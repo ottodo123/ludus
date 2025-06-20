@@ -1,23 +1,50 @@
 import React, { useState, useMemo } from 'react';
 import { useFlashcards } from '../contexts/FlashcardContext';
-import { getDueCards, calculateStudyStreak, calculateRetentionRate } from '../utils/sm2Algorithm';
+import { calculateStudyStreak, calculateRetentionRate } from '../utils/sm2Algorithm';
+import { getDailyReviewCards, getStudyMoreCards, getDailyProgress } from '../utils/dailyReview';
 import LudusFolder from './LudusFolder';
 import StudySession from './StudySession';
+import DailyReviewSettings from './DailyReviewSettings';
 import '../styles/FlashcardsPage.css';
+import '../styles/DailyReviewSettings.css';
 
 const FlashcardsPage = () => {
-  const { cards, statistics } = useFlashcards();
+  const { cards, statistics, preferences } = useFlashcards();
   const [currentView, setCurrentView] = useState('main'); // 'main', 'ludus', 'study'
   const [studyCards, setStudyCards] = useState([]);
+  const [showSettings, setShowSettings] = useState(false);
+  const [studiedToday, setStudiedToday] = useState([]);
+  const [isStudyMoreSession, setIsStudyMoreSession] = useState(false);
 
-  const dueCards = useMemo(() => getDueCards(cards), [cards]);
+  // Get daily review data
+  const dailyReviewData = useMemo(() => 
+    getDailyReviewCards(cards, preferences), 
+    [cards, preferences]
+  );
+
   const studyStreak = useMemo(() => calculateStudyStreak(cards), [cards]);
   const retentionRate = useMemo(() => calculateRetentionRate(cards), [cards]);
+  
+  // Get daily progress
+  const dailyProgress = useMemo(() => 
+    getDailyProgress(studiedToday, preferences.dailyCardLimit || 20),
+    [studiedToday, preferences.dailyCardLimit]
+  );
 
-  const handleStartReview = () => {
-    if (dueCards.length > 0) {
-      setStudyCards(dueCards);
+  const handleStartDailyReview = () => {
+    if (dailyReviewData.dailyCards.length > 0) {
+      setStudyCards(dailyReviewData.dailyCards);
       setCurrentView('study');
+      setIsStudyMoreSession(false);
+    }
+  };
+
+  const handleStudyMore = () => {
+    const moreCards = getStudyMoreCards(cards, studiedToday, preferences);
+    if (moreCards.length > 0) {
+      setStudyCards(moreCards);
+      setCurrentView('study');
+      setIsStudyMoreSession(true);
     }
   };
 
@@ -30,18 +57,35 @@ const FlashcardsPage = () => {
   const handleBackToMain = () => {
     setCurrentView('main');
     setStudyCards([]);
+    setIsStudyMoreSession(false);
   };
 
   const handleStartLessonStudy = (lessonCards) => {
     setStudyCards(lessonCards);
     setCurrentView('study');
+    setIsStudyMoreSession(false);
+  };
+
+  const handleStudyComplete = () => {
+    // Add studied cards to today's session
+    if (!isStudyMoreSession) {
+      setStudiedToday(prev => [...prev, ...studyCards]);
+    } else {
+      setStudiedToday(prev => [...prev, ...studyCards]);
+    }
+    handleBackToMain();
+  };
+
+  const handleSettingsSave = () => {
+    // Settings are automatically saved through context
+    // Just close the modal
   };
 
   if (currentView === 'study') {
     return (
       <StudySession
         cards={studyCards}
-        onComplete={handleBackToMain}
+        onComplete={handleStudyComplete}
         onBack={handleBackToMain}
       />
     );
@@ -62,11 +106,38 @@ const FlashcardsPage = () => {
         {/* Daily Review Section */}
         <section className="daily-review">
           <div className="review-header">
-            <h2>Daily Review</h2>
+            <div className="review-title">
+              <h2>Daily Review</h2>
+              <button 
+                className="settings-btn"
+                onClick={() => setShowSettings(true)}
+                title="Daily Review Settings"
+              >
+                ⚙️
+              </button>
+            </div>
+            
+            {/* Daily Progress Bar */}
+            <div className="daily-progress">
+              <div className="progress-header">
+                <span>Today's Progress</span>
+                <span>{dailyProgress.completed}/{dailyProgress.total} cards</span>
+              </div>
+              <div className="progress-bar">
+                <div 
+                  className="progress-fill"
+                  style={{ width: `${dailyProgress.percentage}%` }}
+                ></div>
+              </div>
+              {dailyProgress.isComplete && (
+                <div className="progress-complete">🎉 Daily goal completed!</div>
+              )}
+            </div>
+
             <div className="review-stats">
               <div className="stat">
-                <span className="stat-number">{dueCards.length}</span>
-                <span className="stat-label">Due Today</span>
+                <span className="stat-number">{dailyReviewData.stats.total}</span>
+                <span className="stat-label">Ready to Review</span>
               </div>
               <div className="stat">
                 <span className="stat-number">{studyStreak}</span>
@@ -83,18 +154,39 @@ const FlashcardsPage = () => {
             </div>
           </div>
           
-          <div className="review-action">
-            <button
-              className={`start-review-btn ${dueCards.length === 0 ? 'disabled' : ''}`}
-              onClick={handleStartReview}
-              disabled={dueCards.length === 0}
-            >
-              {dueCards.length > 0 ? 'Start Review' : 'No Cards Due'}
-            </button>
-            {dueCards.length > 0 && (
-              <p className="review-description">
-                Review {dueCards.length} cards that are due for spaced repetition
-              </p>
+          <div className="review-actions">
+            {/* Primary Review Action */}
+            <div className="primary-action">
+              <button
+                className={`start-review-btn ${dailyReviewData.stats.total === 0 ? 'disabled' : ''}`}
+                onClick={handleStartDailyReview}
+                disabled={dailyReviewData.stats.total === 0}
+              >
+                {dailyReviewData.stats.total > 0 ? 'Start Daily Review' : 'No Cards Ready'}
+              </button>
+              {dailyReviewData.stats.total > 0 && (
+                <p className="review-description">
+                  Review {dailyReviewData.stats.total} cards ({dailyReviewData.stats.due} due, {dailyReviewData.stats.learning} learning)
+                </p>
+              )}
+            </div>
+
+            {/* Study More Action */}
+            {dailyProgress.isComplete && dailyReviewData.canStudyMore && (
+              <div className="study-more-action">
+                <button
+                  className="study-more-btn"
+                  onClick={handleStudyMore}
+                >
+                  Study More (+{dailyReviewData.stats.studyMoreIncrement})
+                </button>
+                <p className="study-more-description">
+                  {dailyReviewData.availableForMore.due > 0 && 
+                    `${dailyReviewData.availableForMore.due} due, `}
+                  {dailyReviewData.availableForMore.learning > 0 &&
+                    `${dailyReviewData.availableForMore.learning} learning cards available`}
+                </p>
+              </div>
             )}
           </div>
         </section>
@@ -156,10 +248,12 @@ const FlashcardsPage = () => {
               View Statistics
               <span className="coming-soon-badge">Soon</span>
             </button>
-            <button className="action-btn" disabled>
+            <button 
+              className="action-btn" 
+              onClick={() => setShowSettings(true)}
+            >
               <span className="action-icon">⚙️</span>
-              Settings
-              <span className="coming-soon-badge">Soon</span>
+              Daily Review Settings
             </button>
             <button className="action-btn" disabled>
               <span className="action-icon">📤</span>
@@ -169,6 +263,14 @@ const FlashcardsPage = () => {
           </div>
         </section>
       </div>
+
+      {/* Settings Modal */}
+      {showSettings && (
+        <DailyReviewSettings
+          onClose={() => setShowSettings(false)}
+          onSave={handleSettingsSave}
+        />
+      )}
     </div>
   );
 };
