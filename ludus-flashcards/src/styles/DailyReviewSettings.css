@@ -15,7 +15,7 @@
   background: white;
   border-radius: 12px;
   padding: 0;
-  max-width: 500px;
+  max-width: 600px;
   width: 90%;
   max-height: 80vh;
   overflow-y: auto;
@@ -133,12 +133,219 @@
   border-color: #3b82f6;
 }
 
-.study-sets {
+/* Selection Mode Styles */
+.selection-mode-options {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
+.radio-label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  margin: 0;
+}
+
+.radio-label:hover {
+  border-color: #d1d5db;
+  background-color: #f9fafb;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom + .radio-content {
+  color: #1f2937;
+}
+
+.radio-label input[type="radio"]:checked ~ * {
+  color: #1f2937;
+}
+
+.radio-label input[type="radio"]:checked {
+  accent-color: #3b82f6;
+}
+
+.radio-label input[type="radio"] {
+  margin: 0;
+  margin-right: 12px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.radio-custom {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  margin-right: 12px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.radio-content {
+  flex: 1;
+}
+
+.radio-content strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.radio-content p {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Auto and Manual Settings */
+.auto-settings {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.manual-settings {
+  background: #fefce8;
+  border: 1px solid #fde047;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* Curriculum Selection */
+.curriculum-selection {
+  margin-bottom: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.curriculum-selection.disabled {
+  opacity: 0.6;
+}
+
+.curriculum-header {
+  padding: 16px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.curriculum-toggle {
+  margin: 0;
+  font-weight: 500;
+}
+
+.chapter-selection {
+  padding: 16px;
+}
+
+.chapter-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.toggle-all-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-all-btn:hover {
+  background: #2563eb;
+}
+
+.toggle-all-btn.active {
+  background: #dc2626;
+}
+
+.toggle-all-btn.active:hover {
+  background: #b91c1c;
+}
+
+.chapter-count {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.chapters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.chapter-checkbox {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0;
+}
+
+.chapter-checkbox:hover {
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.chapter-checkbox input[type="checkbox"] {
+  margin: 0;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.chapter-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.chapter-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.chapter-count-text {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Selection Summary */
+.selection-summary {
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.4;
+  min-height: 20px;
+}
+
+/* Checkbox Styles */
 .checkbox-label {
   display: flex;
   align-items: center;
@@ -146,6 +353,11 @@
   font-size: 14px;
   color: #374151;
   margin: 0;
+  margin-bottom: 8px;
+}
+
+.checkbox-label:last-child {
+  margin-bottom: 0;
 }
 
 .checkbox-label.disabled {
@@ -212,6 +424,7 @@
   .modal-content {
     width: 95%;
     margin: 20px;
+    max-height: 90vh;
   }
   
   .card-limit-options {
@@ -225,5 +438,24 @@
   .btn-primary,
   .btn-secondary {
     width: 100%;
+  }
+  
+  .selection-mode-options {
+    gap: 8px;
+  }
+  
+  .radio-label {
+    padding: 12px;
+  }
+  
+  .chapters-grid {
+    grid-template-columns: 1fr;
+    max-height: 150px;
+  }
+  
+  .chapter-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 } 

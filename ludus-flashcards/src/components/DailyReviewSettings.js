@@ -1,20 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useFlashcards } from '../contexts/FlashcardContext';
+import { groupCardsByLesson } from '../utils/dataProcessor';
+import '../styles/DailyReviewSettings.css';
 
 const DailyReviewSettings = ({ onClose, onSave }) => {
-  const { preferences, updatePreference } = useFlashcards();
+  const { preferences, updatePreference, cards } = useFlashcards();
   
   const [settings, setSettings] = useState({
     dailyCardLimit: preferences.dailyCardLimit || 20,
-    includeStudySets: preferences.includeStudySets || {
-      ludus: true,
-      caesar: false,
-      cicero: false
+    selectionMode: preferences.selectionMode || 'auto', // 'auto', 'manual', 'both'
+    autoIncludeStudied: preferences.autoIncludeStudied !== undefined ? preferences.autoIncludeStudied : true,
+    manualSelections: preferences.manualSelections || {
+      ludus: {
+        enabled: false,
+        allChapters: false,
+        selectedChapters: []
+      },
+      caesar: {
+        enabled: false,
+        allChapters: false,
+        selectedChapters: []
+      },
+      cicero: {
+        enabled: false,
+        allChapters: false,
+        selectedChapters: []
+      }
     },
     prioritizeDue: preferences.prioritizeDue !== undefined ? preferences.prioritizeDue : true,
     includeNewCards: preferences.includeNewCards !== undefined ? preferences.includeNewCards : false,
     studyMoreIncrement: preferences.studyMoreIncrement || 10
   });
+
+  // Get available chapters for each curriculum
+  const availableChapters = useMemo(() => {
+    const ludusCards = cards.filter(card => card.curriculum === 'LUDUS');
+    const ludusGroups = groupCardsByLesson(ludusCards);
+    
+    return {
+      ludus: Object.keys(ludusGroups).map(lesson => ({
+        id: parseInt(lesson),
+        name: `Chapter ${lesson}`,
+        cardCount: ludusGroups[lesson].length
+      })).sort((a, b) => a.id - b.id),
+      caesar: [], // Will be populated when available
+      cicero: []  // Will be populated when available
+    };
+  }, [cards]);
 
   const handleSave = () => {
     // Save each setting
@@ -32,14 +64,73 @@ const DailyReviewSettings = ({ onClose, onSave }) => {
     }));
   };
 
-  const updateStudySet = (studySet, included) => {
+  const updateManualSelection = (curriculum, key, value) => {
     setSettings(prev => ({
       ...prev,
-      includeStudySets: {
-        ...prev.includeStudySets,
-        [studySet]: included
+      manualSelections: {
+        ...prev.manualSelections,
+        [curriculum]: {
+          ...prev.manualSelections[curriculum],
+          [key]: value
+        }
       }
     }));
+  };
+
+  const toggleChapter = (curriculum, chapterId) => {
+    setSettings(prev => {
+      const currentChapters = prev.manualSelections[curriculum].selectedChapters;
+      const newChapters = currentChapters.includes(chapterId)
+        ? currentChapters.filter(id => id !== chapterId)
+        : [...currentChapters, chapterId];
+      
+      return {
+        ...prev,
+        manualSelections: {
+          ...prev.manualSelections,
+          [curriculum]: {
+            ...prev.manualSelections[curriculum],
+            selectedChapters: newChapters,
+            allChapters: newChapters.length === availableChapters[curriculum].length
+          }
+        }
+      };
+    });
+  };
+
+  const toggleAllChapters = (curriculum) => {
+    const allChapters = availableChapters[curriculum].map(ch => ch.id);
+    const currentlyAll = settings.manualSelections[curriculum].allChapters;
+    
+    updateManualSelection(curriculum, 'selectedChapters', currentlyAll ? [] : allChapters);
+    updateManualSelection(curriculum, 'allChapters', !currentlyAll);
+  };
+
+  const getSelectionSummary = () => {
+    const { selectionMode, autoIncludeStudied, manualSelections } = settings;
+    
+    let summary = [];
+    
+    if (selectionMode === 'auto' || selectionMode === 'both') {
+      if (autoIncludeStudied) {
+        summary.push('Previously studied cards');
+      }
+    }
+    
+    if (selectionMode === 'manual' || selectionMode === 'both') {
+      Object.keys(manualSelections).forEach(curriculum => {
+        const selection = manualSelections[curriculum];
+        if (selection.enabled) {
+          if (selection.allChapters) {
+            summary.push(`All ${curriculum.toUpperCase()} chapters`);
+          } else if (selection.selectedChapters.length > 0) {
+            summary.push(`${curriculum.toUpperCase()}: ${selection.selectedChapters.length} chapters`);
+          }
+        }
+      });
+    }
+    
+    return summary.length > 0 ? summary.join(', ') : 'No selection criteria set';
   };
 
   return (
@@ -78,39 +169,154 @@ const DailyReviewSettings = ({ onClose, onSave }) => {
             </div>
           </div>
 
-          {/* Study Sets Inclusion */}
+          {/* Selection Mode */}
           <div className="setting-group">
-            <label className="setting-label">Include Study Sets</label>
-            <div className="study-sets">
+            <label className="setting-label">Card Selection Mode</label>
+            <div className="selection-mode-options">
+              <label className="radio-label">
+                <input
+                  type="radio"
+                  name="selectionMode"
+                  value="auto"
+                  checked={settings.selectionMode === 'auto'}
+                  onChange={e => updateSetting('selectionMode', e.target.value)}
+                />
+                <span className="radio-custom"></span>
+                <div className="radio-content">
+                  <strong>Automatic Only</strong>
+                  <p>System automatically includes previously studied cards</p>
+                </div>
+              </label>
+              
+              <label className="radio-label">
+                <input
+                  type="radio"
+                  name="selectionMode"
+                  value="manual"
+                  checked={settings.selectionMode === 'manual'}
+                  onChange={e => updateSetting('selectionMode', e.target.value)}
+                />
+                <span className="radio-custom"></span>
+                <div className="radio-content">
+                  <strong>Manual Only</strong>
+                  <p>You choose specific chapters/sets to include</p>
+                </div>
+              </label>
+              
+              <label className="radio-label">
+                <input
+                  type="radio"
+                  name="selectionMode"
+                  value="both"
+                  checked={settings.selectionMode === 'both'}
+                  onChange={e => updateSetting('selectionMode', e.target.value)}
+                />
+                <span className="radio-custom"></span>
+                <div className="radio-content">
+                  <strong>Automatic + Manual</strong>
+                  <p>Combine automatic selection with manual choices</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          {/* Automatic Settings */}
+          {(settings.selectionMode === 'auto' || settings.selectionMode === 'both') && (
+            <div className="setting-group auto-settings">
+              <label className="setting-label">🤖 Automatic Selection</label>
               <label className="checkbox-label">
                 <input
                   type="checkbox"
-                  checked={settings.includeStudySets.ludus}
-                  onChange={e => updateStudySet('ludus', e.target.checked)}
+                  checked={settings.autoIncludeStudied}
+                  onChange={e => updateSetting('autoIncludeStudied', e.target.checked)}
                 />
                 <span className="checkmark"></span>
-                LUDUS (680 words)
+                Include all previously studied cards (recommended)
               </label>
-              <label className="checkbox-label disabled">
-                <input
-                  type="checkbox"
-                  checked={settings.includeStudySets.caesar}
-                  onChange={e => updateStudySet('caesar', e.target.checked)}
-                  disabled
-                />
-                <span className="checkmark"></span>
-                CAESAR (Coming Soon)
-              </label>
-              <label className="checkbox-label disabled">
-                <input
-                  type="checkbox"
-                  checked={settings.includeStudySets.cicero}
-                  onChange={e => updateStudySet('cicero', e.target.checked)}
-                  disabled
-                />
-                <span className="checkmark"></span>
-                CICERO (Coming Soon)
-              </label>
+            </div>
+          )}
+
+          {/* Manual Settings */}
+          {(settings.selectionMode === 'manual' || settings.selectionMode === 'both') && (
+            <div className="setting-group manual-settings">
+              <label className="setting-label">✋ Manual Selection</label>
+              
+              {/* LUDUS Selection */}
+              <div className="curriculum-selection">
+                <div className="curriculum-header">
+                  <label className="checkbox-label curriculum-toggle">
+                    <input
+                      type="checkbox"
+                      checked={settings.manualSelections.ludus.enabled}
+                      onChange={e => updateManualSelection('ludus', 'enabled', e.target.checked)}
+                    />
+                    <span className="checkmark"></span>
+                    <strong>LUDUS (680 words)</strong>
+                  </label>
+                </div>
+                
+                {settings.manualSelections.ludus.enabled && (
+                  <div className="chapter-selection">
+                    <div className="chapter-controls">
+                      <button
+                        className={`toggle-all-btn ${settings.manualSelections.ludus.allChapters ? 'active' : ''}`}
+                        onClick={() => toggleAllChapters('ludus')}
+                      >
+                        {settings.manualSelections.ludus.allChapters ? 'Deselect All' : 'Select All'} Chapters
+                      </button>
+                      <span className="chapter-count">
+                        {settings.manualSelections.ludus.selectedChapters.length} of {availableChapters.ludus.length} selected
+                      </span>
+                    </div>
+                    
+                    <div className="chapters-grid">
+                      {availableChapters.ludus.map(chapter => (
+                        <label key={chapter.id} className="chapter-checkbox">
+                          <input
+                            type="checkbox"
+                            checked={settings.manualSelections.ludus.selectedChapters.includes(chapter.id)}
+                            onChange={() => toggleChapter('ludus', chapter.id)}
+                          />
+                          <span className="chapter-info">
+                            <span className="chapter-name">{chapter.name}</span>
+                            <span className="chapter-count-text">({chapter.cardCount} words)</span>
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* CAESAR Selection (Coming Soon) */}
+              <div className="curriculum-selection disabled">
+                <div className="curriculum-header">
+                  <label className="checkbox-label curriculum-toggle">
+                    <input type="checkbox" disabled />
+                    <span className="checkmark"></span>
+                    <strong>CAESAR (Coming Soon)</strong>
+                  </label>
+                </div>
+              </div>
+
+              {/* CICERO Selection (Coming Soon) */}
+              <div className="curriculum-selection disabled">
+                <div className="curriculum-header">
+                  <label className="checkbox-label curriculum-toggle">
+                    <input type="checkbox" disabled />
+                    <span className="checkmark"></span>
+                    <strong>CICERO (Coming Soon)</strong>
+                  </label>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Selection Summary */}
+          <div className="setting-group">
+            <label className="setting-label">📋 Current Selection</label>
+            <div className="selection-summary">
+              {getSelectionSummary()}
             </div>
           </div>
 
@@ -133,7 +339,7 @@ const DailyReviewSettings = ({ onClose, onSave }) => {
                 onChange={e => updateSetting('includeNewCards', e.target.checked)}
               />
               <span className="checkmark"></span>
-              Include new cards if not enough due cards
+              Include new cards if not enough cards available
             </label>
           </div>
 

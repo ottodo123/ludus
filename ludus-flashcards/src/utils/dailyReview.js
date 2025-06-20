@@ -9,28 +9,45 @@ import { getDueCards } from './sm2Algorithm';
 export const getDailyReviewCards = (allCards, preferences) => {
   const {
     dailyCardLimit = 20,
-    includeStudySets = { ludus: true, caesar: false, cicero: false },
+    selectionMode = 'auto',
+    autoIncludeStudied = true,
+    manualSelections = {},
     prioritizeDue = true,
     includeNewCards = false,
     studyMoreIncrement = 10
   } = preferences;
 
-  // Filter cards by included study sets
-  const availableCards = allCards.filter(card => {
-    if (includeStudySets.ludus && card.curriculum === 'LUDUS') return true;
-    if (includeStudySets.caesar && card.curriculum === 'CAESAR') return true;
-    if (includeStudySets.cicero && card.curriculum === 'CICERO') return true;
-    return false;
-  });
+  let availableCards = [];
 
-  // Only include cards that have been studied before (repetitions > 0)
-  const studiedCards = availableCards.filter(card => card.repetitions > 0);
-  
-  // Get due cards from studied cards
-  const dueCards = getDueCards(studiedCards);
+  // Automatic selection
+  if (selectionMode === 'auto' || selectionMode === 'both') {
+    if (autoIncludeStudied) {
+      // Include all previously studied cards
+      const studiedCards = allCards.filter(card => card.repetitions > 0);
+      availableCards.push(...studiedCards);
+    }
+  }
+
+  // Manual selection
+  if (selectionMode === 'manual' || selectionMode === 'both') {
+    const manualCards = getManuallySelectedCards(allCards, manualSelections);
+    
+    // Merge with automatic cards (avoiding duplicates)
+    const existingIds = new Set(availableCards.map(card => card.id));
+    const newManualCards = manualCards.filter(card => !existingIds.has(card.id));
+    availableCards.push(...newManualCards);
+  }
+
+  // If no selection criteria are met, fall back to all studied cards
+  if (availableCards.length === 0) {
+    availableCards = allCards.filter(card => card.repetitions > 0);
+  }
+
+  // Get due cards from available cards
+  const dueCards = getDueCards(availableCards);
   
   // Get learning cards (cards with 1-2 repetitions that might need more practice)
-  const learningCards = studiedCards.filter(card => 
+  const learningCards = availableCards.filter(card => 
     card.repetitions > 0 && 
     card.repetitions < 3 && 
     !dueCards.includes(card)
@@ -98,7 +115,8 @@ export const getDailyReviewCards = (allCards, preferences) => {
     learning: dailyCards.filter(card => learningCards.includes(card)).length,
     new: dailyCards.filter(card => card.repetitions === 0).length,
     remainingStudied: totalRemainingStudied,
-    studyMoreIncrement
+    studyMoreIncrement,
+    availableTotal: availableCards.length
   };
 
   return {
@@ -113,6 +131,41 @@ export const getDailyReviewCards = (allCards, preferences) => {
 };
 
 /**
+ * Get manually selected cards based on user selections
+ * @param {Array} allCards - All available cards
+ * @param {Object} manualSelections - Manual selection preferences
+ * @returns {Array} - Manually selected cards
+ */
+export const getManuallySelectedCards = (allCards, manualSelections) => {
+  let selectedCards = [];
+
+  // Process each curriculum
+  Object.keys(manualSelections).forEach(curriculum => {
+    const selection = manualSelections[curriculum];
+    
+    if (!selection.enabled) return;
+
+    // Filter cards by curriculum
+    const curriculumCards = allCards.filter(card => 
+      card.curriculum === curriculum.toUpperCase()
+    );
+
+    if (selection.allChapters) {
+      // Include all chapters from this curriculum
+      selectedCards.push(...curriculumCards);
+    } else if (selection.selectedChapters && selection.selectedChapters.length > 0) {
+      // Include only selected chapters
+      const chapterCards = curriculumCards.filter(card => 
+        selection.selectedChapters.includes(card.lesson_number)
+      );
+      selectedCards.push(...chapterCards);
+    }
+  });
+
+  return selectedCards;
+};
+
+/**
  * Get additional cards for "study more" functionality
  * @param {Array} allCards - All available cards
  * @param {Array} alreadyStudiedToday - Cards already studied in this session
@@ -121,25 +174,38 @@ export const getDailyReviewCards = (allCards, preferences) => {
  */
 export const getStudyMoreCards = (allCards, alreadyStudiedToday, preferences) => {
   const {
-    includeStudySets = { ludus: true, caesar: false, cicero: false },
+    selectionMode = 'auto',
+    autoIncludeStudied = true,
+    manualSelections = {},
     studyMoreIncrement = 10,
     prioritizeDue = true
   } = preferences;
 
-  // Filter cards by included study sets
-  const availableCards = allCards.filter(card => {
-    if (includeStudySets.ludus && card.curriculum === 'LUDUS') return true;
-    if (includeStudySets.caesar && card.curriculum === 'CAESAR') return true;
-    if (includeStudySets.cicero && card.curriculum === 'CICERO') return true;
-    return false;
-  });
+  let availableCards = [];
 
-  // Only include cards that have been studied before
-  const studiedCards = availableCards.filter(card => card.repetitions > 0);
-  
+  // Apply same selection logic as daily review
+  if (selectionMode === 'auto' || selectionMode === 'both') {
+    if (autoIncludeStudied) {
+      const studiedCards = allCards.filter(card => card.repetitions > 0);
+      availableCards.push(...studiedCards);
+    }
+  }
+
+  if (selectionMode === 'manual' || selectionMode === 'both') {
+    const manualCards = getManuallySelectedCards(allCards, manualSelections);
+    const existingIds = new Set(availableCards.map(card => card.id));
+    const newManualCards = manualCards.filter(card => !existingIds.has(card.id));
+    availableCards.push(...newManualCards);
+  }
+
+  // If no selection criteria, fall back to studied cards
+  if (availableCards.length === 0) {
+    availableCards = allCards.filter(card => card.repetitions > 0);
+  }
+
   // Exclude cards already studied today
   const alreadyStudiedIds = new Set(alreadyStudiedToday.map(card => card.id));
-  const remainingCards = studiedCards.filter(card => !alreadyStudiedIds.has(card.id));
+  const remainingCards = availableCards.filter(card => !alreadyStudiedIds.has(card.id));
 
   // Get due and learning cards
   const dueCards = getDueCards(remainingCards);
@@ -196,5 +262,55 @@ export const getDailyProgress = (studiedToday, dailyCardLimit) => {
     percentage,
     isComplete: completed >= dailyCardLimit,
     total: dailyCardLimit
+  };
+};
+
+/**
+ * Get a summary of current selection criteria
+ * @param {Object} preferences - User preferences
+ * @param {Array} allCards - All available cards  
+ * @returns {Object} - Selection summary
+ */
+export const getSelectionSummary = (preferences, allCards) => {
+  const {
+    selectionMode = 'auto',
+    autoIncludeStudied = true,
+    manualSelections = {}
+  } = preferences;
+
+  let autoCount = 0;
+  let manualCount = 0;
+  let totalSelected = 0;
+
+  if (selectionMode === 'auto' || selectionMode === 'both') {
+    if (autoIncludeStudied) {
+      autoCount = allCards.filter(card => card.repetitions > 0).length;
+    }
+  }
+
+  if (selectionMode === 'manual' || selectionMode === 'both') {
+    const manualCards = getManuallySelectedCards(allCards, manualSelections);
+    manualCount = manualCards.length;
+  }
+
+  // Calculate total with overlap consideration
+  if (selectionMode === 'both') {
+    const autoCards = autoIncludeStudied ? allCards.filter(card => card.repetitions > 0) : [];
+    const manualCards = getManuallySelectedCards(allCards, manualSelections);
+    const combinedCards = [...autoCards];
+    const existingIds = new Set(combinedCards.map(card => card.id));
+    const newManualCards = manualCards.filter(card => !existingIds.has(card.id));
+    combinedCards.push(...newManualCards);
+    totalSelected = combinedCards.length;
+  } else {
+    totalSelected = autoCount + manualCount;
+  }
+
+  return {
+    mode: selectionMode,
+    autoCount,
+    manualCount,
+    totalSelected,
+    hasSelection: totalSelected > 0
   };
 }; 
