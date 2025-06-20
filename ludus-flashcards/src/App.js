@@ -1,24 +1,36 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { FlashcardProvider } from './contexts/FlashcardContext';
+import Navigation from './components/Navigation';
+import FlashcardsPage from './components/FlashcardsPage';
+import GlossaryPage from './components/GlossaryPage';
+import GrammarPage from './components/GrammarPage';
 import './App.css';
 
 function App() {
+  const [activeTab, setActiveTab] = useState('flashcards');
+
+  const renderCurrentPage = () => {
+    switch (activeTab) {
+      case 'glossary':
+        return <GlossaryPage />;
+      case 'flashcards':
+        return <FlashcardsPage />;
+      case 'grammar':
+        return <GrammarPage />;
+      default:
+        return <FlashcardsPage />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FlashcardProvider>
+      <div className="App">
+        <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
+        <main className="main-content">
+          {renderCurrentPage()}
+        </main>
+      </div>
+    </FlashcardProvider>
   );
 }
 
