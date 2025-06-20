@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AuthComponent from './AuthComponent';
 import '../styles/Navigation.css';
 
 const Navigation = ({ activeTab, onTabChange }) => {
@@ -28,6 +29,10 @@ const Navigation = ({ activeTab, onTabChange }) => {
               {tab.disabled && <span className="coming-soon">Coming Soon</span>}
             </button>
           ))}
+        </div>
+        
+        <div className="nav-auth">
+          <AuthComponent />
         </div>
       </div>
     </nav>

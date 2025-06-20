@@ -78,6 +78,11 @@
   font-weight: 500;
 }
 
+.nav-auth {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -105,5 +110,11 @@
   .nav-subtitle {
     display: block;
     margin: 0.25rem 0 0 0;
+  }
+  
+  .nav-auth {
+    order: -1;
+    width: 100%;
+    justify-content: center;
   }
 } 

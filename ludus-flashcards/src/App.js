@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AuthProvider } from './contexts/AuthContext';
 import { FlashcardProvider } from './contexts/FlashcardContext';
 import Navigation from './components/Navigation';
 import FlashcardsPage from './components/FlashcardsPage';
@@ -23,14 +24,16 @@ function App() {
   };
 
   return (
-    <FlashcardProvider>
-      <div className="App">
-        <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
-        <main className="main-content">
-          {renderCurrentPage()}
-        </main>
-      </div>
-    </FlashcardProvider>
+    <AuthProvider>
+      <FlashcardProvider>
+        <div className="App">
+          <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
+          <main className="main-content">
+            {renderCurrentPage()}
+          </main>
+        </div>
+      </FlashcardProvider>
+    </AuthProvider>
   );
 }
 

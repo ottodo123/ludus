@@ -1,0 +1,73 @@
+.auth-component {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth-component.signed-in {
+  background: #f8f9fa;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #e1e5e9;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.user-name {
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.auth-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-button.sign-in {
+  background: #fff;
+  color: #333;
+  border: 1px solid #dadce0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.auth-button.sign-in:hover {
+  background: #f8f9fa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.auth-button.sign-out {
+  background: #dc3545;
+  color: white;
+  font-size: 12px;
+  padding: 6px 12px;
+}
+
+.auth-button.sign-out:hover {
+  background: #c82333;
+}
+
+.auth-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+} 
