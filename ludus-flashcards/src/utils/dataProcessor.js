@@ -10,8 +10,8 @@ export const isDue = (card) => {
 // Parse CSV data and convert to card objects  
 export const parseVocabularyData = async () => {
   try {
-    // Load CSV data from the public folder
-    const response = await fetch('/data/Ludus_Vocabulary_Final.csv');
+    // Load CSV data from the public folder (works for both localhost and GitHub Pages)
+    const response = await fetch(`${process.env.PUBLIC_URL}/data/Ludus_Vocabulary_Final.csv`);
     const csvData = await response.text();
     
     const lines = csvData.trim().split('\n');
