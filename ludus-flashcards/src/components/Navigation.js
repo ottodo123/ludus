@@ -1,49 +1,36 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/Navigation.css';
 import AuthComponent from './AuthComponent';
 
 const Navigation = ({ onPageChange, currentPage }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const pages = [
-    { key: 'ludus', label: 'Home' },
-    { key: 'flashcards', label: 'Flashcards' },
-    { key: 'glossary', label: 'Glossary' },
-    { key: 'grammar', label: 'Grammar' }
+    { key: 'ludus', label: 'Home', disabled: false },
+    { key: 'flashcards', label: 'Flashcards', disabled: false },
+    { key: 'glossary', label: 'Glossary', disabled: false },
+    { key: 'grammar', label: 'Grammar', disabled: false }
   ];
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <nav className="navigation">
-      <div className="nav-brand">
-        <h1 onClick={() => onPageChange('ludus')}>Ludus</h1>
-      </div>
-      
-      <div className="nav-toggle" onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <div className="nav-container">
+        <div className="nav-brand">
+          <h1 onClick={() => onPageChange('ludus')}>Ludus</h1>
+          <span className="nav-subtitle">Latin Flashcard Platform</span>
+        </div>
 
-      <div className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>
-        <ul className="nav-list">
+        <div className="nav-tabs">
           {pages.map(page => (
-            <li key={page.key} className="nav-item">
-              <button 
-                className={`nav-link ${currentPage === page.key ? 'active' : ''}`}
-                onClick={() => {
-                  onPageChange(page.key);
-                  setIsMenuOpen(false);
-                }}
-              >
-                {page.label}
-              </button>
-            </li>
+            <button 
+              key={page.key}
+              className={`nav-tab ${currentPage === page.key ? 'active' : ''} ${page.disabled ? 'disabled' : ''}`}
+              onClick={() => !page.disabled && onPageChange(page.key)}
+              disabled={page.disabled}
+            >
+              {page.label}
+              {page.disabled && <span className="coming-soon">Coming Soon</span>}
+            </button>
           ))}
-        </ul>
+        </div>
         
         <div className="nav-auth">
           <AuthComponent />
