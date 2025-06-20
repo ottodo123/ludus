@@ -7,7 +7,6 @@ import LudusFolder from './components/LudusFolder';
 import FlashcardsPage from './components/FlashcardsPage';
 import GlossaryPage from './components/GlossaryPage';
 import GrammarPage from './components/GrammarPage';
-import IndexTester from './components/IndexTester';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('ludus');
@@ -22,8 +21,6 @@ function App() {
         return <GlossaryPage />;
       case 'grammar':
         return <GrammarPage />;
-      case 'index-tester':
-        return <IndexTester />;
       default:
         return <LudusFolder onPageChange={setCurrentPage} />;
     }

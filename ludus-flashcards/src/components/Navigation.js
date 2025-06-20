@@ -9,8 +9,7 @@ const Navigation = ({ onPageChange, currentPage }) => {
     { key: 'ludus', label: 'Home' },
     { key: 'flashcards', label: 'Flashcards' },
     { key: 'glossary', label: 'Glossary' },
-    { key: 'grammar', label: 'Grammar' },
-    { key: 'index-tester', label: '🔍 Index Tester' }
+    { key: 'grammar', label: 'Grammar' }
   ];
 
   const toggleMenu = () => {
