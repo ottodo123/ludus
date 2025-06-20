@@ -4,7 +4,6 @@ import AuthComponent from './AuthComponent';
 
 const Navigation = ({ onPageChange, currentPage }) => {
   const pages = [
-    { key: 'ludus', label: 'Home', disabled: false },
     { key: 'flashcards', label: 'Flashcards', disabled: false },
     { key: 'glossary', label: 'Glossary', disabled: false },
     { key: 'grammar', label: 'Grammar', disabled: false }
