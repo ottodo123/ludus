@@ -1,25 +1,31 @@
 import React, { useState } from 'react';
+import './App.css';
 import { AuthProvider } from './contexts/AuthContext';
 import { FlashcardProvider } from './contexts/FlashcardContext';
 import Navigation from './components/Navigation';
+import LudusFolder from './components/LudusFolder';
 import FlashcardsPage from './components/FlashcardsPage';
 import GlossaryPage from './components/GlossaryPage';
 import GrammarPage from './components/GrammarPage';
-import './App.css';
+import IndexTester from './components/IndexTester';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('flashcards');
+  const [currentPage, setCurrentPage] = useState('ludus');
 
-  const renderCurrentPage = () => {
-    switch (activeTab) {
-      case 'glossary':
-        return <GlossaryPage />;
+  const renderPage = () => {
+    switch(currentPage) {
+      case 'ludus':
+        return <LudusFolder onPageChange={setCurrentPage} />;
       case 'flashcards':
         return <FlashcardsPage />;
+      case 'glossary':
+        return <GlossaryPage />;
       case 'grammar':
         return <GrammarPage />;
+      case 'index-tester':
+        return <IndexTester />;
       default:
-        return <FlashcardsPage />;
+        return <LudusFolder onPageChange={setCurrentPage} />;
     }
   };
 
@@ -27,9 +33,9 @@ function App() {
     <AuthProvider>
       <FlashcardProvider>
         <div className="App">
-          <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
-          <main className="main-content">
-            {renderCurrentPage()}
+          <Navigation onPageChange={setCurrentPage} currentPage={currentPage} />
+          <main className="app-content">
+            {renderPage()}
           </main>
         </div>
       </FlashcardProvider>

@@ -6,6 +6,8 @@ import {
   collection,
   query,
   where,
+  orderBy,
+  limit,
   getDocs 
 } from 'firebase/firestore';
 import { db } from '../config/firebase';
@@ -40,6 +42,101 @@ export const getUserProgress = async (userId) => {
     return progress;
   } catch (error) {
     console.error('Error getting user progress:', error);
+    throw error;
+  }
+};
+
+// Get cards due for review (REQUIRES INDEX)
+export const getDueCards = async (userId) => {
+  try {
+    const now = new Date().toISOString();
+    const progressQuery = query(
+      collection(db, 'users', userId, 'cardProgress'),
+      where('nextReview', '<=', now),
+      orderBy('nextReview', 'asc'),
+      limit(20)
+    );
+    const querySnapshot = await getDocs(progressQuery);
+    
+    const dueCards = [];
+    querySnapshot.forEach((doc) => {
+      dueCards.push({ id: doc.id, ...doc.data() });
+    });
+    
+    return dueCards;
+  } catch (error) {
+    console.error('Error getting due cards:', error);
+    console.error('Index creation link should appear above ↑');
+    throw error;
+  }
+};
+
+// Get learning cards (REQUIRES INDEX)
+export const getLearningCards = async (userId) => {
+  try {
+    const progressQuery = query(
+      collection(db, 'users', userId, 'cardProgress'),
+      where('repetitions', '>', 0),
+      where('repetitions', '<', 3),
+      orderBy('repetitions', 'asc'),
+      orderBy('lastReviewed', 'desc')
+    );
+    const querySnapshot = await getDocs(progressQuery);
+    
+    const learningCards = [];
+    querySnapshot.forEach((doc) => {
+      learningCards.push({ id: doc.id, ...doc.data() });
+    });
+    
+    return learningCards;
+  } catch (error) {
+    console.error('Error getting learning cards:', error);
+    console.error('Index creation link should appear above ↑');
+    throw error;
+  }
+};
+
+// Get user's best/worst cards (REQUIRES INDEX)
+export const getUserStats = async (userId) => {
+  try {
+    // Best cards (highest accuracy)
+    const bestCardsQuery = query(
+      collection(db, 'users', userId, 'cardProgress'),
+      where('totalReviews', '>', 3),
+      orderBy('totalReviews', 'desc'),
+      orderBy('correctReviews', 'desc'),
+      limit(10)
+    );
+    
+    // Worst cards (lowest accuracy)
+    const worstCardsQuery = query(
+      collection(db, 'users', userId, 'cardProgress'),
+      where('totalReviews', '>', 3),
+      orderBy('correctReviews', 'asc'),
+      orderBy('totalReviews', 'desc'),
+      limit(10)
+    );
+    
+    const [bestSnapshot, worstSnapshot] = await Promise.all([
+      getDocs(bestCardsQuery),
+      getDocs(worstCardsQuery)
+    ]);
+    
+    const bestCards = [];
+    const worstCards = [];
+    
+    bestSnapshot.forEach((doc) => {
+      bestCards.push({ id: doc.id, ...doc.data() });
+    });
+    
+    worstSnapshot.forEach((doc) => {
+      worstCards.push({ id: doc.id, ...doc.data() });
+    });
+    
+    return { bestCards, worstCards };
+  } catch (error) {
+    console.error('Error getting user stats:', error);
+    console.error('Index creation link should appear above ↑');
     throw error;
   }
 };
