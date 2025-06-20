@@ -1,7 +1,9 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { parseVocabularyData } from '../utils/dataProcessor';
 import { loadCards, saveCards, loadPreferences, savePreferences, loadStatistics, saveStatistics } from '../utils/storage';
+import { saveUserProgress, getUserProgress, updateCardStats, saveUserProfile, getUserProfile } from '../services/userDataService';
 import { calculateNextReview } from '../utils/sm2Algorithm';
+import { useAuth } from './AuthContext';
 
 // Create context
 const FlashcardContext = createContext();
@@ -52,6 +54,19 @@ const initialState = {
 // Reducer function
 const flashcardReducer = (state, action) => {
   switch (action.type) {
+    case actionTypes.SET_LOADING:
+      return {
+        ...state,
+        loading: action.payload
+      };
+
+    case actionTypes.SET_ERROR:
+      return {
+        ...state,
+        error: action.payload,
+        loading: false
+      };
+
     case actionTypes.SET_CARDS:
       return {
         ...state,
@@ -63,7 +78,9 @@ const flashcardReducer = (state, action) => {
       return {
         ...state,
         cards: state.cards.map(card =>
-          card.id === action.payload.id ? { ...card, ...action.payload } : card
+          card.id === action.payload.id
+            ? { ...card, ...action.payload }
+            : card
         )
       };
 
@@ -74,11 +91,12 @@ const flashcardReducer = (state, action) => {
       };
 
     case actionTypes.UPDATE_PREFERENCE:
+      const { key, value } = action.payload;
       return {
         ...state,
         preferences: {
           ...state.preferences,
-          [action.payload.key]: action.payload.value
+          [key]: value
         }
       };
 
@@ -95,19 +113,6 @@ const flashcardReducer = (state, action) => {
           ...state.statistics,
           ...action.payload
         }
-      };
-
-    case actionTypes.SET_LOADING:
-      return {
-        ...state,
-        loading: action.payload
-      };
-
-    case actionTypes.SET_ERROR:
-      return {
-        ...state,
-        error: action.payload,
-        loading: false
       };
 
     case actionTypes.GRADE_CARD:
@@ -166,33 +171,75 @@ const flashcardReducer = (state, action) => {
 
 // Context provider component
 export const FlashcardProvider = ({ children }) => {
+  const { user } = useAuth();
   const [state, dispatch] = useReducer(flashcardReducer, initialState);
 
-  // Initialize data on mount
+  // Initialize data on mount or when user changes
   useEffect(() => {
     const initializeData = async () => {
       try {
         dispatch({ type: actionTypes.SET_LOADING, payload: true });
 
-        // Load preferences
-        const preferences = loadPreferences();
-        dispatch({ type: actionTypes.SET_PREFERENCES, payload: preferences });
+        if (user) {
+          console.log('🔥 Loading data from Firebase for user:', user.uid);
+          
+          // Load user profile from Firebase
+          try {
+            const userProfile = await getUserProfile(user.uid);
+            if (userProfile) {
+              dispatch({ type: actionTypes.SET_PREFERENCES, payload: userProfile.preferences || state.preferences });
+              dispatch({ type: actionTypes.SET_STATISTICS, payload: userProfile.statistics || state.statistics });
+            }
+          } catch (error) {
+            console.error('Error loading user profile:', error);
+          }
 
-        // Load statistics
-        const statistics = loadStatistics();
-        dispatch({ type: actionTypes.SET_STATISTICS, payload: statistics });
+          // Load user progress from Firebase
+          try {
+            const progress = await getUserProgress(user.uid);
+            
+            // Get base cards from CSV
+            let cards = await parseVocabularyData();
+            
+            // Merge with user progress
+            if (progress && Object.keys(progress).length > 0) {
+              console.log('📚 Merging Firebase progress with cards:', Object.keys(progress).length, 'cards with progress');
+              cards = cards.map(card => {
+                const cardProgress = progress[card.id];
+                return cardProgress ? { ...card, ...cardProgress } : card;
+              });
+            }
 
-        // Try to load cards from localStorage first
-        let cards = loadCards();
-        
-        if (!cards) {
-          // If no cards in localStorage, parse from CSV
-          cards = await parseVocabularyData();
-          // Save to localStorage for future use
-          saveCards(cards);
+            dispatch({ type: actionTypes.SET_CARDS, payload: cards });
+          } catch (error) {
+            console.error('Error loading Firebase progress:', error);
+            // Fallback to CSV data
+            const cards = await parseVocabularyData();
+            dispatch({ type: actionTypes.SET_CARDS, payload: cards });
+          }
+        } else {
+          console.log('💾 Loading data from localStorage (no user signed in)');
+          
+          // Load preferences
+          const preferences = loadPreferences();
+          dispatch({ type: actionTypes.SET_PREFERENCES, payload: preferences });
+
+          // Load statistics
+          const statistics = loadStatistics();
+          dispatch({ type: actionTypes.SET_STATISTICS, payload: statistics });
+
+          // Try to load cards from localStorage first
+          let cards = loadCards();
+          
+          if (!cards) {
+            // If no cards in localStorage, parse from CSV
+            cards = await parseVocabularyData();
+            // Save to localStorage for future use
+            saveCards(cards);
+          }
+
+          dispatch({ type: actionTypes.SET_CARDS, payload: cards });
         }
-
-        dispatch({ type: actionTypes.SET_CARDS, payload: cards });
       } catch (error) {
         console.error('Error initializing data:', error);
         dispatch({ type: actionTypes.SET_ERROR, payload: error.message });
@@ -200,22 +247,37 @@ export const FlashcardProvider = ({ children }) => {
     };
 
     initializeData();
-  }, []);
+  }, [user]); // Re-run when user changes
 
-  // Save to localStorage whenever state changes
+  // Save to storage whenever state changes
   useEffect(() => {
-    if (state.cards.length > 0) {
-      saveCards(state.cards);
-    }
-  }, [state.cards]);
+    const saveData = async () => {
+      if (state.cards.length === 0) return; // Don't save empty state
+      
+      if (user) {
+        // Save to Firebase
+        try {
+          console.log('🔥 Saving user profile to Firebase');
+          await saveUserProfile(user.uid, {
+            preferences: state.preferences,
+            statistics: state.statistics,
+            displayName: user.displayName,
+            email: user.email,
+            photoURL: user.photoURL
+          });
+        } catch (error) {
+          console.error('Error saving user profile to Firebase:', error);
+        }
+      } else {
+        // Save to localStorage
+        saveCards(state.cards);
+        savePreferences(state.preferences);
+        saveStatistics(state.statistics);
+      }
+    };
 
-  useEffect(() => {
-    savePreferences(state.preferences);
-  }, [state.preferences]);
-
-  useEffect(() => {
-    saveStatistics(state.statistics);
-  }, [state.statistics]);
+    saveData();
+  }, [state.preferences, state.statistics, user]);
 
   // Action creators
   const actions = {
@@ -240,11 +302,25 @@ export const FlashcardProvider = ({ children }) => {
       });
     },
 
-    gradeCard: (cardId, grade) => {
+    gradeCard: async (cardId, grade) => {
+      const startTime = Date.now();
+      
+      // Update local state first
       dispatch({
         type: actionTypes.GRADE_CARD,
         payload: { cardId, grade }
       });
+
+      // Save to Firebase if user is signed in
+      if (user) {
+        try {
+          const timeTaken = Date.now() - startTime;
+          console.log('🔥 Saving card progress to Firebase:', cardId, 'grade:', grade);
+          await updateCardStats(user.uid, cardId, grade, timeTaken);
+        } catch (error) {
+          console.error('Error saving card progress to Firebase:', error);
+        }
+      }
     },
 
     resetProgress: (cardIds) => {
@@ -281,13 +357,11 @@ export const FlashcardProvider = ({ children }) => {
   );
 };
 
-// Custom hook to use the context
+// Hook to use flashcard context
 export const useFlashcards = () => {
   const context = useContext(FlashcardContext);
-  
   if (!context) {
     throw new Error('useFlashcards must be used within a FlashcardProvider');
   }
-  
   return context;
 }; 
