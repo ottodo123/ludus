@@ -1,0 +1,681 @@
+lesson_number,latin_headword,latin_endings,part_of_speech,english
+1,terra incognita,,idiom,unknown land
+1,amant,,verb,"they love, like"
+1,est,,verb,"he, she, it is"
+1,habet,,verb,"he, she, it has, holds"
+1,laudant,,verb,they praise
+1,sunt,,verb,they are
+1,vident,,verb,they see
+1,videt,,verb,"he, she, it sees"
+1,agricola,-ae,noun,farmer
+1,incola,-ae,noun,inhabitant
+1,īnsula,-ae,noun,island
+1,puella,-ae,noun,girl
+1,silva,-ae,noun,"forest, woods"
+1,terra,-ae,noun,"land, earth"
+1,vīta,-ae,noun,life
+1,bona,,adjective,good
+1,magna,,adjective,"large, great"
+1,multae,,adjective,many
+1,parva,,adjective,small
+1,perīculōsa,,adjective,dangerous
+1,et,,conjunction,and
+1,nōn,,adverb,not
+1,quod,,conjunction,because
+1,quoque,,adverb,"also, too"
+1,saepe,,adverb,often
+1,sed,,conjunction,but
+2,prō bonō pūblicō,,idiom,for the public good
+2,ambulō,ambulāre (1),verb,walk
+2,amō,amāre (1),verb,"love, like"
+2,exspectō,exspectāre (1),verb,"wait for, await"
+2,habitō,habitāre (1),verb,"dwell, live (in)"
+2,laudō,laudāre (1),verb,praise
+2,narrō,narrāre (1),verb,"tell, relate, say"
+2,portō,portāre (1),verb,"carry, bring"
+2,scrībit,,verb,"he, she, it writes"
+2,spectō,spectāre (1),verb,"look at, watch"
+2,sum,esse,verb,be
+2,epistula,-ae,noun,letter
+2,fābula,-ae,noun,story
+2,fīlia,-ae,noun,daughter
+2,nauta,-ae,noun,sailor
+2,pecūnia,-ae,noun,money
+2,longa,,adjective,long
+2,multa,,adjective,much
+2,bene,,adverb,well
+2,cūr,,adverb,why?
+3,persōna nōn grāta,,idiom,unwelcome person
+3,clāmō,clāmāre (1),verb,shout
+3,dō,dare (1),verb,give
+3,labōrō,labōrāre (1),verb,"work, toil"
+3,mōnstrō,mōnstrāre (1),verb,"show, display"
+3,necō,necāre (1),verb,kill
+3,occupō,occupāre (1),verb,"seize, capture"
+3,pugnō,pugnāre (1),verb,fight
+3,servō,servāre (1),verb,"save, preserve"
+3,superō,superāre (1),verb,"defeat, conquer, overcome, surpass; win"
+3,vocō,vocāre (1),verb,"call, summon"
+3,fēmina,-ae,noun,woman
+3,mihi,,pronoun,"to me, for me"
+3,grāta,,adjective,pleasing (to)
+3,propinqua,,adjective,"near (to), nearby"
+3,pulchra,,adjective,"beautiful, handsome"
+3,hodiē,,adverb,today
+3,ibi,,adverb,"there, in that place"
+3,nunc,,adverb,now
+4,ex nihilō,,idiom,out of nothing
+4,dēsīderō,dēsīderāre (1),verb,"desire, wish"
+4,habeō,,verb,I have
+4,timent,,verb,they fear
+4,aqua,-ae,noun,water
+4,dea,-ae,noun,goddess
+4,flamma,-ae,noun,flame
+4,ōra,-ae,noun,"shore, coast"
+4,ā,ab,preposition,"from, away from"
+4,cum,,preposition,with
+4,ē,ex,preposition,"from, out from, out of"
+4,in,,preposition,"in, on; into, onto"
+4,itaque,,conjunction,"and so, therefore"
+5,hīc situs est,,idiom,here lies
+5,ōrō,ōrāre (1),verb,"beg, ask for, pray (can take double accusative)"
+5,stō,stāre (1),verb,stand
+5,lūna,-ae,noun,moon
+5,rāna,-ae,noun,frog
+5,īrāta,,adjective,angry
+5,clāra,,adjective,"bright, famous"
+5,celeriter,,adverb,quickly
+5,hīc,,adverb,"here, in this place"
+5,iterum,,adverb,"again, a second time"
+5,mox,,adverb,soon
+5,noctū,,adverb,at night
+5,ubi,,conjunction,where; when (+ perf. indic.)
+6,semper fidēlis,,idiom,always faithful
+6,juvō,"juvāre (1), jūvī",verb,"help, aid"
+6,properō,"properāre (1), properāvī",verb,"hurry, hasten (+ infin.)"
+6,temptō,"temptāre (1), temptāvī",verb,"try, attempt (+ infin.)"
+6,vīdī,,verb,"I saw, have seen"
+6,vīdit,,verb,"he, she, it saw, has seen"
+6,mē,,pronoun,me
+6,tē,,pronoun,you (s.)
+6,territa,,adjective,"frightened, scared, terrified"
+6,dē,,preposition,"about, concerning"
+6,ōlim,,adverb,"once, formerly, sometime"
+6,semper,,adverb,always
+6,subitō,,adverb,suddenly
+7,rēs novae,,idiom,revolution
+7,habent,,verb,"they have, they hold"
+7,vīdērunt,,verb,"they saw, they have seen"
+7,hasta,-ae,noun,spear
+7,tibi,,pronoun,"to you, for you (s.)"
+7,via,-ae,noun,"street, road, way"
+7,nova,,adjective,"new, strange, unusual"
+7,quattuor,,adjective,four
+7,diū,,adverb,for a long time
+7,posteā,,adverb,"afterward, later"
+7,tum,,adverb,"then, at that time"
+8,caelum ipsum stultitiā petimus,,idiom,we seek heaven itself through folly
+8,habēs,,verb,"you (s.) have, you hold"
+8,manet,,verb,"he, she, it remains"
+8,nāvigō,"nāvigāre (1), nāvigāvī",verb,sail
+8,āra,"-ae, f.",noun,altar
+8,caelum,"-ī, n.",noun,"sky, heaven"
+8,dōnum,"-ī, n.",noun,gift
+8,sagitta,"-ae, f.",noun,arrow
+8,templum,"-ī, n.",noun,temple
+8,tēlum,"-ī, n.",noun,"weapon, spear"
+8,alia (neuter aliud),,adjective,"another, other"
+8,antīqua,,adjective,"ancient, old"
+8,cāra,,adjective,"dear, precious"
+8,prō,,preposition,"in front of, before, on behalf of"
+9,testis ūnus testis nūllus,,idiom,one witness is no witness
+9,ager,"agrī, m.",noun,field
+9,amīcus,"-ī, m.",noun,friend
+9,equus,"-ī, m.",noun,horse
+9,frūmentum,"-ī, n.",noun,grain
+9,gladius,"-iī, m.",noun,sword
+9,perīculum,"-ī, n.",noun,danger
+9,puer,"puerī, m.",noun,"boy; (pl.) boys, children"
+9,servus,"-ī, m.",noun,"enslaved person, slave"
+9,fīdus,"-a,-um",adjective,"faithful, loyal"
+9,meus,"-a,-um",adjective,"my, mine"
+9,nūllus,"-a,-um",adjective,"no, none"
+9,sōlus,"-a,-um",adjective,"alone, only"
+9,tuus,"-a, -um",adjective,"your, yours (s.)"
+10,sīc semper tyrannīs,,idiom,thus always to tyrants
+10,mūtō,"mūtāre (1), mūtāvī",verb,change; change one thing into another (+ in + Accus.)
+10,parō,"parāre (1), parāvī",verb,prepare (+ infin.)
+10,postulō,"postulāre (1), postulāvī",verb,demand
+10,aurum,"-ī, n.",noun,gold
+10,deus,"-ī, m.",noun,"god; dī (Nom. pl.), dīs (Dat. & Abl. pl.)"
+10,praemium,"-iī, n.",noun,reward
+10,quid,,pronoun,What?
+10,vir,"virī, m.",noun,"man, male, husband"
+10,līber,"lībera, līberum",adjective,free
+10,miser,"misera, miserum",adjective,"wretched, miserable"
+10,pulcher,"pulchra, pulchrum",adjective,"beautiful, handsome"
+10,quamquam,,conjunction,although
+10,statim,,adverb,"immediately, at once"
+11,ab ovīs usque ad māla,,idiom,from eggs to apples
+11,bellum,"-ī, n.",noun,war
+11,fīlius,"-iī, m.",noun,son
+11,nōs,,pronoun,"we, us"
+11,oppidum,"-ī, n.",noun,town
+11,rēgnum,-ī n.,noun,"kingdom, rule, reign, throne"
+11,novem,,adjective,nine
+11,sex,,adjective,six
+11,ad,,preposition,"near, at (with stationary verb); to, toward (with verb of motion)"
+11,ante,,preposition,"before, in front of"
+11,per,,preposition,through
+11,post,,preposition,"after, behind"
+11,trāns,,preposition,across
+11,aut,,conjunction,or
+11,aut...aut,,conjunction,either...or
+11,deinde,,adverb,"then, next (in a series)"
+11,jam,,adverb,"now, already, by now"
+11,nōn jam,,adverb,no longer
+11,postrīdiē,,adverb,(on) the next day
+12,ad nauseam,,idiom,to the point of nausea
+12,dēbeō,"dēbēre (2), dēbuī",verb,"owe (+ d. o.); ought, must (+ infin.)"
+12,habeō,"habēre (2), habuī",verb,"have, hold"
+12,maneō,"manēre (2), mānsī",verb,"stay, remain"
+12,moneō,"monēre (2), monuī",verb,"warn, advise"
+12,timeō,"timēre (2), timuī",verb,"fear, be afraid of"
+12,videō,"vidēre (2), vīdī",verb,see
+12,auxilium,"-iī, n.",noun,"help, aid"
+12,altus,"-a, -um",adjective,"high, tall, deep"
+12,malus,"-a, -um",adjective,"bad, evil, wicked"
+12,ita,,adverb,"so, thus"
+12,maximē,,adverb,"very much, especially; yes"
+12,tamen,,adverb,nevertheless
+13,"nōn fuī, nōn sum, nōn cūrō",,idiom,"I was not, I am not, I don't care"
+13,oppugnō,"oppugnāre (1), oppugnāvī",verb,attack
+13,vastō,"vastāre (1), vastāvī",verb,"destroy, devastate"
+13,vigilō,"vigilāre (1), vigilāvī",verb,"keep watch, stay awake"
+13,arma,"-ōrum, n. pl.",noun,"arms, weapons"
+13,castra,"-ōrum, n. pl.",noun,camp
+13,Rōma,"-ae, f.",noun,Rome
+13,scūtum,"-ī, n.",noun,shield
+13,lātus,"-a, -um",adjective,wide
+13,Rōmānus,"-a, -um",adjective,Roman; (noun) m./f. a Roman; m. pl. – the Romans
+13,ācriter,,adverb,fiercely
+13,male,,adverb,"badly, poorly"
+14,dē mortuīs nīl nisi bonum,,idiom,"of the dead, nothing unless good"
+14,nūntiō,"nūntiāre (1), nūntiāvī",verb,"announce, report"
+14,cōpia,"-ae, f.",noun,"supply, abundance; cōpiae, -ārum, f. pl.– forces, troops"
+14,nūntius,"-iī, m.",noun,"message, messenger, news, report"
+14,populus,"-ī, m.",noun,"nation, people"
+14,proelium,"-iī, n.",noun,battle
+14,rēgīna,"-ae, f.",noun,queen
+14,tēctum,"-ī, n.",noun,"roof, house"
+14,centum,,adjective,one hundred
+14,decem,,adjective,ten
+14,mortuus,"-a, -um",adjective,dead
+14,minimē,,adverb,"least, not at all; no"
+14,et...et,,conjunction,both...and
+15,Quid rīdēs?...Dē tā fābula narrātur.,,idiom,Why do you laugh?...The story is about you.
+15,absum,"abesse, āfuī",verb,"be absent, be away"
+15,adsum,"adesse, adfuī",verb,"be present, be at"
+15,audīvit,,verb,"he, she, it heard, listened"
+15,probō,"probāre, probāvī (1)",verb,approve (of)
+15,annus,"-ī, m.",noun,year
+15,cōnsilium,"-iī, n.",noun,"plan, advice; judgment, understanding"
+15,fāma,"-ae, f.",noun,"rumor, reputation"
+15,locus,"-ī, m.",noun,"place, location; loca, -ōrum, n. pl. – places, locations"
+15,hic,"haec, hoc",pronoun,"this (s.), these (pl.)"
+15,ille,"illa, illud",pronoun,"that (s.), those (pl.)"
+15,satis,,noun/adverb,"enough, sufficient(ly)"
+15,contrā,,preposition,against
+15,propter,,preposition,on account of
+15,quam,,adverb,how (in exclamations)
+16,Annō Dominī (A.D.),,idiom,In the year of the Lord
+16,dīcit,,verb,"he, she, it says, speaks, tells"
+16,dīxit,,verb,"he, she, it said, spoke, told, has said"
+16,mittit,,verb,"he, she, it sends"
+16,venit,,verb,"he, she, it comes"
+16,vēnit,,verb,"he, she, it has come, came"
+16,quis,quid,pronoun,"who?, what?"
+16,socius,"-iī, m.",noun,"ally, companion"
+16,barbarus,"-a, -um",adjective,"foreign, barbarous; (noun) m./f. – foreigner, barbarian, stranger"
+16,-ne,,enclitic,expects a yes or no reply
+16,nōnne,,adverb,expects a yes reply
+16,num,,adverb,expects a no reply
+16,fortiter,,adverb,bravely
+17,inter alia,,idiom,among other things
+17,jubeō,"jubēre (2), jussī",verb,order (+ Accus. + Infin.)
+17,quī,"quae, quod",adjective,"which?, what?"
+17,circum,(+ Accus.),preposition,"around, about"
+17,hōra,"-ae, f.",noun,hour
+17,inter,(+ Accus.),preposition,"between (2), among (3+)"
+17,liber,"librī, m.",noun,book
+17,longē,,adverb,"far, at a distance, by far"
+17,mūrus,"-ī, m.",noun,wall
+18,et cētera (etc.),,idiom,and the rest
+18,aedificō,"aedificāre (1), aedificāvī",verb,build
+18,appellō,"appellāre (1), appellāvī",verb,"call by name, name (can take predicate Accus.)"
+18,cēterī,"-ae, -a",adjective,"the other, the rest of"
+18,parātus,"-a, -um",adjective,"prepared, ready"
+18,videor (2),,verb,"seem, appear (+ Infin. or predicate adj.)"
+18,prīmō,,adverb,"at first, originally"
+18,factum,"-ī, n.",noun,"deed, act, fact"
+18,sine,(+ Abl.),preposition,without
+19,id est (i.e.),,idiom,that is
+19,audācia,"-ae, f.",noun,"daring, boldness, audacity"
+19,fuga,"-ae, f.",noun,"flight, escape"
+19,nōtus,"-a, -um",adjective,"well-known, famous, familiar"
+19,is,"ea, id",pronoun,"this, that; his, her, its, their; him, her, them, etc."
+19,nec,neque,conjunction,"nor, and not"
+19,neque...neque,nec...nec,conjunction,neither...nor
+19,prope,(+ Accus.),preposition,"near, close to"
+20,sub poenā,,idiom,under penalty
+20,dēleō,"dēlēre (2), dēlēvī",verb,destroy
+20,respondeō,"respondēre (2), respondī",verb,"answer, reply, respond"
+20,dum,,conjunction,while (+ present indicative)
+20,sub,(+ Abl.),preposition,under; at the foot of (with stationary verb)
+20,sub,(+ Accus.),preposition,under (with verb of motion)
+20,vērus,"-a, -um",adjective,TRUE
+21,sub rosā,,idiom,under the rose (in secret)
+21,porta,"-ae, f.",noun,gate
+21,prīmus,"-a, -um",adjective,first
+21,suī,"sibi, sē, sē",pronoun,3rd person reflexive pron.
+21,sacer,"sacra, sacrum",adjective,"sacred, holy"
+21,tōtus,"-a, -um",adjective,"whole, entire"
+21,dūrus,"-a, -um",adjective,"hard, difficult, tough"
+22,suum cuique,,idiom,to each his own
+22,rogō,"rogāre (1), rogāvī",verb,"ask for, request; ask, inquire"
+22,suus,"-a, -um",adjective,3rd person reflexive adj.
+22,vulnerō,"vulnerāre (1), vulnerāvī",verb,"wound, injure"
+22,vester,"vestra, vestrum",adjective,"your, yours (2nd pl. possessive adj.)"
+22,inimīcus,"-ī, m.",noun,(personal) enemy
+22,igitur,,adverb,therefore
+22,initium,"-iī, n.",noun,"beginning, start"
+22,māne,,adverb,in the morning
+22,paene,,adverb,"almost, nearly"
+22,inimīcus,"-a, -um (+ Dative)",adjective,"unfriendly, hostile"
+22,postquam,,conjunction,after (+ perf. indic.)
+23,dūra lēx sed lēx,,idiom,harsh law but law
+23,cōnsul,"cōnsulis, m.",noun,consul
+23,pater,"patris, m.",noun,father
+23,dux,"ducis, m.",noun,leader
+23,pāx,"pācis, f.",noun,peace
+23,lēx,"lēgis, f.",noun,law
+23,prīnceps,"prīncipis, m.",noun,"leading citizen, chief, leader"
+23,lingua,"-ae, f.",noun,"tongue, language, speech"
+23,rēx,"rēgis, m.",noun,king
+23,magister,"magistrī, m.",noun,"teacher, master"
+23,vōx,"vōcis, f.",noun,voice
+23,māter,"mātris, f.",noun,mother
+24,pater patriae,,idiom,father of the fatherland
+24,sedeō,"sedēre (2), sēdī",verb,"sit, sit down, settle"
+24,mīles,"mīlitis, m.",noun,soldier
+24,salūs,"salūtis, f.",noun,"safety, salvation"
+24,caput,"capitis, n.",noun,head
+24,uxor,"uxōris, f.",noun,wife
+24,corpus,"corporis, n.",noun,body
+24,flūmen,"flūminis, n.",noun,river
+24,medius,"-a, -um",adjective,"middle, middle of"
+24,genus,"generis, n.",noun,"type, kind"
+24,paucī,"-ae, -a",adjective,few; (noun) a few
+24,homō,"hominis, m.",noun,"human, man"
+24,legiō,"legiōnis, f.",noun,legion
+24,sī,,conjunction,if
+25,rāra avis,,idiom,rare bird
+25,appropinquō,"-āre (1), -āvī",verb,"draw near, approach (+ Dat.)"
+25,mora,"-ae, f.",noun,delay
+25,nox,"noctis, f.",noun,night
+25,urbs,"urbis, f.",noun,city
+25,animal,"animālis, n.",noun,animal
+25,avis,"avis, f.",noun,bird
+25,mīrus,"-a, -um",adjective,"wondrous, amazing, remarkable"
+25,collis,"collis, m.",noun,hill
+25,summus,"-a, -um",adjective,"highest, top of"
+25,lūmen,"lūminis, n.",noun,light
+25,mare,"maris, n.",noun,"sea, ocean"
+25,procul,,adverb,"at a distance, far (away)"
+25,mōns,"montis, m.",noun,mountain
+25,undique,,adverb,on all sides
+26,aquā et igne interdictus,,idiom,banned from water and fire
+26,terreō,"terrēre (2), terruī, territus",verb,"frighten, terrify"
+26,imperātor,"imperātōris, m.",noun,"commander, general"
+26,animus,"-ī, m.",noun,"courage, mind, spirit; in animō habēre – to have in mind, to intend (+ infin.)"
+26,pēs,"pedis, m.",noun,foot
+26,cīvis,"cīvis, c.",noun,citizen
+26,noster,"nostra, nostrum",adjective,our
+26,comes,"comitis, c.",noun,companion
+26,dominus,"-ī, m.",noun,master
+26,crās,,adverb,tomorrow
+26,ignis,"ignis, m.",noun,fire
+26,magnopere,,adverb,greatly
+27,novus homō,,idiom,new man
+27,prohibeō,"prohibēre (2), prohibuī, prohibitus",verb,"prevent, prohibit, keep (from) (+ Acc. + Infin.; + ā/ab + Abl.)"
+27,mēns,"mentis, f.",noun,"mind, attitude"
+27,nōmen,"nōminis, n.",noun,name
+27,potestās,"potestātis, f.",noun,power
+27,virgō,"virginis, f.",noun,"maiden, virgin"
+27,arbor,"arboris, f.",noun,tree
+27,etiam,,adverb,"even, also, too"
+27,frāter,"frātris, (frātrum) m.",noun,brother
+27,numquam,,adverb,never
+27,gēns,"gentis, f.",noun,"tribe, nation"
+28,magnā cum laude,,idiom,with great praise
+28,audeō,"audēre (2), ausus sum",verb,dare (+ inf. or Acc. dir. obj.)
+28,nōbīs,,pronoun,us
+28,teneō,"tenēre (2), tenuī, tentus",verb,"hold, keep"
+28,vōs,,pronoun,you (pl.)
+28,idōneus,"-a, -um (+ Dat.)",adjective,"suitable, appropriate"
+28,iter,"itineris, n.",noun,"route, journey, trip, march"
+28,īra,"-ae, f.",noun,"anger, wrath"
+28,mors,"mortis, f.",noun,death
+28,interim,,adverb,meanwhile
+29,alibī,,idiom,elsewhere
+29,dēfendō,"dēfendere (3), dēfendī, dēfēnsus",verb,defend
+29,hostis,"hostis, m.",noun,"enemy (military); hostēs, hostium, m. pl. – the enemy"
+29,dīcō,"dīcere (3), dīxī, dictus",verb,"say, speak, tell"
+29,numerus,"-ī, m.",noun,"number, amount"
+29,dūcō,"dūcere (3), dūxī, ductus",verb,lead
+29,petō,"petere (3), petīvī, petītus",verb,"seek, beg, ask for, attack"
+29,relinquō,"relinquere (3), relīquī, relictus",verb,"leave, leave behind, abandon"
+29,septem,,adjective,seven
+30,nōn compos mentis,,idiom,not in control of one's mind
+30,capiō,"capere (3), cēpī, captus",verb,"seize, capture, take; cōnsilium capere – to form a plan"
+30,nāvis,"nāvis, f.",noun,ship
+30,cupiō,"cupere (3), cupīvī, cupītus",verb,"desire, want"
+30,oculus,"-ī, m.",noun,eye
+30,mittō,"mittere (3), mīsī, missus",verb,send
+30,sōl,"sōlis, m.",noun,sun
+30,unda,"-ae, f.",noun,wave
+30,vadum,"-ī, n.",noun,"ford, shallow place"
+30,classis,"classis, f.",noun,fleet
+30,ventus,"-ī, m.",noun,wind
+30,lītus,"lītoris, n.",noun,shore
+31,ālea jacta est,,idiom,the die is cast
+31,audiō,"audīre (4), audīvī, audītus",verb,"hear, listen to"
+31,furor,"furōris, m.",noun,"fury, rage, madness"
+31,dēligō,"dēligere (3), dēlēgī, dēlēctus",verb,"choose, select"
+31,moenia,"moenium, n. pl.",noun,"fortifications, walls"
+31,interficiō,"interficere (3), interfēcī, interfectus",verb,kill
+31,jaciō,"jacere (3), jēcī, jactus",verb,"throw, hurl"
+31,nihil,n.,noun,nothing
+31,veniō,"venīre (4), vēnī, ventum",verb,come
+31,vincō,"vincere (3), vīcī, victus",verb,"conquer, defeat"
+31,ūnus,"-a, -um",adjective,"one; sole, only"
+31,agmen,"agminis, n.",noun,"column, line of march"
+31,-que,,enclitic,and
+32,īra brevis furor est,,idiom,anger is a brief madness
+32,faciō,"facere (3), fēcī, factus",verb,"do, make; proelium facere – to fight a battle"
+32,jaceō,"jacēre (2), jacuī, —",verb,"lie, lie down"
+32,frangō,"frangere (3), frēgī, fractus",verb,"break, wreck"
+32,conjūnx,"conjugis, c.",noun,"husband, wife, spouse"
+32,fugiō,"fugere (3), fūgī, fugitūrus",verb,"flee, escape"
+32,gerō,"gerere (3), gessī, gestus",verb,"carry on, wage (war); wear"
+32,nōn sōlum...sed etiam,,conjunction,not only...but also
+33,obiter dictum,,idiom,said in passing
+33,āmittō,"āmittere (3), āmīsī, āmissus",verb,lose
+33,fīnis,"fīnis, m.",noun,"end, limit, boundary; (pl.) territory"
+33,incipiō,"incipere (3), incēpī, inceptus",verb,"begin, take on (+ infin.)"
+33,somnus,"-ī, m.",noun,sleep
+33,inveniō,"invenīre (4), invēnī, inventus",verb,"find, come upon"
+33,iter facere,,verb,"to march, make a journey, travel"
+33,autem,,conjunction,"but, however"
+33,suprā,(+ Accus.),preposition,"above, over"
+34,nīl novī sub sōle,,idiom,nothing new under the sun
+34,agō,"agere (3), ēgī, āctus",verb,"do, drive, accomplish; nihil agere – to accomplish nothing"
+34,cōnstituō,"cōnstituere (3), cōnstituī, cōnstitūtus",verb,"decide (+ infin.); station, determine, establish (+ Accus.)"
+34,prōmittō,"prōmittere (3), prōmīsī, prōmissus",verb,promise (+ dat. ind. obj.)
+34,lūx,"lūcis, f.",noun,"light, daylight; prīma lūx – first light, dawn"
+34,sanguis,"sanguinis, m.",noun,blood
+34,sōror,"sōrōris, f.",noun,sister
+34,fēlīx,fēlīcis (Gen.),adjective,"fortunate, happy"
+34,īnfēlīx,īnfēlīcis (Gen.),adjective,unfortunate
+34,potēns,potentis (Gen.),adjective,powerful
+35,omnia vincit labor,,idiom,work conquers all
+35,excēdō,"excēdere (3), excessī, excessum",verb,"go out, leave, depart"
+35,recēdō,"recēdere (3), recessī, recessum",verb,"withdraw, go back"
+35,respiciō,"respicere (3), respexī, respectus",verb,look back (at)
+35,amor,"amōris, m.",noun,"love, desire"
+35,dolor,"dolōris, m.",noun,"sorrow, grief, pain"
+35,omnis,omne,adjective,"all, every"
+35,ācer,"ācris, ācre",adjective,"sharp, fierce"
+35,libenter,,adverb,"willingly, freely"
+35,quidem,,adverb,indeed
+36,"hodiē mihi, crās tibi",,idiom,"today for me, tomorrow for you"
+36,recognōscō,"recognōscere (3), recognōvī, recognitus",verb,recognize
+36,scrībō,"scrībere (3), scrīpsī, scrīptus",verb,write
+36,īnsigne,"īnsignis, n.",noun,"badge, mark, decoration; (pl.) insignia"
+36,odium,"odiī, n.",noun,hatred
+36,certē,,adverb,"surely, certainly"
+36,graviter,,adverb,"heavily, seriously, severely, deeply"
+37,aut viam inveniam aut faciam,,idiom,I will either find a way or make one
+37,aperiō,"aperīre (4), aperuī, apertus",verb,"open, reveal, uncover"
+37,claudō,"claudere (3), clausī, clausus",verb,close
+37,gaudium,"-iī, n.",noun,joy
+37,ūnus,"-a, -um",adjective,one
+37,duo,"duae, duo",adjective,two
+37,trēs,tria,adjective,three
+37,quattuor,,adjective,four
+37,quīnque,,adjective,five
+37,sex,,adjective,six
+37,septem,,adjective,seven
+37,octō,,adjective,eight
+37,novem,,adjective,nine
+37,decem,,adjective,ten
+37,gravis,grave,adjective,"heavy, serious, severe"
+37,sapiēns,sapientis,adjective,wise
+37,quam,,conjunction,than (in comparisons)
+38,"altius, citius, fortius",,idiom,"higher, faster, stronger"
+38,dēsistō,"dēsistere (3), dēstitī, dēstitum",verb,cease (+ infin.)
+38,jungō,"jungere (3), jūnxī, jūnctus",verb,join
+38,juvenis,"juvenis, (juvenum), c.",noun,"young man, young woman, youth"
+38,rēgia,"-ae, f.",noun,palace
+38,certus,"-a, -um",adjective,"sure, certain, definite"
+38,difficilis,difficile,adjective,difficult
+38,facilis,facile,adjective,easy
+38,fortis,forte,adjective,"brave, strong"
+38,facile,,adverb,easily
+39,nēmō līber est quī corporī servit,,idiom,no one is free who serves his body
+39,conveniō,"convenīre (4), convēnī, conventum",verb,"come together, assemble, gather"
+39,jūdicium,"-iī, n.",noun,"judgment, decision"
+39,jūdex,"jūdicis, m.",noun,"judge, juror"
+39,mālum,"-ī, n.",noun,apple
+39,potentia,"-ae, f.",noun,power
+39,sapientia,"-ae, f.",noun,"wisdom, prudence"
+39,quī,"quae, quod",pronoun,"who, which"
+39,facile,,adverb,"easily, readily"
+40,nōn semper ea sunt quae videntur,,idiom,things are not always what they seem
+40,accipiō,"accipere (3), accēpī, acceptus",verb,"receive; perceive, learn; suffer"
+40,crēdō,"crēdere (3), crēdidī, crēditus",verb,"believe, trust (+ dat.)"
+40,discēdō,"discēdere (3), discessī, discessum",verb,"depart, leave"
+40,ostendō,"ostendere (3), ostendī, ostentus",verb,"show, display, reveal"
+40,sentiō,"sentīre (4), sēnsī, sēnsus",verb,"realize, feel, perceive, believe"
+40,causa,"-ae, f.",noun,"cause, reason"
+41,damnant quod nōn intellegunt,,idiom,they condemn what they do not understand
+41,pōnō,"pōnere (3), posuī, positus",verb,"place, put"
+41,sciō,"scīre (4), scīvī, scītus",verb,"know, be aware"
+41,scelus,"sceleris, n.",noun,"crime, wickedness; + facere – to commit a crime"
+42,quī bene amat bene castīgat,,idiom,he who loves well punishes well
+42,dēserō,"dēserere (3), dēseruī, dēsertus",verb,"abandon, desert"
+42,trahō,"trahere (3), traxī, tractus",verb,"drag, pull"
+42,cōnspectus,"cōnspectūs, m.",noun,"sight, view"
+42,cornū,"cornūs, n.",noun,"horn, wing (of an army)"
+42,exercitus,"exercitūs, m.",noun,army
+42,impetus,"impetūs, m.",noun,"attack; impetum facere in (+ acc.) – to make an attack on/upon, to attack"
+42,signum,"-ī, n.",noun,"signal, (military) standard; statue"
+42,celer,"celeris, celere",adjective,"quick, swift"
+43,alter ego,,idiom,another self
+43,vīs,"vīs, f.",noun,"force, violence; (plur.) vīrēs, vīrium – strength, power"
+43,ego,"meī, mihi, mē, mē",pronoun,"I, me"
+43,nōs,"nostrum/nostrī, nōbīs, nōs, nōbīs",pronoun,"we, us"
+43,tū,"tuī, tibi, tē, tē",pronoun,you (s.)
+43,vōs,"vestrum / vestrī, vōbīs, vōs, vōbīs",pronoun,you (pl.)
+43,adversus,"-a, -um (adj. + Dat.)",adjective,"unfavorable, opposed"
+43,maestus,"-a, -um",adjective,"sad, gloomy"
+43,secundus,"-a, -um (adj. + Dat.)",adjective,"second, favorable"
+43,domī,,adverb,"at home, home"
+44,minima dē malīs,,idiom,the least of evils
+44,conjiciō,"conjicere (3), conjēcī, conjectus",verb,"throw, hurl"
+44,perveniō,"pervenīre (4), pervēnī, perventum",verb,"arrive at, reach (+ ad + acc.)"
+44,putō,"putāre (1), putāvī, putātus",verb,"think, consider"
+44,regō,"regere (3), rēxī, rēctus",verb,"direct, guide, rule"
+44,imperātum,"-ī, n.",noun,"command, order"
+44,voluntās,"voluntātis, f.",noun,"wish, desire, will; will toward (+ in + acc.)"
+45,bis vīvit quī bene vīvit,,idiom,he lives twice who lives well
+45,abeō,"abīre, abiī, abitum",verb,"go away, leave"
+45,adeō,"adīre, adiī aditum",verb,go to(ward) (+ ad + Accus. or + Accus. direct object)
+45,eō,"īre, iī, itum",verb,go
+45,occīdō,"occīdere (3), occīdī, occīsus",verb,"kill, slay, slaughter"
+45,redeō,"redīre, rediī, reditum",verb,"go back, return"
+45,trānseō,"trānsīre, trānsiī, trānsitum",verb,"go across, cross (+ Accus. direct object)"
+45,manus,"manūs, f.",noun,hand; band (of people)
+45,nōbilis,nōbile,adjective,"noble, well-born; (noun) c. – a nobleman/woman; (pl.) the nobles"
+46,carpe diem,,idiom,seize the day
+46,tegō,"tegere (3), tēxī, tēctus",verb,"cover, protect"
+46,diēs,diēī m.,noun,"day, daytime, period"
+46,portus,"portūs, m.",noun,"harbor, port"
+46,rēs,"reī, f.",noun,"thing, matter, affair, deed"
+46,tempus,"temporis, n.",noun,time
+46,brevis,breve,adjective,"short, brief"
+47,in mediās rēs,,idiom,into the middle of things
+47,dēferō,"dēferre, dētulī, dēlātus",verb,"bring down, report (+ ad + Accus.)"
+47,expōnō,"expōnere (3), exposuī, expositus",verb,"arrange, set out, explain; disembark"
+47,ferō,"ferre, tulī, lātus",verb,"carry, bring, bear, endure"
+47,nōlō,"nōlle, nōluī",verb,"be unwilling, not want/wish"
+47,volō,"velle, voluī",verb,"be willing, wish"
+47,memoria,"-ae, f.",noun,"memory, mind; memoriā tenēre – remember (lit., hold in/by memory) (+ ind. stat.)"
+47,nōnnūllī,"-ae, -a",adjective,"some, several"
+48,nātūram expellēs furcā tamen usque recurret,,idiom,"you may drive out nature with a pitchfork, yet it will always return"
+48,cognōscō,"cognōscere (3), cognōvī, cognitus",verb,"learn, come to know; (perf.) know"
+48,nātūra,"-ae, f.",noun,"nature, character, condition"
+48,passus,"passūs, m.",noun,"pace, step"
+48,dulcis,dulce,adjective,"sweet, pleasant"
+48,mīlle,(indecl. adj.),adjective,"thousand, 1000; (+ passūs) one mile"
+48,mīlia,"mīlium (noun), n. pl.",noun,thousands; (+ passuum) miles
+48,īdem,"eadem, idem",pronoun,the same
+48,quīdam,"quaedam, quiddam (quoddam)",pronoun,"a certain, a particular"
+49,nōn sequitur,,idiom,it does not follow
+49,circumveniō (4),"circumvenīre, circumvēnī, circumventus",verb,surround; (+ accus. d.o.)
+49,cōnor (1),"cōnārī, cōnātus sum",verb,"try, attempt (+ infin.)"
+49,contendō (3),"contendere, contendī, contentus",verb,"struggle (+ cum + Abl.); hasten, hurry (sometimes + infin.)"
+49,coorior (4),"coorīrī, coortus sum",verb,"arise, rise"
+49,exeō,"exīre, exiī, exitum",verb,"go out, leave"
+49,proficīscor (3),"proficīscī, profectus sum",verb,"set out, start out"
+49,sequor (3),"sequī, secūtus sum",verb,follow
+49,tollō (3),"tollere, sustulī, sublātus",verb,"raise; raze, destroy"
+49,vagor (1),"vagārī, vagātus sum",verb,"wander, roam"
+49,ignōtus,"-a, -um (adj. + Dat.)",adjective,"unknown, ignoble"
+50,moritūrī tē salūtāmus,,idiom,we who are about to die salute you
+50,efficiō,"efficere (3), effēcī, effectus",verb,"accomplish, bring about"
+50,ērumpō,"ērumpere (3), ērūpī, ēruptus",verb,"burst out, break out"
+50,rapiō,"rapere (3), rapuī, raptus",verb,"snatch, grab, seize"
+50,recipiō,"recipere (3), recēpī, receptus",verb,"take back, accept, rescue; sē recipere – to retreat"
+50,labor,"labōris, m.",noun,"labor, effort, toil"
+50,nēmō,"nēminī (Dat.), nēminem (Accus.), c.",noun,"no one, nobody"
+50,cupidus,"-a, -um (adj. + Gen.)",adjective,desirous
+50,interior,interius (compar. adj.),adjective,"inner, private"
+50,ipse,"-a, -um",pronoun,"him/her/itself, themselves; the very"
+51,modus operandī,,idiom,way of operating
+51,cōgō,"cōgere (3), coēgī, coāctus",verb,"collect, gather; force, compel"
+51,currō,"currere (3), cucurrī, cursum",verb,"run, hasten"
+51,possum,"posse, potuī",verb,"be able, can"
+51,repellō,"repellere (3), reppulī, repulsus",verb,"drive back, repulse, repel"
+51,adventus,"adventūs, m.",noun,"arrival, approach"
+51,scientia,"-ae, f.",noun,"knowledge, skill"
+51,vīgintī,,adjective,twenty
+51,praeter,,preposition,"except, besides, past, beyond"
+52,ipsō factō,,idiom,by the fact itself
+52,quisque,"quaeque, quidque/quicque",pronoun,"each one, each thing, every one"
+52,quisque,"quaeque, quodque",adjective,"each, every"
+52,nisi,,conjunction,"if not, unless"
+53,spēs semper resurgit,,idiom,hope always rises again
+53,obtineō,"obtinēre (2), obtinuī, obtentus",verb,"hold, occupy"
+53,spērō,"spērāre (1), spērāvī, spērātus",verb,hope
+53,suscipiō,"suscipere (3), suscēpī, susceptus",verb,undertake
+53,vehō,"vehere (3), vēxī, vectus",verb,"carry, haul; (pass.) sail"
+53,spēs,"speī, f.",noun,hope
+53,crūdēlis,crūdēle,adjective,"cruel, unmerciful"
+53,cum,,conjunction,"when, since"
+53,ob,,preposition,on account of
+53,quam ob causam,,idiom,"why?; therefore, for this reason"
+54,insatiābilis quaedam cupiditās vērī videndī,,idiom,a certain insatiable desire for seeing the truth
+54,intellegō,"intellegere (3), intellēxī, intellēctus",verb,"understand, realize"
+54,nesciō,"nescīre (4), nescīvī, nescītus",verb,"not know, be ignorant"
+54,quaerō,"quaerere (3), quaesīvī, quaesītus",verb,"ask, inquire, ask of someone; seek, search for"
+54,cupiditās,"cupiditātis, f.",noun,"greed, desire"
+54,quantus,"quanta, quantum",adjective,how great? how large?; (pl.) how many?
+54,tantus,"tanta, tantum",adjective,"so great, so much; (pl.) so many"
+54,cum,,conjunction,although
+55,virtūs et scientia,,idiom,courage and knowledge
+55,arbitror,"arbitrārī (1), arbitrātus sum",verb,"think, consider, judge"
+55,ēgredior,"ēgredī (3), ēgressus sum",verb,"go out, depart, set out"
+55,persuādeō,"persuādēre (2), persuāsī, persuāsus",verb,persuade
+55,trādō,"trādere (3), trādidī, trāditus",verb,"hand over, surrender, hand down; sē trādere – to surrender"
+55,spatium,"spatiī, n.",noun,"space, distance, interval"
+55,virtūs,"virtūtis, f.",noun,"manliness, courage, bravery"
+55,paulō,,adverb,"a little, somewhat"
+55,simul atque,,conjunction,as soon as
+56,tempus edax rērum,,idiom,"time, the devourer of things"
+56,hortor,"hortārī (1), hortātus sum",verb,"encourage, urge"
+56,imperō,"imperāre (1), imperāvī, imperātus",verb,"command, order"
+56,praeficiō,"praeficere (3), praefēcī, praefectus",verb,put in charge (of)
+56,reperiō,"reperīre (4), repperī, repertus",verb,"find out, discover, learn"
+57,magnum opus,,idiom,great work
+57,ēripiō,"ēripere (3), ēripuī, ēreptus",verb,"tear away, steal, rescue"
+57,licet,"licēre (2), licuit or licitum est",verb,"it is allowed/permitted, one may"
+57,mūniō,"mūnīre (4), mūnīvī, mūnītus",verb,"fortify, secure, build"
+57,oportet,"oportēre (2), oportuit",verb,"it is right, one must"
+57,opus,"operis, n.",noun,"(complete) work, fortification"
+57,vulnus,"vulneris, n.",noun,wound
+58,annuit coeptīs,,idiom,he nods at the undertakings
+58,coepī,"coepisse, coeptus",verb,"began, started"
+58,negō,"negāre (1), negāvī, negātus",verb,"say…not, deny"
+58,occurrō,"occurrere (3), occucurrī or occurrī, occursum",verb,"run into, meet"
+58,tālis,tāle,adjective,"such, of such a kind"
+58,tam,,adverb,so
+59,imperium sine fīne dedī,,idiom,I have given empire without end
+59,potior,"potīrī (4), potītus sum",verb,get possession of
+59,ūtor,"ūtī (3), ūsus sum",verb,"use, employ"
+59,imperium,"imperiī, n.",noun,"command, power, rule"
+59,multitūdō,"multitūdinis, f.",noun,"great number, crowd, multitude, majority"
+59,tandem,,adverb,"at last, finally"
+60,"multum legendum esse, non multa",,idiom,"much should be read, not many things"
+60,audeō,"audēre (2), ausus sum",verb,dare
+60,condō,"condere (3), condidī, conditus",verb,"found, establish, build"
+60,legō,"legere (3), lēgī, lēctus",verb,"gather, choose, read"
+60,alter,"altera, alterum",adjective,the other (of two)
+60,neuter,"neutra, neutrum",adjective,neither (of two)
+60,ūllus,"ūlla, ūllum",adjective,"any, some"
+60,uter,"utra, utrum",adjective,which? (of two)
+60,uterque,"utraque, utrumque",adjective,"each (of two), both"
+61,in cīvitāte līberā linguam mentemque līberās esse dēbēre,,idiom,"in a free state, the tongue and mind ought to be free"
+61,augeō,"augēre (2), auxī, auctus",verb,"increase, enlarge"
+61,ōdī,"ōdisse (3), ōsus",verb,"hate, dislike"
+61,perturbō,"perturbāre (1), perturbāvī, perturbātus",verb,"throw into confusion, alarm"
+61,resistō,"resistere (3), restitī, —",verb,"resist, oppose"
+61,aciēs,"aciēī, f.",noun,"line of battle, battle line"
+61,cīvitās,"cīvitātis, f.",noun,"state, community"
+61,lēgātus,"lēgātī, m.",noun,"officer, envoy, ambassador"
+61,pars,"partis, f.",noun,"part, direction, section; in omnēs partēs – in all directions"
+61,societās,"societātis, f.",noun,"alliance, association"
+61,duodecim,,adjective,twelve
+61,firmus,"firma, firmum",adjective,"strong, stable"
+61,pār,paris,adjective,"equal, like"
+61,hinc,,adverb,"from here, hence"
+62,pedibus timor addidit ālās,,idiom,fear added wings to his feet
+62,caedō,"caedere (3), cecīdī, caesus",verb,"kill, slaughter"
+62,cōnsistō,"cōnsistere (3), cōnstitī, —",verb,"make a stand, halt, stand"
+62,cōnspiciō,"cōnspicere (3), cōnspexī, cōnspectus",verb,"catch sight of, observe"
+62,opprimō,"opprimere (3), oppressī, oppressus",verb,"overwhelm, crush"
+62,orior,"orīrī (4), ortus sum",verb,"arise, rise, spring (from)"
+62,sustineō,"sustinēre (2), sustinuī, sustentus",verb,"withstand, endure, support"
+62,timor,"timōris, m.",noun,fear
+62,enim,,conjunction,for
+62,vix,,adverb,"hardly, scarcely"
+63,nōlī jūdicāre nē jūdicēris,,idiom,do not judge lest you be judged
+63,accidō,"accidere (3), accidī, —",verb,happen
+63,jūdicō,"jūdicāre (1), jūdicāvī, jūdicātus",verb,"judge, deem"
+63,polliceor,"pollicērī (2), pollicitus sum",verb,promise
+64,integer vītae scelerisque pūrus,,idiom,upright in life and pure of crime
+64,praestō,"praestāre (1), praestitī, praestitum",verb,"stand before, excel"
+64,vereor,"verērī (2), veritus sum",verb,fear
+64,amīcitia,"–ae, f.",noun,friendship
+64,jūs,"jūris, n.",noun,"right, rights, law"
+64,integer,"integra, integrum",adjective,"whole, entire, fresh"
