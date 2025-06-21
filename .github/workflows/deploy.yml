@@ -3,12 +3,20 @@ name: Build and Deploy React App
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
     - name: Checkout code
@@ -18,21 +26,27 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18.20.4'
+        cache: 'npm'
+        cache-dependency-path: 'ludus-flashcards/package-lock.json'
         
-    - name: Clean and install dependencies
+    - name: Install dependencies
       run: |
         cd ludus-flashcards
-        rm -rf node_modules package-lock.json
-        npm install --legacy-peer-deps
+        npm ci --legacy-peer-deps
         
     - name: Build application
       run: |
         cd ludus-flashcards
         CI=false npm run build
         
-    - name: Deploy to GitHub Pages
-      if: github.ref == 'refs/heads/main'
-      uses: peaceiris/actions-gh-pages@v4
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+      
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./ludus-flashcards/build 
+        path: ./ludus-flashcards/build
+        
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4 
