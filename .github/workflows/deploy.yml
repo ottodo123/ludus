@@ -17,12 +17,13 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '18.20.4'
         
-    - name: Install dependencies
+    - name: Clean and install dependencies
       run: |
         cd ludus-flashcards
-        npm ci --prefer-offline --no-audit
+        rm -rf node_modules package-lock.json
+        npm install --legacy-peer-deps
         
     - name: Build application
       run: |
