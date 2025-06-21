@@ -94,7 +94,10 @@ export const getDefaultStatistics = () => ({
   sessionsCompleted: 0,
   lastStudyDate: null,
   dailyGoal: 20,
-  weeklyGoal: 100
+  weeklyGoal: 100,
+  // Daily tracking
+  studiedToday: 0,
+  studiedTodayDate: new Date().toISOString().split('T')[0] // YYYY-MM-DD
 });
 
 // Update a single card in storage

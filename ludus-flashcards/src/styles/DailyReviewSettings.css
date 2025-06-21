@@ -348,12 +348,39 @@
 /* Checkbox Styles */
 .checkbox-label {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
   font-size: 14px;
   color: #374151;
   margin: 0;
   margin-bottom: 8px;
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.checkbox-label:hover {
+  border-color: #d1d5db;
+  background-color: #f9fafb;
+}
+
+.checkbox-content {
+  flex: 1;
+  margin-left: 8px;
+}
+
+.checkbox-content strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.checkbox-content p {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.4;
 }
 
 .checkbox-label:last-child {
@@ -371,10 +398,28 @@
   width: 16px;
   height: 16px;
   cursor: pointer;
+  margin-top: 2px;
+  flex-shrink: 0;
 }
 
 .checkbox-label.disabled input[type="checkbox"] {
   cursor: not-allowed;
+}
+
+/* Override styles for simple checkboxes (not in selection mode) */
+.auto-settings .checkbox-label,
+.setting-group:not(.setting-group:has(.selection-mode-options)) .checkbox-label:not(.curriculum-toggle) {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  align-items: center;
+  background: none;
+}
+
+.auto-settings .checkbox-label:hover,
+.setting-group:not(.setting-group:has(.selection-mode-options)) .checkbox-label:not(.curriculum-toggle):hover {
+  border: none;
+  background: none;
 }
 
 .checkmark {

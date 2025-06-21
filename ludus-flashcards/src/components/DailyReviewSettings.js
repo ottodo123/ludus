@@ -6,9 +6,29 @@ import '../styles/DailyReviewSettings.css';
 const DailyReviewSettings = ({ onClose, onSave }) => {
   const { preferences, updatePreference, cards } = useFlashcards();
   
+  // Migration function for legacy selectionMode preference
+  const migrateSelectionMode = (prefs) => {
+    if (prefs.selectionMode && prefs.useAutomatic === undefined && prefs.useManual === undefined) {
+      switch (prefs.selectionMode) {
+        case 'auto':
+          return { useAutomatic: true, useManual: false };
+        case 'manual':
+          return { useAutomatic: false, useManual: true };
+        case 'both':
+          return { useAutomatic: true, useManual: true };
+        default:
+          return { useAutomatic: true, useManual: false };
+      }
+    }
+    return {};
+  };
+
+  const migratedPrefs = migrateSelectionMode(preferences);
+
   const [settings, setSettings] = useState({
     dailyCardLimit: preferences.dailyCardLimit || 20,
-    selectionMode: preferences.selectionMode || 'auto', // 'auto', 'manual', 'both'
+    useAutomatic: preferences.useAutomatic !== undefined ? preferences.useAutomatic : (migratedPrefs.useAutomatic !== undefined ? migratedPrefs.useAutomatic : true),
+    useManual: preferences.useManual !== undefined ? preferences.useManual : (migratedPrefs.useManual !== undefined ? migratedPrefs.useManual : false),
     autoIncludeStudied: preferences.autoIncludeStudied !== undefined ? preferences.autoIncludeStudied : true,
     manualSelections: preferences.manualSelections || {
       ludus: {
@@ -29,7 +49,7 @@ const DailyReviewSettings = ({ onClose, onSave }) => {
     },
     prioritizeDue: preferences.prioritizeDue !== undefined ? preferences.prioritizeDue : true,
     includeNewCards: preferences.includeNewCards !== undefined ? preferences.includeNewCards : false,
-    studyMoreIncrement: preferences.studyMoreIncrement || 10
+
   });
 
   // Get available chapters for each curriculum
@@ -58,10 +78,19 @@ const DailyReviewSettings = ({ onClose, onSave }) => {
   };
 
   const updateSetting = (key, value) => {
-    setSettings(prev => ({
-      ...prev,
-      [key]: value
-    }));
+    setSettings(prev => {
+      const newSettings = {
+        ...prev,
+        [key]: value
+      };
+      
+      // When automatic is enabled, automatically set autoIncludeStudied to true
+      if (key === 'useAutomatic' && value === true) {
+        newSettings.autoIncludeStudied = true;
+      }
+      
+      return newSettings;
+    });
   };
 
   const updateManualSelection = (curriculum, key, value) => {
@@ -107,17 +136,15 @@ const DailyReviewSettings = ({ onClose, onSave }) => {
   };
 
   const getSelectionSummary = () => {
-    const { selectionMode, autoIncludeStudied, manualSelections } = settings;
+    const { useAutomatic, useManual, manualSelections } = settings;
     
     let summary = [];
     
-    if (selectionMode === 'auto' || selectionMode === 'both') {
-      if (autoIncludeStudied) {
-        summary.push('Previously studied cards');
-      }
+    if (useAutomatic) {
+      summary.push('Previously studied cards');
     }
     
-    if (selectionMode === 'manual' || selectionMode === 'both') {
+    if (useManual) {
       Object.keys(manualSelections).forEach(curriculum => {
         const selection = manualSelections[curriculum];
         if (selection.enabled) {
@@ -173,71 +200,38 @@ const DailyReviewSettings = ({ onClose, onSave }) => {
           <div className="setting-group">
             <label className="setting-label">Card Selection Mode</label>
             <div className="selection-mode-options">
-              <label className="radio-label">
+              <label className="checkbox-label">
                 <input
-                  type="radio"
-                  name="selectionMode"
-                  value="auto"
-                  checked={settings.selectionMode === 'auto'}
-                  onChange={e => updateSetting('selectionMode', e.target.value)}
+                  type="checkbox"
+                  checked={settings.useAutomatic}
+                  onChange={e => updateSetting('useAutomatic', e.target.checked)}
                 />
-                <span className="radio-custom"></span>
-                <div className="radio-content">
-                  <strong>Automatic Only</strong>
+                <span className="checkmark"></span>
+                <div className="checkbox-content">
+                  <strong>Automatic</strong>
                   <p>System automatically includes previously studied cards</p>
                 </div>
               </label>
               
-              <label className="radio-label">
+              <label className="checkbox-label">
                 <input
-                  type="radio"
-                  name="selectionMode"
-                  value="manual"
-                  checked={settings.selectionMode === 'manual'}
-                  onChange={e => updateSetting('selectionMode', e.target.value)}
+                  type="checkbox"
+                  checked={settings.useManual}
+                  onChange={e => updateSetting('useManual', e.target.checked)}
                 />
-                <span className="radio-custom"></span>
-                <div className="radio-content">
-                  <strong>Manual Only</strong>
+                <span className="checkmark"></span>
+                <div className="checkbox-content">
+                  <strong>Manual</strong>
                   <p>You choose specific chapters/sets to include</p>
-                </div>
-              </label>
-              
-              <label className="radio-label">
-                <input
-                  type="radio"
-                  name="selectionMode"
-                  value="both"
-                  checked={settings.selectionMode === 'both'}
-                  onChange={e => updateSetting('selectionMode', e.target.value)}
-                />
-                <span className="radio-custom"></span>
-                <div className="radio-content">
-                  <strong>Automatic + Manual</strong>
-                  <p>Combine automatic selection with manual choices</p>
                 </div>
               </label>
             </div>
           </div>
 
-          {/* Automatic Settings */}
-          {(settings.selectionMode === 'auto' || settings.selectionMode === 'both') && (
-            <div className="setting-group auto-settings">
-              <label className="setting-label">🤖 Automatic Selection</label>
-              <label className="checkbox-label">
-                <input
-                  type="checkbox"
-                  checked={settings.autoIncludeStudied}
-                  onChange={e => updateSetting('autoIncludeStudied', e.target.checked)}
-                />
-                <span className="checkmark"></span>
-                Include all previously studied cards (recommended)
-              </label>
-            </div>
-          )}
+
 
           {/* Manual Settings */}
-          {(settings.selectionMode === 'manual' || settings.selectionMode === 'both') && (
+          {settings.useManual && (
             <div className="setting-group manual-settings">
               <label className="setting-label">✋ Manual Selection</label>
               
@@ -343,21 +337,7 @@ const DailyReviewSettings = ({ onClose, onSave }) => {
             </label>
           </div>
 
-          {/* Study More Increment */}
-          <div className="setting-group">
-            <label className="setting-label">"Study More" Additional Cards</label>
-            <div className="card-limit-options">
-              {[5, 10, 15, 20].map(increment => (
-                <button
-                  key={increment}
-                  className={`limit-btn ${settings.studyMoreIncrement === increment ? 'active' : ''}`}
-                  onClick={() => updateSetting('studyMoreIncrement', increment)}
-                >
-                  +{increment}
-                </button>
-              ))}
-            </div>
-          </div>
+
         </div>
 
         <div className="modal-actions">

@@ -3,8 +3,6 @@ import { useFlashcards } from '../contexts/FlashcardContext';
 import { 
   getDailyReviewCards, 
   getStudyMoreCards, 
-  getDailyProgress, 
-  isDailyGoalCompleted,
   getSelectionSummary 
 } from '../utils/dailyReview';
 import LudusFolder from './LudusFolder';
@@ -13,15 +11,18 @@ import DailyReviewSettings from './DailyReviewSettings';
 import '../styles/FlashcardsPage.css';
 
 const FlashcardsPage = () => {
-  const { cards, preferences } = useFlashcards();
+  const { cards, preferences, getStudiedToday, statistics } = useFlashcards();
   const [currentView, setCurrentView] = useState('main'); // 'main', 'ludus', 'study'
   const [studyCards, setStudyCards] = useState([]);
   const [showSettings, setShowSettings] = useState(false);
-  const [studiedToday, setStudiedToday] = useState([]);
-  const [isStudyMoreSession, setIsStudyMoreSession] = useState(false);
+
   const [isStudying, setIsStudying] = useState(false);
   const [currentStudyCards, setCurrentStudyCards] = useState([]);
   const [hasStudiedMore, setHasStudiedMore] = useState(false);
+  const [isInDailyReviewFlow, setIsInDailyReviewFlow] = useState(false);
+
+  // Get today's studied count from context
+  const studiedTodayCount = getStudiedToday();
 
   // Get daily review data
   const dailyReviewData = useMemo(() => {
@@ -33,15 +34,29 @@ const FlashcardsPage = () => {
     return getSelectionSummary(preferences, cards);
   }, [preferences, cards]);
   
-  // Get daily progress
+  // Get daily progress using context statistics
   const dailyProgress = useMemo(() => {
-    return getDailyProgress(studiedToday, preferences.dailyCardLimit || 20);
-  }, [studiedToday, preferences.dailyCardLimit]);
+    const today = new Date().toISOString().split('T')[0];
+    const studiedToday = statistics.studiedTodayDate === today ? 
+      (statistics.studiedToday || 0) : 0;
+    const dailyGoal = preferences.dailyCardLimit || 20;
+    const percentage = Math.min(100, Math.round((studiedToday / dailyGoal) * 100));
+    
+    return {
+      completed: studiedToday,
+      remaining: Math.max(0, dailyGoal - studiedToday),
+      percentage,
+      isComplete: studiedToday >= dailyGoal,
+      total: dailyGoal
+    };
+  }, [statistics, preferences.dailyCardLimit]);
 
-  // Check if daily goal is completed
+  // Check if daily goal is completed (either by studying enough cards OR studying all available)
   const goalCompleted = useMemo(() => {
-    return isDailyGoalCompleted(studiedToday, preferences.dailyCardLimit || 20);
-  }, [studiedToday, preferences.dailyCardLimit]);
+    const standardGoalCompleted = dailyProgress.isComplete;
+    const hasStudiedAllSelected = dailyReviewData.stats.hasStudiedAllSelected;
+    return standardGoalCompleted || hasStudiedAllSelected;
+  }, [dailyProgress.isComplete, dailyReviewData.stats.hasStudiedAllSelected]);
 
   // Reset studied today at midnight
   useEffect(() => {
@@ -50,7 +65,6 @@ const FlashcardsPage = () => {
     const msUntilMidnight = tomorrow.getTime() - now.getTime();
 
     const timer = setTimeout(() => {
-      setStudiedToday([]);
       setHasStudiedMore(false);
     }, msUntilMidnight);
 
@@ -59,25 +73,51 @@ const FlashcardsPage = () => {
 
   const handleStartDailyReview = () => {
     if (dailyReviewData.dailyCards.length === 0) {
-      alert('No cards available for daily review. Please check your selection settings.');
+      // If no daily cards, always try to find study more cards (since user clicked the button)
+      const moreCards = getStudyMoreCards(cards, [], preferences); // Use empty array since context tracks the count
+      if (moreCards.length > 0) {
+        setCurrentStudyCards(moreCards);
+        setIsInDailyReviewFlow(true);
+        setIsStudying(true);
+        setHasStudiedMore(true);
+        return;
+      }
+      alert('Excellent work! You\'ve studied all available vocabulary in your selection. Consider adjusting your selection settings to include more content.');
       return;
     }
     
     setCurrentStudyCards(dailyReviewData.dailyCards);
+    setIsInDailyReviewFlow(true);
     setIsStudying(true);
   };
 
-  const handleStudyMore = () => {
-    const moreCards = getStudyMoreCards(cards, studiedToday, preferences);
+  const handleStudyMoreFromSession = async (completedCards) => {
+    // First, process the completed session - the grading happens in the StudySession component
+    // So we just need to wait for Firebase writes and then get fresh study more cards
+    
+    // Wait a moment to ensure all Firebase writes from the completed session are processed
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
+    // Find study more cards
+    const moreCards = getStudyMoreCards(cards, [], preferences); // Empty array since we're checking Firebase data
     
     if (moreCards.length === 0) {
-      alert('No additional cards available for study. Great job completing your available content!');
+      alert('Excellent work! You\'ve studied all available vocabulary. You\'ve achieved mastery of your selected content!');
+      setIsStudying(false);
+      setCurrentStudyCards([]);
+      setIsInDailyReviewFlow(false);
       return;
     }
     
-    setCurrentStudyCards(moreCards);
-    setIsStudying(true);
+    // Start the new session with proper state management
+    setCurrentStudyCards([]); // Clear first to force re-render
+    // Keep setIsInDailyReviewFlow(true) - we're still in the daily review flow
     setHasStudiedMore(true);
+    
+    // Use setTimeout to ensure state updates are processed before starting new session
+    setTimeout(() => {
+      setCurrentStudyCards(moreCards);
+    }, 100);
   };
 
   const handleFolderClick = (folder) => {
@@ -89,26 +129,25 @@ const FlashcardsPage = () => {
   const handleBackToMain = () => {
     setCurrentView('main');
     setStudyCards([]);
-    setIsStudyMoreSession(false);
   };
 
   const handleStartLessonStudy = (lessonCards) => {
     setStudyCards(lessonCards);
     setCurrentView('study');
-    setIsStudyMoreSession(false);
   };
 
   const handleStudyComplete = (results) => {
-    // Add studied cards to today's list
-    const newStudiedCards = results.map(result => result.card);
-    setStudiedToday(prev => [...prev, ...newStudiedCards]);
+    // Study session complete - the grading has already been handled by the context
+    // No need to manually update studied today count as it's handled in gradeCard
     setIsStudying(false);
     setCurrentStudyCards([]);
+    setIsInDailyReviewFlow(false);
   };
 
   const handleBackToFlashcards = () => {
     setIsStudying(false);
     setCurrentStudyCards([]);
+    setIsInDailyReviewFlow(false);
   };
 
   const handleOpenSettings = () => {
@@ -163,6 +202,9 @@ const FlashcardsPage = () => {
         cards={currentStudyCards}
         onComplete={handleStudyComplete}
         onBack={handleBackToFlashcards}
+        onStudyMore={handleStudyMoreFromSession}
+        canStudyMore={isInDailyReviewFlow} // Always allow study more for any session in daily review flow
+        isFromDailyReview={isInDailyReviewFlow}
       />
     );
   }
@@ -196,7 +238,10 @@ const FlashcardsPage = () => {
                 <div className="progress-info">
                   <span className="progress-label">Today's Progress</span>
                   <span className="progress-text">
-                    {dailyProgress.completed} / {dailyProgress.total} cards
+                    {dailyReviewData.stats.hasStudiedAllSelected 
+                      ? `Goal completed! (${dailyReviewData.stats.availableTotal} cards studied)`
+                      : `${dailyProgress.completed} / ${dailyProgress.total} cards`
+                    }
                   </span>
                 </div>
                 <div className="progress-bar-container">
@@ -222,38 +267,30 @@ const FlashcardsPage = () => {
                 <button 
                   className="primary-study-btn"
                   onClick={handleStartDailyReview}
-                  disabled={dailyReviewData.dailyCards.length === 0}
+                  disabled={false}
                 >
                   <span className="btn-icon">📚</span>
                   <div className="btn-text">
                     <span className="btn-title">
-                      {goalCompleted ? 'Review Again' : 'Start Daily Review'}
+                      {dailyReviewData.dailyCards.length === 0 ? 'Study More' : goalCompleted ? 'Study More' : 'Start Daily Review'}
                     </span>
                     <span className="btn-subtitle">
                       {dailyReviewData.dailyCards.length === 0 
-                        ? 'No cards available'
+                        ? 'Continue studying additional vocabulary'
                         : `${dailyReviewData.dailyCards.length} cards ready`
                       }
                     </span>
                   </div>
                 </button>
 
-                {goalCompleted && dailyReviewData.canStudyMore && (
-                  <button 
-                    className="study-more-btn"
-                    onClick={handleStudyMore}
-                  >
-                    <span className="btn-icon">➕</span>
-                    Study More (+{preferences.studyMoreIncrement || 10})
-                  </button>
-                )}
+
               </div>
             </div>
 
             {/* Stats Row - Compact */}
             <div className="stats-row">
               <div className="stat-item">
-                <span className="stat-number">{studiedToday.length}</span>
+                <span className="stat-number">{studiedTodayCount}</span>
                 <span className="stat-label">Studied Today</span>
               </div>
               <div className="stat-item">

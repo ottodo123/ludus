@@ -139,6 +139,20 @@
   border: 1px solid #e5e7eb;
   transition: all 0.3s ease;
   perspective: 1000px;
+  position: relative;
+  cursor: pointer;
+  animation: fadeInCard 0.2s ease;
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .flashcard:hover {
@@ -159,8 +173,26 @@
   text-align: center;
 }
 
-.card-front {
+.card-side {
+  position: absolute;
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.15s ease;
+}
+
+.card-side.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-side.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .card-text {
@@ -179,11 +211,6 @@
 }
 
 .card-back {
-  width: 100%;
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #e5e7eb;
-  animation: fadeIn 0.3s ease;
 }
 
 .card-back .card-text {
@@ -191,11 +218,41 @@
   font-size: 1.75rem;
 }
 
+.card-answer {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #059669;
+  margin-bottom: 0.5rem;
+}
+
+.card-endings {
+  font-size: 1.25rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
 .card-meta {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+.flip-hint {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.875rem;
+  color: #6b7280;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.flashcard:hover .flip-hint {
+  opacity: 1;
 }
 
 .lesson-info,

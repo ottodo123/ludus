@@ -1,12 +1,15 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { parseVocabularyData } from '../utils/dataProcessor';
 import { loadCards, saveCards, loadPreferences, savePreferences, loadStatistics, saveStatistics } from '../utils/storage';
-import { saveUserProgress, getUserProgress, updateCardStats, saveUserProfile, getUserProfile } from '../services/userDataService';
+import { getUserProgress, updateCardStats, saveUserProfile, getUserProfile } from '../services/userDataService';
 import { calculateNextReview } from '../utils/sm2Algorithm';
 import { useAuth } from './AuthContext';
 
 // Create context
 const FlashcardContext = createContext();
+
+// Module-level variable for debouncing statistics saves
+let statsTimeout = null;
 
 // Action types
 const actionTypes = {
@@ -182,13 +185,41 @@ export const FlashcardProvider = ({ children }) => {
 
         if (user) {
           console.log('🔥 Loading data from Firebase for user:', user.uid);
+          console.log('🔍 User authentication status:', { 
+            uid: user.uid, 
+            email: user.email, 
+            isAnonymous: user.isAnonymous 
+          });
+          
+          // Test Firebase connection with timeout
+          try {
+            console.log('🧪 Testing Firebase connection...');
+            const timeoutPromise = new Promise((_, reject) => 
+              setTimeout(() => reject(new Error('Firebase connection timeout')), 10000)
+            );
+            await Promise.race([getUserProfile(user.uid), timeoutPromise]);
+            console.log('✅ Firebase connection test successful');
+          } catch (testError) {
+            console.error('❌ Firebase connection test failed:', testError);
+            if (testError.message?.includes('CORS') || testError.message?.includes('access control')) {
+              console.log('🌐 CORS issue detected - this may resolve automatically');
+            }
+          }
           
           // Load user profile from Firebase
           try {
             const userProfile = await getUserProfile(user.uid);
             if (userProfile) {
               dispatch({ type: actionTypes.SET_PREFERENCES, payload: userProfile.preferences || state.preferences });
-              dispatch({ type: actionTypes.SET_STATISTICS, payload: userProfile.statistics || state.statistics });
+              
+              // Handle daily statistics - reset if it's a new day
+              const today = new Date().toISOString().split('T')[0];
+              const loadedStats = userProfile.statistics || state.statistics;
+              const statsToUse = loadedStats.studiedTodayDate === today ? 
+                loadedStats : 
+                { ...loadedStats, studiedToday: 0, studiedTodayDate: today };
+              
+              dispatch({ type: actionTypes.SET_STATISTICS, payload: statsToUse });
             }
           } catch (error) {
             console.error('Error loading user profile:', error);
@@ -196,7 +227,9 @@ export const FlashcardProvider = ({ children }) => {
 
           // Load user progress from Firebase
           try {
+            console.log('📖 Attempting to load progress from Firebase...');
             const progress = await getUserProgress(user.uid);
+            console.log('📋 Firebase progress loaded:', progress ? Object.keys(progress).length : 'null', 'cards');
             
             // Get base cards from CSV
             let cards = await parseVocabularyData();
@@ -206,8 +239,35 @@ export const FlashcardProvider = ({ children }) => {
               console.log('📚 Merging Firebase progress with cards:', Object.keys(progress).length, 'cards with progress');
               cards = cards.map(card => {
                 const cardProgress = progress[card.id];
-                return cardProgress ? { ...card, ...cardProgress } : card;
+                if (cardProgress) {
+                  console.log(`🔀 Merging progress for card ${card.id}:`, {
+                    original: { repetitions: card.repetitions, easeFactor: card.easeFactor },
+                    fromFirebase: { repetitions: cardProgress.repetitions, easeFactor: cardProgress.easeFactor }
+                  });
+                  
+                  // Data integrity check and repair
+                  const repairedProgress = {
+                    ...cardProgress,
+                    // Ensure easeFactor is within reasonable bounds
+                    easeFactor: cardProgress.easeFactor < 1.5 ? 2.5 : cardProgress.easeFactor,
+                    // Ensure repetitions is not negative
+                    repetitions: Math.max(0, cardProgress.repetitions || 0),
+                    // Ensure interval is positive
+                    interval: Math.max(1, cardProgress.interval || 1)
+                  };
+                  
+                  // Log if we repaired corrupted data
+                  if (repairedProgress.easeFactor !== cardProgress.easeFactor) {
+                    console.log(`🔧 Repaired corrupted easeFactor for card ${card.id}: ${cardProgress.easeFactor} → ${repairedProgress.easeFactor}`);
+                  }
+                  
+                  return { ...card, ...repairedProgress };
+                }
+                return card;
               });
+              console.log('✅ Merge complete. Sample merged card:', cards.find(c => progress[c.id]));
+            } else {
+              console.log('⚠️ No Firebase progress found, using fresh CSV data');
             }
 
             dispatch({ type: actionTypes.SET_CARDS, payload: cards });
@@ -243,6 +303,8 @@ export const FlashcardProvider = ({ children }) => {
       } catch (error) {
         console.error('Error initializing data:', error);
         dispatch({ type: actionTypes.SET_ERROR, payload: error.message });
+      } finally {
+        dispatch({ type: actionTypes.SET_LOADING, payload: false });
       }
     };
 
@@ -277,7 +339,22 @@ export const FlashcardProvider = ({ children }) => {
     };
 
     saveData();
-  }, [state.preferences, state.statistics, user]);
+  }, [state.preferences, state.statistics, state.cards, user]);
+
+  // Save cards to localStorage only for non-Firebase users
+  useEffect(() => {
+    const saveCardsData = async () => {
+      if (state.cards.length === 0 || state.loading || user) return;
+      
+      // Only save to localStorage for non-Firebase users
+      saveCards(state.cards);
+    };
+
+    // Debounce card saves to avoid too frequent writes
+    const timeoutId = setTimeout(saveCardsData, 1000);
+    return () => clearTimeout(timeoutId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.cards, user, state.loading]);
 
   // Action creators
   const actions = {
@@ -305,21 +382,88 @@ export const FlashcardProvider = ({ children }) => {
     gradeCard: async (cardId, grade) => {
       const startTime = Date.now();
       
-      // Update local state first
+      // Update daily statistics first
+      const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+      const isCorrect = grade >= 3;
+      
+      // Update statistics including daily tracking
+      const updatedStats = {
+        ...state.statistics,
+        totalReviews: state.statistics.totalReviews + 1,
+        correctAnswers: isCorrect ? state.statistics.correctAnswers + 1 : state.statistics.correctAnswers,
+        incorrectAnswers: !isCorrect ? state.statistics.incorrectAnswers + 1 : state.statistics.incorrectAnswers,
+        lastStudyDate: new Date().toISOString(),
+        // Daily tracking - check if it's a new day
+        studiedToday: state.statistics.studiedTodayDate === today ? 
+          (state.statistics.studiedToday || 0) + 1 : 1,
+        studiedTodayDate: today
+      };
+      
+      // Update local state immediately for responsive UI
       dispatch({
-        type: actionTypes.GRADE_CARD,
-        payload: { cardId, grade }
+        type: actionTypes.UPDATE_STATISTICS,
+        payload: updatedStats
       });
-
-      // Save to Firebase if user is signed in
+      
       if (user) {
+        // For Firebase users - update UI immediately, save to Firebase asynchronously
         try {
+          // First, update local state immediately using the SM-2 algorithm
+          dispatch({
+            type: actionTypes.GRADE_CARD,
+            payload: { cardId, grade }
+          });
+          
+          // Then save to Firebase asynchronously without blocking the UI
           const timeTaken = Date.now() - startTime;
-          console.log('🔥 Saving card progress to Firebase:', cardId, 'grade:', grade);
-          await updateCardStats(user.uid, cardId, grade, timeTaken);
+          console.log('🔥 Starting async save to Firebase for card:', cardId);
+          
+          // Don't await this - let it happen in the background
+          updateCardStats(user.uid, cardId, grade, timeTaken)
+            .then((updatedCardData) => {
+              console.log('💾 Firebase card save successful:', cardId);
+              // Optionally sync the Firebase result back to local state
+              dispatch({
+                type: actionTypes.UPDATE_CARD,
+                payload: { id: cardId, ...updatedCardData }
+              });
+            })
+            .catch((error) => {
+              console.error('❌ Firebase card save failed:', cardId, error);
+              // UI already updated locally, so this doesn't affect user experience
+            });
+          
+          // Also save statistics asynchronously (debounced to avoid too many calls)
+          if (statsTimeout) {
+            clearTimeout(statsTimeout);
+          }
+          statsTimeout = setTimeout(async () => {
+            try {
+              await saveUserProfile(user.uid, {
+                preferences: state.preferences,
+                statistics: updatedStats,
+                displayName: user.displayName,
+                email: user.email,
+                photoURL: user.photoURL
+              });
+              console.log('📊 Statistics batch saved to Firebase');
+            } catch (statsError) {
+              console.error('Error batch saving statistics to Firebase:', statsError);
+            }
+            statsTimeout = null;
+          }, 1000); // Batch save statistics every 1 second
+          
         } catch (error) {
-          console.error('Error saving card progress to Firebase:', error);
+          console.error('❌ Error in Firebase operation setup:', error);
+          // Fallback - local update already happened above
         }
+      } else {
+        console.log('💾 No user signed in, using local storage');
+        // For non-Firebase users, use local algorithm
+        dispatch({
+          type: actionTypes.GRADE_CARD,
+          payload: { cardId, grade }
+        });
       }
     },
 
@@ -342,6 +486,13 @@ export const FlashcardProvider = ({ children }) => {
         type: actionTypes.SET_ERROR,
         payload: error
       });
+    },
+
+    // Helper function for getting today's study count
+    getStudiedToday: () => {
+      const today = new Date().toISOString().split('T')[0];
+      return state.statistics.studiedTodayDate === today ? 
+        (state.statistics.studiedToday || 0) : 0;
     }
   };
 

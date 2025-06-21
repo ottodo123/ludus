@@ -1,12 +1,14 @@
 .flashcards-page {
   min-height: calc(100vh - 4rem);
   background: #f9fafb;
+  width: 100%;
 }
 
 .page-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -19,6 +21,9 @@
   padding: 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   border: 1px solid #e5e7eb;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .review-header {
@@ -241,6 +246,9 @@
   padding: 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   border: 1px solid #e5e7eb;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .curriculum-section h2 {
@@ -252,8 +260,10 @@
 
 .folders-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, calc(100% - 2rem)), 1fr));
   gap: 1rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .folder-card {
@@ -267,6 +277,9 @@
   align-items: center;
   gap: 1rem;
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .folder-card.active:hover {
@@ -337,6 +350,21 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .page-container {
+    padding: 1.5rem;
+  }
+  
+  .nav-container {
+    padding: 0 1.5rem;
+  }
+  
+  .daily-review-section,
+  .curriculum-section {
+    padding: 1.75rem;
+  }
+}
+
 @media (max-width: 968px) {
   .progress-actions-row {
     grid-template-columns: 1fr;
@@ -350,8 +378,12 @@
 
 @media (max-width: 768px) {
   .page-container {
-    padding: 1rem 0.75rem;
+    padding: 1rem;
     gap: 1.5rem;
+  }
+  
+  .nav-container {
+    padding: 0 1rem;
   }
 
   .daily-review-section,

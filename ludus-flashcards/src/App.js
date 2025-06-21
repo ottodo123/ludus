@@ -10,9 +10,10 @@ import GrammarPage from './components/GrammarPage';
 import StudySession from './components/StudySession';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('ludus');
+  const [currentPage, setCurrentPage] = useState('flashcards');
   const [studyCards, setStudyCards] = useState([]);
   const [isStudying, setIsStudying] = useState(false);
+  const [pageKey, setPageKey] = useState(0); // Force re-render key
 
   const handleStartStudy = (cards) => {
     setStudyCards(cards);
@@ -22,6 +23,14 @@ function App() {
   const handleBackToPage = () => {
     setIsStudying(false);
     setStudyCards([]);
+  };
+
+  const handleGoHome = () => {
+    // Always go to flashcards and reset any study state
+    setIsStudying(false);
+    setStudyCards([]);
+    setCurrentPage('flashcards');
+    setPageKey(prev => prev + 1); // Force re-render
   };
 
   const renderPage = () => {
@@ -45,7 +54,7 @@ function App() {
           />
         );
       case 'flashcards':
-        return <FlashcardsPage />;
+        return <FlashcardsPage key={pageKey} />;
       case 'glossary':
         return <GlossaryPage />;
       case 'grammar':
@@ -64,7 +73,7 @@ function App() {
     <AuthProvider>
       <FlashcardProvider>
         <div className="App">
-          <Navigation onPageChange={setCurrentPage} currentPage={currentPage} />
+          <Navigation onPageChange={setCurrentPage} currentPage={currentPage} onGoHome={handleGoHome} />
           <main className="app-content">
             {renderPage()}
           </main>
