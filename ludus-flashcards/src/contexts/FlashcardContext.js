@@ -312,6 +312,7 @@ export const FlashcardProvider = ({ children }) => {
   }, [user]); // Re-run when user changes
 
   // Save to storage whenever state changes
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const saveData = async () => {
       if (state.cards.length === 0) return; // Don't save empty state

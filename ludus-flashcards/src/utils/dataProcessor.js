@@ -15,7 +15,7 @@ export const parseVocabularyData = async () => {
     const csvData = await response.text();
     
     const lines = csvData.trim().split('\n');
-    const headers = lines[0].split(',');
+    // Skip headers and process the data
     
     console.log(`📚 Loading vocabulary data: ${lines.length} lines found`);
     
