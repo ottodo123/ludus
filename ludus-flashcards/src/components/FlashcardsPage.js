@@ -132,6 +132,12 @@ const FlashcardsPage = () => {
     setIsPracticeMode(false);
   };
 
+  const handleBackToLudus = () => {
+    setCurrentView('ludus');
+    setStudyCards([]);
+    setIsPracticeMode(false);
+  };
+
   const handleStartLessonStudy = (lessonCards, isPracticeMode = false) => {
     setStudyCards(lessonCards);
     setIsPracticeMode(isPracticeMode);
@@ -184,7 +190,7 @@ const FlashcardsPage = () => {
       <StudySession
         cards={studyCards}
         onComplete={handleStudyComplete}
-        onBack={handleBackToMain}
+        onBack={handleBackToLudus}
         isPracticeMode={isPracticeMode}
       />
     );
