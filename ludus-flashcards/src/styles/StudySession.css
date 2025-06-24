@@ -16,7 +16,7 @@
 .session-header {
   background: white;
   border-bottom: 1px solid #e5e7eb;
-  padding: 0.75rem 1rem !important;
+  padding: 0.75rem 0 !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,12 +65,18 @@
 .header-left {
   display: flex;
   align-items: center;
+  width: 120px;
+  flex-shrink: 0;
+  padding-left: 1rem;
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  justify-content: flex-end;
+  width: 120px;
+  flex-shrink: 0;
+  padding-right: 0.25rem;
 }
 
 .session-progress {
@@ -130,6 +136,7 @@
   border: none;
   border-radius: 0.5rem;
   padding: 0.75rem;
+  padding-right: 0.25rem;
   color: #6b7280;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -662,12 +669,20 @@ kbd {
 /* Responsive Design */
 @media (min-width: 769px) {
   .session-header {
-    padding: 0.75rem 1rem !important;
+    padding: 0.75rem 0 !important;
     gap: 0.5rem !important;
   }
   
   .header-center-group {
     gap: 0.25rem !important;
+  }
+  
+  .header-right {
+    padding-right: 0.5rem;
+  }
+  
+  .header-left {
+    padding-left: 2rem;
   }
 }
 
@@ -675,12 +690,14 @@ kbd {
   .session-header {
     flex-direction: row;
     gap: 0.5rem;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0 !important;
     align-items: center;
   }
   
   .header-left {
     flex-shrink: 0;
+    width: auto;
+    padding-left: 1rem;
   }
   
   .header-center-group {
@@ -693,6 +710,8 @@ kbd {
   .header-right {
     flex-shrink: 0;
     margin-left: 0;
+    width: auto;
+    padding-right: 0.25rem;
   }
   
   .session-progress {
