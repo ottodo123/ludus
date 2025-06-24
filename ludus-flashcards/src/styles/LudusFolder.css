@@ -532,12 +532,47 @@
     font-size: 0.95rem;
   }
   
-  /* Show circular stats instead of expanded stats */
+  /* Show dot stats instead of circular stats */
   .stat-circles.mobile-stats {
     display: flex !important;
-    gap: 0.5rem;
+    gap: 1rem;
     margin-right: 1rem;
     align-items: center;
+  }
+  
+  .stat-circles.mobile-stats .stat-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    color: #374151;
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .stat-circles.mobile-stats .stat-circle::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-top: 0.25rem;
+  }
+  
+  .stat-circles.mobile-stats .due-circle::after {
+    background: #dc2626;
+  }
+  
+  .stat-circles.mobile-stats .new-circle::after {
+    background: #fbbf24;
+  }
+  
+  .stat-circles.mobile-stats .learned-circle::after {
+    background: #22c55e;
   }
   
   .desktop-stats {
