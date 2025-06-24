@@ -1,8 +1,15 @@
 .study-session {
-  min-height: 100vh;
+  height: calc(100vh - 4rem);
+  height: calc(100dvh - 4rem);
   background: #f9fafb;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 /* Session Header */
@@ -15,8 +22,7 @@
   justify-content: space-between;
   gap: 0.5rem !important;
   flex-shrink: 0;
-  position: sticky;
-  top: 4rem; /* Stick right below the navigation bar */
+  position: relative;
   z-index: 50;
   flex-direction: row !important;
   height: 80px !important;
@@ -225,7 +231,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
-  min-height: 400px;
+  overflow: hidden;
 }
 
 .flashcard {
@@ -364,6 +370,11 @@
   font-weight: 500;
 }
 
+/* Bottom Actions Container */
+.bottom-actions {
+  flex-shrink: 0;
+}
+
 /* Session Actions */
 .session-actions {
   background: white;
@@ -409,6 +420,7 @@
   background: white;
   border-top: 1px solid #e5e7eb;
   padding: 1.5rem 1rem;
+  flex-shrink: 0;
 }
 
 .btn {
