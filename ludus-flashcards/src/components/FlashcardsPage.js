@@ -7,14 +7,13 @@ import {
 } from '../utils/dailyReview';
 import LudusFolder from './LudusFolder';
 import StudySession from './StudySession';
-import DailyReviewSettings from './DailyReviewSettings';
+import SettingsPage from './SettingsPage';
 import '../styles/FlashcardsPage.css';
 
 const FlashcardsPage = () => {
   const { cards, preferences, getStudiedToday, statistics } = useFlashcards();
-  const [currentView, setCurrentView] = useState('main'); // 'main', 'ludus', 'study'
+  const [currentView, setCurrentView] = useState('main'); // 'main', 'ludus', 'study', 'settings'
   const [studyCards, setStudyCards] = useState([]);
-  const [showSettings, setShowSettings] = useState(false);
   const [isPracticeMode, setIsPracticeMode] = useState(false);
 
   const [isStudying, setIsStudying] = useState(false);
@@ -154,11 +153,11 @@ const FlashcardsPage = () => {
   };
 
   const handleOpenSettings = () => {
-    setShowSettings(true);
+    setCurrentView('settings');
   };
 
-  const handleSettingsSaved = () => {
-    console.log('Settings saved, daily review will update with new preferences');
+  const handleSettingsBack = () => {
+    setCurrentView('main');
   };
 
   const getSelectionModeDescription = () => {
@@ -196,6 +195,14 @@ const FlashcardsPage = () => {
       <LudusFolder
         onBack={handleBackToMain}
         onStartStudy={handleStartLessonStudy}
+      />
+    );
+  }
+
+  if (currentView === 'settings') {
+    return (
+      <SettingsPage
+        onBack={handleSettingsBack}
       />
     );
   }
@@ -361,14 +368,6 @@ const FlashcardsPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Settings Modal */}
-      {showSettings && (
-        <DailyReviewSettings 
-          onClose={() => setShowSettings(false)}
-          onSave={handleSettingsSaved}
-        />
-      )}
     </div>
   );
 };

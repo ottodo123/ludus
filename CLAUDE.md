@@ -45,9 +45,13 @@ The SM-2 spaced repetition algorithm is implemented in `ludus-flashcards/src/uti
 - Quality grades: 1 (Again), 2 (Hard), 3 (Good), 4 (Easy)
 - Interval calculation based on repetitions and ease factor
 
-### Key Files
+### Key Files & Architecture
+- **State Management**: `ludus-flashcards/src/contexts/FlashcardContext.js` - Global state using useReducer pattern for cards, preferences, and statistics
+- **Authentication**: `ludus-flashcards/src/contexts/AuthContext.js` - Firebase auth context wrapper
+- **Daily Review System**: `ludus-flashcards/src/utils/dailyReview.js` - Logic for selecting cards based on user preferences (automatic vs manual selection)
 - **Data Processing**: `ludus-flashcards/src/utils/dataProcessor.js` - Parses CSV vocabulary data
-- **Study Logic**: `ludus-flashcards/src/components/StudySession.js` - Main flashcard interface
+- **Study Logic**: `ludus-flashcards/src/components/StudySession.js` - Main flashcard interface with grading
+- **Settings Management**: `ludus-flashcards/src/components/SettingsPage.js` - Dedicated page for daily review settings (not a modal)
 - **Firebase Config**: `ludus-flashcards/src/config/firebase.js` - Authentication and database setup
 - **Vocabulary Data**: `ludus-flashcards/public/data/` - CSV files with Latin vocabulary
 
@@ -64,9 +68,24 @@ When working with Firebase features:
 - Security Rules: Users can only access their own data
 - See `ludus-flashcards/FIREBASE_SETUP.md` for configuration details
 
+### Component Architecture
+- **FlashcardsPage**: Main page with daily review interface and curriculum browsing
+- **SettingsPage**: Full-page settings interface (migrated from modal popup)
+- **StudySession**: Handles flashcard study sessions with SM-2 algorithm integration
+- **LudusFolder**: Chapter-based browsing for LUDUS curriculum
+- **Navigation**: Custom single-page navigation (no React Router)
+
+### Data Flow & Storage
+- **Local Storage**: Primary storage for offline functionality (cards, preferences, statistics)
+- **Firebase Sync**: Cloud backup for authenticated users, syncs with local storage
+- **Manual Selections**: Range-based chapter selection (fromChapter/toChapter) instead of individual checkboxes
+- **Daily Review Logic**: Combines automatic (previously studied cards) and manual selection modes
+
 ## Important Notes
 
 - Always use `--legacy-peer-deps` when installing packages due to React 19.1.0 compatibility
 - The `CI=false` flag is required in build scripts to bypass warnings
 - Main branch deploys to `gh-pages` branch for GitHub Pages
 - Firebase credentials should never be committed (use environment variables for production)
+- Settings page uses dedicated route, not modal overlay
+- Chapter selection uses dropdown ranges (Chapter X to Chapter Y) not checkbox grids
