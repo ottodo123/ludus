@@ -376,7 +376,10 @@ const StudySession = ({
                   onClick={() => handleGrade(grade)}
                   disabled={isGrading}
                 >
-                  <span className="grade-label">{GRADE_LABELS[grade]} ({grade})</span>
+                  <span className="grade-label">
+                    <span className="btn-text-desktop">{GRADE_LABELS[grade]} ({grade})</span>
+                    <span className="btn-text-mobile">{GRADE_LABELS[grade]}</span>
+                  </span>
                   <span className="grade-interval">
                     {intervals[grade]?.interval}d
                   </span>
@@ -401,7 +404,8 @@ const StudySession = ({
             className="btn large primary reveal-btn"
             onClick={isRevealed ? () => setIsRevealed(false) : handleRevealCard}
           >
-            {isRevealed ? 'Hide Answer (Space)' : 'Reveal Answer (Space)'}
+            <span className="btn-text-desktop">{isRevealed ? 'Hide Answer (Space)' : 'Reveal Answer (Space)'}</span>
+            <span className="btn-text-mobile">{isRevealed ? 'Hide Answer' : 'Reveal Answer'}</span>
           </button>
           
           <button 
