@@ -25,6 +25,7 @@ const StudySession = ({
     endTime: null
   });
   const [isGrading, setIsGrading] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
 
   const currentCard = cards[currentIndex];
   const isLastCard = currentIndex === cards.length - 1;
@@ -87,8 +88,9 @@ const StudySession = ({
         setIsRevealed(true);
         setIsFlipped(true);
       } else {
-        // Flip card back and forth
-        setIsFlipped(!isFlipped);
+        // Hide answer and reset to front
+        setIsRevealed(false);
+        setIsFlipped(false);
       }
     } else if (isRevealed) {
       switch (event.key) {
@@ -274,47 +276,64 @@ const StudySession = ({
   return (
     <div className="study-session">
       <div className="session-header">
-        <button className="back-btn" onClick={onBack}>
-          ← Exit Session
-        </button>
+        <div className="header-left">
+          <button className="settings-btn exit-btn" onClick={onBack}>
+            ← Exit
+          </button>
+        </div>
         
-        <div className="session-progress">
-          <div className="progress-bar">
-            <div 
-              className="progress-fill" 
-              style={{ width: `${progressPercent}%` }}
-            />
-          </div>
-          <span className="progress-text">
-            {currentIndex + 1} of {cards.length}
-          </span>
-        </div>
-
-        <div className="session-stats">
-          <span className="stat correct">✓ {sessionStats.correct}</span>
+        <div className="header-center-group">
           <span className="stat incorrect">✗ {sessionStats.incorrect}</span>
+          
+          <div className="session-progress">
+            <div className="progress-bar">
+              <div 
+                className="progress-fill" 
+                style={{ width: `${progressPercent}%` }}
+              />
+            </div>
+            <span className="progress-text">
+              {currentIndex + 1} of {cards.length}
+            </span>
+          </div>
+          
+          <span className="stat correct">✓ {sessionStats.correct}</span>
+        </div>
+
+        <div className="header-right">
+          <div className="settings-container">
+            <button 
+              className="settings-btn"
+              onClick={() => setShowSettings(!showSettings)}
+              title="Study Settings"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+              </svg>
+            </button>
+            {showSettings && (
+              <div className="settings-dropdown">
+                <button 
+                  className={`settings-item ${preferences.displayMode === 'full' ? 'active' : ''}`}
+                  onClick={toggleDisplayMode}
+                  title="Toggle between basic (headword only) and full (headword + endings) display"
+                >
+                  {preferences.displayMode === 'full' ? 'Full Display' : 'Basic Display'}
+                </button>
+                
+                <button 
+                  className="settings-item"
+                  onClick={toggleStudyDirection}
+                  title="Switch study direction"
+                >
+                  {preferences.studyDirection === 'latin-to-english' ? 'Latin → English' : 'English → Latin'}
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
-      <div className="session-controls">
-        <div className="display-controls">
-          <button 
-            className={`control-btn ${preferences.displayMode === 'full' ? 'active' : ''}`}
-            onClick={toggleDisplayMode}
-            title="Toggle between basic (headword only) and full (headword + endings) display"
-          >
-            {preferences.displayMode === 'full' ? 'Full Display' : 'Basic Display'}
-          </button>
-          
-          <button 
-            className="control-btn"
-            onClick={toggleStudyDirection}
-            title="Switch study direction"
-          >
-            {preferences.studyDirection === 'latin-to-english' ? 'Latin → English' : 'English → Latin'}
-          </button>
-        </div>
-      </div>
 
       <div className="flashcard-container">
         <div className={`flashcard ${isFlipped ? 'flipped' : ''}`} onClick={handleCardClick} key={cardKey}>
@@ -345,19 +364,9 @@ const StudySession = ({
         </div>
       </div>
 
-      <div className="session-actions">
-        {!isRevealed ? (
-          <div className="reveal-section">
-            <button 
-              className="btn large primary"
-              onClick={handleRevealCard}
-            >
-              Reveal Answer (Space)
-            </button>
-          </div>
-        ) : (
+      {isRevealed && (
+        <div className="grading-actions">
           <div className="grading-section">
-            <h3>How well did you know this?</h3>
             {isGrading && <div className="grading-indicator">Saving progress...</div>}
             <div className="grade-buttons">
               {Object.values(GRADES).map(grade => (
@@ -367,67 +376,45 @@ const StudySession = ({
                   onClick={() => handleGrade(grade)}
                   disabled={isGrading}
                 >
-                  <span className="grade-key">{grade}</span>
-                  <span className="grade-label">{GRADE_LABELS[grade]}</span>
+                  <span className="grade-label">{GRADE_LABELS[grade]} ({grade})</span>
                   <span className="grade-interval">
                     {intervals[grade]?.interval}d
                   </span>
                 </button>
               ))}
             </div>
-            <div className="grade-help">
-              <p>Use keyboard shortcuts: 1 (Again) | 2 (Hard) | 3 (Good) | 4 (Easy)</p>
-            </div>
           </div>
-        )}
+        </div>
+      )}
+
+      <div className="session-actions">
+        <div className="reveal-section">
+          <button 
+            className={`nav-btn ${currentIndex === 0 ? 'disabled' : ''}`}
+            onClick={handlePreviousCard}
+            disabled={currentIndex === 0}
+          >
+            ← Previous
+          </button>
+          
+          <button 
+            className="btn large primary reveal-btn"
+            onClick={isRevealed ? () => setIsRevealed(false) : handleRevealCard}
+          >
+            {isRevealed ? 'Hide Answer (Space)' : 'Reveal Answer (Space)'}
+          </button>
+          
+          <button 
+            className={`nav-btn ${isLastCard ? 'disabled' : ''}`}
+            onClick={handleNextCard}
+            disabled={isLastCard}
+          >
+            Next →
+          </button>
+        </div>
       </div>
 
-      <div className="navigation-controls">
-        <button 
-          className={`nav-btn ${currentIndex === 0 ? 'disabled' : ''}`}
-          onClick={handlePreviousCard}
-          disabled={currentIndex === 0}
-        >
-          ← Previous
-        </button>
-        
-        <button 
-          className={`nav-btn ${isLastCard ? 'disabled' : ''}`}
-          onClick={handleNextCard}
-          disabled={isLastCard}
-        >
-          Next →
-        </button>
-      </div>
 
-      <div className="keyboard-shortcuts">
-        <details>
-          <summary>Keyboard Shortcuts</summary>
-          <div className="shortcuts-list">
-            <div className="shortcut">
-              <kbd>Space</kbd> - Reveal answer / Flip card
-            </div>
-            <div className="shortcut">
-              <kbd>1</kbd> - Again (didn't know)
-            </div>
-            <div className="shortcut">
-              <kbd>2</kbd> - Hard (difficult)
-            </div>
-            <div className="shortcut">
-              <kbd>3</kbd> - Good (knew it)
-            </div>
-            <div className="shortcut">
-              <kbd>4</kbd> - Easy (very easy)
-            </div>
-                        <div className="shortcut">
-              <kbd>←/→</kbd> - Navigate cards
-            </div>
-            <div className="shortcut">
-              <kbd>Click</kbd> - Reveal answer / Flip card
-            </div>
-            </div>
-        </details>
-      </div>
     </div>
   );
 };

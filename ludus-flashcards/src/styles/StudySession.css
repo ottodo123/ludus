@@ -14,16 +14,23 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  flex-shrink: 0;
+  position: sticky;
+  top: 4rem; /* Stick right below the navigation bar */
+  z-index: 50;
 }
 
 .back-btn {
   background: transparent;
   border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  padding: 0.375rem 1rem;
   color: #374151;
   cursor: pointer;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 0.925rem;
   font-weight: 500;
 }
@@ -33,10 +40,32 @@
   border-color: #9ca3af;
 }
 
-.session-progress {
+.header-center-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   flex: 1;
-  max-width: 300px;
+  justify-content: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.session-progress {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 120px;
 }
 
 .progress-bar {
@@ -45,7 +74,6 @@
   background: #e5e7eb;
   border-radius: 0.25rem;
   overflow: hidden;
-  margin-bottom: 0.5rem;
 }
 
 .progress-fill {
@@ -59,11 +87,6 @@
   font-size: 0.875rem;
   color: #6b7280;
   font-weight: 500;
-}
-
-.session-stats {
-  display: flex;
-  gap: 1rem;
 }
 
 .stat {
@@ -83,13 +106,81 @@
   color: #dc2626;
 }
 
+/* Settings Dropdown */
+.settings-container {
+  position: relative;
+}
+
+.settings-btn {
+  background: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exit-btn {
+  font-size: 0.925rem !important;
+  font-weight: 500;
+  color: #374151;
+  padding: 0.75rem 1.25rem !important;
+  border-radius: 0.5rem !important;
+}
+
+.settings-btn:hover {
+  background: #f9fafb;
+  color: #374151;
+}
+
+.settings-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin-top: 0.5rem;
+  z-index: 60;
+  min-width: 180px;
+  overflow: hidden;
+}
+
+.settings-item {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 0.875rem;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.settings-item:hover {
+  background: #f3f4f6;
+}
+
+.settings-item.active {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
 /* Session Controls */
 .session-controls {
   background: white;
   border-bottom: 1px solid #e5e7eb;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .display-controls {
@@ -273,7 +364,27 @@
 }
 
 .reveal-section {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.reveal-btn {
+  padding: 0.75rem 2rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* Grading Actions */
+.grading-actions {
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  padding: 1.5rem 1rem;
 }
 
 .btn {
@@ -303,6 +414,15 @@
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
+  padding: 0;
+}
+
+.grade-buttons {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1rem !important;
+  margin-bottom: 0 !important;
+  align-items: center !important;
 }
 
 .grading-section h3 {
@@ -323,14 +443,14 @@
   background: white;
   border: 2px solid #e5e7eb;
   border-radius: 0.75rem;
-  padding: 1rem 0.75rem;
+  padding: 0.75rem 0.75rem;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
-  min-height: 100px;
+  min-height: 70px;
   justify-content: center;
 }
 
