@@ -10,7 +10,8 @@ const StudySession = ({
   onBack, 
   onStudyMore, 
   canStudyMore = false, 
-  isFromDailyReview = false 
+  isFromDailyReview = false,
+  isPracticeMode = false 
 }) => {
   const { preferences, gradeCard, updatePreference } = useFlashcards();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -92,7 +93,32 @@ const StudySession = ({
         setIsRevealed(false);
         setIsFlipped(false);
       }
-    } else if (isRevealed) {
+    }
+    
+    // Navigation shortcuts work in all modes, regardless of reveal state
+    switch (event.key) {
+      case 'ArrowLeft':
+        if (currentIndex > 0) {
+          setCurrentIndex(currentIndex - 1);
+          setIsRevealed(false);
+          setIsFlipped(false);
+          setCardKey(prev => prev + 1);
+        }
+        break;
+      case 'ArrowRight':
+        if (currentIndex < cards.length - 1) {
+          setCurrentIndex(currentIndex + 1);
+          setIsRevealed(false);
+          setIsFlipped(false);
+          setCardKey(prev => prev + 1);
+        }
+        break;
+      default:
+        break;
+    }
+    
+    // Grading shortcuts only work when revealed and in non-practice mode
+    if (isRevealed && !isPracticeMode) {
       switch (event.key) {
         case '1':
           handleGrade(GRADES.AGAIN);
@@ -105,22 +131,6 @@ const StudySession = ({
           break;
         case '4':
           handleGrade(GRADES.EASY);
-          break;
-        case 'ArrowLeft':
-          if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
-            setIsRevealed(false);
-            setIsFlipped(false);
-            setCardKey(prev => prev + 1);
-          }
-          break;
-        case 'ArrowRight':
-          if (currentIndex < cards.length - 1) {
-            setCurrentIndex(currentIndex + 1);
-            setIsRevealed(false);
-            setIsFlipped(false);
-            setCardKey(prev => prev + 1);
-          }
           break;
         default:
           break;
@@ -341,11 +351,6 @@ const StudySession = ({
             {/* Card Front */}
             <div className={`card-side card-front ${isFlipped ? 'hidden' : 'visible'}`}>
               <div className="card-text">{getCardFront()}</div>
-              {preferences.showHints && currentCard.part_of_speech && (
-                <div className="card-hint">
-                  ({currentCard.part_of_speech})
-                </div>
-              )}
             </div>
             
             {/* Card Back */}
@@ -364,57 +369,59 @@ const StudySession = ({
         </div>
       </div>
 
-      {isRevealed && (
-        <div className="grading-actions">
-          <div className="grading-section">
-            {isGrading && <div className="grading-indicator">Saving progress...</div>}
-            <div className="grade-buttons">
-              {Object.values(GRADES).map(grade => (
-                <button
-                  key={grade}
-                  className={`grade-btn grade-${grade} ${isGrading ? 'grading' : ''}`}
-                  onClick={() => handleGrade(grade)}
-                  disabled={isGrading}
-                >
-                  <span className="grade-label">
-                    <span className="btn-text-desktop">{GRADE_LABELS[grade]} ({grade})</span>
-                    <span className="btn-text-mobile">{GRADE_LABELS[grade]}</span>
-                  </span>
-                  <span className="grade-interval">
-                    {intervals[grade]?.interval}d
-                  </span>
-                </button>
-              ))}
+      <div className="bottom-actions">
+        {isRevealed && !isPracticeMode && (
+          <div className="grading-actions">
+            <div className="grading-section">
+              {isGrading && <div className="grading-indicator">Saving progress...</div>}
+              <div className="grade-buttons">
+                {Object.values(GRADES).map(grade => (
+                  <button
+                    key={grade}
+                    className={`grade-btn grade-${grade} ${isGrading ? 'grading' : ''}`}
+                    onClick={() => handleGrade(grade)}
+                    disabled={isGrading}
+                  >
+                    <span className="grade-label">
+                      <span className="btn-text-desktop">{GRADE_LABELS[grade]} ({grade})</span>
+                      <span className="btn-text-mobile">{GRADE_LABELS[grade]}</span>
+                    </span>
+                    <span className="grade-interval">
+                      {intervals[grade]?.interval}d
+                    </span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <div className="session-actions">
-        <div className="reveal-section">
-          <button 
-            className={`nav-btn ${currentIndex === 0 ? 'disabled' : ''}`}
-            onClick={handlePreviousCard}
-            disabled={currentIndex === 0}
-          >
-            ← Previous
-          </button>
-          
-          <button 
-            className="btn large primary reveal-btn"
-            onClick={isRevealed ? () => setIsRevealed(false) : handleRevealCard}
-          >
-            <span className="btn-text-desktop">{isRevealed ? 'Hide Answer (Space)' : 'Reveal Answer (Space)'}</span>
-            <span className="btn-text-mobile">{isRevealed ? 'Hide Answer' : 'Reveal Answer'}</span>
-          </button>
-          
-          <button 
-            className={`nav-btn ${isLastCard ? 'disabled' : ''}`}
-            onClick={handleNextCard}
-            disabled={isLastCard}
-          >
-            Next →
-          </button>
+        <div className="session-actions">
+          <div className="reveal-section">
+            <button 
+              className={`nav-btn ${currentIndex === 0 ? 'disabled' : ''}`}
+              onClick={handlePreviousCard}
+              disabled={currentIndex === 0}
+            >
+              ← Previous
+            </button>
+            
+            <button 
+              className="btn large primary reveal-btn"
+              onClick={isRevealed ? () => setIsRevealed(false) : handleRevealCard}
+            >
+              <span className="btn-text-desktop">{isRevealed ? 'Hide Answer (Space)' : 'Reveal Answer (Space)'}</span>
+              <span className="btn-text-mobile">{isRevealed ? 'Hide Answer' : 'Reveal Answer'}</span>
+            </button>
+            
+            <button 
+              className={`nav-btn ${isLastCard ? 'disabled' : ''}`}
+              onClick={handleNextCard}
+              disabled={isLastCard}
+            >
+              Next →
+            </button>
+          </div>
         </div>
       </div>
 

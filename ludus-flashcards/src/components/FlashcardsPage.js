@@ -15,6 +15,7 @@ const FlashcardsPage = () => {
   const [currentView, setCurrentView] = useState('main'); // 'main', 'ludus', 'study'
   const [studyCards, setStudyCards] = useState([]);
   const [showSettings, setShowSettings] = useState(false);
+  const [isPracticeMode, setIsPracticeMode] = useState(false);
 
   const [isStudying, setIsStudying] = useState(false);
   const [currentStudyCards, setCurrentStudyCards] = useState([]);
@@ -129,10 +130,12 @@ const FlashcardsPage = () => {
   const handleBackToMain = () => {
     setCurrentView('main');
     setStudyCards([]);
+    setIsPracticeMode(false);
   };
 
-  const handleStartLessonStudy = (lessonCards) => {
+  const handleStartLessonStudy = (lessonCards, isPracticeMode = false) => {
     setStudyCards(lessonCards);
+    setIsPracticeMode(isPracticeMode);
     setCurrentView('study');
   };
 
@@ -183,6 +186,7 @@ const FlashcardsPage = () => {
         cards={studyCards}
         onComplete={handleStudyComplete}
         onBack={handleBackToMain}
+        isPracticeMode={isPracticeMode}
       />
     );
   }

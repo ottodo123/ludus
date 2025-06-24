@@ -52,9 +52,6 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
     const lessonCards = lessonGroups[lesson] || [];
     
     switch (action) {
-      case 'study-all':
-        onStartStudy(lessonCards);
-        break;
       case 'review-due':
         const dueCards = getDueCards(lessonCards);
         if (dueCards.length > 0) {
@@ -64,7 +61,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
       case 'practice':
         // Practice mode - random order, no SRS impact
         const shuffledCards = [...lessonCards].sort(() => Math.random() - 0.5);
-        onStartStudy(shuffledCards);
+        onStartStudy(shuffledCards, true);
         break;
       default:
         break;
@@ -174,7 +171,6 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
                           <button className="action-btn primary" onClick={() => setOpenDropdown(openDropdown === lesson ? null : lesson)}>Study</button>
                           {openDropdown === lesson && (
                             <div className="dropdown-menu">
-                              <button className="dropdown-item" onClick={() => { handleLessonAction(lesson, 'study-all'); setOpenDropdown(null); }}>Study All</button>
                               <button className="dropdown-item" onClick={() => { handleLessonAction(lesson, 'review-due'); setOpenDropdown(null); }} disabled={stats.due === 0}>Review Due</button>
                               <button className="dropdown-item" onClick={() => { handleLessonAction(lesson, 'practice'); setOpenDropdown(null); }}>Practice Mode</button>
                             </div>
@@ -182,8 +178,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
                         </div>
                       ) : (
                         <div className="desktop-actions">
-                          <button className="action-btn primary" onClick={() => handleLessonAction(lesson, 'study-all')}>Study All</button>
-                          <button className={`action-btn ${stats.due > 0 ? 'secondary' : 'disabled'}`} onClick={() => handleLessonAction(lesson, 'review-due')} disabled={stats.due === 0}>Review Due</button>
+                          <button className={`action-btn ${stats.due > 0 ? 'primary' : 'disabled'}`} onClick={() => handleLessonAction(lesson, 'review-due')} disabled={stats.due === 0}>Review Due</button>
                           <button className="action-btn tertiary" onClick={() => handleLessonAction(lesson, 'practice')}>Practice Mode</button>
                         </div>
                       )}
