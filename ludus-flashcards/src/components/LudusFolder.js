@@ -5,7 +5,7 @@ import { getDueCards } from '../utils/sm2Algorithm';
 import '../styles/LudusFolder.css';
 
 const LudusFolder = ({ onBack, onStartStudy }) => {
-  const { cards } = useFlashcards();
+  const { cards, resetProgress } = useFlashcards();
   const [showFilters, setShowFilters] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [filterMode, setFilterMode] = useState('chapter'); // 'chapter', 'alphabetical', or part of speech value
@@ -65,6 +65,21 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
         break;
       default:
         break;
+    }
+  };
+
+  const handleResetChapter = (lesson) => {
+    const lessonCards = lessonGroups[lesson] || [];
+    
+    if (lessonCards.length === 0) return;
+    
+    const confirmReset = window.confirm(
+      `Are you sure you want to reset all progress for Chapter ${lesson}? This will clear all review data and cannot be undone.`
+    );
+    
+    if (confirmReset) {
+      const cardIds = lessonCards.map(card => card.id);
+      resetProgress(cardIds);
     }
   };
 
@@ -141,7 +156,21 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
             return (
               <div key={lesson} className={`lesson-row ${!hasCards ? 'empty' : ''}`}> 
                 <div className="lesson-header">
-                  <h3>Chapter {lesson}</h3>
+                  <div className="lesson-title-group">
+                    <h3>Chapter {lesson}</h3>
+                    <button 
+                      className="reset-btn" 
+                      onClick={() => handleResetChapter(lesson)}
+                      title="Reset chapter progress"
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                        <path d="M21 3v5h-5"/>
+                        <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
+                        <path d="M3 21v-5h5"/>
+                      </svg>
+                    </button>
+                  </div>
                   <span className="lesson-count">{stats.total} words</span>
                 </div>
                 {hasCards ? (

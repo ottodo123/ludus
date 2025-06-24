@@ -468,11 +468,40 @@ export const FlashcardProvider = ({ children }) => {
       }
     },
 
-    resetProgress: (cardIds) => {
+    resetProgress: async (cardIds) => {
+      // Update local state immediately
       dispatch({
         type: actionTypes.RESET_PROGRESS,
         payload: { cardIds }
       });
+
+      // Update Firebase if user is authenticated
+      if (state.user && cardIds.length > 0) {
+        try {
+          // Reset each card in Firebase
+          const resetPromises = cardIds.map(cardId => {
+            const resetData = {
+              easeFactor: 2.5,
+              interval: 0,
+              repetitions: 0,
+              nextReview: null,
+              lastReviewed: null,
+              isKnown: false,
+              totalReviews: 0,
+              correctReviews: 0,
+              averageTime: 0,
+              lastUpdated: new Date().toISOString()
+            };
+            return updateCardStats(state.user.uid, cardId, resetData);
+          });
+
+          await Promise.all(resetPromises);
+          console.log(`✅ Successfully reset ${cardIds.length} cards in Firebase`);
+        } catch (error) {
+          console.error('❌ Error resetting cards in Firebase:', error);
+          // Continue with local reset even if Firebase fails
+        }
+      }
     },
 
     markAsKnown: (cardIds, isKnown = true) => {

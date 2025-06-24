@@ -147,6 +147,31 @@
   gap: 0.25rem;
 }
 
+.lesson-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reset-btn {
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset-btn:hover {
+  background: #f3f4f6;
+  color: #dc2626;
+  transform: rotate(180deg);
+}
+
 .lesson-stats {
   display: flex;
   gap: 2rem;
@@ -469,17 +494,33 @@
   
   /* Lesson row - stays horizontal but compact */
   .lesson-row {
-    padding: 1rem 1rem 1rem 2rem;
+    padding: 1rem;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
+    min-height: 80px;
   }
   
   .lesson-header {
     min-width: unset;
     margin-right: 0;
-    gap: 0;
-    display: block;
+    gap: 0.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .lesson-title-group {
+    gap: 0.25rem;
+  }
+  
+  .reset-btn {
+    padding: 0.125rem;
+  }
+  
+  .reset-btn svg {
+    width: 12px;
+    height: 12px;
   }
   
   .lesson-header h3 {
@@ -508,11 +549,19 @@
     gap: 0;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+    min-width: 70px;
   }
   
   .mobile-actions {
     display: block !important;
     position: relative;
+  }
+  
+  .mobile-actions .action-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
   }
   
   .dropdown-menu {
