@@ -1,0 +1,1026 @@
+{
+  "timestamp": "2025-06-25T23:48:29.611Z",
+  "summary": {
+    "Irregular Verbs": {
+      "possum": {
+        "ourCount": 1,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0"
+        ]
+      },
+      "sum": {
+        "ourCount": 3,
+        "dictCount": 3,
+        "discrepancies": [
+          "STEM COUNT: Our 4 vs DICT 3",
+          "MISSING STEM: \"ADJ\" from DICTLINE not in our index",
+          "MISSING STEM: \"0\" from DICTLINE not in our index",
+          "MISSING STEM: \"SUPER\" from DICTLINE not in our index",
+          "EXTRA STEM: \"su\" in our index but not in DICTLINE",
+          "EXTRA STEM: \"es\" in our index but not in DICTLINE",
+          "EXTRA STEM: \"fu\" in our index but not in DICTLINE",
+          "EXTRA STEM: \"fut\" in our index but not in DICTLINE"
+        ]
+      },
+      "fero": {
+        "ourCount": 4,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 4 entries, DICTLINE has 0"
+        ]
+      },
+      "eo": {
+        "ourCount": 48,
+        "dictCount": 2,
+        "discrepancies": [
+          "COUNT MISMATCH: Our index has 48 entries, DICTLINE has 2",
+          "STEM COUNT: Our 4 vs DICT 3",
+          "MISSING STEM: \"ADV\" from DICTLINE not in our index",
+          "MISSING STEM: \"POS\" from DICTLINE not in our index",
+          "MISSING STEM: \"X\" from DICTLINE not in our index",
+          "EXTRA STEM: \"e\" in our index but not in DICTLINE",
+          "EXTRA STEM: \"i\" in our index but not in DICTLINE",
+          "EXTRA STEM: \"iv\" in our index but not in DICTLINE",
+          "EXTRA STEM: \"it\" in our index but not in DICTLINE"
+        ]
+      },
+      "volo": {
+        "ourCount": 3,
+        "dictCount": 1,
+        "discrepancies": [
+          "COUNT MISMATCH: Our index has 3 entries, DICTLINE has 1",
+          "STEM COUNT: Our 3 vs DICT 4",
+          "MISSING STEM: \"volon\" from DICTLINE not in our index",
+          "MISSING STEM: \"N\" from DICTLINE not in our index",
+          "MISSING STEM: \"3\" from DICTLINE not in our index",
+          "MISSING STEM: \"1\" from DICTLINE not in our index",
+          "EXTRA STEM: \"vol\" in our index but not in DICTLINE",
+          "EXTRA STEM: \"vel\" in our index but not in DICTLINE",
+          "EXTRA STEM: \"volu\" in our index but not in DICTLINE"
+        ]
+      },
+      "nolo": {
+        "ourCount": 2,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0"
+        ]
+      },
+      "malo": {
+        "ourCount": 5,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0"
+        ]
+      }
+    },
+    "Deponent Verbs": {
+      "sequor": {
+        "ourCount": 2,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0"
+        ]
+      },
+      "loquor": {
+        "ourCount": 1,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0"
+        ]
+      },
+      "patior": {
+        "ourCount": 1,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0"
+        ]
+      },
+      "morior": {
+        "ourCount": 5,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0"
+        ]
+      },
+      "conor": {
+        "ourCount": 2,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0"
+        ]
+      }
+    },
+    "Third Declension Nouns": {
+      "rex": {
+        "ourCount": 2,
+        "dictCount": 1,
+        "discrepancies": [
+          "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1",
+          "STEM COUNT: Our 3 vs DICT 4",
+          "MISSING STEM: \"N\" from DICTLINE not in our index",
+          "MISSING STEM: \"3\" from DICTLINE not in our index",
+          "MISSING STEM: \"1\" from DICTLINE not in our index",
+          "EXTRA STEM: \"rex\" in our index but not in DICTLINE",
+          "EXTRA STEM: \"rect\" in our index but not in DICTLINE"
+        ]
+      },
+      "homo": {
+        "ourCount": 1,
+        "dictCount": 1,
+        "discrepancies": [
+          "STEM COUNT: Our 2 vs DICT 4",
+          "MISSING STEM: \"N\" from DICTLINE not in our index",
+          "MISSING STEM: \"3\" from DICTLINE not in our index",
+          "MISSING STEM: \"1\" from DICTLINE not in our index",
+          "EXTRA STEM: \"homo\" in our index but not in DICTLINE"
+        ]
+      },
+      "corpus": {
+        "ourCount": 2,
+        "dictCount": 2,
+        "discrepancies": [
+          "STEM COUNT: Our 2 vs DICT 4",
+          "MISSING STEM: \"N\" from DICTLINE not in our index",
+          "MISSING STEM: \"3\" from DICTLINE not in our index",
+          "MISSING STEM: \"2\" from DICTLINE not in our index",
+          "EXTRA STEM: \"corpus\" in our index but not in DICTLINE"
+        ]
+      },
+      "nomen": {
+        "ourCount": 1,
+        "dictCount": 1,
+        "discrepancies": [
+          "STEM COUNT: Our 2 vs DICT 4",
+          "MISSING STEM: \"N\" from DICTLINE not in our index",
+          "MISSING STEM: \"3\" from DICTLINE not in our index",
+          "MISSING STEM: \"2\" from DICTLINE not in our index",
+          "EXTRA STEM: \"nomen\" in our index but not in DICTLINE"
+        ]
+      },
+      "miles": {
+        "ourCount": 2,
+        "dictCount": 1,
+        "discrepancies": [
+          "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1",
+          "STEM COUNT: Our 2 vs DICT 4",
+          "MISSING STEM: \"N\" from DICTLINE not in our index",
+          "MISSING STEM: \"3\" from DICTLINE not in our index",
+          "MISSING STEM: \"1\" from DICTLINE not in our index",
+          "EXTRA STEM: \"miles\" in our index but not in DICTLINE"
+        ]
+      },
+      "pater": {
+        "ourCount": 2,
+        "dictCount": 2,
+        "discrepancies": [
+          "STEM COUNT: Our 1 vs DICT 3",
+          "MISSING STEM: \"N\" from DICTLINE not in our index",
+          "MISSING STEM: \"1\" from DICTLINE not in our index"
+        ]
+      },
+      "mater": {
+        "ourCount": 1,
+        "dictCount": 1,
+        "discrepancies": [
+          "STEM COUNT: Our 2 vs DICT 4",
+          "MISSING STEM: \"N\" from DICTLINE not in our index",
+          "MISSING STEM: \"3\" from DICTLINE not in our index",
+          "MISSING STEM: \"1\" from DICTLINE not in our index",
+          "EXTRA STEM: \"mater\" in our index but not in DICTLINE"
+        ]
+      }
+    },
+    "Irregular Adjectives": {
+      "bonus": {
+        "ourCount": 3,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 3 entries, DICTLINE has 0"
+        ]
+      },
+      "magnus": {
+        "ourCount": 3,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 3 entries, DICTLINE has 0"
+        ]
+      },
+      "multus": {
+        "ourCount": 2,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0"
+        ]
+      },
+      "malus": {
+        "ourCount": 5,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0"
+        ]
+      },
+      "parvus": {
+        "ourCount": 1,
+        "dictCount": 0,
+        "discrepancies": [
+          "EXTRA: Word found in our index but not in DICTLINE",
+          "COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0"
+        ]
+      }
+    },
+    "Common Particles": {
+      "que": {
+        "ourCount": 2,
+        "dictCount": 2,
+        "discrepancies": [
+          "STEM COUNT: Our 1 vs DICT 3",
+          "MISSING STEM: \"CONJ\" from DICTLINE not in our index",
+          "MISSING STEM: \"F\" from DICTLINE not in our index",
+          "MISSING STEM: \"X\" from DICTLINE not in our index",
+          "EXTRA STEM: \"que\" in our index but not in DICTLINE"
+        ]
+      },
+      "ne": {
+        "ourCount": 4,
+        "dictCount": 3,
+        "discrepancies": [
+          "COUNT MISMATCH: Our index has 4 entries, DICTLINE has 3",
+          "MISSING STEM: \"ADV\" from DICTLINE not in our index",
+          "MISSING STEM: \"POS\" from DICTLINE not in our index",
+          "MISSING STEM: \"X\" from DICTLINE not in our index",
+          "EXTRA STEM: \"n\" in our index but not in DICTLINE",
+          "EXTRA STEM: \"nev\" in our index but not in DICTLINE",
+          "EXTRA STEM: \"net\" in our index but not in DICTLINE"
+        ]
+      },
+      "an": {
+        "ourCount": 6,
+        "dictCount": 6,
+        "discrepancies": [
+          "STEM COUNT: Our 1 vs DICT 2",
+          "MISSING STEM: \"CONJ\" from DICTLINE not in our index",
+          "MISSING STEM: \"X\" from DICTLINE not in our index",
+          "EXTRA STEM: \"an\" in our index but not in DICTLINE"
+        ]
+      },
+      "num": {
+        "ourCount": 2,
+        "dictCount": 1,
+        "discrepancies": [
+          "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1",
+          "STEM COUNT: Our 1 vs DICT 3",
+          "MISSING STEM: \"ADV\" from DICTLINE not in our index",
+          "MISSING STEM: \"POS\" from DICTLINE not in our index",
+          "MISSING STEM: \"X\" from DICTLINE not in our index",
+          "EXTRA STEM: \"Num\" in our index but not in DICTLINE"
+        ]
+      },
+      "si": {
+        "ourCount": 1,
+        "dictCount": 1,
+        "discrepancies": [
+          "STEM COUNT: Our 1 vs DICT 2",
+          "MISSING STEM: \"CONJ\" from DICTLINE not in our index",
+          "MISSING STEM: \"X\" from DICTLINE not in our index",
+          "EXTRA STEM: \"si\" in our index but not in DICTLINE"
+        ]
+      },
+      "ut": {
+        "ourCount": 2,
+        "dictCount": 2,
+        "discrepancies": [
+          "STEM COUNT: Our 1 vs DICT 2",
+          "MISSING STEM: \"CONJ\" from DICTLINE not in our index",
+          "MISSING STEM: \"X\" from DICTLINE not in our index",
+          "EXTRA STEM: \"ut\" in our index but not in DICTLINE"
+        ]
+      }
+    }
+  },
+  "testCases": [
+    {
+      "word": "possum",
+      "category": "Irregular Verbs",
+      "input": "possum",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 1,
+      "actualStems": [
+        "poss",
+        "pot",
+        "potu",
+        "zzz"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "sum",
+      "category": "Irregular Verbs",
+      "input": "sum",
+      "expectedDictEntries": 3,
+      "expectedStems": [
+        "ADJ",
+        "0",
+        "0",
+        "SUPER"
+      ],
+      "expectedPOS": "X",
+      "actualEntries": 3,
+      "actualStems": [
+        "su",
+        "es",
+        "fu",
+        "fut"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "STEM COUNT: Our 4 vs DICT 3",
+        "MISSING STEM: \"ADJ\" from DICTLINE not in our index",
+        "MISSING STEM: \"0\" from DICTLINE not in our index",
+        "MISSING STEM: \"SUPER\" from DICTLINE not in our index",
+        "EXTRA STEM: \"su\" in our index but not in DICTLINE",
+        "EXTRA STEM: \"es\" in our index but not in DICTLINE",
+        "EXTRA STEM: \"fu\" in our index but not in DICTLINE",
+        "EXTRA STEM: \"fut\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "fero",
+      "category": "Irregular Verbs",
+      "input": "fero",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 4,
+      "actualStems": [
+        "fer",
+        "fer",
+        "tul",
+        "lat"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 4 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "eo",
+      "category": "Irregular Verbs",
+      "input": "eo",
+      "expectedDictEntries": 2,
+      "expectedStems": [
+        "ADV",
+        "POS",
+        "X",
+        "X"
+      ],
+      "expectedPOS": "X",
+      "actualEntries": 48,
+      "actualStems": [
+        "e",
+        "i",
+        "iv",
+        "it"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "COUNT MISMATCH: Our index has 48 entries, DICTLINE has 2",
+        "STEM COUNT: Our 4 vs DICT 3",
+        "MISSING STEM: \"ADV\" from DICTLINE not in our index",
+        "MISSING STEM: \"POS\" from DICTLINE not in our index",
+        "MISSING STEM: \"X\" from DICTLINE not in our index",
+        "EXTRA STEM: \"e\" in our index but not in DICTLINE",
+        "EXTRA STEM: \"i\" in our index but not in DICTLINE",
+        "EXTRA STEM: \"iv\" in our index but not in DICTLINE",
+        "EXTRA STEM: \"it\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "volo",
+      "category": "Irregular Verbs",
+      "input": "volo",
+      "expectedDictEntries": 1,
+      "expectedStems": [
+        "volon",
+        "N",
+        "3",
+        "1"
+      ],
+      "expectedPOS": "M",
+      "actualEntries": 3,
+      "actualStems": [
+        "vol",
+        "vel",
+        "volu",
+        "zzz"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "COUNT MISMATCH: Our index has 3 entries, DICTLINE has 1",
+        "STEM COUNT: Our 3 vs DICT 4",
+        "MISSING STEM: \"volon\" from DICTLINE not in our index",
+        "MISSING STEM: \"N\" from DICTLINE not in our index",
+        "MISSING STEM: \"3\" from DICTLINE not in our index",
+        "MISSING STEM: \"1\" from DICTLINE not in our index",
+        "EXTRA STEM: \"vol\" in our index but not in DICTLINE",
+        "EXTRA STEM: \"vel\" in our index but not in DICTLINE",
+        "EXTRA STEM: \"volu\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "nolo",
+      "category": "Irregular Verbs",
+      "input": "nolo",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 2,
+      "actualStems": [
+        "nol",
+        "nol",
+        "nolu",
+        "zzz"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "malo",
+      "category": "Irregular Verbs",
+      "input": "malo",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 5,
+      "actualStems": [
+        "mal",
+        "mal"
+      ],
+      "actualPOS": "N",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "sequor",
+      "category": "Deponent Verbs",
+      "input": "sequor",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 2,
+      "actualStems": [
+        "sequ",
+        "sequ",
+        "zzz",
+        "secut"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "loquor",
+      "category": "Deponent Verbs",
+      "input": "loquor",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 1,
+      "actualStems": [
+        "loqu",
+        "loqu",
+        "zzz",
+        "locut"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "patior",
+      "category": "Deponent Verbs",
+      "input": "patior",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 1,
+      "actualStems": [
+        "pati",
+        "pat",
+        "zzz",
+        "pass"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "morior",
+      "category": "Deponent Verbs",
+      "input": "morior",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 5,
+      "actualStems": [
+        "mori",
+        "mor",
+        "zzz",
+        "morit"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "conor",
+      "category": "Deponent Verbs",
+      "input": "conor",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 2,
+      "actualStems": [
+        "con",
+        "con",
+        "conav",
+        "conat"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "rex",
+      "category": "Third Declension Nouns",
+      "input": "rex",
+      "expectedDictEntries": 1,
+      "expectedStems": [
+        "reg",
+        "N",
+        "3",
+        "1"
+      ],
+      "expectedPOS": "M",
+      "actualEntries": 2,
+      "actualStems": [
+        "reg",
+        "reg",
+        "rex",
+        "rect"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1",
+        "STEM COUNT: Our 3 vs DICT 4",
+        "MISSING STEM: \"N\" from DICTLINE not in our index",
+        "MISSING STEM: \"3\" from DICTLINE not in our index",
+        "MISSING STEM: \"1\" from DICTLINE not in our index",
+        "EXTRA STEM: \"rex\" in our index but not in DICTLINE",
+        "EXTRA STEM: \"rect\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "homo",
+      "category": "Third Declension Nouns",
+      "input": "homo",
+      "expectedDictEntries": 1,
+      "expectedStems": [
+        "homin",
+        "N",
+        "3",
+        "1"
+      ],
+      "expectedPOS": "M",
+      "actualEntries": 1,
+      "actualStems": [
+        "homo",
+        "homin"
+      ],
+      "actualPOS": "N",
+      "issues": [
+        "STEM COUNT: Our 2 vs DICT 4",
+        "MISSING STEM: \"N\" from DICTLINE not in our index",
+        "MISSING STEM: \"3\" from DICTLINE not in our index",
+        "MISSING STEM: \"1\" from DICTLINE not in our index",
+        "EXTRA STEM: \"homo\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "corpus",
+      "category": "Third Declension Nouns",
+      "input": "corpus",
+      "expectedDictEntries": 2,
+      "expectedStems": [
+        "corpor",
+        "N",
+        "3",
+        "2"
+      ],
+      "expectedPOS": "N",
+      "actualEntries": 2,
+      "actualStems": [
+        "corpus",
+        "corpor"
+      ],
+      "actualPOS": "N",
+      "issues": [
+        "STEM COUNT: Our 2 vs DICT 4",
+        "MISSING STEM: \"N\" from DICTLINE not in our index",
+        "MISSING STEM: \"3\" from DICTLINE not in our index",
+        "MISSING STEM: \"2\" from DICTLINE not in our index",
+        "EXTRA STEM: \"corpus\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "nomen",
+      "category": "Third Declension Nouns",
+      "input": "nomen",
+      "expectedDictEntries": 1,
+      "expectedStems": [
+        "nomin",
+        "N",
+        "3",
+        "2"
+      ],
+      "expectedPOS": "N",
+      "actualEntries": 1,
+      "actualStems": [
+        "nomen",
+        "nomin"
+      ],
+      "actualPOS": "N",
+      "issues": [
+        "STEM COUNT: Our 2 vs DICT 4",
+        "MISSING STEM: \"N\" from DICTLINE not in our index",
+        "MISSING STEM: \"3\" from DICTLINE not in our index",
+        "MISSING STEM: \"2\" from DICTLINE not in our index",
+        "EXTRA STEM: \"nomen\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "miles",
+      "category": "Third Declension Nouns",
+      "input": "miles",
+      "expectedDictEntries": 1,
+      "expectedStems": [
+        "milit",
+        "N",
+        "3",
+        "1"
+      ],
+      "expectedPOS": "M",
+      "actualEntries": 2,
+      "actualStems": [
+        "miles",
+        "milit"
+      ],
+      "actualPOS": "N",
+      "issues": [
+        "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1",
+        "STEM COUNT: Our 2 vs DICT 4",
+        "MISSING STEM: \"N\" from DICTLINE not in our index",
+        "MISSING STEM: \"3\" from DICTLINE not in our index",
+        "MISSING STEM: \"1\" from DICTLINE not in our index",
+        "EXTRA STEM: \"miles\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "pater",
+      "category": "Third Declension Nouns",
+      "input": "pater",
+      "expectedDictEntries": 2,
+      "expectedStems": [
+        "pater",
+        "N",
+        "1",
+        "1"
+      ],
+      "expectedPOS": "F",
+      "actualEntries": 2,
+      "actualStems": [
+        "pater",
+        "pater"
+      ],
+      "actualPOS": "N",
+      "issues": [
+        "STEM COUNT: Our 1 vs DICT 3",
+        "MISSING STEM: \"N\" from DICTLINE not in our index",
+        "MISSING STEM: \"1\" from DICTLINE not in our index"
+      ]
+    },
+    {
+      "word": "mater",
+      "category": "Third Declension Nouns",
+      "input": "mater",
+      "expectedDictEntries": 1,
+      "expectedStems": [
+        "matr",
+        "N",
+        "3",
+        "1"
+      ],
+      "expectedPOS": "F",
+      "actualEntries": 1,
+      "actualStems": [
+        "mater",
+        "matr"
+      ],
+      "actualPOS": "N",
+      "issues": [
+        "STEM COUNT: Our 2 vs DICT 4",
+        "MISSING STEM: \"N\" from DICTLINE not in our index",
+        "MISSING STEM: \"3\" from DICTLINE not in our index",
+        "MISSING STEM: \"1\" from DICTLINE not in our index",
+        "EXTRA STEM: \"mater\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "bonus",
+      "category": "Irregular Adjectives",
+      "input": "bonus",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 3,
+      "actualStems": [
+        "bon",
+        "bon"
+      ],
+      "actualPOS": "N",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 3 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "magnus",
+      "category": "Irregular Adjectives",
+      "input": "magnus",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 3,
+      "actualStems": [
+        "magn",
+        "magn",
+        "maj",
+        "maxi"
+      ],
+      "actualPOS": "ADJ",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 3 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "multus",
+      "category": "Irregular Adjectives",
+      "input": "multus",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 2,
+      "actualStems": [
+        "mult",
+        "mult"
+      ],
+      "actualPOS": "N",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "malus",
+      "category": "Irregular Adjectives",
+      "input": "malus",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 5,
+      "actualStems": [
+        "mal",
+        "mal"
+      ],
+      "actualPOS": "N",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "parvus",
+      "category": "Irregular Adjectives",
+      "input": "parvus",
+      "expectedDictEntries": 0,
+      "expectedStems": [],
+      "expectedPOS": "",
+      "actualEntries": 1,
+      "actualStems": [
+        "parv",
+        "parv",
+        "min",
+        "mini"
+      ],
+      "actualPOS": "ADJ",
+      "issues": [
+        "EXTRA: Word found in our index but not in DICTLINE",
+        "COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0"
+      ]
+    },
+    {
+      "word": "que",
+      "category": "Common Particles",
+      "input": "que",
+      "expectedDictEntries": 2,
+      "expectedStems": [
+        "CONJ",
+        "F",
+        "X",
+        "X"
+      ],
+      "expectedPOS": "E",
+      "actualEntries": 2,
+      "actualStems": [
+        "que"
+      ],
+      "actualPOS": "CONJ",
+      "issues": [
+        "STEM COUNT: Our 1 vs DICT 3",
+        "MISSING STEM: \"CONJ\" from DICTLINE not in our index",
+        "MISSING STEM: \"F\" from DICTLINE not in our index",
+        "MISSING STEM: \"X\" from DICTLINE not in our index",
+        "EXTRA STEM: \"que\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "ne",
+      "category": "Common Particles",
+      "input": "ne",
+      "expectedDictEntries": 3,
+      "expectedStems": [
+        "ADV",
+        "POS",
+        "X",
+        "X"
+      ],
+      "expectedPOS": "X",
+      "actualEntries": 4,
+      "actualStems": [
+        "n",
+        "n",
+        "nev",
+        "net"
+      ],
+      "actualPOS": "V",
+      "issues": [
+        "COUNT MISMATCH: Our index has 4 entries, DICTLINE has 3",
+        "MISSING STEM: \"ADV\" from DICTLINE not in our index",
+        "MISSING STEM: \"POS\" from DICTLINE not in our index",
+        "MISSING STEM: \"X\" from DICTLINE not in our index",
+        "EXTRA STEM: \"n\" in our index but not in DICTLINE",
+        "EXTRA STEM: \"nev\" in our index but not in DICTLINE",
+        "EXTRA STEM: \"net\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "an",
+      "category": "Common Particles",
+      "input": "an",
+      "expectedDictEntries": 6,
+      "expectedStems": [
+        "CONJ",
+        "X",
+        "X",
+        "X"
+      ],
+      "expectedPOS": "C",
+      "actualEntries": 6,
+      "actualStems": [
+        "an"
+      ],
+      "actualPOS": "CONJ",
+      "issues": [
+        "STEM COUNT: Our 1 vs DICT 2",
+        "MISSING STEM: \"CONJ\" from DICTLINE not in our index",
+        "MISSING STEM: \"X\" from DICTLINE not in our index",
+        "EXTRA STEM: \"an\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "num",
+      "category": "Common Particles",
+      "input": "num",
+      "expectedDictEntries": 1,
+      "expectedStems": [
+        "ADV",
+        "POS",
+        "X",
+        "X"
+      ],
+      "expectedPOS": "X",
+      "actualEntries": 2,
+      "actualStems": [
+        "Num"
+      ],
+      "actualPOS": "N",
+      "issues": [
+        "COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1",
+        "STEM COUNT: Our 1 vs DICT 3",
+        "MISSING STEM: \"ADV\" from DICTLINE not in our index",
+        "MISSING STEM: \"POS\" from DICTLINE not in our index",
+        "MISSING STEM: \"X\" from DICTLINE not in our index",
+        "EXTRA STEM: \"Num\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "si",
+      "category": "Common Particles",
+      "input": "si",
+      "expectedDictEntries": 1,
+      "expectedStems": [
+        "CONJ",
+        "X",
+        "X",
+        "X"
+      ],
+      "expectedPOS": "A",
+      "actualEntries": 1,
+      "actualStems": [
+        "si"
+      ],
+      "actualPOS": "CONJ",
+      "issues": [
+        "STEM COUNT: Our 1 vs DICT 2",
+        "MISSING STEM: \"CONJ\" from DICTLINE not in our index",
+        "MISSING STEM: \"X\" from DICTLINE not in our index",
+        "EXTRA STEM: \"si\" in our index but not in DICTLINE"
+      ]
+    },
+    {
+      "word": "ut",
+      "category": "Common Particles",
+      "input": "ut",
+      "expectedDictEntries": 2,
+      "expectedStems": [
+        "CONJ",
+        "X",
+        "X",
+        "X"
+      ],
+      "expectedPOS": "A",
+      "actualEntries": 2,
+      "actualStems": [
+        "ut"
+      ],
+      "actualPOS": "CONJ",
+      "issues": [
+        "STEM COUNT: Our 1 vs DICT 2",
+        "MISSING STEM: \"CONJ\" from DICTLINE not in our index",
+        "MISSING STEM: \"X\" from DICTLINE not in our index",
+        "EXTRA STEM: \"ut\" in our index but not in DICTLINE"
+      ]
+    }
+  ],
+  "metadata": {
+    "totalWordsTested": 30,
+    "totalIssuesFound": 30
+  }
+}

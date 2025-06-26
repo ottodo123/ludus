@@ -1,0 +1,1295 @@
+🔍 COMPREHENSIVE DIAGNOSTIC TEST
+
+Total entries in optimized index: 38302
+Total morphological forms: 682637
+
+
+==================================================
+IRREGULAR VERBS
+==================================================
+
+--- Testing: POSSUM ---
+Our index has 1 entries for "possum"
+Our entries:
+  - possum, posse, potui (V 5 2 TO_BEING)
+    Stems: [poss, pot, potu, zzz]
+    Meaning: be able, can; [multum posse => have much/more/most influence/power]...
+
+DICTLINE.GEN has 0 entries for "possum"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0
+
+--- Testing: SUM ---
+Our index has 3 entries for "sum"
+Our entries:
+  - sum, esse, fui, futurus (V 5 1 TO_BEING)
+    Stems: [su, es, fu, fut]
+    Meaning: be; exist; (archaic INF esse, FUT INFINITIVE fore)...
+  - sumo, sumere, sumpsi, sumptum (V 3 1)
+    Stems: [sum, sum, sumps, sumpt]
+    Meaning: take up; begin; suppose, assume; select; purchase; exact (punishment); obtain...
+  - sumo, sumere, sumsi, sumtum (V 3 1)
+    Stems: [sum, sum, sums, sumt]
+    Meaning: accept; begin; suppose; select; purchase; obtain; (sumpsi, sumptum)...
+
+DICTLINE.GEN has 3 entries for "sum"
+DICTLINE entries:
+  - X X
+    Stems: [ADJ, 0, 0, SUPER]
+    Line: sum                                                                         ADJ    0 0 SUPER        ...
+  - 3 1
+    Stems: [sum, sumps, sumpt, V]
+    Line: sum                sum                sumps              sumpt              V      3 1 X            ...
+  - 3 1
+    Stems: [sum, sums, sumt, V]
+    Line: sum                sum                sums               sumt               V      3 1 X            ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ STEM COUNT: Our 4 vs DICT 3
+  ❌ MISSING STEM: "ADJ" from DICTLINE not in our index
+  ❌ MISSING STEM: "0" from DICTLINE not in our index
+  ❌ MISSING STEM: "SUPER" from DICTLINE not in our index
+  ❌ EXTRA STEM: "su" in our index but not in DICTLINE
+  ❌ EXTRA STEM: "es" in our index but not in DICTLINE
+  ❌ EXTRA STEM: "fu" in our index but not in DICTLINE
+  ❌ EXTRA STEM: "fut" in our index but not in DICTLINE
+
+--- Testing: FERO ---
+Our index has 4 entries for "fero"
+Our entries:
+  - fero, ferere, tuli, latum (V 3 2 TRANS)
+    Stems: [fer, fer, tul, lat]
+    Meaning: bear, carry, bring; suffer, endure, tolerate; say, speak; obtain...
+  - ferus, feri (N 2 1)
+    Stems: [fer, fer]
+    Meaning: wild beast/animal; wild/untamed horse/boar...
+  - fer, fer (ADJ 1 1)
+    Stems: [fer, fer]
+    Meaning: wild, savage; uncivilized; untamed; fierce...
+  - fero, ferere, tuli, latum (V 3 2)
+    Stems: [fer, fer, tul, lat]
+    Meaning: bring, bear; tell/speak of; consider; carry off, win, receive, produce; get...
+
+DICTLINE.GEN has 0 entries for "fero"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 4 entries, DICTLINE has 0
+
+--- Testing: EO ---
+Our index has 48 entries for "eo"
+Our entries:
+  - eo, ire, ivi, itum (V 6 1)
+    Stems: [e, i, iv, it]
+    Meaning: go, walk; march, advance; pass; flow; pass (time); ride; sail...
+  - abeo, abire, abivi, abitum (V 6 1 INTRANS)
+    Stems: [abe, abi, abiv, abit]
+    Meaning: depart, go away; go off, go forth; pass away, die, disappear; be changed...
+  - adeo, adire, adivi, aditum (V 6 1)
+    Stems: [ade, adi, adiv, adit]
+    Meaning: approach; attack; visit, address; undertake; take possession (inheritance)...
+  - anteo, antire, antivi, antitum (V 6 1)
+    Stems: [ante, anti, antiv, antit]
+    Meaning: go before, go ahead, precede; surpass; anticipate; prevent; (anteeo drop e)...
+  - anteeo, anteire, anteivi, anteitum (V 6 1)
+    Stems: [antee, antei, anteiv, anteit]
+    Meaning: go/walk before/ahead, precede, antedate; surpass; anticipate; prevent...
+  - antideo, antidire, antidivi, antiditum (V 6 1)
+    Stems: [antide, antidi, antidiv, antidit]
+    Meaning: go before, go ahead, precede; surpass; anticipate; prevent; (anteeo drop e)...
+  - circueo, circuire, circuivi, circuitum (V 6 1)
+    Stems: [circue, circui, circuiv, circuit]
+    Meaning: encircle, surround; border; skirt; circulate/wander through; go/measure round...
+  - circumeo, circumire, circumivi, circumitum (V 6 1)
+    Stems: [circume, circumi, circumiv, circumit]
+    Meaning: encircle, surround; border; skirt; circulate/wander through; go/measure round...
+  - coeo, coire, coivi, coitum (V 6 1)
+    Stems: [coe, coi, coiv, coit]
+    Meaning: fit together; have sexual intercourse; collect/gather (fluid); meet; rally...
+  - coeo, coire, coivi, coitum (V 6 1)
+    Stems: [coe, coi, coiv, coit]
+    Meaning: enter agreement; unite/assemble/conspire; come/go together; mend/knit (wound)...
+  - compereo, comperire, comperivi, comperitum (V 6 1 INTRANS)
+    Stems: [compere, comperi, comperiv, comperit]
+    Meaning: perish together...
+  - concieo, concire, concivi, concitum (V 6 1 TRANS)
+    Stems: [concie, conci, conciv, concit]
+    Meaning: move, set in violent motion, stir up; muster; rouse, excite, incite, provoke...
+  - contraeo, contraire, contraivi, contraitum (V 6 1 INTRANS)
+    Stems: [contrae, contrai, contraiv, contrait]
+    Meaning: go against, oppose; make resistance; (w/DAT)...
+  - contreo, contrire, contrivi, contritum (V 6 1 TRANS)
+    Stems: [contre, contri, contriv, contrit]
+    Meaning: destroy, crush; go against...
+  - depereo, deperire, deperivi, deperitum (V 6 1)
+    Stems: [depere, deperi, deperiv, deperit]
+    Meaning: perish/die; be lost/totally destroyed; be much in love with/love to distraction...
+  - dispereo, disperire, disperivi, disperitum (V 6 1 INTRANS)
+    Stems: [dispere, disperi, disperiv, disperit]
+    Meaning: perish/die; be destroyed; be ruined/lost/undone (completely) (L+S); disappear...
+  - dormeo, dormire, dormivi, dormitum (V 6 1 INTRANS)
+    Stems: [dorme, dormi, dormiv, dormit]
+    Meaning: sleep, rest; go to sleep, be/fall asleep; be idle, do nothing; (form for FUT)...
+  - eo, eare, evi, etum (V 1 1)
+    Stems: [e, e, ev, et]
+    Meaning: go, walk; march, advance; pass; flow; pass (time); ride; be in the middle...
+  - eo (ADV )
+    Stems: [eo]
+    Meaning: therefore, for that reason, consequently; by that degree; so much the more/less...
+  - eo (ADV )
+    Stems: [eo]
+    Meaning: there, to/toward that place; in that direction; to that object/point/stage...
+  - Eous, Eoi (N 2 1)
+    Stems: [Eo, Eo]
+    Meaning: morning star; Oriental, dweller in the east; one of the horses of the Sun...
+  - Eo, Eo (ADJ 1 1)
+    Stems: [Eo, Eo]
+    Meaning: eastern; of the dawn; belonging to/of/set in the morning...
+  - exeo, exire, exivi, exitum (V 6 1 INTRANS)
+    Stems: [exe, exi, exiv, exit]
+    Meaning: come/go/sail/march/move out/forth/away, leave; pass (away), expire/perish/die...
+  - exeo, exire, exivi, exitum (V 6 1 INTRANS)
+    Stems: [exe, exi, exiv, exit]
+    Meaning: discharge (fluid); rise (river); become visible; issue/emerge/escape; sprout...
+  - ineo, inire, inivi, initum (V 6 1)
+    Stems: [ine, ini, iniv, init]
+    Meaning: enter; undertake; begin; go in; enter upon; [consilium ~ => form a plan]...
+  - intereo, interire, interivi, interitum (V 6 1)
+    Stems: [intere, interi, interiv, interit]
+    Meaning: perish, die; be ruined; cease...
+  - introeo, introire, introivi, introitum (V 6 1)
+    Stems: [introe, introi, introiv, introit]
+    Meaning: enter, go in or into; invade...
+  - lenio, lenire, lenivi, lenitum (V 6 1 TRANS)
+    Stems: [leni, leni, leniv, lenit]
+    Meaning: mitigate, moderate; alleviate, allay, assuage, ease, calm, placate, appease...
+  - lenio, lenire, lenivi, lenitum (V 6 1 TRANS)
+    Stems: [leni, leni, leniv, lenit]
+    Meaning: mollify; explain away, gloss over; beguile, pass pleasantly; abate; (Kludge)...
+  - malo, malle, malui (V 6 2)
+    Stems: [mal, mal, malu, zzz]
+    Meaning: prefer; incline toward, wish rather...
+  - nequeo, nequire, nequivi, nequitum (V 6 1)
+    Stems: [neque, nequi, nequiv, nequit]
+    Meaning: be unable, cannot...
+  - obeo, obire, obivi, obitum (V 6 1)
+    Stems: [obe, obi, obiv, obit]
+    Meaning: go to meet; attend to; fall; die...
+  - odeo, odire, odivi, zzzum (V 6 1 TRANS)
+    Stems: [ode, odi, odiv, zzz]
+    Meaning: hate; dislike; be disinclined/reluctant/adverse to; (usu. PREFDEF)...
+  - pereo, perire, perivi, peritum (V 6 1)
+    Stems: [pere, peri, periv, perit]
+    Meaning: die, pass away; be ruined, be destroyed; go to waste...
+  - pertranseo, pertransire, pertransivi, pertransitum (V 6 1 INTRANS)
+    Stems: [pertranse, pertransi, pertransiv, pertransit]
+    Meaning: pass right through; go/pass by (L+S); pass away; cross (Bee)...
+  - praeeo, praeire, praeivi, praeitum (V 6 1)
+    Stems: [praee, praei, praeiv, praeit]
+    Meaning: go before, precede; dictate...
+  - praetereo, praeterire, praeterivi, praeteritum (V 6 1)
+    Stems: [praetere, praeteri, praeteriv, praeterit]
+    Meaning: pass/go by; disregard/neglect/omit/miss; surpass/excel; go overdue; pass over...
+  - prodeo, prodire, prodivi, proditum (V 6 1 INTRANS)
+    Stems: [prode, prodi, prodiv, prodit]
+    Meaning: go/come forth/out, advance; appear; sprout/spring up; issue/extend/project...
+  - queo, quire, quivi, quitum (V 6 1)
+    Stems: [que, qui, quiv, quit]
+    Meaning: be able...
+  - redeo, redire, redivi, reditum (V 6 1)
+    Stems: [rede, redi, rediv, redit]
+    Meaning: return, go back, give back; fall back on, revert to; respond, pay back...
+  - scio, scire, scivi, scitum (V 6 1 TRANS)
+    Stems: [sci, sci, sciv, scit]
+    Meaning: know, understand...
+  - subeo, subire, subivi, subitum (V 6 1 INTRANS)
+    Stems: [sube, subi, subiv, subit]
+    Meaning: go/move/pass/sink/extend underneath/into; climb/come/go up, ascend; steal in on...
+  - subeo, subire, subivi, subitum (V 6 1 INTRANS)
+    Stems: [sube, subi, subiv, subit]
+    Meaning: place/be placed under/in support; come up w/aid; assume a form; undergo, endure...
+  - subintroeo, subintroire, subintroivi, subintroitum (V 6 1 TRANS)
+    Stems: [subintroe, subintroi, subintroiv, subintroit]
+    Meaning: go into, enter...
+  - transabeo, transabire, transabivi, transabitum (V 6 1)
+    Stems: [transabe, transabi, transabiv, transabit]
+    Meaning: go away beyond...
+  - transeo, transire, transivi, transitum (V 6 1)
+    Stems: [transe, transi, transiv, transit]
+    Meaning: go over, cross...
+  - veneo, venire, venivi, venitum (V 6 1)
+    Stems: [vene, veni, veniv, venit]
+    Meaning: go for sale, be sold (as slave), be disposed of for (dishonorable/venal) gain...
+  - vulo, zzzre, zzzi, zzzum (V 6 2)
+    Stems: [vul, zzz, zzz, zzz]
+    Meaning: wish, want, prefer; be willing, will...
+
+DICTLINE.GEN has 2 entries for "eo"
+DICTLINE entries:
+  - X C
+    Stems: [ADV, POS, X, X]
+    Line: eo                                                                          ADV    POS              ...
+  - X B
+    Stems: [ADV, POS, X, X]
+    Line: eo                                                                          ADV    POS              ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ COUNT MISMATCH: Our index has 48 entries, DICTLINE has 2
+  ❌ STEM COUNT: Our 4 vs DICT 3
+  ❌ MISSING STEM: "ADV" from DICTLINE not in our index
+  ❌ MISSING STEM: "POS" from DICTLINE not in our index
+  ❌ MISSING STEM: "X" from DICTLINE not in our index
+  ❌ EXTRA STEM: "e" in our index but not in DICTLINE
+  ❌ EXTRA STEM: "i" in our index but not in DICTLINE
+  ❌ EXTRA STEM: "iv" in our index but not in DICTLINE
+  ❌ EXTRA STEM: "it" in our index but not in DICTLINE
+
+--- Testing: VOLO ---
+Our index has 3 entries for "volo"
+Our entries:
+  - volo, volle, volui (V 6 2)
+    Stems: [vol, vel, volu, zzz]
+    Meaning: wish, want, prefer; be willing, will...
+  - volo, volare, volavi, volatum (V 1 1)
+    Stems: [vol, vol, volav, volat]
+    Meaning: fly...
+  - volo, volonis (N 3 1)
+    Stems: [volo, volon]
+    Meaning: volunteers (pl.); (in the Second Punic War)...
+
+DICTLINE.GEN has 1 entries for "volo"
+DICTLINE entries:
+  - M P
+    Stems: [volon, N, 3, 1]
+    Line: volo               volon                                                    N      3 1 M P          ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ COUNT MISMATCH: Our index has 3 entries, DICTLINE has 1
+  ❌ STEM COUNT: Our 3 vs DICT 4
+  ❌ MISSING STEM: "volon" from DICTLINE not in our index
+  ❌ MISSING STEM: "N" from DICTLINE not in our index
+  ❌ MISSING STEM: "3" from DICTLINE not in our index
+  ❌ MISSING STEM: "1" from DICTLINE not in our index
+  ❌ EXTRA STEM: "vol" in our index but not in DICTLINE
+  ❌ EXTRA STEM: "vel" in our index but not in DICTLINE
+  ❌ EXTRA STEM: "volu" in our index but not in DICTLINE
+
+--- Testing: NOLO ---
+Our index has 2 entries for "nolo"
+Our entries:
+  - nolo, nolle, nolui (V 6 2)
+    Stems: [nol, nol, nolu, zzz]
+    Meaning: be unwilling; wish not to; refuse...
+  - nolo, nolle, nolui (V 6 2)
+    Stems: [nol, nol, nolu, zzz]
+    Meaning: be unwilling; wish not to; refuse to...
+
+DICTLINE.GEN has 0 entries for "nolo"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0
+
+--- Testing: MALO ---
+Our index has 5 entries for "malo"
+Our entries:
+  - malus, mali (N 2 1)
+    Stems: [mal, mal]
+    Meaning: mast; beam; tall pole, upright pole; standard, prop, staff...
+  - malus, mali (N 2 1)
+    Stems: [mal, mal]
+    Meaning: apple tree...
+  - malum, mali (N 2 2)
+    Stems: [mal, mal]
+    Meaning: apple; fruit; lemon; quince...
+  - malum, mali (N 2 2)
+    Stems: [mal, mal]
+    Meaning: evil, mischief; disaster, misfortune, calamity, plague; punishment; harm/hurt...
+  - malus, pej, zzz (ADJ 1 1)
+    Stems: [mal, mal, pej, zzz]
+    Meaning: bad, evil, wicked; ugly; unlucky...
+
+DICTLINE.GEN has 0 entries for "malo"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0
+
+==================================================
+DEPONENT VERBS
+==================================================
+
+--- Testing: SEQUOR ---
+Our index has 2 entries for "sequor"
+Our entries:
+  - sequor, sequi, secutus sum (V 3 1 DEP)
+    Stems: [sequ, sequ, zzz, secut]
+    Meaning: follow; escort/attend/accompany; aim at/reach after/strive for/make for/seek...
+  - sequor, sequi, secutus sum (V 3 1 DEP)
+    Stems: [sequ, sequ, zzz, secut]
+    Meaning: support/back/side with; obey, observe; pursue/chase; range/spread over; attain...
+
+DICTLINE.GEN has 0 entries for "sequor"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0
+
+--- Testing: LOQUOR ---
+Our index has 1 entries for "loquor"
+Our entries:
+  - loquor, loqui, locutus sum (V 3 1 DEP)
+    Stems: [loqu, loqu, zzz, locut]
+    Meaning: speak, tell; talk; mention; say, utter; phrase...
+
+DICTLINE.GEN has 0 entries for "loquor"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0
+
+--- Testing: PATIOR ---
+Our index has 1 entries for "patior"
+Our entries:
+  - patior, patii, passus sum (V 3 1 DEP)
+    Stems: [pati, pat, zzz, pass]
+    Meaning: suffer; allow; undergo, endure; permit...
+
+DICTLINE.GEN has 0 entries for "patior"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0
+
+--- Testing: MORIOR ---
+Our index has 5 entries for "morior"
+Our entries:
+  - morior, morii, moritus sum (V 3 4 DEP)
+    Stems: [mori, mor, zzz, morit]
+    Meaning: die; expire, pass/die/wither away/out; decay; (FUT ACT PPL only, moriturus)...
+  - morior, morii, mortuus sum (V 3 1 DEP)
+    Stems: [mori, mor, zzz, mortu]
+    Meaning: die, expire, pass/die/wither away/out; fail, come to an end; decay...
+  - morior, morii, mortuus sum (V 3 1 DEP)
+    Stems: [mori, mor, zzz, mortu]
+    Meaning: perish; become obsolete (word), fall into disuse; be forgotten...
+  - morior, morii, mortuus sum (V 3 1 DEP)
+    Stems: [mori, mor, zzz, mortu]
+    Meaning: become obsolete (word), fall into disuse; be forgotten; faint, languish...
+  - morior, morii, mortuus sum (V 3 1 DEP)
+    Stems: [mori, mor, zzz, mortu]
+    Meaning: become void/moot (lawsuit); be extinguished (fire/light), go out...
+
+DICTLINE.GEN has 0 entries for "morior"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0
+
+--- Testing: CONOR ---
+Our index has 2 entries for "conor"
+Our entries:
+  - conor, conari, conatus sum (V 1 1 DEP)
+    Stems: [con, con, conav, conat]
+    Meaning: attempt/try/endeavor, make an effort; exert oneself; try to go/rise/speak...
+  - conor, conari, conatus sum (V 1 1 DEP)
+    Stems: [con, con, zzz, conat]
+    Meaning: attempt/try/endeavor, make an effort; exert oneself; try to go/rise/speak...
+
+DICTLINE.GEN has 0 entries for "conor"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0
+
+==================================================
+THIRD DECLENSION NOUNS
+==================================================
+
+--- Testing: REX ---
+Our index has 2 entries for "rex"
+Our entries:
+  - rego, regere, rexi, rectum (V 3 1)
+    Stems: [reg, reg, rex, rect]
+    Meaning: rule, guide; manage, direct...
+  - rex, regis (N 3 1)
+    Stems: [rex, reg]
+    Meaning: king...
+
+DICTLINE.GEN has 1 entries for "rex"
+DICTLINE entries:
+  - M P
+    Stems: [reg, N, 3, 1]
+    Line: rex                reg                                                      N      3 1 M P          ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1
+  ❌ STEM COUNT: Our 3 vs DICT 4
+  ❌ MISSING STEM: "N" from DICTLINE not in our index
+  ❌ MISSING STEM: "3" from DICTLINE not in our index
+  ❌ MISSING STEM: "1" from DICTLINE not in our index
+  ❌ EXTRA STEM: "rex" in our index but not in DICTLINE
+  ❌ EXTRA STEM: "rect" in our index but not in DICTLINE
+
+--- Testing: HOMO ---
+Our index has 1 entries for "homo"
+Our entries:
+  - homo, hominis (N 3 1)
+    Stems: [homo, homin]
+    Meaning: man, human being, person, fellow; [novus homo => nouveau riche]...
+
+DICTLINE.GEN has 1 entries for "homo"
+DICTLINE entries:
+  - M P
+    Stems: [homin, N, 3, 1]
+    Line: homo               homin                                                    N      3 1 M P          ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ STEM COUNT: Our 2 vs DICT 4
+  ❌ MISSING STEM: "N" from DICTLINE not in our index
+  ❌ MISSING STEM: "3" from DICTLINE not in our index
+  ❌ MISSING STEM: "1" from DICTLINE not in our index
+  ❌ EXTRA STEM: "homo" in our index but not in DICTLINE
+
+--- Testing: CORPUS ---
+Our index has 2 entries for "corpus"
+Our entries:
+  - corpus, corporis (N 3 2)
+    Stems: [corpus, corpor]
+    Meaning: body; person, self; virility; flesh; corpse; trunk; frame(work); collection/sum...
+  - corpus, corporis (N 3 2)
+    Stems: [corpus, corpor]
+    Meaning: substantial/material/concrete object/body; particle/atom; corporation, guild...
+
+DICTLINE.GEN has 2 entries for "corpus"
+DICTLINE entries:
+  - N T
+    Stems: [corpor, N, 3, 2]
+    Line: corpus             corpor                                                   N      3 2 N T          ...
+  - N T
+    Stems: [corpor, N, 3, 2]
+    Line: corpus             corpor                                                   N      3 2 N T          ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ STEM COUNT: Our 2 vs DICT 4
+  ❌ MISSING STEM: "N" from DICTLINE not in our index
+  ❌ MISSING STEM: "3" from DICTLINE not in our index
+  ❌ MISSING STEM: "2" from DICTLINE not in our index
+  ❌ EXTRA STEM: "corpus" in our index but not in DICTLINE
+
+--- Testing: NOMEN ---
+Our index has 1 entries for "nomen"
+Our entries:
+  - nomen, nominis (N 3 2)
+    Stems: [nomen, nomin]
+    Meaning: name, family name; noun; account, entry in debt ledger; sake; title, heading...
+
+DICTLINE.GEN has 1 entries for "nomen"
+DICTLINE entries:
+  - N T
+    Stems: [nomin, N, 3, 2]
+    Line: nomen              nomin                                                    N      3 2 N T          ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ STEM COUNT: Our 2 vs DICT 4
+  ❌ MISSING STEM: "N" from DICTLINE not in our index
+  ❌ MISSING STEM: "3" from DICTLINE not in our index
+  ❌ MISSING STEM: "2" from DICTLINE not in our index
+  ❌ EXTRA STEM: "nomen" in our index but not in DICTLINE
+
+--- Testing: MILES ---
+Our index has 2 entries for "miles"
+Our entries:
+  - miles, militis (N 3 1)
+    Stems: [miles, milit]
+    Meaning: soldier; foot soldier; soldiery; knight (Latham); knight's fee/service...
+  - mille, milis (N 3 4)
+    Stems: [mille, mil]
+    Meaning: thousand; thousands (men/things); miles; [~ passuum => thousand paces = 1 mile]...
+
+DICTLINE.GEN has 1 entries for "miles"
+DICTLINE entries:
+  - M P
+    Stems: [milit, N, 3, 1]
+    Line: miles              milit                                                    N      3 1 M P          ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1
+  ❌ STEM COUNT: Our 2 vs DICT 4
+  ❌ MISSING STEM: "N" from DICTLINE not in our index
+  ❌ MISSING STEM: "3" from DICTLINE not in our index
+  ❌ MISSING STEM: "1" from DICTLINE not in our index
+  ❌ EXTRA STEM: "miles" in our index but not in DICTLINE
+
+--- Testing: PATER ---
+Our index has 2 entries for "pater"
+Our entries:
+  - patera, paterae (N 1 1)
+    Stems: [pater, pater]
+    Meaning: bowl; saucer...
+  - pater, patris (N 3 1)
+    Stems: [pater, patr]
+    Meaning: father; [pater familias, patris familias => head of family/household]...
+
+DICTLINE.GEN has 2 entries for "pater"
+DICTLINE entries:
+  - F T
+    Stems: [pater, N, 1, 1]
+    Line: pater              pater                                                    N      1 1 F T          ...
+  - M P
+    Stems: [patr, N, 3, 1]
+    Line: pater              patr                                                     N      3 1 M P          ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ STEM COUNT: Our 1 vs DICT 3
+  ❌ MISSING STEM: "N" from DICTLINE not in our index
+  ❌ MISSING STEM: "1" from DICTLINE not in our index
+
+--- Testing: MATER ---
+Our index has 1 entries for "mater"
+Our entries:
+  - mater, matris (N 3 1)
+    Stems: [mater, matr]
+    Meaning: mother, foster mother; lady, matron; origin, source, motherland, mother city...
+
+DICTLINE.GEN has 1 entries for "mater"
+DICTLINE entries:
+  - F T
+    Stems: [matr, N, 3, 1]
+    Line: mater              matr                                                     N      3 1 F T          ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ STEM COUNT: Our 2 vs DICT 4
+  ❌ MISSING STEM: "N" from DICTLINE not in our index
+  ❌ MISSING STEM: "3" from DICTLINE not in our index
+  ❌ MISSING STEM: "1" from DICTLINE not in our index
+  ❌ EXTRA STEM: "mater" in our index but not in DICTLINE
+
+==================================================
+IRREGULAR ADJECTIVES
+==================================================
+
+--- Testing: BONUS ---
+Our index has 3 entries for "bonus"
+Our entries:
+  - bonus, boni (N 2 1)
+    Stems: [bon, bon]
+    Meaning: good/moral/honest/brave man; man of honor, gentleman; better/rich people (pl.)...
+  - bonum, boni (N 2 2)
+    Stems: [bon, bon]
+    Meaning: good, good thing, profit, advantage; goods (pl.), possessions, wealth, estate...
+  - bonus, meli, opti (ADJ 1 1)
+    Stems: [bon, bon, meli, opti]
+    Meaning: good, honest, brave, noble, kind, pleasant, right, useful; valid; healthy...
+
+DICTLINE.GEN has 0 entries for "bonus"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 3 entries, DICTLINE has 0
+
+--- Testing: MAGNUS ---
+Our index has 3 entries for "magnus"
+Our entries:
+  - magnus, maj, maxi (ADJ 1 1)
+    Stems: [magn, magn, maj, maxi]
+    Meaning: large/great/big/vast/huge; much; powerful; tall/long/broad; extensive/spacious...
+  - magnus, maj, maxi (ADJ 1 1)
+    Stems: [magn, magn, maj, maxi]
+    Meaning: great (achievement); mighty; distinguished; skilled; bold/confident; proud...
+  - magnus, maj, maxi (ADJ 1 1)
+    Stems: [magn, magn, maj, maxi]
+    Meaning: full/complete/utter/pure; intense; loud; at high price; notable/famous; old...
+
+DICTLINE.GEN has 0 entries for "magnus"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 3 entries, DICTLINE has 0
+
+--- Testing: MULTUS ---
+Our index has 2 entries for "multus"
+Our entries:
+  - multum, multi (N 2 2)
+    Stems: [mult, mult]
+    Meaning: many things (pl.); much; many...
+  - multus, zzz, pluri (ADJ 1 1)
+    Stems: [mult, mult, zzz, pluri]
+    Meaning: much, many, great, many a; large, intense, assiduous; tedious...
+
+DICTLINE.GEN has 0 entries for "multus"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0
+
+--- Testing: MALUS ---
+Our index has 5 entries for "malus"
+Our entries:
+  - malus, mali (N 2 1)
+    Stems: [mal, mal]
+    Meaning: mast; beam; tall pole, upright pole; standard, prop, staff...
+  - malus, mali (N 2 1)
+    Stems: [mal, mal]
+    Meaning: apple tree...
+  - malum, mali (N 2 2)
+    Stems: [mal, mal]
+    Meaning: apple; fruit; lemon; quince...
+  - malum, mali (N 2 2)
+    Stems: [mal, mal]
+    Meaning: evil, mischief; disaster, misfortune, calamity, plague; punishment; harm/hurt...
+  - malus, pej, zzz (ADJ 1 1)
+    Stems: [mal, mal, pej, zzz]
+    Meaning: bad, evil, wicked; ugly; unlucky...
+
+DICTLINE.GEN has 0 entries for "malus"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0
+
+--- Testing: PARVUS ---
+Our index has 1 entries for "parvus"
+Our entries:
+  - parvus, min, mini (ADJ 1 1)
+    Stems: [parv, parv, min, mini]
+    Meaning: small, little, cheap; unimportant; (SUPER) smallest, least...
+
+DICTLINE.GEN has 0 entries for "parvus"
+
+🚨 DISCREPANCIES FOUND:
+  ❌ EXTRA: Word found in our index but not in DICTLINE
+  ❌ COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0
+
+==================================================
+COMMON PARTICLES
+==================================================
+
+--- Testing: QUE ---
+Our index has 2 entries for "que"
+Our entries:
+  - que (CONJ )
+    Stems: [que]
+    Meaning: and; (while properly attached as enclitic sometimes copyists make mistakes)...
+  - queo, quire, quivi, quitum (V 6 1)
+    Stems: [que, qui, quiv, quit]
+    Meaning: be able...
+
+DICTLINE.GEN has 2 entries for "que"
+DICTLINE entries:
+  - E T
+    Stems: [CONJ, F, X, X]
+    Line: que                                                                         CONJ                    ...
+  - 6 1
+    Stems: [qui, quiv, quit, V]
+    Line: que                qui                quiv               quit               V      6 1 X            ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ STEM COUNT: Our 1 vs DICT 3
+  ❌ MISSING STEM: "CONJ" from DICTLINE not in our index
+  ❌ MISSING STEM: "F" from DICTLINE not in our index
+  ❌ MISSING STEM: "X" from DICTLINE not in our index
+  ❌ EXTRA STEM: "que" in our index but not in DICTLINE
+
+--- Testing: NE ---
+Our index has 4 entries for "ne"
+Our entries:
+  - neo, nere, nevi, netum (V 2 1)
+    Stems: [n, n, nev, net]
+    Meaning: spin; weave; produce by spinning...
+  - ne (ADV )
+    Stems: [ne]
+    Meaning: not; (intro clause of purpose with subj verb); [ne....quidem => not even]...
+  - ne (ADV )
+    Stems: [ne]
+    Meaning: truly, indeed, verily, assuredly; (particle of assurance); (w/personal PRON)...
+  - ne (CONJ )
+    Stems: [ne]
+    Meaning: that not, lest; (for negative of IMP)...
+
+DICTLINE.GEN has 3 entries for "ne"
+DICTLINE entries:
+  - X A
+    Stems: [ADV, POS, X, X]
+    Line: ne                                                                          ADV    POS              ...
+  - X C
+    Stems: [ADV, POS, X, X]
+    Line: ne                                                                          ADV    POS              ...
+  - A X
+    Stems: [CONJ, X, X, X]
+    Line: ne                                                                          CONJ                    ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ COUNT MISMATCH: Our index has 4 entries, DICTLINE has 3
+  ❌ MISSING STEM: "ADV" from DICTLINE not in our index
+  ❌ MISSING STEM: "POS" from DICTLINE not in our index
+  ❌ MISSING STEM: "X" from DICTLINE not in our index
+  ❌ EXTRA STEM: "n" in our index but not in DICTLINE
+  ❌ EXTRA STEM: "nev" in our index but not in DICTLINE
+  ❌ EXTRA STEM: "net" in our index but not in DICTLINE
+
+--- Testing: AN ---
+Our index has 6 entries for "an"
+Our entries:
+  - an (CONJ )
+    Stems: [an]
+    Meaning: can it be that (introduces question expecting negative answer/further question)...
+  - an (CONJ )
+    Stems: [an]
+    Meaning: whether; (utrum ... an = whether ... or); or; either...
+  - anus, ani (N 2 1)
+    Stems: [an, an]
+    Meaning: ring, circle, link, circular form; anus; fundement; piles, hemorrhoids (L+S)...
+  - anus, ani (N 2 1)
+    Stems: [an, an]
+    Meaning: year (astronomical/civil); age, time of life; year's produce...
+  - anu, anus (N 4 1)
+    Stems: [an, an]
+    Meaning: old woman; hag; matron; old maid; sibyl, sorceress; foolish/cringing person...
+  - an, an (ADJ 1 1)
+    Stems: [an, an]
+    Meaning: old (of female persons and things), aged...
+
+DICTLINE.GEN has 6 entries for "an"
+DICTLINE entries:
+  - C O
+    Stems: [CONJ, X, X, X]
+    Line: an                                                                          CONJ                    ...
+  - A O
+    Stems: [CONJ, X, X, X]
+    Line: an                                                                          CONJ                    ...
+  - M T
+    Stems: [an, N, 2, 1]
+    Line: an                 an                                                       N      2 1 M T          ...
+  - M T
+    Stems: [an, N, 2, 1]
+    Line: an                 an                                                       N      2 1 M T          ...
+  - F P
+    Stems: [an, N, 4, 1]
+    Line: an                 an                                                       N      4 1 F P          ...
+  - POS X
+    Stems: [an, ADJ, 1, 1]
+    Line: an                 an                                                       ADJ    1 1 POS          ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ STEM COUNT: Our 1 vs DICT 2
+  ❌ MISSING STEM: "CONJ" from DICTLINE not in our index
+  ❌ MISSING STEM: "X" from DICTLINE not in our index
+  ❌ EXTRA STEM: "an" in our index but not in DICTLINE
+
+--- Testing: NUM ---
+Our index has 2 entries for "num"
+Our entries:
+  - Num (N 9 8)
+    Stems: [Num]
+    Meaning: Numerius (Roman praenomen); (abb. N./Num.)...
+  - num (ADV )
+    Stems: [num]
+    Meaning: if, whether; now, surely not, really, then (asking question expecting neg)...
+
+DICTLINE.GEN has 1 entries for "num"
+DICTLINE entries:
+  - X B
+    Stems: [ADV, POS, X, X]
+    Line: num                                                                         ADV    POS              ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1
+  ❌ STEM COUNT: Our 1 vs DICT 3
+  ❌ MISSING STEM: "ADV" from DICTLINE not in our index
+  ❌ MISSING STEM: "POS" from DICTLINE not in our index
+  ❌ MISSING STEM: "X" from DICTLINE not in our index
+  ❌ EXTRA STEM: "Num" in our index but not in DICTLINE
+
+--- Testing: SI ---
+Our index has 1 entries for "si"
+Our entries:
+  - si (CONJ )
+    Stems: [si]
+    Meaning: if, if only; whether; [quod si/si quis or quid => but if/if anyone or anything]...
+
+DICTLINE.GEN has 1 entries for "si"
+DICTLINE entries:
+  - A X
+    Stems: [CONJ, X, X, X]
+    Line: si                                                                          CONJ                    ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ STEM COUNT: Our 1 vs DICT 2
+  ❌ MISSING STEM: "CONJ" from DICTLINE not in our index
+  ❌ MISSING STEM: "X" from DICTLINE not in our index
+  ❌ EXTRA STEM: "si" in our index but not in DICTLINE
+
+--- Testing: UT ---
+Our index has 2 entries for "ut"
+Our entries:
+  - ut (CONJ )
+    Stems: [ut]
+    Meaning: to (+ subjunctive), in order that/to; how, as, when, while; even if...
+  - utor, uti, usus sum (V 3 1 DEP)
+    Stems: [ut, ut, zzz, us]
+    Meaning: use, make use of, enjoy; enjoy the friendship of (with ABL)...
+
+DICTLINE.GEN has 2 entries for "ut"
+DICTLINE entries:
+  - A X
+    Stems: [CONJ, X, X, X]
+    Line: ut                                                                          CONJ                    ...
+  - 3 1
+    Stems: [ut, us, V]
+    Line: ut                 ut                 zzz                us                 V      3 1 DEP          ...
+
+🚨 DISCREPANCIES FOUND:
+  ❌ STEM COUNT: Our 1 vs DICT 2
+  ❌ MISSING STEM: "CONJ" from DICTLINE not in our index
+  ❌ MISSING STEM: "X" from DICTLINE not in our index
+  ❌ EXTRA STEM: "ut" in our index but not in DICTLINE
+
+============================================================
+SUMMARY REPORT
+============================================================
+
+Irregular Verbs:
+  ❌ possum: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0
+  ❌ sum: 8 issues
+    - STEM COUNT: Our 4 vs DICT 3
+    - MISSING STEM: "ADJ" from DICTLINE not in our index
+    - MISSING STEM: "0" from DICTLINE not in our index
+    - MISSING STEM: "SUPER" from DICTLINE not in our index
+    - EXTRA STEM: "su" in our index but not in DICTLINE
+    - EXTRA STEM: "es" in our index but not in DICTLINE
+    - EXTRA STEM: "fu" in our index but not in DICTLINE
+    - EXTRA STEM: "fut" in our index but not in DICTLINE
+  ❌ fero: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 4 entries, DICTLINE has 0
+  ❌ eo: 9 issues
+    - COUNT MISMATCH: Our index has 48 entries, DICTLINE has 2
+    - STEM COUNT: Our 4 vs DICT 3
+    - MISSING STEM: "ADV" from DICTLINE not in our index
+    - MISSING STEM: "POS" from DICTLINE not in our index
+    - MISSING STEM: "X" from DICTLINE not in our index
+    - EXTRA STEM: "e" in our index but not in DICTLINE
+    - EXTRA STEM: "i" in our index but not in DICTLINE
+    - EXTRA STEM: "iv" in our index but not in DICTLINE
+    - EXTRA STEM: "it" in our index but not in DICTLINE
+  ❌ volo: 9 issues
+    - COUNT MISMATCH: Our index has 3 entries, DICTLINE has 1
+    - STEM COUNT: Our 3 vs DICT 4
+    - MISSING STEM: "volon" from DICTLINE not in our index
+    - MISSING STEM: "N" from DICTLINE not in our index
+    - MISSING STEM: "3" from DICTLINE not in our index
+    - MISSING STEM: "1" from DICTLINE not in our index
+    - EXTRA STEM: "vol" in our index but not in DICTLINE
+    - EXTRA STEM: "vel" in our index but not in DICTLINE
+    - EXTRA STEM: "volu" in our index but not in DICTLINE
+  ❌ nolo: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0
+  ❌ malo: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0
+  → 7 words with issues in Irregular Verbs
+
+Deponent Verbs:
+  ❌ sequor: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0
+  ❌ loquor: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0
+  ❌ patior: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0
+  ❌ morior: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0
+  ❌ conor: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0
+  → 5 words with issues in Deponent Verbs
+
+Third Declension Nouns:
+  ❌ rex: 7 issues
+    - COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1
+    - STEM COUNT: Our 3 vs DICT 4
+    - MISSING STEM: "N" from DICTLINE not in our index
+    - MISSING STEM: "3" from DICTLINE not in our index
+    - MISSING STEM: "1" from DICTLINE not in our index
+    - EXTRA STEM: "rex" in our index but not in DICTLINE
+    - EXTRA STEM: "rect" in our index but not in DICTLINE
+  ❌ homo: 5 issues
+    - STEM COUNT: Our 2 vs DICT 4
+    - MISSING STEM: "N" from DICTLINE not in our index
+    - MISSING STEM: "3" from DICTLINE not in our index
+    - MISSING STEM: "1" from DICTLINE not in our index
+    - EXTRA STEM: "homo" in our index but not in DICTLINE
+  ❌ corpus: 5 issues
+    - STEM COUNT: Our 2 vs DICT 4
+    - MISSING STEM: "N" from DICTLINE not in our index
+    - MISSING STEM: "3" from DICTLINE not in our index
+    - MISSING STEM: "2" from DICTLINE not in our index
+    - EXTRA STEM: "corpus" in our index but not in DICTLINE
+  ❌ nomen: 5 issues
+    - STEM COUNT: Our 2 vs DICT 4
+    - MISSING STEM: "N" from DICTLINE not in our index
+    - MISSING STEM: "3" from DICTLINE not in our index
+    - MISSING STEM: "2" from DICTLINE not in our index
+    - EXTRA STEM: "nomen" in our index but not in DICTLINE
+  ❌ miles: 6 issues
+    - COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1
+    - STEM COUNT: Our 2 vs DICT 4
+    - MISSING STEM: "N" from DICTLINE not in our index
+    - MISSING STEM: "3" from DICTLINE not in our index
+    - MISSING STEM: "1" from DICTLINE not in our index
+    - EXTRA STEM: "miles" in our index but not in DICTLINE
+  ❌ pater: 3 issues
+    - STEM COUNT: Our 1 vs DICT 3
+    - MISSING STEM: "N" from DICTLINE not in our index
+    - MISSING STEM: "1" from DICTLINE not in our index
+  ❌ mater: 5 issues
+    - STEM COUNT: Our 2 vs DICT 4
+    - MISSING STEM: "N" from DICTLINE not in our index
+    - MISSING STEM: "3" from DICTLINE not in our index
+    - MISSING STEM: "1" from DICTLINE not in our index
+    - EXTRA STEM: "mater" in our index but not in DICTLINE
+  → 7 words with issues in Third Declension Nouns
+
+Irregular Adjectives:
+  ❌ bonus: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 3 entries, DICTLINE has 0
+  ❌ magnus: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 3 entries, DICTLINE has 0
+  ❌ multus: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0
+  ❌ malus: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0
+  ❌ parvus: 2 issues
+    - EXTRA: Word found in our index but not in DICTLINE
+    - COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0
+  → 5 words with issues in Irregular Adjectives
+
+Common Particles:
+  ❌ que: 5 issues
+    - STEM COUNT: Our 1 vs DICT 3
+    - MISSING STEM: "CONJ" from DICTLINE not in our index
+    - MISSING STEM: "F" from DICTLINE not in our index
+    - MISSING STEM: "X" from DICTLINE not in our index
+    - EXTRA STEM: "que" in our index but not in DICTLINE
+  ❌ ne: 7 issues
+    - COUNT MISMATCH: Our index has 4 entries, DICTLINE has 3
+    - MISSING STEM: "ADV" from DICTLINE not in our index
+    - MISSING STEM: "POS" from DICTLINE not in our index
+    - MISSING STEM: "X" from DICTLINE not in our index
+    - EXTRA STEM: "n" in our index but not in DICTLINE
+    - EXTRA STEM: "nev" in our index but not in DICTLINE
+    - EXTRA STEM: "net" in our index but not in DICTLINE
+  ❌ an: 4 issues
+    - STEM COUNT: Our 1 vs DICT 2
+    - MISSING STEM: "CONJ" from DICTLINE not in our index
+    - MISSING STEM: "X" from DICTLINE not in our index
+    - EXTRA STEM: "an" in our index but not in DICTLINE
+  ❌ num: 6 issues
+    - COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1
+    - STEM COUNT: Our 1 vs DICT 3
+    - MISSING STEM: "ADV" from DICTLINE not in our index
+    - MISSING STEM: "POS" from DICTLINE not in our index
+    - MISSING STEM: "X" from DICTLINE not in our index
+    - EXTRA STEM: "Num" in our index but not in DICTLINE
+  ❌ si: 4 issues
+    - STEM COUNT: Our 1 vs DICT 2
+    - MISSING STEM: "CONJ" from DICTLINE not in our index
+    - MISSING STEM: "X" from DICTLINE not in our index
+    - EXTRA STEM: "si" in our index but not in DICTLINE
+  ❌ ut: 4 issues
+    - STEM COUNT: Our 1 vs DICT 2
+    - MISSING STEM: "CONJ" from DICTLINE not in our index
+    - MISSING STEM: "X" from DICTLINE not in our index
+    - EXTRA STEM: "ut" in our index but not in DICTLINE
+  → 6 words with issues in Common Particles
+
+🔍 TOTAL: 30 words with discrepancies found
+
+============================================================
+SPECIFIC TEST CASES FOR FAILED WORDS
+============================================================
+
+Test Case: POSSUM
+Category: Irregular Verbs
+Input: "possum"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 1 entries, POS: V
+Actual stems: [poss, pot, potu, zzz]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0
+
+Test Case: SUM
+Category: Irregular Verbs
+Input: "sum"
+Expected: 3 entries, POS: X
+Expected stems: [ADJ, 0, 0, SUPER]
+Actual: 3 entries, POS: V
+Actual stems: [su, es, fu, fut]
+Issues: STEM COUNT: Our 4 vs DICT 3; MISSING STEM: "ADJ" from DICTLINE not in our index; MISSING STEM: "0" from DICTLINE not in our index; MISSING STEM: "SUPER" from DICTLINE not in our index; EXTRA STEM: "su" in our index but not in DICTLINE; EXTRA STEM: "es" in our index but not in DICTLINE; EXTRA STEM: "fu" in our index but not in DICTLINE; EXTRA STEM: "fut" in our index but not in DICTLINE
+
+Test Case: FERO
+Category: Irregular Verbs
+Input: "fero"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 4 entries, POS: V
+Actual stems: [fer, fer, tul, lat]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 4 entries, DICTLINE has 0
+
+Test Case: EO
+Category: Irregular Verbs
+Input: "eo"
+Expected: 2 entries, POS: X
+Expected stems: [ADV, POS, X, X]
+Actual: 48 entries, POS: V
+Actual stems: [e, i, iv, it]
+Issues: COUNT MISMATCH: Our index has 48 entries, DICTLINE has 2; STEM COUNT: Our 4 vs DICT 3; MISSING STEM: "ADV" from DICTLINE not in our index; MISSING STEM: "POS" from DICTLINE not in our index; MISSING STEM: "X" from DICTLINE not in our index; EXTRA STEM: "e" in our index but not in DICTLINE; EXTRA STEM: "i" in our index but not in DICTLINE; EXTRA STEM: "iv" in our index but not in DICTLINE; EXTRA STEM: "it" in our index but not in DICTLINE
+
+Test Case: VOLO
+Category: Irregular Verbs
+Input: "volo"
+Expected: 1 entries, POS: M
+Expected stems: [volon, N, 3, 1]
+Actual: 3 entries, POS: V
+Actual stems: [vol, vel, volu, zzz]
+Issues: COUNT MISMATCH: Our index has 3 entries, DICTLINE has 1; STEM COUNT: Our 3 vs DICT 4; MISSING STEM: "volon" from DICTLINE not in our index; MISSING STEM: "N" from DICTLINE not in our index; MISSING STEM: "3" from DICTLINE not in our index; MISSING STEM: "1" from DICTLINE not in our index; EXTRA STEM: "vol" in our index but not in DICTLINE; EXTRA STEM: "vel" in our index but not in DICTLINE; EXTRA STEM: "volu" in our index but not in DICTLINE
+
+Test Case: NOLO
+Category: Irregular Verbs
+Input: "nolo"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 2 entries, POS: V
+Actual stems: [nol, nol, nolu, zzz]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0
+
+Test Case: MALO
+Category: Irregular Verbs
+Input: "malo"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 5 entries, POS: N
+Actual stems: [mal, mal]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0
+
+Test Case: SEQUOR
+Category: Deponent Verbs
+Input: "sequor"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 2 entries, POS: V
+Actual stems: [sequ, sequ, zzz, secut]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0
+
+Test Case: LOQUOR
+Category: Deponent Verbs
+Input: "loquor"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 1 entries, POS: V
+Actual stems: [loqu, loqu, zzz, locut]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0
+
+Test Case: PATIOR
+Category: Deponent Verbs
+Input: "patior"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 1 entries, POS: V
+Actual stems: [pati, pat, zzz, pass]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0
+
+Test Case: MORIOR
+Category: Deponent Verbs
+Input: "morior"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 5 entries, POS: V
+Actual stems: [mori, mor, zzz, morit]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0
+
+Test Case: CONOR
+Category: Deponent Verbs
+Input: "conor"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 2 entries, POS: V
+Actual stems: [con, con, conav, conat]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0
+
+Test Case: REX
+Category: Third Declension Nouns
+Input: "rex"
+Expected: 1 entries, POS: M
+Expected stems: [reg, N, 3, 1]
+Actual: 2 entries, POS: V
+Actual stems: [reg, reg, rex, rect]
+Issues: COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1; STEM COUNT: Our 3 vs DICT 4; MISSING STEM: "N" from DICTLINE not in our index; MISSING STEM: "3" from DICTLINE not in our index; MISSING STEM: "1" from DICTLINE not in our index; EXTRA STEM: "rex" in our index but not in DICTLINE; EXTRA STEM: "rect" in our index but not in DICTLINE
+
+Test Case: HOMO
+Category: Third Declension Nouns
+Input: "homo"
+Expected: 1 entries, POS: M
+Expected stems: [homin, N, 3, 1]
+Actual: 1 entries, POS: N
+Actual stems: [homo, homin]
+Issues: STEM COUNT: Our 2 vs DICT 4; MISSING STEM: "N" from DICTLINE not in our index; MISSING STEM: "3" from DICTLINE not in our index; MISSING STEM: "1" from DICTLINE not in our index; EXTRA STEM: "homo" in our index but not in DICTLINE
+
+Test Case: CORPUS
+Category: Third Declension Nouns
+Input: "corpus"
+Expected: 2 entries, POS: N
+Expected stems: [corpor, N, 3, 2]
+Actual: 2 entries, POS: N
+Actual stems: [corpus, corpor]
+Issues: STEM COUNT: Our 2 vs DICT 4; MISSING STEM: "N" from DICTLINE not in our index; MISSING STEM: "3" from DICTLINE not in our index; MISSING STEM: "2" from DICTLINE not in our index; EXTRA STEM: "corpus" in our index but not in DICTLINE
+
+Test Case: NOMEN
+Category: Third Declension Nouns
+Input: "nomen"
+Expected: 1 entries, POS: N
+Expected stems: [nomin, N, 3, 2]
+Actual: 1 entries, POS: N
+Actual stems: [nomen, nomin]
+Issues: STEM COUNT: Our 2 vs DICT 4; MISSING STEM: "N" from DICTLINE not in our index; MISSING STEM: "3" from DICTLINE not in our index; MISSING STEM: "2" from DICTLINE not in our index; EXTRA STEM: "nomen" in our index but not in DICTLINE
+
+Test Case: MILES
+Category: Third Declension Nouns
+Input: "miles"
+Expected: 1 entries, POS: M
+Expected stems: [milit, N, 3, 1]
+Actual: 2 entries, POS: N
+Actual stems: [miles, milit]
+Issues: COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1; STEM COUNT: Our 2 vs DICT 4; MISSING STEM: "N" from DICTLINE not in our index; MISSING STEM: "3" from DICTLINE not in our index; MISSING STEM: "1" from DICTLINE not in our index; EXTRA STEM: "miles" in our index but not in DICTLINE
+
+Test Case: PATER
+Category: Third Declension Nouns
+Input: "pater"
+Expected: 2 entries, POS: F
+Expected stems: [pater, N, 1, 1]
+Actual: 2 entries, POS: N
+Actual stems: [pater, pater]
+Issues: STEM COUNT: Our 1 vs DICT 3; MISSING STEM: "N" from DICTLINE not in our index; MISSING STEM: "1" from DICTLINE not in our index
+
+Test Case: MATER
+Category: Third Declension Nouns
+Input: "mater"
+Expected: 1 entries, POS: F
+Expected stems: [matr, N, 3, 1]
+Actual: 1 entries, POS: N
+Actual stems: [mater, matr]
+Issues: STEM COUNT: Our 2 vs DICT 4; MISSING STEM: "N" from DICTLINE not in our index; MISSING STEM: "3" from DICTLINE not in our index; MISSING STEM: "1" from DICTLINE not in our index; EXTRA STEM: "mater" in our index but not in DICTLINE
+
+Test Case: BONUS
+Category: Irregular Adjectives
+Input: "bonus"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 3 entries, POS: N
+Actual stems: [bon, bon]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 3 entries, DICTLINE has 0
+
+Test Case: MAGNUS
+Category: Irregular Adjectives
+Input: "magnus"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 3 entries, POS: ADJ
+Actual stems: [magn, magn, maj, maxi]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 3 entries, DICTLINE has 0
+
+Test Case: MULTUS
+Category: Irregular Adjectives
+Input: "multus"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 2 entries, POS: N
+Actual stems: [mult, mult]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 2 entries, DICTLINE has 0
+
+Test Case: MALUS
+Category: Irregular Adjectives
+Input: "malus"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 5 entries, POS: N
+Actual stems: [mal, mal]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 5 entries, DICTLINE has 0
+
+Test Case: PARVUS
+Category: Irregular Adjectives
+Input: "parvus"
+Expected: 0 entries, POS: 
+Expected stems: []
+Actual: 1 entries, POS: ADJ
+Actual stems: [parv, parv, min, mini]
+Issues: EXTRA: Word found in our index but not in DICTLINE; COUNT MISMATCH: Our index has 1 entries, DICTLINE has 0
+
+Test Case: QUE
+Category: Common Particles
+Input: "que"
+Expected: 2 entries, POS: E
+Expected stems: [CONJ, F, X, X]
+Actual: 2 entries, POS: CONJ
+Actual stems: [que]
+Issues: STEM COUNT: Our 1 vs DICT 3; MISSING STEM: "CONJ" from DICTLINE not in our index; MISSING STEM: "F" from DICTLINE not in our index; MISSING STEM: "X" from DICTLINE not in our index; EXTRA STEM: "que" in our index but not in DICTLINE
+
+Test Case: NE
+Category: Common Particles
+Input: "ne"
+Expected: 3 entries, POS: X
+Expected stems: [ADV, POS, X, X]
+Actual: 4 entries, POS: V
+Actual stems: [n, n, nev, net]
+Issues: COUNT MISMATCH: Our index has 4 entries, DICTLINE has 3; MISSING STEM: "ADV" from DICTLINE not in our index; MISSING STEM: "POS" from DICTLINE not in our index; MISSING STEM: "X" from DICTLINE not in our index; EXTRA STEM: "n" in our index but not in DICTLINE; EXTRA STEM: "nev" in our index but not in DICTLINE; EXTRA STEM: "net" in our index but not in DICTLINE
+
+Test Case: AN
+Category: Common Particles
+Input: "an"
+Expected: 6 entries, POS: C
+Expected stems: [CONJ, X, X, X]
+Actual: 6 entries, POS: CONJ
+Actual stems: [an]
+Issues: STEM COUNT: Our 1 vs DICT 2; MISSING STEM: "CONJ" from DICTLINE not in our index; MISSING STEM: "X" from DICTLINE not in our index; EXTRA STEM: "an" in our index but not in DICTLINE
+
+Test Case: NUM
+Category: Common Particles
+Input: "num"
+Expected: 1 entries, POS: X
+Expected stems: [ADV, POS, X, X]
+Actual: 2 entries, POS: N
+Actual stems: [Num]
+Issues: COUNT MISMATCH: Our index has 2 entries, DICTLINE has 1; STEM COUNT: Our 1 vs DICT 3; MISSING STEM: "ADV" from DICTLINE not in our index; MISSING STEM: "POS" from DICTLINE not in our index; MISSING STEM: "X" from DICTLINE not in our index; EXTRA STEM: "Num" in our index but not in DICTLINE
+
+Test Case: SI
+Category: Common Particles
+Input: "si"
+Expected: 1 entries, POS: A
+Expected stems: [CONJ, X, X, X]
+Actual: 1 entries, POS: CONJ
+Actual stems: [si]
+Issues: STEM COUNT: Our 1 vs DICT 2; MISSING STEM: "CONJ" from DICTLINE not in our index; MISSING STEM: "X" from DICTLINE not in our index; EXTRA STEM: "si" in our index but not in DICTLINE
+
+Test Case: UT
+Category: Common Particles
+Input: "ut"
+Expected: 2 entries, POS: A
+Expected stems: [CONJ, X, X, X]
+Actual: 2 entries, POS: CONJ
+Actual stems: [ut]
+Issues: STEM COUNT: Our 1 vs DICT 2; MISSING STEM: "CONJ" from DICTLINE not in our index; MISSING STEM: "X" from DICTLINE not in our index; EXTRA STEM: "ut" in our index but not in DICTLINE
+
+📁 Detailed results saved to: /Users/ottodo/Documents/GitHub/ludus/ludus-flashcards/scripts/diagnostic_results.json

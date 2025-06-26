@@ -1,0 +1,166 @@
+{
+  "timestamp": "2025-06-25T23:51:37.884Z",
+  "summary": {
+    "totalTests": 27,
+    "passed": 24,
+    "failed": 3,
+    "successRate": 88.88888888888889
+  },
+  "confirmedDiscrepancies": [
+    {
+      "category": "Irregular Verbs",
+      "word": "sum/esse",
+      "issue": "Missing fu/fut stems in DICTLINE (our implementation correct)",
+      "severity": "low",
+      "status": "not_our_issue"
+    }
+  ],
+  "failedTestCases": [
+    {
+      "input": "mavult",
+      "expected": "malo, malle, malui",
+      "actual": [],
+      "type": "irregular verb form"
+    },
+    {
+      "input": "patitur",
+      "expected": "patior, patii, passus sum",
+      "actual": [],
+      "type": "deponent verb form"
+    },
+    {
+      "input": "moritur",
+      "expected": "morior, morii, mortuus sum",
+      "actual": [],
+      "type": "deponent verb form"
+    }
+  ],
+  "passedTestCases": [
+    {
+      "input": "possum",
+      "expected": "possum, posse, potui",
+      "type": "irregular verb"
+    },
+    {
+      "input": "potest",
+      "expected": "possum, posse, potui",
+      "type": "irregular verb form"
+    },
+    {
+      "input": "sunt",
+      "expected": "sum, esse, fui, futurus",
+      "type": "irregular verb form"
+    },
+    {
+      "input": "fert",
+      "expected": "fero, ferere, tuli, latum",
+      "type": "irregular verb form"
+    },
+    {
+      "input": "tulit",
+      "expected": "fero, ferere, tuli, latum",
+      "type": "irregular verb form"
+    },
+    {
+      "input": "vult",
+      "expected": "volo, volle, volui",
+      "type": "irregular verb form"
+    },
+    {
+      "input": "nolo",
+      "expected": "nolo, nolle, nolui",
+      "type": "irregular verb"
+    },
+    {
+      "input": "sequor",
+      "expected": "sequor, sequi, secutus sum",
+      "type": "deponent verb"
+    },
+    {
+      "input": "secutus",
+      "expected": "sequor, sequi, secutus sum",
+      "type": "deponent participle"
+    },
+    {
+      "input": "loquitur",
+      "expected": "loquor, loqui, locutus sum",
+      "type": "deponent verb form"
+    },
+    {
+      "input": "conatur",
+      "expected": "conor, conari, conatus sum",
+      "type": "deponent verb form"
+    },
+    {
+      "input": "rex",
+      "expected": "rex, regis",
+      "type": "third declension noun"
+    },
+    {
+      "input": "regis",
+      "expected": "rex, regis",
+      "type": "third declension genitive"
+    },
+    {
+      "input": "homines",
+      "expected": "homo, hominis",
+      "type": "third declension plural"
+    },
+    {
+      "input": "corpore",
+      "expected": "corpus, corporis",
+      "type": "third declension ablative"
+    },
+    {
+      "input": "nomina",
+      "expected": "nomen, nominis",
+      "type": "third declension neuter plural"
+    },
+    {
+      "input": "milites",
+      "expected": "miles, militis",
+      "type": "third declension plural"
+    },
+    {
+      "input": "patris",
+      "expected": "pater, patris",
+      "type": "third declension genitive"
+    },
+    {
+      "input": "matrem",
+      "expected": "mater, matris",
+      "type": "third declension accusative"
+    },
+    {
+      "input": "que",
+      "expected": "que (conjunction)",
+      "type": "enclitic"
+    },
+    {
+      "input": "ne",
+      "expected": "ne (negative/question)",
+      "type": "particle"
+    },
+    {
+      "input": "num",
+      "expected": "num (question particle)",
+      "type": "particle"
+    },
+    {
+      "input": "si",
+      "expected": "si (if)",
+      "type": "conjunction"
+    },
+    {
+      "input": "ut",
+      "expected": "ut (as/so that)",
+      "type": "conjunction"
+    }
+  ],
+  "recommendations": [
+    "Fix morphological index gaps for missing inflected forms",
+    "Verify dictionary form matching logic",
+    "Test compound verb form generation",
+    "Validate with actual Latin text samples"
+  ]
+}

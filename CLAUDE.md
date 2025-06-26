@@ -81,6 +81,24 @@ When working with Firebase features:
 - **Manual Selections**: Range-based chapter selection (fromChapter/toChapter) instead of individual checkboxes
 - **Daily Review Logic**: Combines automatic (previously studied cards) and manual selection modes
 
+## Recent Work (Session ending 2025-06-26)
+
+### Irregular Verb & Pronoun Fixes
+- **Fixed irregular verb inflection support** in `GlossaryPage.js`:
+  - Added "odeo" (6 1 TRANS declension) with defective perfect-tense forms
+  - Added "quaeso" (3 1 declension) with irregular 3rd conjugation handling
+  - Both now show complete inflection tables instead of failing to display
+- **Removed translation columns** from verb inflection tables (completed earlier)
+- **Added pronoun inflection support** for hic/haec/hoc, ille/illa/illud, etc.
+- **Known issues**: Some irregular verb endings still missing, "iste" pronoun missing from dictionary
+- **Files modified**: `src/components/GlossaryPage.js` (lines 520-600, 800-853, 1335-1386)
+
+### Outstanding Tasks
+See TodoRead for current task list. Priority items:
+- Fix remaining irregular verb inflection gaps
+- Add missing "iste, ista, istud" pronoun to source data
+- Complete inflection table coverage for all irregular patterns
+
 ## Important Notes
 
 - Always use `--legacy-peer-deps` when installing packages due to React 19.1.0 compatibility

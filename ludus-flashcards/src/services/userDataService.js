@@ -7,7 +7,8 @@ import {
   where,
   orderBy,
   limit,
-  getDocs 
+  getDocs,
+  deleteDoc 
 } from 'firebase/firestore';
 import { db } from '../config/firebase';
 
@@ -303,4 +304,200 @@ const applySpacedRepetition = (cardData, quality) => {
     lastReviewed: new Date().toISOString(),
     isKnown: repetitions >= 1 && quality >= 3
   };
+};
+
+// ============================================
+// SAVED WORD SESSIONS FUNCTIONS
+// ============================================
+
+// Save user's saved word sessions
+export const saveSavedWordSessions = async (userId, sessionsData, retries = 3) => {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const sessionsRef = doc(db, 'users', userId, 'glossary', 'savedSessions');
+      await setDoc(sessionsRef, {
+        sessions: sessionsData.sessions,
+        currentSessionId: sessionsData.currentSessionId,
+        lastUpdated: new Date().toISOString()
+      }, { merge: true });
+      console.log(`✅ Saved word sessions saved successfully (attempt ${attempt})`);
+      return; // Success, exit the function
+    } catch (error) {
+      console.error(`Error saving saved word sessions (attempt ${attempt}/${retries}):`, error);
+      
+      if (error.code === 'unavailable' || error.code === 'deadline-exceeded' || 
+          error.message?.includes('CORS') || error.message?.includes('access control')) {
+        // These are transient network errors, retry with exponential backoff
+        if (attempt < retries) {
+          const delay = Math.pow(2, attempt) * 100; // 200ms, 400ms, 800ms
+          console.log(`⏳ Retrying in ${delay}ms...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+          continue;
+        }
+      }
+      
+      // For other errors or final attempt, throw the error
+      throw error;
+    }
+  }
+};
+
+// Get user's saved word sessions
+export const getSavedWordSessions = async (userId, retries = 3) => {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const sessionsRef = doc(db, 'users', userId, 'glossary', 'savedSessions');
+      const sessionsDoc = await getDoc(sessionsRef);
+      
+      if (sessionsDoc.exists()) {
+        const data = sessionsDoc.data();
+        return {
+          sessions: data.sessions || [],
+          currentSessionId: data.currentSessionId || 1,
+          lastUpdated: data.lastUpdated
+        };
+      } else {
+        // Return default structure if no saved sessions exist
+        return {
+          sessions: [{
+            id: 1,
+            name: "Session 1",
+            startedAt: new Date().toISOString(),
+            words: []
+          }],
+          currentSessionId: 1,
+          lastUpdated: null
+        };
+      }
+    } catch (error) {
+      console.error(`Error getting saved word sessions (attempt ${attempt}/${retries}):`, error);
+      
+      if (error.code === 'unavailable' || error.code === 'deadline-exceeded' || 
+          error.message?.includes('CORS') || error.message?.includes('access control')) {
+        // These are transient network errors, retry with exponential backoff
+        if (attempt < retries) {
+          const delay = Math.pow(2, attempt) * 100; // 200ms, 400ms, 800ms
+          console.log(`⏳ Retrying in ${delay}ms...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+          continue;
+        }
+      }
+      
+      // For other errors or final attempt, throw the error
+      throw error;
+    }
+  }
+};
+
+// Delete user's saved word sessions (for Clear All functionality)
+export const deleteSavedWordSessions = async (userId, retries = 3) => {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const sessionsRef = doc(db, 'users', userId, 'glossary', 'savedSessions');
+      await deleteDoc(sessionsRef);
+      console.log(`✅ Saved word sessions deleted successfully (attempt ${attempt})`);
+      return; // Success, exit the function
+    } catch (error) {
+      console.error(`Error deleting saved word sessions (attempt ${attempt}/${retries}):`, error);
+      
+      if (error.code === 'unavailable' || error.code === 'deadline-exceeded' || 
+          error.message?.includes('CORS') || error.message?.includes('access control')) {
+        // These are transient network errors, retry with exponential backoff
+        if (attempt < retries) {
+          const delay = Math.pow(2, attempt) * 100; // 200ms, 400ms, 800ms
+          console.log(`⏳ Retrying in ${delay}ms...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+          continue;
+        }
+      }
+      
+      // For other errors or final attempt, throw the error
+      throw error;
+    }
+  }
+};
+
+// Sync saved word sessions to Firebase (debounced save)
+let saveTimeout = null;
+export const debouncedSaveSessions = (userId, sessionsData, delay = 1000) => {
+  // Clear existing timeout
+  if (saveTimeout) {
+    clearTimeout(saveTimeout);
+  }
+  
+  // Set new timeout
+  saveTimeout = setTimeout(async () => {
+    try {
+      await saveSavedWordSessions(userId, sessionsData);
+    } catch (error) {
+      console.error('Error in debounced save:', error);
+    }
+  }, delay);
+};
+
+// Force trigger Firebase index creation link (for development)
+export const triggerIndexCreation = async (userId) => {
+  console.log('🔗 Attempting to trigger Firebase index creation link...');
+  
+  // First save a document to ensure the collection exists
+  try {
+    const testRef = doc(db, 'users', userId, 'glossary', 'savedSessions');
+    await setDoc(testRef, {
+      sessions: [],
+      currentSessionId: 1,
+      lastUpdated: new Date().toISOString()
+    }, { merge: true });
+    console.log('📄 Test document created');
+  } catch (error) {
+    console.error('❌ Error creating test document:', error);
+  }
+  
+  // Now try the query that requires an index
+  try {
+    const sessionsQuery = query(
+      collection(db, 'users', userId, 'glossary'),
+      orderBy('lastUpdated', 'desc'),
+      limit(1)
+    );
+    
+    const result = await getDocs(sessionsQuery);
+    console.log('✅ Query succeeded - index may already exist', result.size, 'documents');
+    
+    // Try a more complex query that definitely needs an index
+    const complexQuery = query(
+      collection(db, 'users', userId, 'glossary'),
+      where('currentSessionId', '>', 0),
+      orderBy('currentSessionId', 'asc'),
+      orderBy('lastUpdated', 'desc')
+    );
+    
+    await getDocs(complexQuery);
+    console.log('✅ Complex query also succeeded');
+    
+  } catch (error) {
+    console.error('❌ Query failed - this should generate index creation link:', error);
+    console.error('🔗 CHECK CONSOLE ABOVE FOR FIREBASE INDEX CREATION LINK ↑');
+    
+    if (error.code === 'failed-precondition') {
+      console.error('📋 Index creation required!');
+      logFirebaseIndexInstructions();
+    }
+    
+    throw error;
+  }
+};
+
+// Create Firebase index manually through console
+export const logFirebaseIndexInstructions = () => {
+  console.group('🔥 Firebase Index Creation Instructions');
+  console.log('1. Go to: https://console.firebase.google.com/project/ludus-23160/firestore/indexes');
+  console.log('2. Click "Create Index"');
+  console.log('3. Collection ID: users/{userId}/glossary/savedSessions');
+  console.log('4. Add field: lastUpdated (Descending)');
+  console.log('5. Click "Create"');
+  console.groupEnd();
+  
+  // Also create a clickable link
+  const indexUrl = 'https://console.firebase.google.com/project/ludus-23160/firestore/indexes';
+  console.log(`🔗 Direct link to Firebase Indexes: ${indexUrl}`);
 }; 

@@ -56,7 +56,7 @@ function App() {
       case 'flashcards':
         return <FlashcardsPage key={pageKey} />;
       case 'glossary':
-        return <GlossaryPage />;
+        return <GlossaryPage onNavigate={setCurrentPage} />;
       case 'grammar':
         return <GrammarPage />;
       default:
