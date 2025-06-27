@@ -4,7 +4,7 @@ import { groupCardsByLesson, filterCardsByPartOfSpeech, getPartsOfSpeechWithCoun
 import { getDueCards } from '../utils/sm2Algorithm';
 import '../styles/LudusFolder.css';
 
-const LudusFolder = ({ onBack, onStartStudy }) => {
+const OvidFolder = ({ onBack, onStartStudy }) => {
   const { cards, resetProgress } = useFlashcards();
   const [showFilters, setShowFilters] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -14,19 +14,19 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
   const [viewMode, setViewMode] = useState('chapters'); // 'chapters' or 'vocabulary'
   const [selectedChapter, setSelectedChapter] = useState(null);
 
-  const ludusCards = useMemo(() => 
-    cards.filter(card => card.curriculum === 'LUDUS'), 
+  const ovidCards = useMemo(() => 
+    cards.filter(card => card.curriculum === 'OVID'), 
     [cards]
   );
 
   const filteredCards = useMemo(() => {
     // Filter by part of speech if filterMode is not a sort mode
     if (filterMode === 'chapter' || filterMode === 'alphabetical') {
-      return ludusCards;
+      return ovidCards;
     } else {
-      return filterCardsByPartOfSpeech(ludusCards, filterMode);
+      return filterCardsByPartOfSpeech(ovidCards, filterMode);
     }
-  }, [ludusCards, filterMode]);
+  }, [ovidCards, filterMode]);
 
   const lessonGroups = useMemo(() => 
     groupCardsByLesson(filteredCards),
@@ -34,8 +34,8 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
   );
 
   const partsOfSpeech = useMemo(() => 
-    getPartsOfSpeechWithCounts(ludusCards),
-    [ludusCards]
+    getPartsOfSpeechWithCounts(ovidCards),
+    [ovidCards]
   );
 
   // Sort filtered cards by chapter or alphabetically for vocabulary view
@@ -75,7 +75,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
     if (lessonCards.length === 0) return;
     
     const confirmReset = window.confirm(
-      `Are you sure you want to reset all progress for Chapter ${lesson}? This will clear all review data and cannot be undone.`
+      `Are you sure you want to reset all progress for ${typeof lesson === 'string' ? lesson : `Chapter ${lesson}`}? This will clear all review data and cannot be undone.`
     );
     
     if (confirmReset) {
@@ -94,7 +94,19 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
     return { total, due, newCards, learned };
   };
 
-  const allLessons = Array.from({ length: 64 }, (_, i) => i + 1);
+  // Get all sections for Ovid curriculum (using text identifiers)
+  const allLessons = useMemo(() => {
+    const lessons = ovidCards.map(card => card.lesson_number);
+    const uniqueLessons = [...new Set(lessons)];
+    // Sort sections in a logical order
+    return uniqueLessons.sort((a, b) => {
+      // Handle numeric vs string comparison
+      if (typeof a === 'string' && typeof b === 'string') {
+        return a.localeCompare(b);
+      }
+      return a - b;
+    });
+  }, [ovidCards]);
 
   // Get display text for current filter mode
   const getFilterDisplayText = () => {
@@ -116,9 +128,9 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
     return (
       <div className="ludus-folder">
         <button className="back-btn" onClick={() => setSelectedChapter(null)}>
-          ← Back to LUDUS
+          ← Back to OVID
         </button>
-        <h1 className="main-title">Chapter {selectedChapter}</h1>
+        <h1 className="main-title">{typeof selectedChapter === 'string' ? selectedChapter : `Chapter ${selectedChapter}`}</h1>
         
         <div className="vocabulary-container">
           <div className="vocabulary-controls">
@@ -175,7 +187,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
               {chapterCards.map((card, index) => (
                 <div key={card.id} className="vocabulary-item">
                   <div className="vocabulary-word">
-                    <span className="chapter-badge">LUD {card.lesson_number}</span>
+                    <span className="chapter-badge">OVI {card.lesson_number}</span>
                     <span className="word-text">
                       {card.latin_headword}
                       {card.latin_endings ? `, ${card.latin_endings}` : ''}
@@ -184,7 +196,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
                   </div>
                   <div className="vocabulary-meaning">{card.english}</div>
                   <div className="vocabulary-status">
-                    <span className="status-new">LUD</span>
+                    <span className="status-new">OVI</span>
                   </div>
                 </div>
               ))}
@@ -201,7 +213,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
       <button className="back-btn" onClick={onBack}>
         ← Dashboard
       </button>
-      <h1 className="main-title">LUDUS</h1>
+      <h1 className="main-title">OVID</h1>
       <div className="header-actions">
         <button 
           className={`view-toggle-btn ${viewMode === 'chapters' ? 'active' : ''}`}
@@ -249,7 +261,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
                 <div className="lesson-header">
                   <div className="lesson-title-group">
                     <h3 className="clickable-chapter-title">
-                      Chapter {lesson}
+                      {typeof lesson === 'string' ? lesson : `Chapter ${lesson}`}
                     </h3>
                     <button 
                       className="reset-btn" 
@@ -323,7 +335,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
           {/* Controls Section - only for vocabulary view */}
           <div className="vocabulary-controls">
             <div className="controls-left">
-              <span className="word-counter">{sortedVocabularyCards.length} words • 64 chapters</span>
+              <span className="word-counter">{sortedVocabularyCards.length} words • {allLessons.length} sections</span>
             </div>
             <div className="controls-right">
               <div className="filter-dropdown-container">
@@ -392,4 +404,4 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
   );
 };
 
-export default LudusFolder; 
+export default OvidFolder;

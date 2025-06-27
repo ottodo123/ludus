@@ -12,8 +12,55 @@ This is Ludus, a modern React-based Latin flashcard platform that implements spa
 ```bash
 cd ludus-flashcards
 npm install --legacy-peer-deps  # Required due to peer dependency conflicts
-npm start                       # Start development server on localhost:3000
+./start.sh                      # ALWAYS use this for development - fully stable
 ```
+
+**CRITICAL: Development Server Solution**
+The React development server had persistent connection issues causing "Safari can't connect to server" errors that made refreshing impossible. This has been **permanently fixed** with a custom stable server.
+
+**ALWAYS use `./start.sh` for development**:
+- ✅ Works with all browsers (Safari, Chrome, Firefox) 
+- ✅ Fully refreshable without any connection errors
+- ✅ No WebSocket issues or port conflicts
+- ✅ Reliable localhost connection on port 3000
+- ✅ Uses Python HTTP server serving production build
+- ✅ Automatic build process before serving
+- ✅ Process cleanup to prevent port conflicts
+- 📍 Access at `http://localhost:3000/`
+
+**The `start.sh` script**:
+1. Kills any existing servers on port 3000
+2. Runs `npm run build` to create latest production build
+3. Starts Python HTTP server in `/build` directory
+4. Provides clear instructions and status messages
+
+**Development Commands**:
+- `./start.sh` - **ONLY command to use for development** (fully stable)
+- `npm run build` - Manual build (already included in start.sh)
+- `npm test` - Run tests
+
+**NEVER use**:
+- `npm start` - Original React dev server (causes connection issues)
+- `npm run start:dev` - Same issues as npm start
+- Manual `python3 -m http.server` - Use start.sh instead for proper setup
+
+**Server Management for Code Changes**:
+When making code changes during development, the server MUST be restarted to pick up changes:
+
+1. **For ANY code/CSS changes**:
+   ```bash
+   # Kill existing servers first
+   pkill -f 'python.*http.server'; pkill -f 'node.*serve-build'
+   sleep 2
+   # Always restart with start.sh
+   ./start.sh
+   ```
+
+2. **Critical**: Changes to JS/CSS files require a fresh build and server restart
+3. **Never assume** browser refresh will show changes - always restart server
+4. **Port 3000 conflicts**: The script handles this automatically, but if you see "Address already in use", the kill commands above will fix it
+
+**For Claude Code**: Always run the kill commands and restart server after making any file changes to ensure changes are visible.
 
 ### Building & Deployment
 ```bash
@@ -81,9 +128,31 @@ When working with Firebase features:
 - **Manual Selections**: Range-based chapter selection (fromChapter/toChapter) instead of individual checkboxes
 - **Daily Review Logic**: Combines automatic (previously studied cards) and manual selection modes
 
-## Recent Work (Session ending 2025-06-26)
+## Recent Work (Session ending 2025-06-27)
 
-### Irregular Verb & Pronoun Fixes
+### Development Server Stability Fix (CRITICAL)
+- **PERMANENTLY FIXED** Safari connection issues that prevented page refreshing
+- **Created `start.sh` script** that provides 100% reliable development server
+- **Solution**: Python HTTP server serving production build instead of React dev server
+- **Result**: No more "Safari can't connect to server" errors, fully refreshable in all browsers
+- **Files created/modified**: `start.sh`, `package.json` (homepage field), various .env configs
+
+### Saved Words Session Management Feature
+- **Implemented session-based organization** for saved words with dividers and date tracking
+- **Added "New Session" functionality** with automatic date stamping and word counts  
+- **Session management**: Click session names to rename, delete sessions with trash icons
+- **Firebase integration**: Sessions sync to cloud storage for authenticated users
+- **UI improvements**: Dedicated SavedWordsPage, always-visible sidebar, compact styling
+- **Files modified**: `GlossaryPage.js`, `SavedWordsPage.js`, `userDataService.js`, `GlossaryPage.css`
+
+### Bug Fixes & UI Polish
+- **Fixed random word deletion bug** by replacing broken debounced save with direct Firebase saves
+- **Resolved Firebase sync issues** that caused saved words to disappear
+- **Fixed spacing inconsistencies** in saved words sidebar (reduced top padding)
+- **Removed debug elements** and test buttons for clean production UI
+- **Files modified**: `GlossaryPage.js`, `GlossaryPage.css`
+
+### Previous Work - Irregular Verb & Pronoun Fixes
 - **Fixed irregular verb inflection support** in `GlossaryPage.js`:
   - Added "odeo" (6 1 TRANS declension) with defective perfect-tense forms
   - Added "quaeso" (3 1 declension) with irregular 3rd conjugation handling

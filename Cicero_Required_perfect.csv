@@ -1,0 +1,245 @@
+lesson_number,latin_headword,latin_endings,part_of_speech,english
+1,usque,all the time,adverb,"all the way; usque ad, even to,"
+1,furor,"furoris, m.",verb,"madness, raving, fury"
+1,iste,"ista, istud",verb,"that, that of yours"
+1,iactō,"iactare, iacavi, iactatus",,"vaunt, boast, throw"
+1,audācia,"audaciae, f.",noun,"audacity, boldness, daring"
+1,nocturnus,"a, um",adjective,"night-time, nocturnal"
+1,os,"oris, n.",noun,"mouth, face"
+1,vultus,"vultus (also voltus), m.",noun,"countenance,"
+1,coniurātiō,"coniurationis, f.",,conspiracy
+1,proximus,"a, um",noun,"nearest, next"
+1,ignōrō,"ignorare, ignoravi (1)",verb,not know; be unfamiliar with; disregard; ignore; be ignorant of
+2,immo,,adverb,"no indeed (contradiction); on the contrary, more correctly; indeed, nay more"
+2,vērō,however,adverb,"in truth, indeed"
+2,nōtō,"notare, notavi, notatus",verb,"mark, designate"
+2,oculus,"-i, m.",noun,eye
+2,iussus,"iussus, m.",,"bidding, command"
+2,pridem,long ago,adverb,long since
+2,pestis,"pestis, f.",noun,"plague, pest, ruin"
+3,an,or?,conjunction,can it be that (introduces question expecting negative answer/further question)
+3,mediocris,mediocre,adjective,"moderate, average"
+3,orbis,"orbis, m.",noun,"circle, ring"
+3,incendium,"incendii, n.",noun,"conflagration, fire"
+3,nimis,,adverb,very much; too much; exceedingly
+3,antiquus,"a, um",noun,"old, ancient"
+3,praetereō,"praeterire, praeterii, praeteritus",verb,"go by,"
+3,quondam,formerly,adverb,once upon a time
+3,acerbus,"a, um",adjective,"bitter, harsh"
+3,consultum,"-i, n.",noun,"decree, response"
+3,vehemens,vehementis,adjective,"powerful, violent"
+4,detrimentum,"-i, n.",noun,"loss, harm  < de + tribo"
+4,avus,"avi, m.",noun,grandfather
+4,consulāris,"consulare, consular",adjective,"consular, of/proper to a consul; of consular rank; proposed/governed by consul"
+4,praetor,"praetoris, m.",noun,"magistrate, judge"
+4,poena,"-ae, f.",noun,"penalty, punishment"
+4,modus,"-i, m.",noun,"manner, way"
+4,tabula,"-ae, f.",noun,tablet; (plur.) records
+4,tamquam,(adv.) just as; (conj.) as if,conjunction,"as, just as, just as if; as it were, so to speak; as much as; so as"
+4,-condō,,,
+4,clēmēns,clementis,adjective,"merciful, gentle"
+4,nēquitia,"nequitiae, f.",noun,"worthlessness, wickedness"
+4,condemnō,"condemnare, condemnavi, condemnatus",verb,"condemn, doom, convict; find guilty; (pass) sentence; blame, censure, impugn"
+5,crēscō,"crescere, crevi, cretus",verb,"grow, increase"
+5,adeō,"adire, adivi (4)",verb,"approach; attack; visit, address; undertake; take possession (inheritance)"
+5,perniciēs,"perniciei, f.",noun,"ruin, death, destruction"
+5,mōlior,"moliri, molitus sum, work",verb,"build, pile up,"
+5,comprehendō,"comprehendere, comprehensi",verb,"catch/seize/grasp firmly; arrest; take hold/root/fire, ignite; conceive (baby)"
+5,credo,"credere, credidi, creditus (+ dat.)",verb,"trust,"
+5,crūdēlis,crudele,adjective,"cruel, unmerciful"
+5,dēnique,finally,adverb,at last
+5,improbus,"a, um",adjective,wicked  < in + probus
+5,perdō,"perdere, perdidi, perditus",verb,"destroy,"
+5,fateor,"fateri, fassus sum, confess",verb,"acknowledge,"
+6,obsideō,obsidēre,verb,"obsedi, obsessus, beset, besiege,"
+6,auris,"auris, f.",noun,ear
+6,sīcut,just as,adverb,as if
+6,adhuc,so far,adverb,till now
+6,etenim,,conjunction,"and indeed, because, since, as a matter of fact (independent reason, emphasis)"
+6,tenebrae,"-e, f.",noun,"darkness (pl.), obscurity; night; dark corner; ignorance; concealment; gloom"
+6,nefārius,"a, um",adjective,"wicked, evil"
+6,pariēs,"parietis, m.",noun,house wall
+6,illūstrō,"illustrare, illustravi",verb,illustratus (also
+6,-rumpō,,,
+6,mūtō,"mutare, -avi, -atus",verb,change  < moveo
+7,mēns,"mentis (mentium), f.",noun,"mind, intention, purpose,"
+7,oblīviscor,oblivisci,verb,"oblitus sum, forget"
+7,meminī,meminisse (defective),verb,"remember, recall"
+7,atrōx,atrocis,adjective,"fierce, dreadful, brutal"
+7,-mīror,,,
+7,contentus,"a, um",adjective,"content, satisfied  < contineo"
+7,cōgitō,"cogitare, cogitavi, cogitatus",verb,"consider, think"
+8,plānus,"plani, planissi",adjective,"level, flat"
+8,obscūrus,"a, um",adjective,"dim, dark, obscure"
+8,scelus,"sceleris, n.",noun,"evil deed, crime"
+8,negō,"negare, -avi, -atus, deny, refuse",verb,say no
+8,taceō,"tacēre, tacui, tacitus",verb,"be silent, be still"
+9,sanctus,"a, um",noun,"consecrated, sacred  < sancio"
+9,interitus,"interitus, m.",noun,"destruction, ruin, death"
+9,exitium,"exitii, n.",noun,"destruction, ruin, death"
+9,rogō,"rogare, rogavi, rogatus",verb,ask (for)
+9,ferrum,"-i, n.",noun,"iron, iron weapon, sword"
+9,trucīdō,"trucidare, trucidavi, trucidatus",verb,"slaughter,"
+9,igitur,therefore,conjunction,"therefore (postpositive), so/then; consequently; accordingly; well/in that case"
+9,placeō,placēre,verb,"placui, placitus, please;"
+9,lectus,"-i, m.",noun,chosen/picked/selected men (pl.)
+10,māne,in the morning,noun,"morning, morn; [multo mane => very early in the morning]"
+10,aliquandō,at last,adverb,"at some time or another,"
+10,nimius,"a, um",adjective,"too great, too much"
+10,dēsīderō,"-siderare, -avi, -atus",verb,"want, desire"
+10,sinō,"sinere, sivi, situs",verb,"let, allow, permit"
+11,custōs,"custodis, m.",noun,"guardian, protector"
+11,īnfēstus,"a, um",adjective,"dangerous, unsafe"
+11,totiēns,so often,,so many times
+11,comitium,"comitii, n.",noun,assembly place; (plur.)
+11,campus,"campi, m.",noun,"field, plain"
+11,quotiēns,how many times?; as often as,adverb,how often; as often as
+12,templum,"-i, n.",noun,"sanctuary, temple"
+12,tectum,"-i, n.",noun,"house  < tego, cover, roof over"
+12,quōniam,since,conjunction,"because, since, seeing that"
+12,propius,,,
+12,sevērus,"-i, m.",noun,Severus; (Emperor Lucius Septimius Severus 193-211)
+12,lēnis,lene,noun,gentle
+12,sīn,but if,conjunction,but if; if on the contrary
+12,iamdudum,,,
+12,exeō,"-ire, -ii, -itum",verb,"go out, issue, expire, rise"
+12,-hauriō,,,
+12,comes,"comitis, c.",noun,"companion  < cum + eo, ire"
+13,sponte,,adverb,of one's own will; voluntarily; for one's own sake
+13,exsilium,"exsilii, n.",noun,(a state of) exile
+13,dēlectō,"delectare, delectavi, delectatus",verb,"delight,"
+13,ōdī,odisse,verb,"osus (defective), hate, dislike"
+13,domesticus,"a, um",noun,"household, domestic"
+13,haereō,haerēre,verb,"haesi, haesurus, hesitate, stick"
+13,lībidō,libidinis,noun,"f. (also lubido), lust, desire,"
+13,facinus,"facinoris, n.",noun,"crime, deed  < facio"
+13,umquam,ever,adverb,at any time
+13,flagitium,"flagitii, n.",noun,"offense, shame, villainy"
+13,fax,"facis, f.",noun,"firebrand, torch"
+14,nūper,lately,,"newly, recently"
+14,praetermittō,"-mittere, -misi, -missus",verb,"omit, neglect,"
+14,immānis,"immani, immanissi",adjective,huge/vast/immense/tremendous/extreme/monstrous; inhuman/savage/brutal/frightful
+14,exsistō,"exsistere, exstiti, ---",verb,"emerge, arise, exist"
+14,vindicō,"vindicare, vindicavi, vindicatus",verb,punish;
+14,impendeō,impendēre,verb,"---, ---, hang over, threaten,"
+14,īgnōminia,"ignominiae, f.",noun,disgrace
+14,vitium,"vitii, n.",noun,"vice, fault, flaw"
+15,difficultās,"difficultatis, f.",noun,difficulty
+15,caelum,"-i, n.",noun,"heaven, sky"
+15,spīritus,"spiritus, m.",noun,"breath, breeze, inspiration,"
+15,iūcundus,"a, um",,"pleasant, sweet"
+15,nesciō,"nescire, -scivi, -scitus, not know",verb,be ignorant
+15,prīdiē,on the day before,adverb,day before
+15,stō,"stare, steti, statum",verb,stand
+15,omittō,"-mittere, -misi, -missus, disregard",verb,"let go,"
+15,quot,how many?; as many as,adjective,how many; of what number; as many
+15,āiō,aiere (defective),verb,"say, tell"
+16,sīca,"-ae, f.",noun,"dagger, stiletto"
+16,-lābor,,,
+16,sacer,sacra,noun,"sacrum, sacred"
+16,dēfigō,"defigere, defixi, defixus",verb,"fix, stick into,"
+16,loquor,loqui,verb,"locutus sum, speak"
+16,odium,"odii, n.",noun,hatred
+16,misericordia,"misericordiae, f.",noun,"compassion, pity"
+16,frequentia,"frequentiae, f.",noun,"throng, crowd"
+16,tot,,numeral,"so many, such a number of; as many, so many; such a great number of"
+16,contingit,,,
+16,iūdicium,"iudicii, n.",,"judgment, sentence, court"
+16,nūdus,"a, um",adjective,"bare, naked"
+16,inānis,inane,adjective,"empty, vain, worthless"
+17,pactum,"-i, n.",noun,"means, method, manner; agreement"
+17,careō,"carēre, carui, --- (+ abl.)",verb,"be without, lack"
+17,aspectus,"aspectus, m.",noun,"look, glance, appearance"
+17,mālō,malle,verb,"malui, prefer, wish rather"
+17,cōnscientia,"conscientiae, f.",noun,"joint knowledge,"
+17,sēnsus,"sensus, m.",noun,"sensation, understanding,"
+17,parēns,"parentis, c.",noun,"parent, mother, father"
+17,plācō,"placare, placavi, placatus",verb,"calm, appease,"
+17,opīnor,"opinari, opinatus sum, suppose",verb,imagine
+18,tacitus,"a, um",noun,"silent, quiet  < taceo"
+18,nex,"necis, f.",noun,"murder, death"
+18,quaestiō,"quaestionis, f.",noun,"inquiry, investigation, trial"
+18,quisquis,quicquid,,"whoever, whatever"
+18,abhorreō,abhorrēre,verb,"abhorrui, ---, shrink from, be"
+18,vērus,"a, um",noun,true
+18,falsus,"a, um",adjective,"false, feigned, pretended  < fallo"
+19,repudiō,"repudiare, repudiavi, repudiatus",verb,"reject,"
+19,sodālis,"sodalis, m.",noun,"companion, friend, accomplice"
+19,vidēlicet,,adverb,"one may see; clearly, evidently"
+19,quam,(with comparative) than; (with superlative),adverb,"how, how much; as, than; [quam + superlative => as ... as possible]"
+19,carcer,"carceris, m.",noun,"prison, jail"
+19,vinculum,"-i, n.",noun,"bond, chain; (plur.) prison"
+19,dīgnus,"a, um",adjective,"(+ abl.), worthy, worthwhile, fitting"
+20,obtemperō,"obtemperare, obtemperavi",verb,obey; comply with the demands of; be submissive to; (w/DAT)
+20,ecquis,ecquid (pron.),,anyone / anything at all
+20,attendō,"attendere, attendi, attenditus",verb,direct
+20,silentium,"silentii, n.",noun,"silence, quiet"
+21,quiescō,"quiescere, quievi, quietus, rest",verb,"keep quiet,"
+21,clāmō,"clamare, -avi, -atus",verb,"shout, scream"
+21,cārus,"a, um",noun,dear (+ dat.)
+21,honestus,"a, um",adjective,"honorable, respectable"
+21,studium,"studii, n.",noun,"zeal, enthusiasm, eagerness,"
+21,vāstō,"vastare, vastavi, vastatus",verb,devastate
+22,frangō,"frangere, fregi, fractus",verb,break
+22,corrigō,"corrigere, correxi, correctus",verb,"correct, put"
+22,utinam,if only,adverb,would that
+22,tametsī,just as if,conjunction,"even if, although, though"
+22,invidia,"invidiae, f.",noun,"unpopularity, hatred, envy"
+22,minus,,adverb,less; not so well; not quite
+22,praesēns,praesentis,adjective,"immediate, imminent, present"
+22,pudor,"pudoris, m.",noun,"modesty, sense of honor, shame"
+23,inimīcus,"a, um",noun,(+ dat.) unfriendly; (noun)
+23,praedicō,"-dicere, -dixi, -dictus",verb,"predict, fortell,"
+23,-flō,,,
+23,rēctus,"a, um",adjective,"straight, right, upright, direct"
+23,sermō,"sermonis, m.",noun,"conversation, speech, talk,"
+23,mōlēs,"molis, f.",noun,"mass, bulk, great effort"
+23,glōria,"gloriae, f.",noun,glory
+23,importūnus,"a, um",adjective,"troublesome, ill-natured"
+23,scelerātus,"a, um",noun,criminal
+23,sēcernō,"secernere, secrevi, secretus",verb,"separate, put"
+23,impius,"a, um",adjective,"irreligious, disloyal, traitorous,"
+23,latrōcinium,"latrocinii, n.",noun,"brigandage, robbery; band"
+24,argentum,"-i, n.",noun,"silver; money, cash; silver-plate; [argentum vivum => quicksilver/mercury]"
+24,sacrārium,"sacrarii, n.",noun,shrine
+25,rapiō,"rapere, rapui, raptus",verb,"snatch, grab"
+25,voluptās,"voluptatis, f.",noun,pleasure
+25,pariō,"parere, peperi, partus",verb,"give birth to, produce"
+25,exerceō,exercēre,verb,"exercui, exercitus, exercise,"
+25,ōtium,"otiii, n.",noun,"leisure, ease"
+26,hīc,"haec, hoc",pronoun,this
+26,-fruor,,,
+26,obeō,"-ire, -ii, -itum",verb,"encounter, engage in, meet, die"
+26,somnus,"-i, m.",noun,"drowsiness, sleep"
+26,praeclārus,"a, um",adjective,"famous, well-known, bright,"
+26,famēs,"famis, f.",noun,hunger
+26,frīgus,"frigoris, n.",noun,"cold, chill"
+27,prōficiō,"-ficere, -feci, -fectus",verb,"profit, benefit, make"
+27,cōnsulātus,"consulatus, m.",noun,consulship
+27,exsul,"exsulis, m.",noun,(a person in) exile #27
+27,querimōnia,"querimoniae, f.",noun,complaint  cf.
+27,penitus,deeply,adjective,inwardly
+27,cūnctus,"a, um",noun,"whole, entire, all"
+27,auctor,"auctoris, m.",noun,"promoter, leader"
+28,mātūrus,"a, um",adjective,"early, seasonable, ripe"
+29,pertimēscō,"pertimescere, pertimui, ---",verb,be very
+29,ardeō,"ardēre, arsi, arsus",verb,"be on fire, burn"
+29,-flagrō,,,
+29,sanguis,"sanguinis, m.",noun,blood
+30,dissimulō,"dissimulare, dissimulavi, dissimulatus",verb,"conceal, dissemble, disguise, hide; ignore"
+30,perpetuus,"a, um",adjective,"continuous, perpetual"
+30,eōdem,,adverb,to the same place/purpose
+30,colligō,"colligere, collegi, collectus",verb,"gather together,"
+30,exstinguō,"exstinguere, exstinxi, exstinctus",verb,"put out,"
+31,fortasse,perhaps,adverb,maybe
+31,morbus,"-i, m.",noun,"sickness, disease, illness"
+32,īnflammō,"inflammare, inflammavi, inflammatus",verb,set
+32,frōns,"frontis, f.",noun,"forehead, brow"
+32,patefaciō,"patefacere, -feci, -factus",verb,"lay open, open,"
+33,ōmen,"ominis, n.",noun,"portent, omen"
+33,iungō,"iungere, iunxi, iunctus",,"join, harness, yoke"
+33,auspicium,"auspicii, n.",noun,"augury, omen from birds"
+33,foedus,"foederis, n.",adjective,"agreement, treaty, pact"
+33,societās,"societatis, f.",noun,"alliance, group, association"
+33,aeternus,"a, um",adjective,"eternal, everlasting"
+33,vīvus,"a, um",adjective,"alive, living"

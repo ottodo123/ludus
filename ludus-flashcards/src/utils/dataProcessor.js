@@ -7,85 +7,193 @@ export const isDue = (card) => {
   return now >= reviewDate;
 };
 
-// Parse CSV data and convert to card objects  
-export const parseVocabularyData = async () => {
-  try {
-    // Load CSV data from the public folder (works for both localhost and GitHub Pages)
-    const response = await fetch(`${process.env.PUBLIC_URL}/data/Ludus_Vocabulary_Final.csv`);
-    const csvData = await response.text();
+// Parse CSV data for a specific curriculum
+const parseCSVData = (csvData, curriculum, idPrefix) => {
+  const lines = csvData.trim().split('\n');
+  const cards = [];
+  
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line) continue;
     
-    const lines = csvData.trim().split('\n');
-    // Skip headers and process the data
+    // More robust CSV parsing using a simple split and quote cleaning
+    const values = line.split(',');
     
-    console.log(`📚 Loading vocabulary data: ${lines.length} lines found`);
+    // Clean up quotes and rejoin values that were split incorrectly due to commas inside quotes
+    const cleanValues = [];
+    let current = '';
+    let inQuotedField = false;
     
-    const cards = [];
-    for (let i = 1; i < lines.length; i++) {
-      const line = lines[i].trim();
-      if (!line) continue;
+    for (let j = 0; j < values.length; j++) {
+      const value = values[j];
       
-      // More robust CSV parsing using a simple split and quote cleaning
-      const values = line.split(',');
-      
-      // Clean up quotes and rejoin values that were split incorrectly due to commas inside quotes
-      const cleanValues = [];
-      let current = '';
-      let inQuotedField = false;
-      
-      for (let j = 0; j < values.length; j++) {
-        const value = values[j];
-        
-        if (inQuotedField) {
-          current += ',' + value;
-          if (value.endsWith('"')) {
-            cleanValues.push(current.slice(0, -1)); // Remove ending quote
-            current = '';
-            inQuotedField = false;
-          }
-        } else if (value.startsWith('"') && !value.endsWith('"')) {
-          current = value.slice(1); // Remove starting quote
-          inQuotedField = true;
-        } else if (value.startsWith('"') && value.endsWith('"')) {
-          cleanValues.push(value.slice(1, -1)); // Remove both quotes
-        } else {
-          cleanValues.push(value);
+      if (inQuotedField) {
+        current += ',' + value;
+        if (value.endsWith('"')) {
+          cleanValues.push(current.slice(0, -1)); // Remove ending quote
+          current = '';
+          inQuotedField = false;
         }
+      } else if (value.startsWith('"') && !value.endsWith('"')) {
+        current = value.slice(1); // Remove starting quote
+        inQuotedField = true;
+      } else if (value.startsWith('"') && value.endsWith('"')) {
+        cleanValues.push(value.slice(1, -1)); // Remove both quotes
+      } else {
+        cleanValues.push(value);
       }
-      
-      // If we have at least 5 fields, create a card
+    }
+    
+    // Handle different CSV formats
+    let lessonNum, headword, endings, partOfSpeech, english, requiredOrder, bookLineRef, chapter;
+    
+    if (curriculum === 'LUDUS') {
+      // LUDUS format: lesson_number,latin_headword,latin_endings,part_of_speech,english
       if (cleanValues.length >= 5) {
-        const lessonNum = parseInt(cleanValues[0]) || 0;
+        lessonNum = parseInt(cleanValues[0]) || 0;
+        headword = cleanValues[1] || '';
+        endings = cleanValues[2] || '';
+        partOfSpeech = cleanValues[3] || '';
+        english = cleanValues[4] || '';
+      }
+    } else if (curriculum === 'AENEID') {
+      // AENEID format: Required_Order,Book_Line_Ref,Chapter,Headword,Latin_Entry,Definitions,Occurrences
+      if (cleanValues.length >= 6) {
+        requiredOrder = parseInt(cleanValues[0]) || 0;
+        bookLineRef = cleanValues[1] || '';
+        chapter = cleanValues[2] || '';
+        headword = cleanValues[3] || '';
+        endings = cleanValues[4] || '';
+        english = cleanValues[5] || '';
         
-        const card = {
-          id: `ludus-${i}`,
-          curriculum: 'LUDUS',
-          lesson_number: lessonNum,
-          latin_headword: cleanValues[1] || '',
-          latin_endings: cleanValues[2] || '',
-          part_of_speech: cleanValues[3] || '',
-          english: cleanValues[4] || '',
-          // SM-2 algorithm fields
-          easeFactor: 2.5,
-          interval: 0,
-          repetitions: 0,
-          nextReview: null,
-          lastReviewed: null,
-          // User preferences
-          displayMode: 'full', // 'basic' or 'full'
-          isKnown: false,
-          createdAt: new Date().toISOString()
-        };
-        cards.push(card);
+        // For Aeneid, we'll use the chapter (like "I.1-25") as the lesson identifier
+        lessonNum = requiredOrder; // Use required order for sorting within sections
         
-        // Debug log for first few cards and chapter 14 specifically
-        if (i <= 5 || lessonNum === 14) {
-          console.log(`Card ${i}: Lesson ${lessonNum} - ${cleanValues[1]}`);
+        // Extract part of speech from English definitions if present
+        partOfSpeech = '';
+        if (english.includes('(adj.)')) partOfSpeech = 'adj';
+        else if (english.includes('(n.)')) partOfSpeech = 'n';
+        else if (english.includes('(v.)')) partOfSpeech = 'v';
+        else if (english.includes('(adv.)')) partOfSpeech = 'adv';
+        else if (english.includes('(conj.)')) partOfSpeech = 'conj';
+        else if (english.includes('(prep.)')) partOfSpeech = 'prep';
+        else if (english.includes('(pron.)')) partOfSpeech = 'pron';
+        else partOfSpeech = 'misc';
+      }
+    } else {
+      // Other curricula format: Chapter,Headword,Latin_Entry,Part_of_Speech,English
+      // or lesson_number,latin_headword,latin_endings,part_of_speech,english
+      if (cleanValues.length >= 5) {
+        // Try to determine the format by checking first column
+        const firstCol = cleanValues[0];
+        if (firstCol.toLowerCase().includes('chapter') || firstCol === 'Chapter') {
+          // Skip header row
+          continue;
+        } else if (isNaN(parseInt(firstCol))) {
+          // Probably a chapter identifier like "D&I (1-199)" - keep as string for Ovid
+          if (curriculum === 'OVID') {
+            lessonNum = firstCol; // Keep original section name
+          } else {
+            lessonNum = 1; // Default to 1 for other curricula
+          }
+        } else {
+          lessonNum = parseInt(firstCol) || 1;
+        }
+        
+        // Determine column mapping
+        if (curriculum === 'CAESAR' || curriculum === 'CICERO') {
+          // Format: lesson_number,latin_headword,latin_endings,part_of_speech,english
+          headword = cleanValues[1] || '';
+          endings = cleanValues[2] || '';
+          partOfSpeech = cleanValues[3] || '';
+          english = cleanValues[4] || '';
+        } else {
+          // Format: Chapter,Headword,Latin_Entry,Part_of_Speech,English
+          headword = cleanValues[1] || '';
+          endings = cleanValues[2] || '';
+          partOfSpeech = cleanValues[3] || '';
+          english = cleanValues[4] || '';
         }
       }
     }
     
-    console.log(`✅ Successfully loaded ${cards.length} vocabulary cards`);
-    return cards;
+    // Create card if we have valid data
+    if (headword && cleanValues.length >= 5) {
+      const card = {
+        id: `${idPrefix}-${i}`,
+        curriculum: curriculum,
+        lesson_number: lessonNum,
+        latin_headword: headword,
+        latin_endings: endings,
+        part_of_speech: partOfSpeech,
+        english: english,
+        // SM-2 algorithm fields
+        easeFactor: 2.5,
+        interval: 0,
+        repetitions: 0,
+        nextReview: null,
+        lastReviewed: null,
+        // User preferences
+        displayMode: 'full', // 'basic' or 'full'
+        isKnown: false,
+        createdAt: new Date().toISOString()
+      };
+      
+      // Add Aeneid-specific fields
+      if (curriculum === 'AENEID') {
+        card.required_order = requiredOrder;
+        card.book_line_ref = bookLineRef;
+        card.chapter = chapter;
+      }
+      
+      cards.push(card);
+    }
+  }
+  
+  return cards;
+};
+
+// Parse CSV data and convert to card objects from all curricula
+export const parseVocabularyData = async () => {
+  try {
+    const allCards = [];
+    
+    // Define curriculum files
+    const curricula = [
+      { name: 'LUDUS', file: 'Ludus_Vocabulary_Final.csv', prefix: 'ludus' },
+      { name: 'CAESAR', file: 'caesar_required_perfect.csv', prefix: 'caesar' },
+      { name: 'CICERO', file: 'Cicero_Required_perfect.csv', prefix: 'cicero' },
+      { name: 'APULEIUS', file: 'Apuleius_Required_perfect.csv', prefix: 'apuleius' },
+      { name: 'OVID', file: 'Ovid_Required_perfect.csv', prefix: 'ovid' },
+      { name: 'AENEID', file: 'Aeneid_Required.csv', prefix: 'aeneid' }
+    ];
+    
+    // Load each curriculum
+    for (const curriculum of curricula) {
+      try {
+        console.log(`📚 Loading ${curriculum.name} vocabulary...`);
+        const response = await fetch(`${process.env.PUBLIC_URL}/data/${curriculum.file}`);
+        
+        if (response.ok) {
+          const csvData = await response.text();
+          const cards = parseCSVData(csvData, curriculum.name, curriculum.prefix);
+          allCards.push(...cards);
+          console.log(`✅ Loaded ${cards.length} ${curriculum.name} cards`);
+        } else {
+          console.log(`⚠️ ${curriculum.name} data not available yet (${response.status})`);
+        }
+      } catch (error) {
+        console.log(`⚠️ ${curriculum.name} data not available yet:`, error.message);
+      }
+    }
+    
+    if (allCards.length === 0) {
+      console.log('🔄 No vocabulary data found, falling back to sample data');
+      return generateSampleCards();
+    }
+    
+    console.log(`✅ Successfully loaded ${allCards.length} total vocabulary cards from ${curricula.filter(c => allCards.some(card => card.curriculum === c.name)).length} curricula`);
+    return allCards;
   } catch (error) {
     console.error('❌ Error parsing vocabulary data:', error);
     console.log('🔄 Falling back to sample data');

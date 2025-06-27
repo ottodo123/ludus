@@ -1,0 +1,1449 @@
+[
+  {
+    "title": "Agreement and Basic Constructions",
+    "points": [
+      {
+        "number": "1",
+        "title": "Agreement of Verb (LUD 1)",
+        "description": "A verb agrees with its subject in person and number.",
+        "examples": [
+          "Puer ambulat.  The boy walks.",
+          "Pueri ambulant.  The boys walk."
+        ],
+        "tags": [
+          "Agreement and Basic Constructions"
+        ]
+      },
+      {
+        "number": "2",
+        "title": "Agreement of Noun and Predicate Noun (LUD 4)",
+        "description": "A predicate noun agrees in case with the noun which it modifies.  (For more on Apposition, see #5 below.)  Such nouns, as in the examples below, are usually connected by sum, or by other linking verbs, including the passives of verbs of naming, choosing, and making (see also predicate accusative, #28 below).",
+        "examples": [
+          "Roma est urbs.  Rome is a city.",
+          "Dicunt Romam esse urbem.  They say that Rome is a city.",
+          "Urbem Romam videmus.  We see the city (of) Rome.",
+          "Femina appellatur Tullia, The woman is named Julia."
+        ],
+        "tags": [
+          "Agreement and Basic Constructions"
+        ]
+      },
+      {
+        "number": "3",
+        "title": "Adjective-Noun Agreement and Predicate Adjective (LUD 1)",
+        "description": "An adjective agrees in gender, number, and case with the noun it modifies.  An adjective attached to a noun by a linking verb, as in the third sentence below, also agrees with its noun (the subject).",
+        "examples": [
+          "Feminae clarae me vocant.  Famous women call me.",
+          "Nautas bonos laudo.  I praise good farmers.",
+          "Incolae sunt clari.  The inhabitants are famous."
+        ],
+        "tags": [
+          "Agreement and Basic Constructions"
+        ]
+      },
+      {
+        "number": "4",
+        "title": "Agreement of Relative Pronoun (LUD 39)",
+        "description": "The relative pronoun agrees with its antecedent in gender and number, but its case depends upon its grammatical function in its own relative clause.",
+        "examples": [
+          "Puellae quarum mater clara est urbem servant.",
+          "The girls whose mother is famous are saving the city.",
+          "Dux quem laudamus urbem servavit.",
+          "The leader whom we praise has saved the city."
+        ],
+        "tags": [
+          "Agreement and Basic Constructions"
+        ]
+      },
+      {
+        "number": "5",
+        "title": "Apposition - A noun may modify another noun or pronoun, so long as it is in the same case as the noun it modifies.  Such nouns are called \"appositives.\"",
+        "description": "Nouns",
+        "examples": [
+          "Consules Marcus et Lepidus urbem servaverunt.",
+          "The consuls, Marcus and Lepidus, saved the city."
+        ],
+        "tags": [
+          "Agreement and Basic Constructions"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Nominative Case",
+    "points": [
+      {
+        "number": "6",
+        "title": "The subject is in the nominative. (LUD 1)",
+        "description": "",
+        "examples": [],
+        "tags": [
+          "Noun",
+          "Nominative Case"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Genitive Case",
+    "points": [
+      {
+        "number": "7",
+        "title": "Genitive of Possession (LUD 1)",
+        "description": "The genitive case is used to express the possessor.",
+        "examples": [],
+        "tags": [
+          "Noun",
+          "Genitive Case"
+        ]
+      },
+      {
+        "number": "8",
+        "title": "Partitive Genitive (or Gen. of the Whole) (LUD 48)",
+        "description": "The genitive is often used with superlative adjectives and words of indefinite quantity, e.g. aliquid, to denote the whole out of which some part is taken.  Thus in many cases where English would use an adjective-noun combination in grammatical agreement (e.g., more money; no food) Latin prefers adj-noun or noun-noun with the second noun in the genitive case, e.g., plus pecuniae, more money (literally, more of money); nihil cibi, no food (nothing of food).  Indefinite words commonly used with this type of genitive are nihil, plus, minus, tantum, quantum, quid, aliquid, quicquam and satis.\nOther examples:\tmagna pars Romanorum,",
+        "examples": [
+          "a large part of the Romans.",
+          "altissima puellarum, the tallest of the girls"
+        ],
+        "tags": [
+          "Noun",
+          "Genitive Case"
+        ]
+      },
+      {
+        "number": "9",
+        "title": "Objective Genitive (BG I.3)",
+        "description": "The genitive is used together with nouns whose meaning implies feeling or action, when in English we use such action nouns with another noun preceded by \"of\", e.g. amor patriae, love of one's country.  The other noun typically calls to mind a verbal action, and the objective genitive supplies an object, as it were, for that verbal action.  In such uses, the noun in the genitive would be in the accusative if the action noun became its corresponding verb:  amor patriae ?  amat patriam.  (See the comparison with subjective genitive in #12 below.)",
+        "examples": [],
+        "tags": [
+          "Noun",
+          "Genitive Case"
+        ]
+      },
+      {
+        "number": "10",
+        "title": "Genitive of Description (BG I.8)",
+        "description": "A noun and accompanying adjective may be put into the genitive case to describe another noun.",
+        "examples": [
+          "vir summae virtutis\t\t\tfossa trium pedum",
+          "a man of the highest courage\t\ta 3-foot deep trench",
+          "(lit., a trench of 3 feet)"
+        ],
+        "tags": [
+          "Noun",
+          "Genitive Case"
+        ]
+      },
+      {
+        "number": "11",
+        "title": "Genitive (of Cause) with Special Intransitive Verbs (C+P 1)",
+        "description": "Many verbs of emotion take a genitive object of the cause of the emotion.  When impersonal, miseret, paenitet, taedet and a few others use the genitive of cause and the accusative of the person affected by the emotion.",
+        "examples": [
+          "me iniuriae paenitet,",
+          "I regret / feel regret for the harm (that I inflicted)"
+        ],
+        "tags": [
+          "Noun",
+          "Genitive Case"
+        ]
+      },
+      {
+        "number": "12",
+        "title": "Subjective Genitive (CAT I.1, BG I.7)",
+        "description": "The genitive is used with nouns whose meaning implies action, when in English we use such actions nouns with another noun preceded by \"of\" or the noun with apostrophe + s ('s), e.g. amor matris, the love of the mother, the mother's love.  In such uses, the noun in the genitive would be the nominative subject if the action noun became its corresponding verb:  mater amat (puellam).",
+        "examples": [
+          "Objective Genitive (#9 above)\t\tSubjective Genitive",
+          "cupiditas regni\t\t\t\t\ttimor puerorum",
+          "desire for the throne\t\t\t\tthe fear of the children \t\t\t\t\t\t\t\t\t\t(the children's fear)",
+          "imperium gentium rule over nations\tamor matris",
+          "a mother's love",
+          "odium tyrannorum hatred of tyrants\tadventus Caesaris",
+          "the arrival of Caesar",
+          "dux peditum the general of the infantry"
+        ],
+        "tags": [
+          "Noun",
+          "Genitive Case"
+        ]
+      },
+      {
+        "number": "13",
+        "title": "Genitive of Respect (CAT I.5)",
+        "description": "The genitive is used with adjectives and nouns to show in what respect their meaning applies.  This use is most frequent with adjectives and verbs of remembering or forgetting, knowing or not knowing, fullness or emptiness.  The translation varies.",
+        "examples": [
+          "plenus auri, full of gold",
+          "obliviscere caedis, forget about slaughter."
+        ],
+        "tags": [
+          "Noun",
+          "Genitive Case"
+        ]
+      },
+      {
+        "number": "14",
+        "title": "Appositional Genitive (CAT I.12)",
+        "description": "The genitive may modify another noun as if it were in apposition to that noun (i.e. in the same case).  E.g. poena mortis, the penalty of death (the penalty = death).  Compare English expressions, such as the crime of robbery, a reward of money.",
+        "examples": [],
+        "tags": [
+          "Noun",
+          "Genitive Case"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Dative Case",
+    "points": [
+      {
+        "number": "15",
+        "title": "Indirect Object (LUD 3)",
+        "description": "The indirect object of verbs of giving, showing, and telling is in the dative case.",
+        "examples": [
+          "Puero donum dedi.",
+          "I gave a gift to the boy.  OR  I gave the boy a gift."
+        ],
+        "tags": [
+          "Noun",
+          "Dative Case"
+        ]
+      },
+      {
+        "number": "16",
+        "title": "Dative with Special Adjectives (LUD 3)",
+        "description": "Certain adjectives may take a dependent dative.  Some frequently seen adjectives of this type are adversus, carus, fidus, gratus, inimicus, idoneus, par, propinquus, secundus, similis.",
+        "examples": [
+          "Vir amicis carus est vir felix.",
+          "A man dear to his friends is a fortunate man."
+        ],
+        "tags": [
+          "Noun",
+          "Dative Case"
+        ]
+      },
+      {
+        "number": "17",
+        "title": "Dative with Special Intransitive Verbs (LUD 55)",
+        "description": "Certain intransitive verbs may govern dative objects, which are best translated as direct objects:  mihi nocuerunt, they harmed me; hostibus resistimus, we are opposing the enemy.  Some more frequently seen intransitive verbs that use a dative object are the following:",
+        "examples": [
+          "persuadeo - persuade\t\t\timpero - order",
+          "credo - believe\t\t\t\tstudeo - eagerly pursue",
+          "mando - command\t\t\t\tresisto - resist, oppose",
+          "noceo -  harm"
+        ],
+        "tags": [
+          "Noun",
+          "Dative Case"
+        ]
+      },
+      {
+        "number": "18",
+        "title": "Dative with Special Compound Verbs (LUD 56)",
+        "description": "Many verbs compounded with ad-, ante-, con-, in-, inter-, ob-, post-, prae-, pro-, sub-, and super- may take a dative object, which is best translated in English as a direct object:  nobis insidiantur,  they are plotting against us; hostibus occurrimus, we meet the enemy.  Some of the more common such verbs are the following:",
+        "examples": [
+          "praesto - excel, surpass",
+          "occurro - meet",
+          "praeficio - put in charge of",
+          "appropinquo - draw near,approach",
+          "obsto - oppose, stand in the way of"
+        ],
+        "tags": [
+          "Noun",
+          "Dative Case"
+        ]
+      },
+      {
+        "number": "19",
+        "title": "Dative of Possession (LUD 59)",
+        "description": "The dative is used with sum to express possession.  The thing possessed is the subject, while the possessor is in the dative.  Translate the Latin subject as the direct object, the dative as the subject, and the form of sum as the appropriate form of have.",
+        "examples": [
+          "Decem equi mihi sunt.  I have ten horses."
+        ],
+        "tags": [
+          "Noun",
+          "Dative Case"
+        ]
+      },
+      {
+        "number": "20",
+        "title": "Dative of Agent (LUD 62)",
+        "description": "The dative is used with the passive periphrastic (see #99 below) to denote the personal agent.\nThis use is also common with the perfect passive but rare (in prose) with other verb forms.",
+        "examples": [
+          "Hic liber tibi legendus est.",
+          "This book must be read by you.  OR  You must read this book.",
+          "mihi constitutum est,  has been decided by me"
+        ],
+        "tags": [
+          "Noun",
+          "Dative Case"
+        ]
+      },
+      {
+        "number": "21",
+        "title": "Dative of Reference (BG I.25)",
+        "description": "The dative of reference is used to denote the person or thing for whose benefit (or detriment) an action is done, or from whose point of view it happens.  Rather than depending on any single word, this use of the dative denotes the person with reference to whom an entire statement is true.  The meaning of the statement is complete without the dative, unlike other uses of the dative.  Often the dative of reference is best translated with of, as if it were a possessive genitive.",
+        "examples": [
+          "Mihi ante oculos versaris.",
+          "You hover before my eyes (lit. hover before the eyes to me).",
+          "Laudavit mihi fratrem.",
+          "He praised my brother. (lit. he praised the brother out of regard \t\tfor me).",
+          "Plato mihi optimus philosophus est.",
+          "To me, Plato is the best philosopher.  (i.e. to my mind or from \tmy perspective)"
+        ],
+        "tags": [
+          "Noun",
+          "Dative Case"
+        ]
+      },
+      {
+        "number": "22",
+        "title": "Dative of Purpose (BG I.25)",
+        "description": "The dative is used to express the purpose of another action.  The dative of purpose usually occurs along with the dative of reference (see above #21) in a double dative construction (see below #23). It is rarely seen by itself in prose, with the exception of a few abstract nouns and certain military expressions.",
+        "examples": [
+          "Hoc magno usui fuit.",
+          "This was of great use (lit., for great use).",
+          "Locum castris deligit.",
+          "He chooses a place for a camp."
+        ],
+        "tags": [
+          "Noun",
+          "Dative Case"
+        ]
+      },
+      {
+        "number": "23",
+        "title": "Double Dative (BG I.25)",
+        "description": "The dative of purpose and dative of reference often occur together in the so-called double dative construction (see #21 & 22 above).",
+        "examples": [
+          "Auxilio mihi venit.  She is coming as an aid to/for me.",
+          "Legionem decimam subsidio septimae misit.",
+          "He sent the tenth legion as a relief to/for the seventh (legion)."
+        ],
+        "tags": [
+          "Noun",
+          "Dative Case"
+        ]
+      },
+      {
+        "number": "24",
+        "title": "Dative of Separation (CAT I.18)",
+        "description": "The dative is used with some verbs of taking away, especially with compound verbs prefixed with ab, de, ex, and a few with ad; the noun in the dative is usually a person.",
+        "examples": [
+          "Mihi pecuniam eripuit",
+          "He snatched the money from me (lit., with reference to me, i.e. to \tmy disadvantage)"
+        ],
+        "tags": [
+          "Noun",
+          "Dative Case"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Accusative Case",
+    "points": [
+      {
+        "number": "25",
+        "title": "Direct Object (LUD 1)",
+        "description": "The direct object of a transitive verb is in the accusative.  Puerum amo.  I like the boy.",
+        "examples": [],
+        "tags": [
+          "Noun",
+          "Accusative Case"
+        ]
+      },
+      {
+        "number": "26",
+        "title": "Accusative with Prepositions (LUD 4)",
+        "description": "The accusative is used with certain prepositions, e.g., ad, trans, per, inter, in, sub, propter.  Usually the preposition depends on a verb of motion.  Trans viam propero.  I hurry across the road.",
+        "examples": [],
+        "tags": [
+          "Noun",
+          "Accusative Case"
+        ]
+      },
+      {
+        "number": "27",
+        "title": "Double Accusative (LUD 5)",
+        "description": "Some verbs, such as rogo and oro, take two direct objects:  one is the person being asked, the other is the thing being requested.",
+        "examples": [
+          "Feminas aquam oramus.  We beg the women for water."
+        ],
+        "tags": [
+          "Noun",
+          "Accusative Case"
+        ]
+      },
+      {
+        "number": "28",
+        "title": "Predicate Accusative (LUD 18)",
+        "description": "Verbs of making, naming, and choosing ('factitive' verbs), such as voco and deligo, can in the active voice take both a direct object and a second accusative, which is called a \"predicate\" accusative.  This second accusative is usually a proper name, title, or adjective.\nNote:  when such verbs are in the passive voice, they act as linking verbs and take a predicate noun or adjective in the nominative case.  (See also #2 above.)",
+        "examples": [
+          "Filiam Tulliam appello.  I name my daughter Tullia.",
+          "Eos nautas delegi. I chose them (as) sailors.",
+          "Oppidum pulchrum fecerunt.  They made the town beautiful.",
+          "The woman is named Tullia.  Femina Tullia appellatur.",
+          "This nation is called barbaric.  Hic populus vocatur barbarus."
+        ],
+        "tags": [
+          "Noun",
+          "Accusative Case"
+        ]
+      },
+      {
+        "number": "29",
+        "title": "Subject Accusative in Indirect Statement (LUD 40)",
+        "description": "The subject of an indirect statement is in the \taccusative case.  (See #602 & 63 below for indirect statement.)",
+        "examples": [
+          "Dico militem esse fortem.  I say that the soldier is brave."
+        ],
+        "tags": [
+          "Noun",
+          "Accusative Case"
+        ]
+      },
+      {
+        "number": "30",
+        "title": "Accusative of Duration of Time (LUD 46)",
+        "description": "The accusative is used to express duration of time.",
+        "examples": [
+          "Multas horas ducem exspectavi.",
+          "For many hours I awaited the leader."
+        ],
+        "tags": [
+          "Noun",
+          "Accusative Case"
+        ]
+      },
+      {
+        "number": "31",
+        "title": "Accusative of Extent of Space (LUD 48)",
+        "description": "The accusative is used to express extent of space.",
+        "examples": [
+          "arbor multos pedes alta, a tree many feet high"
+        ],
+        "tags": [
+          "Noun",
+          "Accusative Case"
+        ]
+      },
+      {
+        "number": "32",
+        "title": "Accusative of Place to Which without a Preposition (BG I.5)",
+        "description": "The accusative of place to which is regularly used without a preposition when expressing motion toward (1) a specifically named city, town or small island or (2) the nouns domus (home) or rus (countryside).",
+        "examples": [
+          "Iter Romam facimus.\t      vs.\tIter ad urbem facimus.",
+          "We are traveling to Rome.\t\tWe are traveling to the city.  \t\t\t\t\t\t\t\t\t(No specific city is named.)"
+        ],
+        "tags": [
+          "Noun",
+          "Accusative Case"
+        ]
+      },
+      {
+        "number": "33",
+        "title": "Accusative of Exclamation (VER 8; CAT I.2)",
+        "description": "The accusative is used in exclamations.  (For verbs in exclamations, the infinitive form is used.)\nO tempora!  O the times!  Me miserum!  Ah, wretched me!",
+        "examples": [],
+        "tags": [
+          "Noun",
+          "Accusative Case"
+        ]
+      },
+      {
+        "number": "34",
+        "title": "Accusative of Result Produced (or Internal Acc.) and Cognate \tAccusative (CAT I.17)",
+        "description": "The accusative may be used to denote the result, rather than the object, of the action.  This accusative is most often a neuter noun, pronoun, or adjective, especially an adjective of number or amount.  Translation will vary, but generally involves taking the Latin accusative as an English adjective modifying an (action) noun related to the meaning of the verb\nThe term \"Cognate Accusative\" denotes the variety of this phenomenon in which the Accus. of Result is related etymologically or closely related in meaning to the intransitive verb.",
+        "examples": [
+          "Nihil valet.  He has no strength (lit., he is strong nothing).",
+          "Multum nocet.  It does much harm (lit., it harms much).",
+          "Vitam duram vixi.  I have lived a hard life."
+        ],
+        "tags": [
+          "Noun",
+          "Accusative Case"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Ablative Case",
+    "points": [
+      {
+        "number": "35",
+        "title": "Ablative with Prepositions (LUD 4)",
+        "description": "The ablative is used with certain prepositions, e.g. a/ab, de, e/ex, in, sub.  Usually the prepositional phrase depends on a stationary verb or refers to motion away from someone/thing.",
+        "examples": [
+          "ab aqua, away from the water\tde fuga, concerning flight"
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "36",
+        "title": "Ablative of Means (LUD 11)",
+        "description": "The ablative is used without a preposition to express the means by which an action is done.",
+        "examples": [
+          "Aqua flammas superavi.  I overcame the flames with water."
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "37",
+        "title": "Ablative of Agent (LUD 13)",
+        "description": "The ablative with a/ab is used with a passive verb to denote the person by whom a thing is done.",
+        "examples": [
+          "A puella laudatur.  She is being praised by the girl."
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "38",
+        "title": "Ablative of Accompaniment (LUD 28)",
+        "description": "The ablative with cum is used to express accompaniment.",
+        "examples": [
+          "Multis cum amicis ad aram properat.",
+          "He hurries to the altar with many friends."
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "39",
+        "title": "Ablative of Manner (LUD 28)",
+        "description": "The ablative with cum is used to express the manner in which a thing is done, but the cum may be omitted when an adjective modifies the noun.  The noun is usually an abstract noun.",
+        "examples": [
+          "Magna cum ira respondet.  He answers with great anger."
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "40",
+        "title": "Ablative Absolute (LUD 28)",
+        "description": "The ablative of a noun or pronoun together with a participle, noun, or adjective is used to express time, cause, opposition, condition, or other circumstances.  For more on the translation of the ablative absolute, see LUD 28 & #100 below.",
+        "examples": [
+          "Urbe capta fugimus.  When the city had been captured, we fled."
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "41",
+        "title": "Ablative of Comparison (LUD 37)",
+        "description": "A comparative without quam takes the ablative, but when quam is used, the words denoting the things compared are in the same case.  amicus vita carior, a friend dearer than life vs. amicus carior quam vita",
+        "examples": [],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "42",
+        "title": "Ablative of Respect (LUD 45)",
+        "description": "The ablative is used to specify the respect in which another word applies and often appear with a comparative expression or a superlative.",
+        "examples": [
+          "et animo et corpore miser, wretched in both mind and body",
+          "virtute major / maximus, greater / greatest in courage"
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "43",
+        "title": "Ablative of Time When and Within Which (LUD 46)",
+        "description": "The ablative is used to express the time at which or within which something is done or occurs.",
+        "examples": [
+          "WHEN:\tSecundo die servata est.",
+          "She was saved on the second day.",
+          "WITHIN WHICH:\tDecem annis consul deligetur.",
+          "Within ten years he will be chosen consul."
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "44",
+        "title": "Ablative with Special Deponent Verbs (\"PUFF V\" verbs) \t(LUD 59)",
+        "description": "The deponents potior,?utor, fruor, fungor, and vescor govern the ablative, not the accusative.  Equo utor.  I use a horse.",
+        "examples": [],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "45",
+        "title": "Ablative of Degree of Difference (BG I.5)",
+        "description": "The ablative may be used to denote the degree to which one thing is different from another.  It is usually, but not always, found with a comparative word.",
+        "examples": [
+          "Nauta multo altior est quam agricola.",
+          "The sailor is much taller than the farmer.",
+          "Exercitus quinque milibus passuum abest.",
+          "The army is five miles away (i.e. away by a difference of five \tmiles)."
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "46",
+        "title": "Ablative of Place from Which without a Preposition (BG I.6)",
+        "description": "The ablative of place from which is regularly used without a preposition when expressing motion away from (1) a specifically named city, town or small island or (2) the nouns domus (home) and rus (countryside).",
+        "examples": [
+          "Roma profecta est.\t   vs.\t\tAb urbe profecta est.",
+          "She set out from Rome.\t\t\tShe set out from the city.",
+          "(No specific city is named.)"
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "47",
+        "title": "Ablative of Description (BG I.7)",
+        "description": "A noun and accompanying adjective may be put into the ablative case to describe another noun.",
+        "examples": [
+          "puer bona voluntate...\ta boy of good will...",
+          "Livia, femina summa scientia...",
+          "Livia, a woman of the highest learning..."
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "48",
+        "title": "Ablative of Separation (BG I.8)",
+        "description": "The ablative is regularly used, with or without a preposition, to express separation or removal from another noun. This usage generally occurs in conjunction with a verb or adjective of removing, freeing, restraining, ceasing, lacking or depriving.",
+        "examples": [
+          "Gallos ab Aquitanis Garumna dividit.",
+          "The Garonne separates the Gauls from the Aquitanians.",
+          "Nunc liberi timore sumus.",
+          "Now we are free from fear."
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "49",
+        "title": "Ablative of Accordance (CAT I.8)",
+        "description": "This use of the ablative expresses in accordance with what an action is done.  Translate with in accordance with, according to, or by.  This use is considered a subset of either the Abl. of Manner (#39) or Abl. of Respect (#42).",
+        "examples": [
+          "Iussu consulis illos comprehendimus.",
+          "We arrested those men in accordance with the order of the \tconsul (or by order of the consul)."
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "50",
+        "title": "Ablative of Cause (CAT I.17)",
+        "description": "The cause of an emotion or feeling may be expressed by the ablative, usually without a preposition.  (For a similar use of the Gen., see #11 above.)",
+        "examples": [
+          "ardere ira, to be on fire with anger",
+          "victoria elatus, elated by the victory"
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "51",
+        "title": "Ablative of Attendant Circumstance (CAT I.33)",
+        "description": "The ablative, usually without a preposition, can denote the circumstances attending an action or event.\nVocative Case (LUD 5)",
+        "examples": [
+          "bonis auspiciis, under good auspices"
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "52",
+        "title": "The vocative case expresses the person or thing directly addressed by a speaker.  It normally follows one or more words.  When a vocative begins a sentence, it usually expresses strong emotion.",
+        "description": "Locative Case (C+P 8)",
+        "examples": [
+          "Quid facis, bone serve?  What are you doing, good slave?",
+          "Ubi properas, mi fili?  Where are you hurrying, my son?"
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      },
+      {
+        "number": "53",
+        "title": "The locative case expresses place where without a preposition (vs. abl. of place where with prep.) only with names of towns, cities, small islands, or with domus, rus, and humus.",
+        "description": "Verbs",
+        "examples": [
+          "Romae templum deae vidisti.",
+          "You saw the temple of the goddess in/at Rome.",
+          "(vs. In urbe templum deae vidisti-no specific city named)",
+          "Catilina aram domi habet.",
+          "Catiline has an altar at home / in his home/house."
+        ],
+        "tags": [
+          "Noun",
+          "Ablative Case"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Indicative Mood",
+    "points": [
+      {
+        "number": "54",
+        "title": "Postquam and Ubi with Perfect Indicative (LUD 6 & 22)",
+        "description": "The perfect indicative is used with postquam, after, and ubi, when, to refer to time before another past action.",
+        "examples": [
+          "Ubi ad oppidum properavit, patrem vocavit.",
+          "When she had hurried to the town, she called her father."
+        ],
+        "tags": [
+          "Verb",
+          "Indicative Mood"
+        ]
+      },
+      {
+        "number": "55",
+        "title": "Dum with Present Indicative (LUD 20)",
+        "description": "The present indicative is used with dum, while, to refer to past time.",
+        "examples": [
+          "Dum in urbe sum, auxilium petivi.",
+          "While I was in the city, I sought help."
+        ],
+        "tags": [
+          "Verb",
+          "Indicative Mood"
+        ]
+      },
+      {
+        "number": "56",
+        "title": "Future More Vivid Condition (LUD 52)",
+        "description": "Conditions referring to likely events in future time use the future or future perfect in the conditional (if) clause and future in the main clause (conclusion).  In English, we use the present tense in the conditional clause, the future in the main clause.",
+        "examples": [
+          "Si te in periculo videro, te juvabo.",
+          "If I see you in danger, I will help you."
+        ],
+        "tags": [
+          "Verb",
+          "Indicative Mood"
+        ]
+      },
+      {
+        "number": "57",
+        "title": "Cum Clause of Repeated Action (BG I.1)",
+        "description": "A clause introduced by cum, when it takes the indicative, may express a repeated or habitual action to which the action of the main clause responds.  For example, Whenever Caesar spoke in the Senate, everyone listened carefully.",
+        "examples": [
+          "Cum hostes se receperunt, nostri persecuti sunt.",
+          "Whenever the enemy retreated, our men pursued."
+        ],
+        "tags": [
+          "Verb",
+          "Indicative Mood"
+        ]
+      },
+      {
+        "number": "58",
+        "title": "Comparative Clause with ut (ut + indicative) (BG I.22)",
+        "description": "When ut is followed by a clause in the indicative, it is introducing a further explanation or a point of comparison, and ut can usually be translated by as.",
+        "examples": [
+          "Ille collis est altior, ut comperietis.",
+          "That hill is rather high, as you will discover."
+        ],
+        "tags": [
+          "Verb",
+          "Indicative Mood"
+        ]
+      },
+      {
+        "number": "59",
+        "title": "Quod Clause of Fact (C+P 2)",
+        "description": "A clause introduced by quod may stand in apposition with a noun or pronoun to express what the pro/noun refers to.  Quod should be translated with that / the fact that.",
+        "examples": [
+          "Puellae hoc audaciores fiebant quod magister aberat.",
+          "The girls were made bolder because of this, the fact that the \tteacher was away.  OR  The fact that the teacher was away \tmade the girls bolder.",
+          "The difference between this type of clause and quod causal is that the clause of fact is a noun clause and so stands in apposition with another pro/noun.  For quod causal, there is no pro/noun as antecedent in the governing clause for the causal clause to stand in apposition with.  It is an adverbial clause explaining the cause of the action of the governing verb.",
+          "Fugimus quod timebamus.  We fled because we feared."
+        ],
+        "tags": [
+          "Verb",
+          "Indicative Mood"
+        ]
+      },
+      {
+        "number": "60",
+        "title": "Clause of Added Fact (C+P 3)",
+        "description": "A subordinate clause (especially those introduced by quod, qui, si) in indirect discourse (ind. statement & question, clauses of purpose, volition, and fearing) normally takes the subjunctive.  Such a subordinate clause takes the INDICATIVE, however, when it provides information that is not part of the thought being reported indirectly but is an insertion by the author or speaker regarded as simple fact and presented to inform the reader or audience.  In effect, the use of the indicative states, this is something I, the writer/speaker, am adding because it is helpful for you to know, but so-and-so did not actually say or think this.  Compare the Indirect Dependent Clause / IDC (#78) and Dependent Clause in Implied Indirect Discourse / Implied IDC (#82) below.",
+        "examples": [
+          "Dixit se in domum M. Corneli, [qui consul priore anno \tfuerat], venisse.",
+          "He said that he had come into the home of Marcus Cornelius, \twho had been consul the previous year.",
+          "(The relative clause is not part of what \"he\" said; the author adds \tit to inform the reader about Marcus Cornelius.)"
+        ],
+        "tags": [
+          "Verb",
+          "Indicative Mood"
+        ]
+      },
+      {
+        "number": "61",
+        "title": "Conative Imperfect (C+P 3)",
+        "description": "The imperfect tense can expressive that one is making an effort to accomplish the verb's meaning.",
+        "examples": [
+          "Eos fugere prohibebam.",
+          "I was trying to prevent them from escaping."
+        ],
+        "tags": [
+          "Verb",
+          "Indicative Mood"
+        ]
+      },
+      {
+        "number": "62",
+        "title": "Cum Temporal Clause (CAT I.7)",
+        "description": "A clause introduced by cum takes the INDICATIVE instead of the subjunctive when it refers to a specific date or time, rather than to circumstances, of the action of the governing clause.  The governing clause often contains tum.",
+        "examples": [
+          "Tum cum ille ex urbe fugerat hoc providebam animo.",
+          "At that time, when that man had fled from the city, I foresaw this \twith my mind."
+        ],
+        "tags": [
+          "Verb",
+          "Indicative Mood"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Infinitive Mood",
+    "points": [
+      {
+        "number": "63",
+        "title": "Complementary (LUD 4)",
+        "description": "Certain verbs that imply another action to complete their meaning, e.g., desidero, and tempto, take a present infinitive; the subject of both verbs is the same.  Ambulare desidero.  I wish to walk.",
+        "examples": [],
+        "tags": [
+          "Verb",
+          "Infinitive Mood"
+        ]
+      },
+      {
+        "number": "64",
+        "title": "Indirect Statement (LUD 40 & 41)",
+        "description": "The infinitive, with an accusative noun as subject, is used in indirect statements.  In this use the infinitive is normally governed by a verb of mental action, e.g., puto, scio, credo.  See examples in #65 below.",
+        "examples": [],
+        "tags": [
+          "Verb",
+          "Infinitive Mood"
+        ]
+      },
+      {
+        "number": "65",
+        "title": "Infinitives and Relative Time in Indirect Statement (LUD 40 & 41)",
+        "description": "The present infinitive represents an action at the same time as that of the verb on which it depends.  The perfect infinitive represents an action before the time of the verb on which it depends.  The future infinitive represents an action after the time of the verb on which it depends.",
+        "examples": [
+          "Dico te fugere.  I say that you are fleeing.",
+          "Dico te fugisse.  I say that you have fled.",
+          "Dico te fugiturum esse.  I say that you will flee."
+        ],
+        "tags": [
+          "Verb",
+          "Infinitive Mood"
+        ]
+      },
+      {
+        "number": "66",
+        "title": "Historical Infinitive (VER 11)",
+        "description": "The present infinitive is sometimes used to express concisely a series of successive actions.  This sort of infinitive is equivalent to an imperfect indicative.  The subject often must be supplied from the context; if expressed, however, it is in the nominative.",
+        "examples": [
+          "Cives concurrere, virum circumvenire, clamare.",
+          "The citizens were running together, surrounding the man, \tshouting."
+        ],
+        "tags": [
+          "Verb",
+          "Infinitive Mood"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Imperative Mood",
+    "points": [
+      {
+        "number": "67",
+        "title": "Direct Command (LUD 5)",
+        "description": "The imperative mood is used for direct commands and normally follows one or more words.  Me juvate!  Help me!",
+        "examples": [],
+        "tags": [
+          "Verb",
+          "Imperative Mood"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Subjunctive Mood",
+    "points": [
+      {
+        "number": "68",
+        "title": "Cum Circumstantial / Situational Clause (When) (LUD 53)",
+        "description": "The imperfect and pluperfect subjunctive are used with cum in clauses describing the situation or circumstances of another action.",
+        "examples": [
+          "Cum quaererem, multa de magno animo ejus cognovi.",
+          "When I inquired, I learned many things about his great courage."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "69",
+        "title": "Cum Causal Clause (Since) (LUD 53)",
+        "description": "The subjunctive is used with cum to express the cause of another action.",
+        "examples": [
+          "Cum vadum reperire non possint, aliud iter petunt.",
+          "Since they cannot find a ford, they are seeking another route."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "70",
+        "title": "Cum Concessive / Adversative Clause (Although) (LUD 54)",
+        "description": "The subjunctive is used with cum to express an action opposed to another action.",
+        "examples": [
+          "Cum vadum reperissent, flumen non transierunt.",
+          "Although they had found a ford, they did not cross the river."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "71",
+        "title": "Indirect Question (LUD 54)",
+        "description": "The subjunctive is used with an interrogative word in indirect questions.",
+        "examples": [
+          "Quaerit quis Romanos oppugnet.",
+          "He asks who is attacking the Romans."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "72",
+        "title": "Adverbial Purpose Clause (LUD 55)",
+        "description": "The subjunctive is used with ut and ne in clauses expressing purpose.",
+        "examples": [
+          "Magno cum exercitu venit ut Romanos vincat.",
+          "He comes with a large army (in order) to conquer the Romans / \t\t(in order) that he may conquer..."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "73",
+        "title": "Relative Purpose Clause & quo Clause of Purpose with Comparative Word (LUD 55; BG II.17)",
+        "description": "The subjunctive is used in relative clauses expressing purpose; the governing verb is often mitto or a compound of that verb.\nWhen a purpose clause contains a comparative word, it is normally introduced by quo instead of ut. Such clauses are translated in the same ways as an adverbial purpose clause (#72 above).",
+        "examples": [
+          "Nuntium mittit qui Romanos moneat.  He sends a messenger \t(in order) to warn the Romans.",
+          "Fossam effodiunt quo facilius exercitum hostium impediant.",
+          "They dig a trench in order to impede more easily the army of the \tenemy."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "74",
+        "title": "Substantive Clause of Volition (LUD 56)",
+        "description": "The subjunctive is used with ut and ne in substantive clauses expressing what is wanted.  Verbs commonly governing such clauses are hortor, impero, moneo, persuadeo, peto, and postulo.",
+        "examples": [
+          "Pater imperat ne inimicos meos juvem.",
+          "My father orders that I not help my enemies."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "75",
+        "title": "Adverbial Result Clause (LUD 58)",
+        "description": "The subjunctive is used with ut and ut non in clauses expressing result.",
+        "examples": [
+          "Hostes tam propinqui sunt ut signa eorum videamus.",
+          "The enemy is so close that we see their standards."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "76",
+        "title": "Sequence of Tenses (LUD 57 & 63)",
+        "description": "The present or perfect subjunctive is used in the subordinate clause when the main verb represents present or future action; this is called \"primary sequence.\"  The imperfect or pluperfect subj. is used when the main verb represents a past action; this is called \"secondary sequence.\"\nThe present and imperfect represent an action occurring at the same time or after the time of the main verb.\nThe perfect and pluperfect represent an action occurring before the time of the main verb.",
+        "examples": [],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "77",
+        "title": "Clause of Fearing (LUD 64)",
+        "description": "The subjunctive is used with ne and ut in substantive/noun clauses expressing fear.  A fearing clause introduced by ne must be translated positively, while one introduced by ut must be translated negatively.",
+        "examples": [
+          "Timeo ne capiar.",
+          "I fear that I may be captured / lest I be captured.",
+          "Timeo ut veniat.",
+          "I fear that he will not come / that he may not come."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "78",
+        "title": "Indirect Dependent Clause (IDC) / Subordinate Clause in Indirect Discourse (LUD 64)",
+        "description": "Subordinate (dependent) clauses which form a part of indirect discourse have their verbs in the subjunctive (most often relative, quod causal, and conditional clauses).  Indirect discourse includes the following:  indirect statement, adverbial and relative purpose, substantive clause of volition, clause of fearing, and indirect question.\nThis use of the subjunctive indicates that the subordinate clause is part of what the subject said or thought, i.e. is actually part of the reported speech, thought, order, etc.  Compare the Clause of Added Fact (above #60).",
+        "examples": [
+          "Direct Statement:",
+          "Silva [in qua puer est] multa pericula habet.",
+          "The forest [in which the boy is] has many dangers.",
+          "Indirect Statement:",
+          "Dicit silvam [in qua puer sit] multa pericula habere.",
+          "She says that the forest [in which the boy is] has many dangers."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "79",
+        "title": "Substantive Result Clause (BG I.2)",
+        "description": "Result clauses depending on verbs that mean happen, make, bring about are introduced by ut (negative: ut non).",
+        "examples": [
+          "Accidit ut acies hic constitueretur.",
+          "It happened that the line of battle was stationed here.",
+          "Effecit ut bellum contra Romanos non susciperent.",
+          "He brought it about that they did not undertake war against the \tRomans.",
+          "Note: such clauses function grammatically as either subject or \tobject of the governing verb:",
+          "In the first example, that the line of battle was stationed here is \tthe SUBJECT of accidit.",
+          "(What happened? [That the line of battle was stationed \t\t\there] happened.)",
+          "In the second example, that they did not undertake a war... is \tthe OBJECT of effecit.",
+          "(What did he bring about? He brought about [that they did \t\t\tnot undertake...])."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "80",
+        "title": "Relative Clause of Characteristic (BG I.3)",
+        "description": "A relative clause describing the antecedent as the sort of person or thing that behaves, or would behave, in a certain way in certain circumstances has its verb in the subjunctive.  In an equivalent English expression we might tend to use the phrase of the sort.\nCLUES:  The antecedent of the relative is usually indefinite, interrogative or negative.  The most common main clauses are nemo est qui (there is no one who), quis est qui? (who is there who?), nihil est quod (there is nothing which), sunt qui (there are those who).",
+        "examples": [
+          "Regular Relative:  Video puerum quem amo.",
+          "I see the boy whom I love.",
+          "Rel. Charac.:  Nemo est quem amem.",
+          "There is no one (of the sort) whom I love."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "81",
+        "title": "Dum Anticipatory Clause (BG I.7)",
+        "description": "Dum takes the present or imperfect subjunctive in clauses expressing intention or expectancy, i.e., an action that is anticipated but not necessarily accomplished.  The verb in the subjunctive should be translated either for him to do or until he does / should do.",
+        "examples": [
+          "Exspectas dum hoc dicat.",
+          "You are waiting\tfor him to say this.",
+          "until he says this.",
+          "until he should say this.",
+          "Tres horas exspectabas dum naves convenirent.",
+          "You waited three hours\tfor the ships to gather.",
+          "until the ships gathered.",
+          "until the ships could/should gather."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "82",
+        "title": "Subjunctive in Implied Indirect Discourse / Implied IDC (BG \tI.23)",
+        "description": "A subordinate clause may take the subjunctive if it represents the thought of someone other than the writer or speaker.  In English we tend to add a clause such as as he said, thus attributing responsibility for the statement to someone else.  This construction is virtually the same as the IDC (#78), but without explicit indirect discourse, hence the term \"implied indirect discourse.\"",
+        "examples": [
+          "Mihi timendum est quod Catilina vivus exierit.",
+          "I must fear because [as some may say] Catiline has left alive."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "83",
+        "title": "Deliberative Subjunctive (C+P 10; VER 1)",
+        "description": "The Deliberative Subjunctive is used in questions implying doubt, indignation, or impossibility.  It can stand as an independent clause, and the negative is non.\nBUT\tQuid faciam?  What should I do?  what am I to do?\nA particular variety of the Deliberative Subjunctive is its use in Repudiating Questions (CAT I.22) introduced by ut.  In this use, ut functions as an untranslatable adverb.",
+        "examples": [
+          "Quid facio?  What am I doing?",
+          "Quid dicerem, What was I to say?",
+          "Tu ut mentem umquam mutes?  You ever change your mind? \t\t\t\t\t\t\t\t[strongly implying of course not!]"
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "84",
+        "title": "Subjunctive by Attraction (BG V.39)",
+        "description": "A dependent clause that falls within a subjunctive clause often has its verb in the subjunctive simply because the dependent clause forms an integral part of the meaning of the larger subjunctive clause. In other words, it is \"attracted\" into the mood of that verb.\nIn this example, the relative clause qui...discessissent falls within the substantive clause of result ut... ...interciperentur. The verb discessissent is subjunctive because the fact that the soldiers had gone into the woods is a logical and necessary precursor to their being intercepted.",
+        "examples": [
+          "Accidit ut non nulli milites, [qui in silvas discessissent], \trepentino equitum adventu interciperentur.",
+          "It happened that some soldiers, who had gone off into the \twoods, were cut off by the sudden arrival of the cavalry."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "85",
+        "title": "Quin with Subjunctive (VER 3)",
+        "description": "This use of the subjunctive when referring to the past, is a negative clause of result.",
+        "examples": [
+          "Nihil fuit quin abstulerit.",
+          "There was nothing which <as a result> he did not carry off."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "86",
+        "title": "Potential Subjunctive (VER 6)",
+        "description": "The Potential Subjunctive represents an action as possible or conceivable.  The present and perfect tense refer to the immediate future, the imperfect (occasionally the pluperfect) to past time.\nAlthough the potential subj. is usually an independent use, it can appear in subordinate clauses.",
+        "examples": [
+          "Magnum portum videas / videris.",
+          "You would/might see a large harbor.",
+          "Magnum portum videres.",
+          "You would have/might have seen a large harbor"
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "87",
+        "title": "Relative Result Clause (CAT I.5)",
+        "description": "A relative clause with the subjunctive may express result.  Such clauses may be translated in the same way as the adverbial result clause (#73).  (The relative result clause overlaps with the clause of characteristic but usually is foreshadowed by a 'so' word in the governing clause.)",
+        "examples": [
+          "Nihil est tam certum quod numquam dubitetur.",
+          "Nothing is so certain that it is never doubted."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "88",
+        "title": "Proviso Clause (CAT I.10)",
+        "description": "A subjunctive clause, usually introduced by modo, dum, or dummodo expresses a proviso and is translated with so long as, provided that.",
+        "examples": [
+          "Oderint dum metuant.  Let them hate, so long as they fear."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "89",
+        "title": "Relative Causal & Adversative Clauses (CAT I.19)",
+        "description": "A relative characteristic clause may express cause or opposition; in such cases qui is equivalent to cum, since or although.  In this variety of the characteristic clause, the antecedent may be a definite person or thing, and thus the clues listed above (#80) are usually not found.",
+        "examples": [
+          "Illorum auxilio in re publica defendenda saepe utebam \tpraesertim qui fortes semper essent.",
+          "In defending the state I often used the help of those men, \tespecially since they were always brave."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "90",
+        "title": "Optative Subjunctive / Subjunctive of Wish (CAT I.22)",
+        "description": "The optative subjunctive expresses a wish.  It can stand as an independent clause, and the negative is non.  Utinam is frequently the introductory word.",
+        "examples": [
+          "a) The PRESENT tense refers to a possible action.",
+          "Sic di te servent,  So may the gods save you. OR",
+          "If only / Would that the gods might save you.",
+          "b) The IMPERFECT tense refers to an action unaccomplished \tin present time.",
+          "Utinam Clodius viveret.  Would that Clodius were (now) \t\t\talive. / If only Clodius were alive.",
+          "c) The PLUPERFECT tense refers to an action that was not so in \tthe past.",
+          "Utinam di te servavissent.  Would that the gods had saved \t\tyou. / If only the gods had saved you."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "91",
+        "title": "Hortatory / Jussive Subjunctive (C+P 1 & 2; CAT I.32)",
+        "description": "The PRESENT tense of the subjunctive may express an exhortation or command.  It can stand as an independent clause, and the negative is ne.",
+        "examples": [
+          "Caveat emptor.  Let the buyer beware.",
+          "Ad oppidum eamus,  Let's go to the town.",
+          "Oderint dum metuant.  Let them hate, so long as they fear."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "92",
+        "title": "Substantive Purpose Clause (CAT III.4)",
+        "description": "A Purpose Clause introduced by ut or ne may stand in apposition to a noun or pronoun in the main clause, rather than modifying the main verb directly.  There is no difference in translation from the more common adverbial purpose clause (#72).",
+        "examples": [
+          "Veni ut urbem conservarem.  I came to preserve the city.",
+          "Veni EO CONSILIO, ut urbem conservarem.",
+          "I came for this purpose, to preserve the city."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "93",
+        "title": "Hindering Clause (CAT III.15)",
+        "description": "The subjunctive introduced by quominus or quin is used with verbs of hindering.  In English we tend to say hinder from doing (i.e. we use the gerund).  Quin is normally used when the (main) verb of hindering is negative (cf. non dubito quin + subj.).\nCONDITIONS WITH SUBJUNCTIVE\nSee also the Future More Vivid Condition, #56 above.",
+        "examples": [
+          "Nihil nos impedit quominus virtutem colamus.",
+          "Nothing hinders us from cultivating excellence."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "94",
+        "title": "Present Contrary to Fact (CAT I.17)",
+        "description": "A condition contrary to fact in present time takes the IMPERFECT SUBJUNCTIVE in both clauses.",
+        "examples": [
+          "Sapientia non expeteretur, si nihil efficeret.",
+          "Philosophy would not be desired, if it accomplished nothing."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "95",
+        "title": "Past Contrary to Fact (C+P 8; CAT I.21)",
+        "description": "A condition contrary to fact in past time takes the PLUPERFECT SUBJUNCTIVE in both clauses.",
+        "examples": [
+          "Si hoc dixisses, erravisses.",
+          "If you had said this, you would have erred."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "96",
+        "title": "Future Less Vivid (CAT I.19)",
+        "description": "A condition with the PRESENT SUBJUNCTIVE in both clauses represents a future action as less likely to occur than does the future more vivid condition (which uses the indicative; see #56 above).  Such conditions are also known as \"should-would conditions\", a name which indicates the equivalent English translation.\nSupine (C+P 10; CAT I.10 & 29)",
+        "examples": [
+          "Si discedam, tristis sis.",
+          "If I should leave, you would be sad."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "97",
+        "title": "The Supine is a verbal noun of the 4th declension existing in only the accusative and ablative singular, e.g. from dico: Accus. dictum; Abl. dictu.",
+        "description": "Gerund (LUD 50)",
+        "examples": [
+          "a) The ACCUSATIVE is used with verbs of motion to express \tpurpose.",
+          "Rem publicam perditum ierunt.",
+          "They went (in order) to ruin the state.",
+          "b) The ABLATIVE is an ablative of respect used most \tfrequently with adjectives such as \tfacilis, difficilis, optimus, \tincredibilis.",
+          "facile dictu, easy to tell."
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "98",
+        "title": "The gerund is a verbal noun with only four forms: amandi, -o,",
+        "description": "-um, -o. It is never used as the subject or object of a verb (the infinitive assumes these roles). The gerund is translated into English as ____-ing  (running, fighting, etc.) and is frequently used to express purpose, in the genitive with causa and in the accusative with ad.\nGerundive (LUD 36, 61 & 62)",
+        "examples": [
+          "in dicendo, in speaking",
+          "dicendi causa, for the sake of speaking",
+          "ad dicendum, for the purpose of speaking"
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      },
+      {
+        "number": "97",
+        "title": "The gerundive is a verbal adjective with 1st/2nd declension endings:  amandus, -a, -um, etc.  One use of the gerundive is the passive periphrastic (see #101 below). The other use is to modify a noun. In this latter use, the gerundive should be translated as _____ -ing, and the accompanying noun should be translated as its direct object (e.g., ad libros legendos, for the purpose of reading books).  Like the gerund, the gerundive is often used to express purpose.",
+        "description": "",
+        "examples": [
+          "in cohortandis militibus, in encouraging the soldiers",
+          "ad cohortandos milites, for the purpose of encouraging the \tsoldiers",
+          "militum cohortandorum causa, for the sake of encouraging the \tsoldiers"
+        ],
+        "tags": [
+          "Verb",
+          "Subjunctive Mood"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Participles",
+    "points": [
+      {
+        "number": "100",
+        "title": "Active Periphrastic (LUD 50)",
+        "description": "The combination of a future active participle and a form of sum says that someone is about to act or going to act.  Mihi multa dicturus est.  He is about to say  / going to say many things to me.  Notice that the active periphrastic is very different from the passive periphrastic (#99):  it uses a different participle and does not express obligation.",
+        "examples": [],
+        "tags": [
+          "Participles",
+          "Participles"
+        ]
+      },
+      {
+        "number": "101",
+        "title": "Passive Periphrastic (LUD 62)",
+        "description": "The combination of a future passive participle (also known as a gerundive) and a form of sum expresses obligation or necessity.  The Latin expresses the idea passively, but in translation it may make sense to transform the sentence into the equivalent active expression.\nTo express the person(s) by whom the action must be done, the Dative of Agent is used in Latin (see #20 above).",
+        "examples": [
+          "Amanda est.",
+          "She has to be loved.",
+          "Agendum erat.",
+          "It had to be done.",
+          "Videndi erunt.",
+          "They will have to be seen.",
+          "Hic liber tibi legendus est.",
+          "This book must be read by you.",
+          "You must read this book."
+        ],
+        "tags": [
+          "Participles",
+          "Participles"
+        ]
+      },
+      {
+        "number": "102",
+        "title": "Use and Translation of Participles (LUD 26, 27, 36)",
+        "description": "The participle is a verbal adjective, i.e. it has some qualities of verbs and some of adjectives.  Although the literal translation of a participle in a Latin sentence is an important first step, it is normally insufficient; in general, participles should be translated by a subordinate clause in English.  Consider the following sentence:\nA literal translation (The soldiers saved the man having been wounded by an arrow) is unclear and does not express the thought of the Latin in standard English.  Instead translate in one of the following ways:\nThe soldiers saved the man after he had been wounded by an arrow.\nThe soldiers saved the man when he had been wounded by an arrow.\nThe soldiers saved the man who had been wounded by an arrow.\nOther types of subordinate clauses useful for translating a perfect participle are those introduced by since, although, and if.  Learn the following menu, in order that you can refer to it whenever you encounter a participle:\nThe TENSE of a participle shows only relative time:  the present participle shows an action going on at the same time as the governing verb, the perfect an action that has happened before, and the future an action that will happen after (though the use of the future active participle is limited almost entirely to the active periphrastic [#100] and the fut. active infinitive in indirect statement [#64 & 65]).  Consider the following sentences:\nPRESENT Participle:\nPERFECT Participle:\nPARTICIPLES IN ABLATIVE ABSOLUTE\nPRESENT\nHostibus appropinquantibus, moenia defenditis.\nWhile / Since the enemy is approaching, you defend the walls.\nHostibus appropinquantibus, moenia defendistis.\nWhile / Since the enemy was approaching, you defended the walls.\nPERFECT\nHostibus visis moenia defendere paramus.\nSince the enemy has been seen, we are preparing to defend the walls.\nHostibus visis moenia defendere parabamus.\nSince the enemy had been seen, we prepared to defend the walls.",
+        "examples": [
+          "Milites virum sagitta vulneratum servaverunt.",
+          "Femina virum ambulantem vocat.",
+          "The woman calls the man who is walking or while he is walking.",
+          "SAME TIME",
+          "Femina virum ambulantem vocavit.",
+          "The woman called the man who was walking or while he was \twalking.\t\t\t\t\t\t\tSAME TIME",
+          "Femina virum amissum petit.",
+          "The woman seeks the man who was lost or who has been lost.",
+          "TIME BEFORE",
+          "Femina virum amissum petivit.",
+          "The woman sought the man who had been lost.",
+          "TIME BEFORE",
+          "SAME TIME",
+          "SAME TIME",
+          "TIME BEFORE",
+          "TIME BEFORE"
+        ],
+        "tags": [
+          "Participles",
+          "Participles"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Voice",
+    "points": [
+      {
+        "number": "103",
+        "title": "Impersonal Passive (C+P 10)",
+        "description": "Verbs, especially intransitive ones, may sometimes be used impersonally in the passive voice. This use, which only occurs in the third person singular (neuter), has the effect of simply reporting an action, usually without specifying who did it. This use is not to be translated literally, but by an idiomatic paraphrase in English.\n1",
+        "examples": [
+          "E.g.,\tPugnabatur.",
+          "It was being fought.",
+          "Fighting went on.",
+          "Huc omnibus veniendum erit.",
+          "It will have to be come to this place by everyone.",
+          "Everyone will have to come to this place."
+        ],
+        "tags": [
+          "Voice",
+          "Voice"
+        ]
+      }
+    ]
+  }
+]

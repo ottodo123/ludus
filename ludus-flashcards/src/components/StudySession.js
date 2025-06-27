@@ -208,6 +208,13 @@ const StudySession = ({
 
   const getCardFront = () => {
     if (preferences.studyDirection === 'latin-to-english') {
+      // Special handling for saved words
+      if (currentCard.isSavedWord) {
+        return preferences.displayMode === 'full' 
+          ? (currentCard.latin_full_form || currentCard.latin_headword)
+          : currentCard.latin_headword;
+      }
+      // Regular LUDUS cards
       return preferences.displayMode === 'full' 
         ? `${currentCard.latin_headword}${currentCard.latin_endings ? ', ' + currentCard.latin_endings : ''}`
         : currentCard.latin_headword;
@@ -219,7 +226,23 @@ const StudySession = ({
   const getCardBack = () => {
     if (preferences.studyDirection === 'latin-to-english') {
       // When studying Latin to English, show English on back
-      // In basic mode, also show Latin endings if available
+      // For saved words, show full form in basic mode as supplemental info
+      if (currentCard.isSavedWord && preferences.displayMode === 'basic') {
+        const genderInfo = currentCard.latin_endings && 
+          (currentCard.latin_endings.includes(', f.') || 
+           currentCard.latin_endings.includes(', m.') || 
+           currentCard.latin_endings.includes(', n.'))
+          ? ` ${currentCard.latin_endings.match(/, [fmn]\./)?.[0] || ''}`
+          : '';
+          
+        return (
+          <div>
+            <div className="card-answer">{currentCard.english}</div>
+            <div className="card-endings">{currentCard.latin_full_form + genderInfo}</div>
+          </div>
+        );
+      }
+      // In basic mode, also show Latin endings if available (for LUDUS cards)
       if (preferences.displayMode === 'basic' && currentCard.latin_endings) {
         return (
           <div>
@@ -231,6 +254,22 @@ const StudySession = ({
       return currentCard.english;
     } else {
       // When studying English to Latin
+      if (currentCard.isSavedWord) {
+        const latinText = preferences.displayMode === 'full'
+          ? (currentCard.latin_full_form || currentCard.latin_headword)
+          : currentCard.latin_headword;
+        
+        // Add gender info if available
+        const genderInfo = currentCard.latin_endings && 
+          (currentCard.latin_endings.includes(', f.') || 
+           currentCard.latin_endings.includes(', m.') || 
+           currentCard.latin_endings.includes(', n.'))
+          ? ` ${currentCard.latin_endings.match(/, [fmn]\./)?.[0] || ''}`
+          : '';
+          
+        return latinText + genderInfo;
+      }
+      // Regular LUDUS cards
       return preferences.displayMode === 'full'
         ? `${currentCard.latin_headword}${currentCard.latin_endings ? ', ' + currentCard.latin_endings : ''}`
         : currentCard.latin_headword;
@@ -357,8 +396,14 @@ const StudySession = ({
             <div className={`card-side card-back ${isFlipped ? 'visible' : 'hidden'}`}>
               <div className="card-text">{getCardBack()}</div>
               <div className="card-meta">
-                <span className="lesson-info">Chapter {currentCard.lesson_number}</span>
-                <span className="pos-info">{currentCard.part_of_speech}</span>
+                <span className="lesson-info">
+                  {currentCard.isSavedWord 
+                    ? currentCard.lesson_number 
+                    : `LUD ${currentCard.lesson_number}`}
+                </span>
+                <span className="pos-info">
+                  {currentCard.part_of_speech}
+                </span>
               </div>
             </div>
           </div>

@@ -35,12 +35,14 @@ export const debugSavedWordsSystem = async (user) => {
     const firebaseData = await getSavedWordSessions(user.uid);
     console.log('✅ Firebase read successful:', firebaseData);
     
-    // 4. Test Firebase write
+    // 4. Test Firebase write (but restore original data after)
     console.log('📝 Testing Firebase write...');
+    const originalData = firebaseData; // Keep the original data
+    
     const testData = {
       sessions: [{
         id: 999,
-        name: "Debug Test Session",
+        name: "Debug Test Session", 
         startedAt: new Date().toISOString(),
         words: []
       }],
@@ -49,6 +51,12 @@ export const debugSavedWordsSystem = async (user) => {
     
     await saveSavedWordSessions(user.uid, testData);
     console.log('✅ Firebase write successful');
+    
+    // Restore the original data immediately
+    if (originalData.sessions && originalData.sessions.length > 0) {
+      await saveSavedWordSessions(user.uid, originalData);
+      console.log('🔄 Restored original data after test');
+    }
     
     // 5. Verify the write worked
     const verifyData = await getSavedWordSessions(user.uid);

@@ -720,10 +720,11 @@
   align-items: center;
 }
 
-.controls-right {
+.vocabulary-controls .controls-right {
   display: flex;
   align-items: center;
   gap: 1rem;
+  align-self: center !important;
 }
 
 .word-counter {
@@ -1133,4 +1134,79 @@
   border-radius: 0.25rem;
   font-size: 0.75rem;
   font-weight: 500;
+}
+
+/* Status bar and button improvements for individual chapter/session views */
+.vocabulary-controls .controls-left {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.vocabulary-controls .controls-left > span {
+  margin-right: 0.5rem;
+}
+
+.vocabulary-controls .controls-left > span:last-child {
+  margin-right: 0;
+}
+
+.vocabulary-controls .controls-right .chapter-actions,
+.vocabulary-controls .controls-right .session-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.vocabulary-controls .controls-right .chapter-actions {
+  border-top: none !important;
+}
+
+.vocabulary-controls .controls-right .action-btn {
+  border-radius: 0.5rem !important;
+}
+
+/* Status bar styling for individual views */
+.stat-separator {
+  color: #9ca3af;
+  margin: 0 0.5rem;
+}
+
+.stat-label {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+.stat-badge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+.stat-due {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.stat-new {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.stat-learned {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+.stat-zero {
+  background: #f9fafb;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
 } 

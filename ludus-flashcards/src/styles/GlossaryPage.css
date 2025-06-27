@@ -53,8 +53,24 @@
 /* Search Tabs */
 .search-tabs {
   display: flex;
-  border-bottom: 2px solid #f3f4f6;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 0;
+  position: relative;
+}
+
+.search-tabs::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 160px; /* Adjust this value to stop before the button */
+  height: 2px;
+  background: #f3f4f6;
+}
+
+.tabs-left {
+  display: flex;
 }
 
 .search-tab {
@@ -778,7 +794,6 @@
 
 .declension-table td:nth-child(2),
 .conjugation-table td:nth-child(2) {
-  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
   font-weight: 600;
   color: #1f2937;
 }
@@ -799,16 +814,18 @@
 
 /* Saved Words Toggle Button */
 .saved-words-toggle {
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   background: #f3f4f6;
   border: 2px solid #e5e7eb;
   border-radius: 0.75rem;
   font-weight: 600;
-  font-size: 0.925rem;
+  font-size: 0.875rem;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
   color: #6b7280;
+  margin-bottom: 2px; /* Align with tab bottom border */
+  margin-left: auto; /* Push to the right */
 }
 
 .saved-words-toggle:hover {
@@ -850,34 +867,34 @@
 }
 
 .saved-words-header {
-  padding: 1.25rem;
+  padding: 0.875rem 1rem;
   border-bottom: 1px solid #e5e7eb;
 }
 
 .saved-words-title {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .saved-words-title h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: #1f2937;
 }
 
 .saved-words-controls {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.375rem;
   align-items: center;
 }
 
 .new-session-btn {
-  padding: 0.375rem 0.75rem;
+  padding: 0.25rem 0.5rem;
   background: #3b82f6;
   color: white;
   border: 1px solid #3b82f6;
-  border-radius: 0.375rem;
-  font-size: 0.8rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -891,12 +908,12 @@
 }
 
 .clear-all-btn {
-  padding: 0.375rem 0.75rem;
+  padding: 0.25rem 0.5rem;
   background: #fee2e2;
   color: #dc2626;
   border: 1px solid #fecaca;
-  border-radius: 0.375rem;
-  font-size: 0.8rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -912,12 +929,15 @@
 .saved-words-list {
   flex: 1;
   overflow-y: auto;
-  padding: 1rem;
+  padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 /* Session Groups */
 .session-group {
-  margin-bottom: 1.5rem;
+  margin: 0 !important;
 }
 
 .session-group:last-child {
@@ -927,43 +947,31 @@
 .session-divider {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-left: 4px solid #3b82f6;
-}
-
-.session-info {
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0;
+  border-left: 3px solid #3b82f6;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
-}
-
-.session-display {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.session-info-left {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   flex-wrap: wrap;
-  flex: 1;
 }
+
+
 
 .session-name {
   margin: 0;
-  font-size: 1rem;
+  padding: 0;
+  font-size: 0.875rem;
   font-weight: 600;
   color: #1f2937;
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.375rem;
+  border-radius: 0.25rem;
   transition: all 0.2s ease;
   flex-shrink: 0;
+  line-height: 1;
+  display: inline-block;
+  padding: 0.125rem 0.375rem;
 }
 
 .session-name:hover {
@@ -972,22 +980,25 @@
 }
 
 .session-date {
+  margin: 0;
+  padding: 0;
   font-size: 0.75rem;
   color: #6b7280;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1;
+  display: inline-block;
 }
 
 .session-count {
+  margin: 0;
+  padding: 0;
   font-size: 0.75rem;
   color: #6b7280;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1;
+  display: inline-block;
 }
 
-.session-edit {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
 
 .session-name-input {
   flex: 1;
@@ -1010,6 +1021,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  margin: 0;
+  margin-bottom: 0;
 }
 
 .empty-session {
@@ -1025,10 +1038,10 @@
 }
 
 .delete-session-btn {
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   border: 1px solid #e5e7eb;
-  border-radius: 0.375rem;
+  border-radius: 0.25rem;
   background: white;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -1037,6 +1050,8 @@
   justify-content: center;
   flex-shrink: 0;
   color: #6b7280;
+  margin-left: auto;
+  align-self: center;
 }
 
 .delete-session-btn:hover {
@@ -1069,17 +1084,13 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 1rem;
+  padding: 0.75rem;
   border: 1px solid #e5e7eb;
-  border-radius: 0.75rem;
-  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
   background: #f9fafb;
   transition: all 0.2s ease;
 }
 
-.saved-word-item:last-child {
-  margin-bottom: 0;
-}
 
 .saved-word-item:hover {
   background: #f3f4f6;
@@ -1102,13 +1113,13 @@
 .word-header {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  gap: 0.375rem;
+  margin-bottom: 0.375rem;
 }
 
 .word-header strong {
   color: #1f2937;
-  font-size: 1rem;
+  font-size: 0.925rem;
 }
 
 .part-of-speech {
@@ -1122,8 +1133,8 @@
 
 .word-meaning {
   color: #6b7280;
-  font-size: 0.875rem;
-  line-height: 1.4;
+  font-size: 0.8rem;
+  line-height: 1.3;
 }
 
 .saved-word-actions {
@@ -1253,6 +1264,42 @@
   font-size: 0.925rem;
   line-height: 1.5;
   margin-bottom: 0.5rem;
+}
+
+/* Drag and Drop Styles */
+.saved-word-item[draggable="true"] {
+  cursor: grab;
+}
+
+.saved-word-item.dragging {
+  opacity: 0.5;
+  transform: rotate(2deg);
+  cursor: grabbing;
+}
+
+.session-group.drag-over {
+  background: rgba(59, 130, 246, 0.1);
+  border: 2px dashed #3b82f6;
+  border-radius: 0.75rem;
+}
+
+.session-group.drag-over .session-divider {
+  background: rgba(59, 130, 246, 0.05);
+  border-color: #3b82f6;
+}
+
+.saved-word-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.saved-word-item.dragging:hover {
+  transform: rotate(2deg); /* Override hover effect when dragging */
+}
+
+.saved-word-item.drag-over-word {
+  border-top: 3px solid #3b82f6;
+  margin-top: 3px;
 }
 
 /* Responsive */

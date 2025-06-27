@@ -2798,6 +2798,12 @@ const GlossaryPage = ({ onNavigate }) => {
   ]);
   const [editingSessionId, setEditingSessionId] = useState(null);
   const [editingSessionName, setEditingSessionName] = useState('');
+  const [hasLoadedInitialData, setHasLoadedInitialData] = useState(false);
+  const [draggedWord, setDraggedWord] = useState(null);
+  const [draggedFromSession, setDraggedFromSession] = useState(null);
+  const [dragOverSession, setDragOverSession] = useState(null);
+  const [dragOverWordIndex, setDragOverWordIndex] = useState(null);
+  const [draggedWordIndex, setDraggedWordIndex] = useState(null);
 
   // Load saved sessions from Firebase/localStorage on component mount
   useEffect(() => {
@@ -2827,6 +2833,7 @@ const GlossaryPage = ({ onNavigate }) => {
               console.log('📊 Index creation triggered');
             }
             
+            setHasLoadedInitialData(true);
             return; // Successfully loaded from Firebase
           }
         } catch (error) {
@@ -2866,6 +2873,8 @@ const GlossaryPage = ({ onNavigate }) => {
           console.error('Error parsing saved sessions data:', error);
         }
       }
+      
+      setHasLoadedInitialData(true);
     };
     
     loadSavedSessions();
@@ -2873,44 +2882,66 @@ const GlossaryPage = ({ onNavigate }) => {
 
   // Save sessions to Firebase/localStorage whenever sessions state changes
   useEffect(() => {
+    // CRITICAL: Only save if we've loaded initial data to prevent overwriting with empty state
+    if (!hasLoadedInitialData) {
+      console.log('⏳ Skipping save - initial data not loaded yet');
+      return;
+    }
+    
     // Always save to localStorage for offline support
     localStorage.setItem('glossary-sessions', JSON.stringify(sessions));
     localStorage.setItem('glossary-current-session-id', currentSessionId.toString());
     
     // Also save to Firebase if user is authenticated
-    if (user?.uid && sessions.length > 0) {
+    if (user?.uid) {
       const sessionsData = {
         sessions,
         currentSessionId
       };
       
-      // Use debounced save to avoid excessive Firebase calls
-      debouncedSaveSessions(user.uid, sessionsData);
-      console.log('🔥 Queued Firebase save for user:', user.uid);
+      console.log('💾 Saving to Firebase:', sessions.length, 'sessions with', sessions.reduce((total, s) => total + s.words.length, 0), 'total words');
+      
+      // Save directly to Firebase (with a small delay to batch rapid changes)
+      setTimeout(async () => {
+        try {
+          await saveSavedWordSessions(user.uid, sessionsData);
+          console.log('✅ Auto-saved to Firebase');
+        } catch (error) {
+          console.error('❌ Auto-save failed:', error);
+        }
+      }, 500);
     }
-  }, [sessions, currentSessionId, user]);
+  }, [sessions, currentSessionId, user, hasLoadedInitialData]);
 
   // Load dictionary data
   useEffect(() => {
     const loadData = async () => {
       try {
-        console.log('Loading dictionary data...');
-        const [morphDataModule, englishDataModule] = await Promise.all([
-          import('../data/whitakersOptimized.json'),
-          import('../data/englishIndex.json')
-        ]);
+        console.log('📚 Loading dictionary data...');
         
-        console.log('Data loaded:', {
-          morphData: morphDataModule.default ? 'Success' : 'Failed',
-          englishData: englishDataModule.default ? 'Success' : 'Failed'
-        });
+        console.log('📥 Importing whitakersOptimized.json...');
+        const morphDataModule = await import('../data/whitakersOptimized.json');
+        console.log('✅ Morph data loaded:', !!morphDataModule.default);
+        
+        console.log('📥 Importing englishIndex.json...');
+        const englishDataModule = await import('../data/englishIndex.json');
+        console.log('✅ English data loaded:', !!englishDataModule.default);
+        
+        if (!morphDataModule.default) {
+          throw new Error('Failed to load whitakersOptimized.json - no default export');
+        }
+        
+        if (!englishDataModule.default) {
+          throw new Error('Failed to load englishIndex.json - no default export');
+        }
         
         setMorphData(morphDataModule.default);
         setEnglishData(englishDataModule.default);
         setDataLoaded(true);
+        console.log('✅ Dictionary loading complete!');
       } catch (error) {
-        console.error('Error loading data:', error);
-        setLoadError(error.message);
+        console.error('❌ Dictionary loading error:', error);
+        setLoadError(`Dictionary loading failed: ${error.message}`);
       }
     };
     loadData();
@@ -3064,6 +3095,8 @@ const GlossaryPage = ({ onNavigate }) => {
 
   // Saved words functions
   const addToSavedWords = (entry) => {
+    console.log('➕ Adding word:', entry.dictionaryForm);
+    
     // Check if already saved in any session
     const isAlreadySaved = sessions.some(session => 
       session.words.some(word => word.id === entry.id)
@@ -3114,6 +3147,115 @@ const GlossaryPage = ({ onNavigate }) => {
     return sessions
       .slice() // Create copy to avoid mutating original
       .sort((a, b) => new Date(b.startedAt) - new Date(a.startedAt)); // Newest first
+  };
+
+  // Drag and Drop handlers
+  const handleDragStart = (e, word, sessionId, wordIndex) => {
+    setDraggedWord(word);
+    setDraggedFromSession(sessionId);
+    setDraggedWordIndex(wordIndex);
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/plain', ''); // For Firefox compatibility
+  };
+
+  const handleDragOver = (e, sessionId) => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    setDragOverSession(sessionId);
+  };
+
+  const handleWordDragOver = (e, sessionId, wordIndex) => {
+    e.preventDefault();
+    e.stopPropagation();
+    e.dataTransfer.dropEffect = 'move';
+    setDragOverSession(sessionId);
+    setDragOverWordIndex(wordIndex);
+  };
+
+  const handleDragLeave = (e) => {
+    // Only clear drag over if we're leaving the session container entirely
+    if (!e.currentTarget.contains(e.relatedTarget)) {
+      setDragOverSession(null);
+      setDragOverWordIndex(null);
+    }
+  };
+
+  const handleDrop = (e, targetSessionId) => {
+    e.preventDefault();
+    
+    if (!draggedWord || !draggedFromSession) return;
+
+    // If dropping in the same session, handle reordering
+    if (draggedFromSession === targetSessionId && dragOverWordIndex !== null) {
+      console.log('🔄 Reordering word', draggedWord.dictionaryForm, 'in session', targetSessionId, 'to position', dragOverWordIndex);
+      
+      setSessions(prev => {
+        return prev.map(session => {
+          if (session.id === targetSessionId) {
+            const sortedWords = session.words
+              .slice()
+              .sort((a, b) => new Date(b.addedAt) - new Date(a.addedAt));
+            
+            // Remove the dragged word from its current position
+            const filteredWords = sortedWords.filter(word => word.id !== draggedWord.id);
+            
+            // Insert at the new position
+            const newWords = [...filteredWords];
+            newWords.splice(dragOverWordIndex, 0, draggedWord);
+            
+            // Update timestamps to maintain the new order
+            const reorderedWords = newWords.map((word, index) => ({
+              ...word,
+              addedAt: new Date(Date.now() - index * 1000).toISOString() // Stagger timestamps
+            }));
+            
+            return {
+              ...session,
+              words: reorderedWords
+            };
+          }
+          return session;
+        });
+      });
+    } else if (draggedFromSession !== targetSessionId) {
+      // Move word between sessions
+      console.log('🚚 Moving word', draggedWord.dictionaryForm, 'from session', draggedFromSession, 'to session', targetSessionId);
+
+      setSessions(prev => {
+        return prev.map(session => {
+          if (session.id === draggedFromSession) {
+            // Remove from source session
+            return {
+              ...session,
+              words: session.words.filter(word => word.id !== draggedWord.id)
+            };
+          } else if (session.id === targetSessionId) {
+            // Add to target session (with new timestamp)
+            return {
+              ...session,
+              words: [...session.words, { ...draggedWord, addedAt: new Date().toISOString() }]
+            };
+          }
+          return session;
+        });
+      });
+    }
+
+    // Clear drag state
+    setDraggedWord(null);
+    setDraggedFromSession(null);
+    setDragOverSession(null);
+    setDragOverWordIndex(null);
+    setDraggedWordIndex(null);
+  };
+
+  const handleDragEnd = () => {
+    // Clean up drag state
+    setDraggedWord(null);
+    setDraggedFromSession(null);
+    setDragOverSession(null);
+    setDragOverWordIndex(null);
+    setDraggedWordIndex(null);
   };
 
   // Session renaming functions
@@ -3227,25 +3369,34 @@ const GlossaryPage = ({ onNavigate }) => {
 
         <div className="search-section">
           <div className="search-tabs">
-            <button
-              className={`search-tab ${searchDirection === 'latin' ? 'active' : ''}`}
-              onClick={() => {
-                setSearchDirection('latin');
-                setSearchTerm(''); // Clear search when switching
-                setResults([]);
-              }}
+            <div className="tabs-left">
+              <button
+                className={`search-tab ${searchDirection === 'latin' ? 'active' : ''}`}
+                onClick={() => {
+                  setSearchDirection('latin');
+                  setSearchTerm(''); // Clear search when switching
+                  setResults([]);
+                }}
+              >
+                Latin
+              </button>
+              <button
+                className={`search-tab ${searchDirection === 'english' ? 'active' : ''}`}
+                onClick={() => {
+                  setSearchDirection('english');
+                  setSearchTerm(''); // Clear search when switching
+                  setResults([]);
+                }}
+              >
+                English
+              </button>
+            </div>
+            <button 
+              className="saved-words-toggle active"
+              onClick={() => setCurrentView(currentView === 'savedwords' ? 'glossary' : 'savedwords')}
+              title={currentView === 'savedwords' ? 'Back to Glossary' : 'Manage Saved Words'}
             >
-              Latin
-            </button>
-            <button
-              className={`search-tab ${searchDirection === 'english' ? 'active' : ''}`}
-              onClick={() => {
-                setSearchDirection('english');
-                setSearchTerm(''); // Clear search when switching
-                setResults([]);
-              }}
-            >
-              English
+              {currentView === 'savedwords' ? '← Back to Glossary' : `📚 Saved (${savedWords.length})`}
             </button>
           </div>
           <div className="search-bar">
@@ -3259,21 +3410,6 @@ const GlossaryPage = ({ onNavigate }) => {
               }}
               className="search-input"
             />
-            <button 
-              className="saved-words-toggle active"
-              onClick={() => setCurrentView(currentView === 'savedwords' ? 'glossary' : 'savedwords')}
-              title={currentView === 'savedwords' ? 'Back to Glossary' : 'Manage Saved Words'}
-            >
-              {currentView === 'savedwords' ? '← Back to Glossary' : `📚 Manage Saved (${savedWords.length})`}
-            </button>
-            <button 
-              className="saved-words-toggle"
-              onClick={() => debugSavedWordsSystem(user)}
-              title="Debug Saved Words System"
-              style={{ marginLeft: '0.5rem', backgroundColor: '#fbbf24' }}
-            >
-              🔍 Debug
-            </button>
           </div>
         </div>
 
@@ -3408,53 +3544,53 @@ const GlossaryPage = ({ onNavigate }) => {
                   </div>
                 ) : (
                   getSessionizedWords().map((session) => (
-                    <div key={session.id} className="session-group">
+                    <div 
+                      key={session.id} 
+                      className={`session-group ${dragOverSession === session.id ? 'drag-over' : ''}`}
+                      onDragOver={(e) => handleDragOver(e, session.id)}
+                      onDragLeave={handleDragLeave}
+                      onDrop={(e) => handleDrop(e, session.id)}
+                    >
                       <div className="session-divider">
-                        <div className="session-info">
-                          {editingSessionId === session.id ? (
-                            <div className="session-edit">
-                              <input
-                                type="text"
-                                value={editingSessionName}
-                                onChange={(e) => setEditingSessionName(e.target.value)}
-                                onKeyPress={(e) => {
-                                  if (e.key === 'Enter') saveSessionName();
-                                  if (e.key === 'Escape') cancelEditingSession();
-                                }}
-                                onBlur={saveSessionName}
-                                autoFocus
-                                className="session-name-input"
-                              />
-                            </div>
-                          ) : (
-                            <div className="session-display">
-                              <div className="session-info-left">
-                                <h4 
-                                  className="session-name"
-                                  onClick={() => startEditingSession(session.id, session.name)}
-                                  title="Click to rename session"
-                                >
-                                  {session.name}
-                                </h4>
-                                <span className="session-date">
-                                  {new Date(session.startedAt).toLocaleDateString()}
-                                </span>
-                                <span className="session-count">
-                                  ({session.words.length} words)
-                                </span>
-                              </div>
-                              <button
-                                className="delete-session-btn"
-                                onClick={() => deleteSession(session.id)}
-                                title="Delete this session and all its words"
-                              >
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M3 6h18m-2 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2m-6 5v6m4-6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                </svg>
-                              </button>
-                            </div>
-                          )}
-                        </div>
+                        {editingSessionId === session.id ? (
+                          <input
+                            type="text"
+                            value={editingSessionName}
+                            onChange={(e) => setEditingSessionName(e.target.value)}
+                            onKeyPress={(e) => {
+                              if (e.key === 'Enter') saveSessionName();
+                              if (e.key === 'Escape') cancelEditingSession();
+                            }}
+                            onBlur={saveSessionName}
+                            autoFocus
+                            className="session-name-input"
+                          />
+                        ) : (
+                          <>
+                            <h4 
+                              className="session-name"
+                              onClick={() => startEditingSession(session.id, session.name)}
+                              title="Click to rename session"
+                            >
+                              {session.name}
+                            </h4>
+                            <span className="session-count">
+                              ({session.words.length} words)
+                            </span>
+                            <span className="session-date">
+                              {new Date(session.startedAt).toLocaleDateString()}
+                            </span>
+                            <button
+                              className="delete-session-btn"
+                              onClick={() => deleteSession(session.id)}
+                              title="Delete this session and all its words"
+                            >
+                              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 6h18m-2 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2m-6 5v6m4-6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                              </svg>
+                            </button>
+                          </>
+                        )}
                       </div>
                       <div className="session-words">
                         {session.words.length === 0 ? (
@@ -3465,10 +3601,14 @@ const GlossaryPage = ({ onNavigate }) => {
                           session.words
                             .slice() // Create copy to avoid mutating original
                             .sort((a, b) => new Date(b.addedAt) - new Date(a.addedAt)) // Most recent first
-                            .map((word) => (
+                            .map((word, wordIndex) => (
                           <div 
                             key={word.id} 
-                            className={`saved-word-item ${(word.partOfSpeech === 'N' || word.partOfSpeech === 'V' || word.partOfSpeech === 'ADJ' || word.partOfSpeech === 'PRON') ? 'clickable' : ''}`}
+                            className={`saved-word-item ${(word.partOfSpeech === 'N' || word.partOfSpeech === 'V' || word.partOfSpeech === 'ADJ' || word.partOfSpeech === 'PRON') ? 'clickable' : ''} ${draggedWord?.id === word.id ? 'dragging' : ''} ${dragOverWordIndex === wordIndex && dragOverSession === session.id ? 'drag-over-word' : ''}`}
+                            draggable="true"
+                            onDragStart={(e) => handleDragStart(e, word, session.id, wordIndex)}
+                            onDragOver={(e) => handleWordDragOver(e, session.id, wordIndex)}
+                            onDragEnd={handleDragEnd}
                             onClick={() => {
                               if (word.partOfSpeech === 'N' || word.partOfSpeech === 'V' || word.partOfSpeech === 'ADJ' || word.partOfSpeech === 'PRON') {
                                 setSelectedEntry(word);

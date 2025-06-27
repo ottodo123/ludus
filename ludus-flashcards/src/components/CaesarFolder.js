@@ -4,7 +4,7 @@ import { groupCardsByLesson, filterCardsByPartOfSpeech, getPartsOfSpeechWithCoun
 import { getDueCards } from '../utils/sm2Algorithm';
 import '../styles/LudusFolder.css';
 
-const LudusFolder = ({ onBack, onStartStudy }) => {
+const CaesarFolder = ({ onBack, onStartStudy }) => {
   const { cards, resetProgress } = useFlashcards();
   const [showFilters, setShowFilters] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -14,19 +14,19 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
   const [viewMode, setViewMode] = useState('chapters'); // 'chapters' or 'vocabulary'
   const [selectedChapter, setSelectedChapter] = useState(null);
 
-  const ludusCards = useMemo(() => 
-    cards.filter(card => card.curriculum === 'LUDUS'), 
+  const caesarCards = useMemo(() => 
+    cards.filter(card => card.curriculum === 'CAESAR'), 
     [cards]
   );
 
   const filteredCards = useMemo(() => {
     // Filter by part of speech if filterMode is not a sort mode
     if (filterMode === 'chapter' || filterMode === 'alphabetical') {
-      return ludusCards;
+      return caesarCards;
     } else {
-      return filterCardsByPartOfSpeech(ludusCards, filterMode);
+      return filterCardsByPartOfSpeech(caesarCards, filterMode);
     }
-  }, [ludusCards, filterMode]);
+  }, [caesarCards, filterMode]);
 
   const lessonGroups = useMemo(() => 
     groupCardsByLesson(filteredCards),
@@ -34,8 +34,8 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
   );
 
   const partsOfSpeech = useMemo(() => 
-    getPartsOfSpeechWithCounts(ludusCards),
-    [ludusCards]
+    getPartsOfSpeechWithCounts(caesarCards),
+    [caesarCards]
   );
 
   // Sort filtered cards by chapter or alphabetically for vocabulary view
@@ -94,7 +94,12 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
     return { total, due, newCards, learned };
   };
 
-  const allLessons = Array.from({ length: 64 }, (_, i) => i + 1);
+  // Get all chapters for Caesar curriculum
+  const allLessons = useMemo(() => {
+    const lessons = caesarCards.map(card => card.lesson_number);
+    const uniqueLessons = [...new Set(lessons)].sort((a, b) => a - b);
+    return uniqueLessons;
+  }, [caesarCards]);
 
   // Get display text for current filter mode
   const getFilterDisplayText = () => {
@@ -116,7 +121,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
     return (
       <div className="ludus-folder">
         <button className="back-btn" onClick={() => setSelectedChapter(null)}>
-          ← Back to LUDUS
+          ← Back to CAESAR
         </button>
         <h1 className="main-title">Chapter {selectedChapter}</h1>
         
@@ -175,7 +180,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
               {chapterCards.map((card, index) => (
                 <div key={card.id} className="vocabulary-item">
                   <div className="vocabulary-word">
-                    <span className="chapter-badge">LUD {card.lesson_number}</span>
+                    <span className="chapter-badge">CAE {card.lesson_number}</span>
                     <span className="word-text">
                       {card.latin_headword}
                       {card.latin_endings ? `, ${card.latin_endings}` : ''}
@@ -184,7 +189,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
                   </div>
                   <div className="vocabulary-meaning">{card.english}</div>
                   <div className="vocabulary-status">
-                    <span className="status-new">LUD</span>
+                    <span className="status-new">CAE</span>
                   </div>
                 </div>
               ))}
@@ -201,7 +206,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
       <button className="back-btn" onClick={onBack}>
         ← Dashboard
       </button>
-      <h1 className="main-title">LUDUS</h1>
+      <h1 className="main-title">CAESAR</h1>
       <div className="header-actions">
         <button 
           className={`view-toggle-btn ${viewMode === 'chapters' ? 'active' : ''}`}
@@ -323,7 +328,7 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
           {/* Controls Section - only for vocabulary view */}
           <div className="vocabulary-controls">
             <div className="controls-left">
-              <span className="word-counter">{sortedVocabularyCards.length} words • 64 chapters</span>
+              <span className="word-counter">{sortedVocabularyCards.length} words • {allLessons.length} chapters</span>
             </div>
             <div className="controls-right">
               <div className="filter-dropdown-container">
@@ -392,4 +397,4 @@ const LudusFolder = ({ onBack, onStartStudy }) => {
   );
 };
 
-export default LudusFolder; 
+export default CaesarFolder;

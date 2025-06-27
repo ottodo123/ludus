@@ -1,0 +1,423 @@
+Required_Order,Book_Line_Ref,Chapter,Headword,Latin_Entry,Definitions,Occurrences in the Aeneid
+1,I.1,I.1-25,"canō","cecinī, 3, n. and a.","to make musical and rhythmical sounds with voice or instrument; to make melody, play, or sing, to sing, rehearse, celebrate in song or verse, 1.1; to speak in measure or rhythm; to proclaim, as prophet or priest, 2.176; reveal, 3.155; foretell, 2.124; rehearse, narrate, 4.14; explain, interpret, 5.524; warn, 12.28; forebode, croak, 11.399; sound, 7.513.",43
+2,I.4,I.1-25,"superus","a, um","adj. (super), above, upper, supreme, 3.20; of the upper world as opposed to Hades, 2.91; 10.40; superae sēdēs, the sky, Olympus, 11.532; supera, the upper world, 7.562; the sky, heaven, 6.787; subst., superī, ōrum, m., those of the upper world, the living as opposed to the dead, 6.481; the gods above, or gods of Olympus as opposed to the infernal gods, 1.4; superl., suprēmus, a, um, the highest; most exalted, 10.350; illustrious, 7.220; extreme, 3.590; last, final, 2.11; subst., suprēmum, ī, n., the end, 12.803; pl., suprēma, ōrum, the last honors, rites, 6.213; (adv.), suprēmum, for the last time, 3.68; superl., summus, a, um, the uppermost, topmost, highest, 2.463; situated on a height; high, 2.166; the highest part of, summit of, top of, 2.302, et al.; surface of, 5.819, et al.; main, chief, 1.342; utmost, greatest, 5.197; supreme, 1.665; most important, 9.227; latest, last, 2.324, et al.; summa rēs, the chief or common interest, common weal, 11.302; the chief conflict, 2.322; subst., summum, ī, n., the top.",1
+3,I.4,I.1-25,"saevus","a, um","(adj.), fierce, fell, wrathful, of men, animals, and things; cruel, 1.458; dreadful, direful, fearful, 2.559; furious, 9.792; stern, bloody, 6.824; formidable, valiant, warlike, 1.99; relentless, 12.849; maddening, angering; bitter, 1.25; mortal, 12.857.",59
+4,I.4,I.1-25,"memor","oris","adj. (rel. to mēns and meminī), mindful, remembering, 1.23; heedful, 480; thankful, grateful, 4.539; not forgetting; relentless, 1.4; with nōn or nec, unmindful, regardless, 12.534.",19
+5,I.8,I.1-25,"laedō","laesī, laesus, 3, a.","to strike violently; smite, 2.231; bruise, strike, hit, 7.809; hurt, injure, offend, thwart, 1.8; violate, 12.496.",5
+6,I.8,I.1-25,"-ve","","(conj. enclit.), usually appended to the first word in the clause or phrase, or freq.; ve — ve, either — or, both — and, 10.150.",79
+7,I.9,I.1-25,"rēgīna","ae, f.","a queen, 1.9; princess, 1.273. (rēx)",41
+8,I.9,I.1-25,"volvō","volvī, volūtus, 3, a.","to roll, 1.86; roll along or down, 1.101; roll or cast up, 3.206; toss, hurl, 12.906; roll over, roll in the dust, 12.329; cast, hurl down, 1.116; 9.512; roll, wheel, 1.163; of books, open, unroll, 1.262; of the Fates, fix the circle of events, decree, ordain, dispose, 1.22; 3.376; of the mind, revolve, meditate, reflect upon, 1.305; pass, continue, live through, experience, endure, suffer, 1.9; rotam volvere, to complete a cycle, period; (pass.), volvī, roll over, roll, 10.590; turn or wind about, 7.350; to be shed, to flow, 4.449; roll on, revolve, 1.269.",53
+9,I.10,I.1-25,"īnsīgnis","e","beautiful, 3.468; splendid, adorned, 4.134; conspicuous, 6.808; marked, renowned, distinguished, 1.10; illustrious, glorious, 10.450. (in and sīgnum)",29
+10,I.14,I.1-25,"dīves","itis, and dīs, dīte","(adj.), rich, wealthy; fertile, 7.262; w. gen., rich in respect of, rich in, 1.14; w. abl., rich in, abounding in, 4.38; superl., dītissimus, a, um, the richest, wealthiest, 1.343; very rich, opulent, 9.360.",16
+11,I.14,I.1-25,"asper","era, erum","(adj.), rough, 2.379; rugged, craggy, jagged, 6.360; chased, embossed, 5.267; (fig.), of the weather, stormy, 2.110; of temperament, spirit, or nature, barbarous, 5.730; formidable, fierce, 1.14; full of strife, warlike, 1.291; cruel, stern, 6.882; angry, 1.279; bitter, 2.96; displeased, 8.365.",31
+12,I.17,I.1-25,"currus","ūs, m.","a chariot, car, 1.156; a chariot team, chariot horses, 7.163; pl. for the sing., 10.574. (currō)",51
+13,I.18,I.1-25,"foveō","fōvī, fōtus, 2, a.","to keep warm; (fig.), foster, protect, cherish, 1.281; soothe, 12.420; caress, make love to, 1.718; rest, incline, 10.838; to toy away, enjoy, 4.193; cherish, hope, long, desire, 1.18.",12
+14,I.19,I.1-25,"prōgeniēs","ēī, f.","lineage, progeny, race, 1.19; offspring, 5.565; son, 7.97. (prōgignō)",9
+15,I.20,I.1-25,"ōlim","ōlim","(adv.), some time ago; formerly, once, 1.653, et al.; at some future time; hereafter, some time, 1.20; at times, ofttimes, 5.125.",20
+16,I.21,I.1-25,"superbus","a, um","adj. (super), overbearing, haughty, proud, insolent, fierce, 1.523; superior, mighty, 1.21; audacious, 12.326; hard, cruel, 12.877; stately, superb, magnificent, splendid, 1.639.",37
+17,I.27,I.1-25,"spernō","sprēvī, sprētus, 3, a.","to sever, remove; (fig.), reject, despise, scorn, disdain, 4.678; insult, 1.27.",3
+18,I.29,I.1-25,"accendō","ī, cēnsus, 3, a.","to set fire to, light up, enkindle, 5.4; enrage, exasperate, incense, 1.29; incite, rouse, 4.232. (ad and candō, rel. to candeō)",25
+19,I.30,I.1-25,"aequor","oris, n.","an equal, horizontal, or level surface; the surface of the sea; the sea, 1.146; water, 6.355; wave, 3.197; a level field, plain, 5.456; low land, 12.524. (aequō)",89
+20,I.31,I.1-25,"mītis","e","(adj.), mellow; ripe, ripening; of a lake or pool, mild, gentle; calm, still, 8.88.",1
+21,I.31,I.1-25,"arceō","uī, 2, a.","to inclose, shut in; restrain, bind, 2.406; debar, keep off, repel, 1.435; protect, save from, 8.73.",9
+22,I.33,I.1-25,"mōlēs","is, f.","a cumbrous mass; a heavy pile or fabric; mound, rampart, 9.35; dike, 2.497; a mass of buildings, vast buildings, 1.421; structure, 11.130; frame or figure, 2.32; bulk, 5.118; weight, 7.589; pile, mass, 1.61; gigantic frame, 5.431; warlike engine, siege tower, 5.439; array, pomp, train, 12.161; body of soldiers, phalanx, 12.575; heavy storm, tempest, 5.790; toil, work, labor, 1.33.",30
+23,I.34,I.1-25,"tellūs","ūris, f.","the earth, 6.140; ground, soil, earth, 1.358; land, 1.171; a land (of an island), 1.34; a country, territory, state, kingdom, 11.245; personified, Tellūs, the goddess Tellus or Earth, 4.166.",49
+24,I.35,I.1-25,"vēlum","ī, n.","a cloth; sail, 1.103, et al.; a curtain, canvas, covering, 1.469.",32
+25,I.35,I.1-25,"spūma","ae, f.","froth, foam, spray, 1.35; pl., spray, 3.208. (spuō, spit)",5
+26,I.35,I.26-50,"sāl","salis, m.","salt; brine, salt water, 1.173; (meton.), the sea, 1.35.",7
+27,I.40,I.26-50,"mergō","mersī, mersus, 3, a.","to dip, immerse, plunge, w. abl. alone, or w. prep., 6.342; cover, 6.267; (fig.), involve, overwhelm, 6.615.",8
+28,I.41,I.26-50,"pontus","ī, m.","the sea; the deep, 2.295; wave, billow, 1.114.",30
+30,I.45,I.26-50,"nūbēs","is, f.","a cloud, 1.516, et al.; storm, 10.809; the air, 12.856; (fig.), flock, multitude, 7.705.",43
+31,I.43,I.26-50,"ratis","is, f.","a raft, float; bark, boat, ship, 1.43, et al.",22
+32,I.44,I.26-50,"pectus","oris, n.","the breast, 1.44; stomach, 5.182; (fig.), mind, 1.227; thought, 5.7; breast, heart, soul, feeling, freq.; spirit, courage, 6.261, et al.; personif.; person, soul, spirit, 2.349.",120
+34,I.45,I.26-50,"scopulus","ī, m.","a projecting ledge of rock; a high cliff or rock, 1.180; crag, 1.45; ledge, reef, 1.145; detached rock, fragment of rock, 12.531.",27
+35,I.45,I.26-50,"acuō","uī, ūtus, 3, a.","to make pointed; to sharpen, whet, 8.386; (fig.), stimulate, provoke, 7.330; incite, rouse.",7
+36,I.46,I.26-50,"dīvus","a, um","(adj.), divine; godlike, 11.657; subst., dīvus, ī, m., a god, freq.; the image of a god, 12.286; dīva, ae, f., a goddess, 1.632, et al.",1
+36,I.46,I.26-50,"dīvus","ī, m.","a god, freq.; the image of a god, 12.286; dīva, ae, f., a goddess, 1.632, et al.",69
+37,I.47,I.26-50,"cor","cordis, n.","the heart, of the mind, feelings, spirit, passions; mind, heart, breast, 1.50; disposition, spirit, 1.303; pleasure, delight, 7.326.",33
+38,I.51,I.26-50,"nimbus","ī, m.","a violent rain; storm, tempest, 1.51; a black cloud, thunder-cloud, cloud, 3.587; a bright cloud; the nimbus surrounding a god, 2.616; cloud of smoke, 5.666; a multitude, 7.793.",24
+39,I.52,I.26-50,"vāstus","a, um","(adj.), empty, void, wild, waste, 9.323; vast, unbounded, 1.118; huge, enormous, immense, 3.647; deep-, vast-, sounding, 1.245.",46
+40,I.52,I.26-50,"antrum","ī, n.","a cave, cavern, grotto, 1.166.",24
+41,I.53,I.26-50,"lūctor","ātus sum, 1, dep. n.","to struggle, strive, contend, 1.53; wrestle, 6.643; w. inf., 12.387.",8
+42,I.56,I.26-50,"fremō","uī, itus, 3, n. and a.","to make a murmuring noise; to roar, 1.56; whinny, neigh, 12.82; raise lamentations, 6.175; whiz, 12.922; resound, 4.668; rage, 5.19; to be fierce, furious, 4.229; fume, rave, 12.535; shout and sing, 4.146; a., rage, rave for, clamor for, 11.453, et al.; ore fremere, applaud, shout applause, 5.385; p., fremēns, entis, raging, 4.229.",35
+43,I.56,I.26-50,"celsus","a, um","adj. (cellō, rise), high, lofty, 1.56, et al.",23
+44,I.57,I.26-50,"scēptrum","ī, n.","a royal staff; scepter, 1.653; freq.; (meton.), rule, sway, power, royal court, realm, 9.9; 1.253; authority, 11.238.",18
+45,I.58,I.26-50,"nī","nī","(conj.), not, lest, that not, 3.686; for nisi, if not, unless, except, 5.356, et al.",19
+46,I.60,I.26-50,"aura","ae (archaic genit. āī), f.","the air in gentle motion; a breeze, 3.356, et al.; air, 4.278, et al.; a blast; ether, spirit, 6.747; splendor, brightness, 6.204; favor, applause, 6.816; pl., air, 1.59, 387; ad auras, to or into the air, on high, upward.",85
+47,I.60,I.26-50,"spēlunca","ae, f.","a cavern, 1.60; retreat, 5.213.",12
+48,I.61,I.26-50,"āter","tra, trum","(adj.), black; dark, gloomy, 1.60, et al.; smoky, lurid, 7.456; 4.384; clotted, dark, 3.622; soiled, blackened, 2.272; (fig.), sad, fatal, 6.429; venomous, deadly; of the odor of smoke, 12.591.",71
+49,I.63,I.26-50,"habēna","ae, f.","a rein, 1.63, et al.; strap, thong, 9.587; whip, 7.380; immissīs or laxīs habēnīs, with all the reins let out, without restraint, unchecked, 5.662; pressīs or adductīs habēnīs, with tightened reins, 12.622. (habeō)",20
+50,I.66,I.26-50,"mulceō","mulsī, mulsus or mulctus, 2, a.","to stroke; lick, 8.634; (fig.), soothe, caress, comfort, 1.197; mitigate, soften, calm, 1.66; to make harmonious, charm, 7.34.",7
+51,I.66,I.51-75,"fluctus","ūs, m.","a flowing; billow, surge, wave, 1.66; ocean, sea, 3.270; water, 5.182; (fig.), of the mind, 12.831. (fluō)",44
+52,I.69,I.51-75,"incutiō","cussī, cussus, 3, a.","to strike into or upon; add, put into, 1.69. (1. in and quatiō)",1
+53,I.69,I.51-75,"puppis","is, f.","the hinder part of a ship; the stern, 5.12; (by synecdoche), a vessel, boat, ship, 1.69; (meton.), crew, 8.497.",43
+54,I.71,I.51-75,"nympha","ae, f.","a bride, a maiden; a nymph, one of the inferior deities, presiding over fountains, woods, etc., 1.71, et al.",6
+55,I.73,I.51-75,"cōnūbium","iī, n.","nuptials, marriage, 1.73; wedlock, nuptial rite, 3.136; marriage tie, nuptial bond, 3.319. (con- and nūbō, wed)",14
+56,I.75,I.51-75,"prōlēs","is, f.","that which springs forth; offspring, race, progeny, 1.75; lineage, 3.180.",24
+57,I.79,I.51-75,"epulae","ārum, f.","a banquet, feast, 1.79; food, 1.216. (sing. epulum)",11
+58,I.79,I.51-75,"recumbō","cubuī, 3, n.","to lie down again; sink down, 9.713; depend, rest, 12.59. (re- and cubō, lie down)",3
+59,I.81,I.51-75,"cavus","a, um","(adj.), hollow, 1.81; concave, 8.599; arching, vaulted, 2.487; cavae manūs, the palms of the hands, 12.86.",34
+60,I.81,I.51-75,"cuspis","idis, f.","a spear point, 7.817; point, 5.208; spear, lance, javelin; a spear, 12.386; a spear or, perhaps, the shaft of a spear as a scepter, 1.81.",12
+61,I.82,I.51-75,"velut","velut (velutī)","(adv.), even as, like, as it were, as, just as, as if, 1.82, et al. (vel and ut)",27
+63,I.90,I.51-75,"intonō","uī, ātus 1, n. and a.","to thunder, 1.90; (impers.), intonat, it thunders, 2.693.",8
+64,I.88,I.51-75,"subitus","a, um","having come up suddenly; unexpected, sudden, 2.692; suddenly, 3.225. (subeō)",27
+65,I.90,I.51-75,"polus","ī, m.","the terminating point of an axis; the celestial pole; (meton.), the heavens, sky, 1.90; air, 1.398.",10
+66,I.90,I.51-75,"micō","micuī, 1, n.","to vibrate, dart, 2.475; flash, glitter, gleam, 1.90; tremble, quiver, 10.396.",11
+67,I.90,I.51-75,"aethēr","eris, m. (acc. aethera and aetherem)","the upper air; ether, sky, heaven, 1.90; in a general sense, air, 1.587, et al.",52
+68,I.92,I.51-75,"extemplō","extemplō","(adv.), immediately, forthwith, at once, directly, 6.210. (ex and tempus)",14
+69,I.92,I.51-75,"membrum","ī, n.","a limb, joint, part, member, 1.691, et al.",31
+70,I.93,I.51-75,"gemō","uī, itus, 3, n. and a.","to groan, 7.501; sigh, 1.465; bemoan, bewail, lament, 1.221; of inanimate things, creak, 6.413.",13
+71,I.93,I.51-75,"duplex","icis","adj. (duo and plicō), twofold, double, 1.655; lying over each other, lapping, 9.707; both, 1.93; twin, 12.198.",10
+72,I.94,I.51-75,"sīdus","eris, n.","a constellation; (fig.), season, 4.309; star, 6.338; bright aspect; weather; storm, 12.451; pl., sīdera, um, weather, vicissitudes of weather, 5.628.",57
+73,I.93,I.51-75,"palma","ae, f.","the palm of the hand, 8.69; the hand, 1.93; palm branch, 5.111; a palm branch or wreath as the symbol of victory; reward, prize, 5.349; victory; a victor, 5.339.",28
+74,I.94,I.51-75,"ter","ter","(num. adv.), thrice, three times, 1.94, et al. (trēs)",38
+75,I.101,I.51-75,"galea","ae, f.","a helmet, either of leather or of metal, 3.468, et al.",32
+76,I.102,I.76-100,"strīdeō","2, n., and strīdō, strīdī, 3","to produce a grating or shrill sound; to creak, 1.449; gurgle, 4.689; rustle, 1.397; whiz, roar, 1.102; hiss, 8.420; twang, 5.502.",21
+77,I.103,I.76-100,"feriō","4, a.","to smite or strike, 1.103; cut, 4.580; pierce, 12.304; slay, 10.315; strike or slay the covenant victim; hence, of a treaty, to make, 10.154.",20
+78,I.104,I.76-100,"prōra","ae, f.","the extreme forward part of a ship; the prow, 1.104.",15
+79,I.104,I.76-100,"unda","ae, f.","a wave, billow, 1.161; freq.; the sea, 3.202; water, river, stream, 9.22.",109
+80,I.106,I.76-100,"pendeō","pependī, 2, n.","to hang, foll. by abl. alone or w. prep., 2.546, et al.; 5.511; be suspended, 1.106; cling, 9.562; bend, stoop forward, 5.147; (meton.), linger, delay, 6.151; listen, hang upon, 4.79.",28
+82,I.108,I.76-100,"torqueō","torsī, tortus, 2, a.","to wind, turn, twist, 4.575; roll along, 6.551; whirl, hurl, 3.208; shoot, 5.497; cast, dash, 1.108; direct, 4.220; turn away, 6.547; turn, cause to revolve, 4.269; control, 12.180; p., tortus, a, um, whirled, whirling, impetuous, 7.567.",43
+83,I.112,I.76-100,"cingō","cīnxi, cīnctus, 3, a.","to gird, 2.520; clothe, 8.282; surround, inclose, 1.112; encompass, envelop, 5.13; wreathe, crown, 5.71; involve, 1.673; fly around, 1.398.",35
+84,I.113,I.76-100,"fīdus","a, um","adj. (fīdō), trustworthy, faithful, trusty, 1.188; safe, secure, hospitable, 5.24; w. gen., tuī fīdissima, most faithful to thee, 12.659.",23
+85,I.114,I.76-100,"vertex","icis, m.","a whirl; whirlpool, 7.567; vortex, 1.117; whirling column of flame, 12.673; the top, crown of the head, the head, 1.403; summit, top, 1.163; mountain summit, height, 3.679; ā vertice, from on high, from above, 1.114. (vertō)",40
+86,I.115,I.76-100,"prōnus","a, um","(adj.), inclined, stooping or bending forward, 3.668; leaning 8.236; descending, falling, 11.485; going down, 9.713; favorable, safe, 5.212.",10
+87,I.118,I.76-100,"appāreō","uī, itus, 2, n.","to come into sight, appear, 2.622, et al.; be laid open, exposed to view, 8.241; attend, 12.850. (ad and pāreō)",17
+88,I.119,I.76-100,"nō","nāvī, nātus, 1, n.","to swim, 1.118.",4
+89,I.118,I.76-100,"gurges","itis, m.","a whirlpool, gulf, 3.421; flood, 2.497; wave, billow, 3.564; rolling, raging sea, abyss, 1.118; sea, ocean, 7.704.",20
+90,I.123,I.76-100,"imber","imbris, m.","a rain-storm; shower, 1.743, et al.; rain-cloud, 3.194; of sea-water, flood, 1.123; hail, 8.429.",13
+91,I.126,I.76-100,"stāgnum","ī, n.","a collection of standing water; a pond, pool, lake; sluggish water or stream, 6.323; pl., stāgna, ōrum, deep waters of the sea, 1.126; waters, 6.330. (stō)",9
+92,I.129,I.76-100,"ruīna","ae, f.","a falling down; fall, overthrow; convulsion, commotion, destructive force, 1.129; onset, shock, 11.613; pl., ruin, overthrow, destruction, 1.238; dare, trahere ruīnam, to fall in ruins, 2.310; bring destruction, 12.454. (ruō)",16
+93,I.130,I.76-100,"dolus","ī, m.","artifice, device, stratagem, 2.390; fraud, treachery, wile, 2.34; deception, craft, 1.684; secret or hidden crime, crafty misdeed, 6.567; (fig.), maze, 5.590; treacherous work or fabric, 2.264.",26
+94,I.131,I.76-100,"for","fātus sum, 1, dep. a. and n.","to speak, report, say, 1.131, 610; ger., fandī; cōpia fandī, opportunity of speaking, 1.520; fandō, by report, 2.81; while speaking, 2.6; p., fandus, a, um; subst., fandum, ī, n., that may be uttered; right, 1.543. (rel. to φημί)",1
+95,I.142,I.76-100,"citus","a, um","swiftly moved or driven; speedy, rapid, swift, 1.301; as an adv., 4.574. (cieo)",11
+96,I.143,I.76-100,"nītor","nīsus or nīxus sum, 3, dep. n.","to lean or rest upon, w. abl., 6.760; tread, walk upon, 2.380; to be borne upon, poised or balanced upon, 4.252; push, press, struggle forward or upward; ascend, 2.443.",10
+97,I.147,I.76-100,"rota","ae, f.","a wheel, 1.147; (fig.), circle or orbit of time, 6.748.",14
+98,I.147,I.76-100,"lēvis","e","(adj.), smooth; slippery, 5.328; polished, 5.91.",10
+98,I.147,I.76-100,"levis","e","(adj.), of little weight, light, 2.682, et al.; thin, slender, 10.817; delicate, tender, 12.207; light-armed, 11.868; fleeting, fleet, swift, flying, 1.147; flitting, airy, 10.663; sudden, 12.489; insignificant, small, 7.232; mean, 12.764.",26
+99,I.149,I.76-100,"saeviō","iī, ītus, 4, n.","to be fierce; to be furious, rage; be angry, 6.544. (saevus)",15
+100,I.150,I.76-100,"volō","voluī, velle, irreg. and def. a.","to will, wish, desire, intend, purpose, freq.; followed by the infin., with or without subject acc., by the subj., or by a noun in the acc.; wish, desire, 2.104, et al.; of the gods, order, decree, 5.50, et al.; be willing, 1.733; think of, intend, mean; of things, to signify, mean, 6.318.",46
+100,I.150,I.76-100,"volō","āvī, ātus, 1, n.","to fly, 1.300, et al.; of rumor, to be spread rapidly, noised or spread abroad, 3.121.",54
+101,I.152,I.101-125,"sileō","uī, 2, n. and a.","to be, keep, remain silent, 2.126; be hushed, calm, still, 1.164; w. acc., to pass over in silence; leave unmentioned, unsung, 10.793.",10
+102,I.153,I.101-125,"arrigō","rēxī, rēctus, 3, a.","to raise up; erect; bristle up, 10.726; (fig.), to excite, rouse; p., arrēctus, a, um, standing up, rising; erect, 5.426; bristling, 11.754; attentive, 1.152; animated, roused, encouraged, 1.579; ardent, intent; intense, 5.138; in fearful expectation, 12.731. (ad and regō)",21
+104,I.155,I.101-125,"pelagus","ī, n.","the sea; open sea, main, 1.138; flood, 1.246.",44
+105,I.155,I.101-125,"genitor","ōris, m.","he who begets; father, sire, 1.155, et al. (gignō)",57
+106,I.161,I.101-125,"sinus","ūs, m.","a fold, 1.320; (fig.), sail, canvas, 5.16; bosom, 4.686; a gulf or bay, 1.243; winding stream, a winding, 6.132; a winding, curvature, depth, 1.16l; curving billow, 11.626.",19
+107,I.161,I.101-125,"scindō","scidī, scissus, 3, a.","to cut asunder; split, 6.182; part, separate, divide, 1.161; tear, 9.478; (fig.), divide, 2.39.",13
+108,I.162,I.101-125,"rūpēs","is, f.","a rock, cliff, crag, ledge, freq.; quarry, 1.429. (rumpō)",18
+109,I.162,I.101-125,"geminus","a, um","(adj.), twin, 1.274, et al.; twofold, 6.203; double, two, 4.470; pl., geminī, ae, a, twin, 2.500; two, 1.162.",41
+110,I.164,I.101-125,"coruscus","a, um","adj. (coruscō), vibrating, tremulous, waving, 12.701; flashing, 1.164; gleaming, 2.172.",9
+111,I.165,I.101-125,"horreō","2, n. and a.","to bristle up or be bristling, 6.419; to bristle, 11.602; (fig.), to shudder, tremble, 2.12; shudder at, fear, dread, 4.209.",12
+112,I.165,I.101-125,"nemus","oris, n.","a wood, forest, or grove, 1.165, et al.",37
+113,I.162,I.101-125,"immineō","2, n.","to rest over; overhang, 1.165; to be at hand; approach, 9.515.",6
+114,I.165,I.101-125,"umbra","ae, f.","shade, shadow, 1.165, et al.; darkness, night, 2.693, et al.; a shade of doubt, 12.669; the shade of the dead, freq.; a ghost, 4.386; a phantom, 10.636; pl., umbrae, ārum, the Manes, shades, 3.638; freq.; sub umbrās, to the abode of the dead, 4.660.",69
+115,I.167,I.101-125,"intus","intus","(adv.), within, 1.294, et al. (in)",14
+116,I.169,I.101-125,"uncus","a, um","(adj.), hooked, crooked, 1.169; talon-shaped, hooked, 3.217.",8
+117,I.169,I.101-125,"morsus","ūs, m.","a biting; eating, 3.394; tooth, 7.112; fang, 2.215; gripe, hold, 12.782; fluke, 1.169. (mordeō)",8
+118,I.173,I.101-125,"artus","ūs, m.","a joint of the body of man or beast, 5.422; a limb, 2.173, et al.; part, member, 6.726; frame, body, 9.490. (generally in the pl., except in later writers)",23
+118,I.173,I.101-125,"artus","a, um","(adj.), straitened, narrow; close, tight, 1.293.",2
+119,I.175,I.101-125,"folium","iī, n.","a leaf, 1.175.",12
+120,I.179,I.101-125,"torreō","uī, tostus, 2, a. and n.","to burn, scorch, roast, parch, 1.179; rush, roll, 6.550; of a river bank, 9.105; p., torrēns, entis, subst., a torrent, 7.567.",3
+121,I.184,I.101-125,"cervus","ī, m.","a stag, deer, 1.184, et al.",7
+122,I.185,I.101-125,"armentum","ī, n.","collective (arō), beasts used for plowing; cattle, 2.499, et al.; of all kinds of animals, a herd, drove; of deer, 1.185; of horses, 3.540.",11
+123,I.186,I.101-125,"pāscō","pāvī, pāstus, 3, a. and n.","to furnish with food; to feed; rear, breed, 6.655; nourish, 1.608; (fig.), 1.464; let grow, 7.391; cherish, indulge, nourish, 10.627; pass. as dep., pāscor, pāstus sum, 3, a. and n., to graze, 1.186; feed upon, eat, 2.471; use for pasture, to pasture, 11.319.",10
+124,I.187,I.101-125,"arcus","ūs, m.","a bow, 5.500, et al.; the rainbow, 5.88.",23
+125,I.190,I.101-125,"sternō","strāvī, strātus, 3, a.","to spread out, spread, 1.700; stretch on the ground, strike down, slay, 1.190; cast down, prostrate, devastate, 2.306; make level, smooth, calm, 5.763; spread, cover, 8.719; strew, litter; overthrow, conquer, 6.858; pass. (in middle sense), sternor, ī, to stretch one's self, lie down, 3.509.",47
+126,I.191,I.126-150,"frōns","frondis, f.","a leaf, 3.449; leafage, foliage; leafy spray, branch, twig, bough, 2.249; a leafy crown, a garland, wreath, 4.148.",18
+126,I.191,I.126-150,"frōns","frontis, f.","the forehead, brow, 636; face, 11.238; 10.211; horns, 3.9, 627; front, 1.166; prow, 5.158.",16
+127,I.191,I.126-150,"turba","ae, f.","confusion, uproar, tumult, 5.152; a crowd, throng, 2.580; multitude, 6.305; herd, 1.191; flock, 3.233.",21
+128,I.192,I.126-150,"ingēns","entis","(adj.), great, freq.; huge, enormous, 2.400; monstrous, vast, 3.658; mighty, giant-, 1.99; immense, 5.423; great, massive, 1.640; ponderous, 6.222; vast, spacious, 6.81; lofty, towering, 4.89; stately, 1.446; exalted, great, 2.325; dread, 7.241; fearful, 5.523.",168
+129,I.193,I.126-150,"humus","ī, f.","the surface of the ground, the soil; the ground, 3.3, et al.; humī, locative, on the ground, upon the ground; to the earth, 1.193, et al.",22
+130,I.195,I.126-150,"hērōs","ōis, m.","a demigod; a hero, 6.192, et al.; an illustrious man, champion, hero, 5.453.",23
+131,I.198,I.126-150,"ignārus","a, um","(adj.), not knowing; freq.; unaware, ignorant, 11.154; often w. genit., ignorant of, 1.630; unsuspicious of, 2.106; unconscious, 9.345; not knowing the land; (pass.), unknown, a stranger, 10.706.",28
+132,I.200,I.126-150,"rabiēs","em, ē, f.","madness, frenzy, fury, fierceness, 2.357, et al.; of inanimate things, 5.802, et al.",7
+133,I.201,I.126-150,"sonō","sonuī, sonitus, 1, n. and a.","to sound, resound, freq.; murmur, 3.442, et al.; chirp, 12.477; rattle, 4.149; roar, 1.246; thunder, 2.113; (w. acc.), indicate by sound, betray, reveal, 1.328; boast, 12.529.",28
+134,I.202,I.126-150,"maestus","a, um","adj. (maereō), sad, sorrowful, 2.270, et al.; melancholy, depressing, 1.202; gloomy, mournful, 3.64; betokening grief, 11.35.",36
+135,I.206,I.126-150,"surgō","surrēxī, surrēctus, 3, a. and n.","to raise, prick up, 4.183; rise, spring up, arise, 3.513, et al.; as an enemy, 10.28; to swell, 9.30; to tower up, 10.725; increase, grow, rise, 4.274; impend, threaten, 4.43. Cf. subrigō. (sub and regō)",47
+136,I.210,I.126-150,"daps","dapis, f.","a feast, banquet, 1.210; food, viands, 1.706; flesh of sacrificial victims, 6.225; usually found in the pl., but the gen. pl. is not used.",16
+137,I.211,I.126-150,"vīscus","eris, n.","an inner part of the body; pl., vīscera, um, the entrails, vitals, 6.599; the flesh, 1.211; heart, bosom, 6.833.",12
+138,I.212,I.126-150,"secō","secuī, sectus, 1, a.","to cut, freq.; cut off, 4.704; engrave, carve, 3.464; cut through, cleave, 5.218, et al.; of the channel of a river, 8.63; sail through, pass, 8.96; speed, 6.899; shape out mentally, form, 10.107.",29
+139,I.212,I.126-150,"tremō","uī, 3, n. and a.","to tremble, quake, shake, quiver, 5.198; tremble at, fear, dread, 8.296.",22
+141,I.214,I.126-150,"herba","ae, f.","any grassy or herbaceous growth; grass, turf, 1.214, et al; fodder; herb, plant, 3.650; grassy land, pasture, meadow, 3.221; a plant.",19
+142,I.215,I.126-150,"pinguis","e","(adj.), fat, 1.215; well-fed, 1.635; fertile; reeking, 4.62; fat or rich with victims, 9.585.",14
+143,I.216,I.126-150,"mēnsa","ae, f.","a table, 1.640; dish, food, viands, 1.216; course of food, 1.723.",25
+144,I.223,I.126-150,"trīstis","e","(adj.), sad, sorrowful, 1.228, et al.; melancholy, woeful, mournful; dismal, gloomy, 4.243, et al.; grim, stern, 6.315; dire, 2.337; inauspicious, 11.259; fearful, 3.366; fatal, 5.411.",44
+146,I.230,I.126-150,"fulmen","inis, n.","lightning, 10.177; thunderbolt, 2.649, et al.; thunder, 1.230. (fulgeō)",19
+147,I.238,I.126-150,"fūnus","eris, n.","a funeral; freq., funeral rites, 4.308; death, carnage, 2.361; corpse, dead body, 6.150; deathbed, 9.491; funeral pyre, 11.189; calamity, 1.232; pl., fūnera, um, a corpse prepared for burial, 9.486.",33
+148,I.238,I.126-150,"sōlor","ātus sum, 1, dep. a.","to solace, console, 5.770; assuage, comfort, aid, relieve, 5.41; console one's self for, 1.239.",10
+149,I.244,I.126-150,"fōns","fontis, m.","a spring, fountain, 1.244; water, 2.686; living water, 12.119; lake, 4.512.",12
+150,I.246,I.126-150,"arvum","ī, n.","arable land; land; a field, 1.246; soil; plain, the ground, 12.237; the shore, 2.209; pl., arva, ōrum, fields, lands, country; waters, 8.695. (arō)",53
+151,I.251,I.151-175,"rīdeō","rīsī, rīsus, 2, n. and a.","to laugh or smile, 5.358; laugh at, deride, 5.181.",4
+152,I.256,I.151-175,"ōsculum","ī, n.","the lip, 1.256; kiss, 1.687. (1. ōs)",4
+153,I.256,I.151-175,"lībō","āvī, ātus, 1, a.","to taste, sip; to touch lightly; kiss, 1.256; pour out as a drink offering, 1.736; make a libation, 3.354; (w. acc. of the object on which the libation is poured), to pour libations on, 12.174.",13
+154,I.259,I.151-175,"sublīmis","e","(adj.), raised up, elevated, uplifted, 11.602; aloft; on high, 1.259; through the air, 1.415; on high, 6.720; to heaven, 5.255; of lofty soul, 12.788; (adv.), sublīme, loftily, aloft, on high, 10.664.",15
+155,I.264,I.151-175,"ferōx","ōcis","adj. (ferus), wild; impetuous; ferocious, fiery, fierce, 5.277; warlike, martial; proud, 12.895.",10
+156,I.264,I.151-175,"contundō","tudī, tūnsus, or tūsus, 3, a.","to pound thoroughly; beat, bruise, pound; (fig.), subdue, conquer, 1.264.",1
+157,I.267,I.151-175,"cognōmen","inis, n.","a name common to a family; a surname; name, 1.267.",13
+158,I.271,I.151-175,"albus","a, um","(adj.), white, 3.392; blank, undecorated, 9.548; subst., album, ī, n., whiteness, white.",23
+159,I.273,I.151-175,"dōnec","dōnec","(adv.), as long as, while; until, till at length, w. indic., 1.273; w. subj., 11.860. (contract. fr. dōnicum, until)",14
+160,I.275,I.151-175,"lupus","ī, m.","a wolf, 3.428, et al.",8
+161,I.275,I.151-175,"fulvus","a, um","(adj.), reddish or tawny yellow; yellow, 5.374; tawny, 2.722; brown, 11.751; glowing, bright, 12.792.",19
+162,I.278,I.151-175,"mēta","ae, f.","a meta; one of the cone-shaped pillars, three of which terminated each end of the spina in the Roman circus, and marked the turning point of the course; a turning point, goal, 5.129; (fig.), limit, extremity, end, bound, 1.278; 8.594; meridian, zenith, 5.835; mētae mortis, the bounds of death; i.e., fixed by death, 12.546. (mētior)",10
+163,I.280,I.151-175,"fatīgō","āvī, ātus, 1, a.","to weary, tire, 1.316; exhaust, 11.306; goad, 9.610; harass, vex, pursue, 6.533; infuriate, 9.63; rouse, 4.572; beat up, hunt, scour, 9.605; disturb, confound, 1.280; strike upon, beat, 10.304; demand with importunity, clamor for, 7.582.",14
+164,I.286,I.151-175,"orīgō","inis, f.","a source, origin, beginning, 1.372; descent, lineage, birth, 1.286; source, root, founder, 12.166. (orior)",10
+165,I.291,I.151-175,"saeculum","ī, n.","a generation, race; century, period, age, time, 1.291, et al.",8
+166,I.292,I.151-175,"cānus","a, um","(adj.), white, of the hair and beard; whitened, hoary, of frost and cold; of the sea, foaming, hoary, 8.672; gray-haired, venerable; hoary, 1.292.",4
+167,I.293,I.151-175,"dīrus","a, um","(adj.), accursed; portentous; fearful, dreadful, awful, dire, cruel, horrible, freq.; accursed, 2.261; unhallowed, impious, 6.373; foul, carrion, 3.262; wild, furious, ardent, 9.185; pl., dīra (adv.), fearfully, 10.572.",33
+168,I.295,I.151-175,"vinciō","vinxī, vinctus, 4, a.","to bind, 11.81; bind round, 1.337; wreathe, bind round, 12.120.",4
+169,I.296,I.151-175,"nōdus","ī, m.","a knot, 1.320, et al.; of a tree, 11.553; bond, 1.296; coil, 2.220; (fig.), difficult point; center of strife, 10.428.",14
+170,I.303,I.151-175,"gignō","genuī, genitus, 3, a.","beget, 10.848, et al.; bear, bring forth, 1.618, et al.; p., genitus, a, um, w. abl. of source, begotten of, born of, 9.642; son of, 1.297. (γίγνομαι, become)",14
+172,I.301,I.151-175,"āla","ae, f.","a wing, 1.301; the feather of an arrow, 9.578; the wing of an army; cavalry, 11.730; troop, battalion, 11.604; horsemen, mounted huntsmen, 4.121.",33
+173,I.305,I.151-175,"almus","a, um","adj. (alō), giving nourishment; fostering, genial, blessing, blessed, benign, 1.306; fruitful; gracious, kind, kindly, propitious, 7.774.",18
+174,I.312,I.151-175,"gradior","gressus sum, 3, dep. n.","to step, walk, go, 1.312; move, advance, 10.572.",10
+175,I.312,I.151-175,"comitor","ātus sum, 1. dep. a.","to accompany, attend, follow, 3.660; p., comitātus, a, um, attended, accompanied, 1.312, et al. (comes)",21
+176,I.314,I.176-200,"obvius","a, um","adj. (ob and via), in the way; presenting one's self or itself; meeting, 1.314; against, 6.880; opposing, 9.56; in the way of; exposed to, 3.499; obvius fierī, to encounter, meet, 10.380.",18
+177,I.317,I.176-200,"volucer","cris, cre","adj. (1. volō), having the power to fly; of birds or winged creatures, swift-winged, 5.488; of things, winged, fleeting, 2.794; swift, 1.317; subst., volucris, is, f., a bird, 3.262.",12
+179,I.318,I.176-200,"suspendō","pendī, pēnsus, 3, a.","to hang up, 6.859; hang, 1.318; p., suspēnsus, a, um, suspended, scarcely touching the ground or water, 7.810; hanging, 8.190; as adj., in suspense, uncertain, doubtful, in doubt, 6.722; anxious, 2.729; filled with awe, 3.372.",10
+180,I.319,I.176-200,"coma","ae, f.","the hair, 1.319; mane, 10.726; (fig.), foliage, leafy crown, 2.629; leaves, branches.",25
+181,I.320,I.176-200,"genū","ūs, n.","a knee, 1.320, et al. (γόνυ)",10
+182,I.321,I.176-200,"iuvenis","e","(adj.), young; in the vigor or flower of life; young, youthful, freq.; subst., iuvenis, is, c., a young person, youth; young man, 1.321, et al.",78
+183,I.323,I.176-200,"pharetra","ae, f.","a quiver, 1.323, et al.",13
+184,I.323,I.176-200,"macula","ae, f.","a spot, 5.566, et al.",3
+185,I.325,I.176-200,"ōrdior","ōrsus sum, 4, dep. a. and n.","to weave, spin; to begin; begin to speak; begin, 1.325.",9
+186,I.335,I.176-200,"dīgnor","ātus sum, 1, dep. a.","(w. acc. and abl.), to deem worthy of, 1.335; (w. inf.), think, fit, deign, 4.192; p., dīgnātus, a, um, with pass. meaning, deemed worthy of, honored by, 3.475. (dīgnus)",2
+187,I.337,I.176-200,"purpura","ae, f.","purple color, purple; purple border or fringe, 5.251. (πορφύρα, the purple-fish)",2
+188,I.341,I.176-200,"germānus","a, um","(adj.), of the same parentage; particularly, of the same father; own; subst., germānus, ī, m., own brother; brother, 1.341, et al.; germāna, ae, f., own sister; sister, 4.478.",12
+189,I.349,I.176-200,"caecus","a, um","(adj.), blind, freq.; blinded mentally, reckless, 1.349; 11.781; with fury, mad, 2.357; of things which baffle or obstruct the sight or the mind, dark, 3.200; hidden, covered, 1.536; secret, private, 2.453; from behind, 10.733; uncertain or dim, 9.518; uncertain, 6.30; aimless, 4.209; blinding, 12.444; of uncertain origin, 12.617; of sound, indistinct, subdued, 10.98; obscure, 12.591.",34
+190,I.352,I.176-200,"vānus","a, um","(adj.), containing nothing, empty; devoid of truth, deceitful, false, 1.352; unavailing, 8.259; groundless, 4.12; ignorant, 10.631; subst., vāna, ōrum, n., useless things, 2.287; (adv.), vāna, vainly, 11.854.",1
+191,I.352,I.176-200,"lūdō","lūsī, lūsus, 3, n. and a.","to play, frolic, sport, 1.397, et al.; play with dice, 9.336; make sport of, mock, delude, deceive, 1.352; make one's sport, 11.427.",12
+192,I.357,I.176-200,"celerō","āvī, ātus, 1, a.","to speed, hasten, 1.357, et al. (celer)",8
+193,I.359,I.176-200,"ignōtus","a, um","(adj.), unknown, 1.359; strange, 5.795; not well known, but little known, 11.527.",19
+194,I.359,I.176-200,"pondus","eris, n.","weight, 5.447; burden, load, 6.413; a stone, a shot, 11.616. (pendō)",16
+195,I.359,I.176-200,"aurum","ī, n.","gold, 1.349, et al.; (meton.), a golden goblet, 7.245; golden bit, 7.279.",77
+196,I.364,I.176-200,"fēmina","ae, f.","a woman, 1.364.",9
+197,I.367,I.176-200,"solum","ī, n.","the bottom or ground of anything; soil, earth, ground, 1.367, et al.; land, 3.698; foundation, 10.102; the water beneath a ship, as its support; the water, sea, 5.199; support, table, 7.111.",30
+198,I.378,I.176-200,"carpo","carpsī, carptus, 3, a.","to pluck or pull, crop, browse upon, eat, graze; cause to graze, pasture; gather, 6.146; (fig.), catch, breathe, enjoy, 1.388; consume, 4.2; devour, waste, 4.32; carpere prāta, etc., to course over.",11
+199,I.389,I.176-200,"līmen","inis, n.","a threshold, 2.242, et al.; (meton.), door, gate, portal, 2.480; a dwelling, abode, palace, 1.389; realm, 6.696; border, limit, 10.355; the line where the race begins or ends, the “calx,"" the starting point, 5.316; in līmine, near at hand, in sight, 7.598.",68
+200,I.392,I.176-200,"augurium","iī, n.","the business of the augur; augury, divination, 1.392; an augury, omen, portent, 2.703; oracle, 3.89; presage, 5.523. (augur)",11
+201,I.394,I.201-225,"āles","itis (gen. pl. sometimes alituum, 8.27)","adj. (āla), winged, swift, 5.861, et al.; subst. c., a bird, 1.394; an owl, 12.862.",11
+202,I.399,I.201-225,"pūbēs","is, f.","the groin, middle, 3.427; the youthful population; youth, young men; youthful band, 1.399; brood, offspring, 6.580.",20
+202,I.399,I.201-225,"pūbēs","eris","(adj.), grown up, pubescent; of plants, mature, full grown, 12.413.",1
+203,I.402,I.201-225,"fulgeō","fulsī, 2, and fulgō, 3, n.","to shine brightly; flash, gleam, glance, 5.562.",11
+204,I.404,I.201-225,"spīrō","āvī, ātus, 1, n. and a.","to breathe, blow, 5.844; palpitate, 4.64; pant; breathe heavily, 7.510; heave, boil, 10.291; of odors, breathe forth, exhale, emit; w. acc., 1.404; p., spīrāns, antis, lifelike, breathing, 6.847.",12
+206,I.412,I.201-225,"amictus","ūs, m.","a veiling or draping of the person; an upper garment, covering; cloak, mantle, veil, 3.405; 5.421. (amiciō)",11
+207,I.415,I.201-225,"revīsō","3, a. and n.","to look at again; visit again, return to see; return to, 2.760; revisit, 3.318.",11
+208,I.417,I.201-225,"caleō","uī, 2, n.","to be warm; to glow, 1.417.",2
+209,I.417,I.201-225,"serta","ōrum, n.","things entwined; garlands, festoons, wreaths, 1.417, et al. (sero, serere, serui, sertus)",4
+210,I.425,I.201-225,"sulcus","ī, m.","a furrow, 6.844; furrow, 1.425; track, train, 2.697.",5
+211,I.427,I.201-225,"fodiō","fōdī, fossus, 3, a.","to dig; pierce, 6.881.",1
+212,I.429,I.201-225,"decus","oris, n.","that which is becoming; grace, ornament, decoration, 1.429; glory, honor, distinction, 2.89; pride, 10.858; beauty, 1.592; dignity, honor, 5.174; an honor, honorable gift, 12.83. (decet)",23
+213,I.430,I.201-225,"flōs","flōris, m.","a blossom, flower, 6.708; flower, freshness, 7.162; down, 8.160; beauty, perfection, glory, flower, 8.500.",10
+214,I.436,I.201-225,"ferveō","ferbuī, 2, n., and fervō, fervī, 3, n.","to boil; (fig.), to blaze, be bright, 4.567; flash, 8.677; glow, 11.195; stir, be alive, teeming, 4.407; move, speed on, 1.436; rage, 9.693.",1
+215,I.438,I.201-225,"suspiciō","spexī, spectus, 3, a. and n.","to look up to, 6.668; behold, see; look upon with wonder; admire; survey, 1.438. (sub and speciō, look)",6
+216,I.441,I.201-225,"lūcus","ī, m.","a consecrated wood; sacred grove, 6.259, et al.; in general, a grove, wood, forest.",35
+217,I.448,I.201-225,"nectō","nexuī, or nexī, nexus, 3, a.","to tie, bind, fasten, 4.239; bind together or round, 1.448; join, unite, of soul and body, 4.695; (fig.), of arguments, 9.219.",7
+218,I.449,I.201-225,"foris","is, f.","a door; often in the pl. with reference to double doors, 1.505; door or entrance. (rel. to θύρα)",11
+219,I.453,I.201-225,"lūstrō","āvī, ātus, 1, a.","to purify by atonement, 3.279; go round the fields with the victims; hence to bless, ask for a blessing on; go or dance around an altar or the image of a god, 7.391; traverse, pass across, around, or over, 1.608; pass in review, parade before, 5.578; run through, 2.528; search, 1.577; observe, survey, 1.453; watch, mark, 11.763; of the sun, illuminate, 4.607. (lūstrum)",29
+220,I.458,I.201-225,"ambō","ae, ō","(adj.), both, 1.458.",25
+221,I.461,I.201-225,"ēn","ēn","(interj.), lo! behold! with nom., 1.461; in indignation, 4.597.",17
+222,I.468,I.201-225,"crista","ae, f.","a crest, plume, 3.468; helmet, 7.185.",17
+223,I.470,I.201-225,"nix","nivis, f.","snow, 4.250.",3
+224,I.473,I.201-225,"bibō","bibī, 3, a.","to drink, 1.473, et al.; (fig.), take in, drink in, 1.749; of weapons, 11.804.",4
+225,I.477,I.201-225,"hasta","ae, f.","a spear, 2.50, and freq.; hasta pūra, a headless spear, 6.760; pampinea hasta, a thyrsus, 7.396.",72
+226,I.478,I.226-250,"pulvis","eris, m., rarely f.","dust, 2.273; soil, ground, earth; dusty plain, 7.163.",13
+227,I.480,I.226-250,"crīnis","is, m.","the hair, 1.480; train of meteors, 5.528; (often in the pl.), the hairs of the head, the hair.",28
+228,I.482,I.226-250,"pandō","pandī, passus or pānsus, 3, a.","to spread out or open, 7.641; unfurl, 3.520; extend, expose, 6.740; break through, open, 2.234; unbind, dishevel, 1.480; (fig.), disclose, declare, explain, reveal, 3.179.",25
+229,I.489,I.226-250,"niger","gra, grum","(adj.), black; dark, swarthy, dusky, 6.134; gloomy.",17
+230,I.490,I.226-250,"lūna","ae, f.","the moon, 1.742, et al.; moonlight, 2.340, et al. (rel. to lūceō)",12
+231,I.495,I.226-250,"stupeō","uī, 2, n. and a.","to be amazed or dazed; to be bewildered, confounded, lost in wonder, 1.495; wonder at, 2.31.",8
+232,I.497,I.226-250,"caterva","ae, f.","a troop, squadron, band, 2.370; crowd, throng, multitude, 2.40; flock, 11.456.",15
+233,I.499,I.226-250,"chorus","ī, m.","a dance in a circle; a dance; a company of singers or dancers, choir, train, 1.499; band, troop, 5.581; festival, 11.737.",13
+234,I.500,I.226-250,"glomerō","āvī, atus, 1, a.","to gather into a ball or mass; roll, whirl, 3.577; collect; assemble, gather, 2.315; (pass.), glomerārī, in mid. signif., to throng, gather; troop, flock, 1.500. (glomus, ball)",12
+235,I.506,I.226-250,"sīdō","sīdī, 3, n.","to seat one’s self; perch, alight, 6.203.",1
+236,I.513,I.226-250,"obstipēscō","stipuī (stupuī), 3, inc. n.","to become stupefied; to be astonished, amazed, 1.613.",16
+237,I.531,I.226-250,"ūber","eris, n.","a teat, an udder, 3.392; the breast, 5.285; breast, bosom, 3.95; (meton.), richness, fertility, fruitfulness, productiveness, 1.531.",10
+237,I.531,I.226-250,"ūber","eris","(adj.), fruitful, fertile, 3.106. (compar., ūberior; superl., ūberrimus), (ūber)",4
+238,I.534,I.226-250,"avis","is, f.","a bird, 6.193, et al.",10
+239,I.539,I.226-250,"oleō","uī, 2, n. and a.","to emit a smell; to smell of; p., olēns, entis, smelling; fragrant, 11.137; strong-scented.",2
+240,I.552,I.226-250,"aptō","āvī, ātus, 1, a.","to fit, join, or fasten to; with acc. and dat., 8.721; put on, 2.390; get ready, prepare, 10.259; fit out, prepare, 1.552; with abl. of manner, 8.80. (aptus)",16
+241,I.552,I.226-250,"stringō","strīnxī, strīctus, 3, a.","to draw tight, bind; of a sword, draw out, draw, 2.334; graze, touch lightly, go near, 5.163; trim up, cut, 1.552; (fig.), touch the mind, 9.294.",1
+242,I.557,I.226-250,"fretum","ī, n.","a frith or strait; water; the sea, 1.557.",8
+243,I.564,I.226-250,"compellō","pulī, pulsus, 3, a.","to drive together; compel; force, drive, 1.575.",1
+243,I.564,I.226-250,"compellō","āvī, ātus, 1, a.","to address, accost, speak to, 1.581; greet, salute, 3.299; chide, upbraid, 5.161.",11
+244,I.589,I.226-250,"decōrus","a, um","adj. (decor), fit, proper, becoming, 5.343; graceful, beautiful, 1.589; adorned, 5.133; shining, 11.194.",11
+245,I.590,I.226-250,"iuventa","ae, f.","youthfulness; the age of youth; youth, 1.590, et al. (iuvenis)",9
+246,I.592,I.226-250,"ebur","oris, n.","ivory, 1.592.",4
+247,I.593,I.226-250,"flāvus","a, um","(adj.), yellowish; yellow, 7.31; gold-tinted, golden, 1.592; 4.559; yellow-haired, golden-haired; pale green, 5.309.",7
+248,I.597,I.226-250,"miseror","ātus sum, 1, dep. a.","to express, manifest, or feel pity for; compassionate, pity, 1.597. (miser)",16
+249,I.601,I.226-250,"spargō","sparsī, sparsus, 3, a.","to scatter, strew; cast in fragments, 3.605; disperse, 1.602; shower, hurl, 12.51; sprinkle, 4.512; besprinkle, bedew, stain, 8.645; infuse, 4.486; (fig.), spread abroad, disseminate, 2.98; bring over or upon, diffuse, 7.754.",34
+250,I.604,I.226-250,"cōnscius","a, um","adj. (com- and sciō), having complete knowledge; conscious, 5.455; conscious of, 2.141; conscious of guilt, guilty, 2.99; witnessing (w. dat.), 4.167; having knowledge in common, or a mutual understanding; confederate, 2.267.",13
+251,I.607,I.251-254,"fluvius","iī, m.","a stream; river, 1.607; water, fountains, abundant water; secundō fluviō, by the favoring stream, with or down the stream, 7.494. (fluō)",25
+252,I.611,I.251-254,"laevus","a, um","(adj.), the left, 10.495; (situated) on the left, 3.412; the left, 3.420; (fig.), ill-starred, unpropitious, baleful, 10.275; infatuated, blind, 2.54.",15
+253,I.623,I.251-254,"stirps","stirpis, f.","the lower part of the trunk together with the roots of plants and trees; the extremity, end; root; trunk, tree, 12.770; (fig.), origin, descent, lineage, stock, race, 1.626, et al.",19
+254,I.629,I.251-254,"dēmum","dēmum","(adv.), at length, at last, 1.629; at least, indeed, especially. (dē with n. superl. ending -mum, hence, perhaps meaning downmost)",11
+255,II.12,II.1-25,"lūctus","ūs, m.","a mourning; sorrow, grief, woe, lamentation, 2.298, and freq.; personif., 6.274. (lūgeō)",1
+256,II.16,II.1-25,"intexō","uī, tus, 3, a.","to weave into or in; work in, inweave, 5.252; festoon, wreathe, entwine; cover, 6.216; frame, 2.16.",5
+257,II.17,II.1-25,"voveō","vōvī, vōtus, 2, a.","to make a pledge or vow to a deity; vow, 10.774; consecrate, devote, 11.558.",3
+258,II.18,II.1-25,"sortior","ītus sum, 4, dep. n. and a.","to cast lots; obtain, get, take by lot, 3.634; share, 8.445; distribute, 3.510; assign, allot, appoint, 3.376; select, choose, 2.18; 12.920. (sors)",8
+259,II.18,II.1-25,"fūrtim","fūrtim","(adv.), by stealth, secretly, 2.18. (fūr)",6
+260,II.20,II.1-25,"uterus","ī, m.","the womb, belly, 11.813; cavity, 2.38.",8
+261,II.23,II.1-25,"carīna","ae, f.","the keel of a ship, ship, 4.398; a boat, 6.391; frame, timber, 5.682.",22
+262,II.25,II.1-25,"reor","ratus sum, 2, dep. a.","to reason; reckon; think, believe, 3.381; p., ratus, a, um, active, having thought, believing, 11.712; (pass.), determined by reckoning, settled, fixed, 9.104; 10.629.",16
+263,II.33,II.1-25,"locō","āvī, ātus, 1, a.","to place, put, 1.213, et al.; lay, 1.428; found, 1.247. (locus)",17
+264,II.37,II.1-25,"ūrō","ussī, ūstus, 3, a.","to burn; burn up, 2.37; inflame with love, 4.68; trouble, disturb, torment, 1.662.",5
+265,II.38,II.1-25,"latebra","ae, f.","a hiding place; recess, lodgment, retreat, 12.389; usually in pl., latebrae, ārum, an ambuscade; covert, retreat; cavern, 3.424; recess, cavity, 2.38; the hatches of a ship, the hold, 10.657. (lateō)",8
+266,II.46,II.1-25,"māchina","ae, f.","a machine, fabric, engine, 2.46, et al.",4
+267,II.48,II.1-25,"error","ōris, m.","a wandering, 1.755; a winding maze, 5.591; mistake, error, 3.181; deception, 2.48. (errō)",10
+268,II.50,II.1-25,"validus","a, um","adj. (valeō), strong, 1.120; vigorous, powerful, 5.15; mighty, 2.50; heavy, massive.",16
+269,II.51,II.1-25,"curvus","a, um","(adj.), curved, bent, bending, 2.51; winding, 2.748; crooked.",17
+270,II.55,II.1-25,"foedō","āvī, ātus, 1, a.","to make foul; defile, pollute, 3.227; (fig.), disfigure, mutilate, 2.286; lacerate, wound, 12.871; break, tear in pieces, destroy, 2.55. (foedus)",11
+271,II.57,II.1-25,"ecce","ecce","(interj.), see! lo! behold! w. a proposition, 5.793. (en and ce)",37
+272,II.58,II.1-25,"pāstor","ōris, m.","one who feeds; herdsman, shepherd, 2.58. (pāscō)",11
+273,II.60,II.1-25,"struō","strūxī, strūctus, 3, a.","to place side by side or upon; to pile up; build, erect, 3.84; cover, load, 5.54; arrange, 1.704; like īnstruō, to form or draw out a line of battle, 9.42; (fig.), to plan, purpose, intend, 4.271; bring about, effect, 2.60. (rel. to sternō)",13
+274,II.63,II.1-25,"iuventūs","ūtis, f.","youthfulness; the age of youth; collective, young people, the youth; warriors, 1.467. (iuvenis)",25
+275,II.67,II.1-25,"namque","namque","(conj.), for indeed, since indeed, for, 4.633; affirmative, indeed, 10.614.",42
+276,II.68,II.1-25,"turbō","āvī, ātus, 1, a.","to stir up, confuse, disturb, 3.449; scatter, 1.395; overthrow, 11.796; agitate, 4.566; perplex, 1.515; enrage, anger, 8.435; madden, 7.767; without obj. acc., to make disturbance, uproar, 6.857, et a1.; reflex., to be troubled, 6.800. (turba)",7
+276,II.68,II.1-25,"turbō","inis, m.","a tornado, whirlwind; storm, tempest, 1.442; whirling cloud, 3.573; wind accompanying the lightning; lightning-blast, 1.45; 6.594; whirling or stormy force, 11.284, et al.; a whirling top, a child's top, 7.378. (cf. turba)",17
+277,II.69,II.1-25,"heu","heu","(interj.), alas! ah! oh! 2.289, et al.",34
+278,II.71,II.1-25,"super","super","(adv.), above, 4.684, et al.; above, from above, 10.384; moreover, 4.606; besides, 1.29; more than enough, 2.642; remaining, surviving, left (with ellipsis of esse), 3.489, et al.; still (or above), 4.684; of time, in, during, 9.61.",33
+279,II.75,II.1-25,"memorō","āvī, ātus, 1, a.","to call to memory; mention, rehearse, relate, 1.8; say, speak, 3.182; name, 1.327; mention proudly, boast of, 5.392. (memor)",27
+280,II.77,II.26-50,"equidem","equidem","(adv.), indeed, at least, certainly, surely; w. first person, for my part, 1.238. (demonstr. e or ec and quidem)",31
+281,II.82,II.26-50,"inclutus","a, um","(adj.), famous, glorious, renowned, 2.82. (rel. to clueō, to be heard of; κλύω, hear; κλυτός, renowned)",6
+282,II.84,II.26-50,"īnsōns","sontis","(adj.), innocent, guiltless, unoffending, 2.84.",7
+283,II.96,II.26-50,"prōmittō","mīsī, missus, 3, a.","to let go, send forth or down; promise, 4.228; vow, pledge, 2.96; p., prōmissus, a, um, promised, betrothed, 12.31.",17
+284,II.96,II.26-50,"ultor","ōris, m.","an avenger, 2.96; translated adjectively, avenging, 6.818. (ulcīscor)",6
+285,II.97,II.26-50,"hinc","hinc","(adv.), from this place, from here, hence, 3.111; from that place, hence, thence, 3.707; from that or this time (others, from this thing), 2.97; henceforth, 2.148; for ab hōc or ab hīs, 9.763; then, thereupon, 1.194; hinc — hinc, on this side — on that, here — there, 4.40; hinc atque hinc, on both sides, on either side, 1.162. (hīc)",86
+286,II.101,II.26-50,"nēquīquam","nēquīquam","(adv.), in vain, to no purpose, 2.515.",36
+287,II.109,II.26-50,"fessus","a, um","adj. (rel. to fatīscō), faint, wearied, tired; spent, exhausted, feeble, 2.596; languid; (fig.), strained, sea-tossed, 1.168; afflicted, 3.145; wearied with, exhausted by, w. gen., 1.178; w. abl., 5.715.",33
+288,II.120,II.26-50,"gelidus","a, um","adj. (gelū), frosty, ice-cold; cold, cool, icy, chilling, 2.120; chilled, 3.30.",19
+289,II.121,II.26-50,"ōs","ōris, n.","the mouth, 1.559; visage, face, countenance, 12.101; language, speech, words, 2.423; an entrance, door, 6.53; opening, 2.482; ōs summum, the lips, 1.737; pl., ōra, features, face, visage, form, countenance, 4.499; images, 4.62; ante ōra, before one's face, 12.82.",142
+289,II.121,II.26-50,"os","ossis, n.","a bone, 2.121.",32
+290,II.122,II.26-50,"vātēs","is, c.","a prophet, soothsayer, augur, seer, 3.433; prophetess, 3.187; poet, bard, 6.662; priest, 11.774.",36
+291,II.133,II.26-50,"vitta","ae, f.","a fillet, band, or chaplet for the head, especially for religious occasions, 5.366, et al.",18
+292,II.134,II.26-50,"lētum","ī, n.","death, destruction, 2.134, et al. (cf. dēleō)",32
+293,II.135,II.26-50,"lacus","ūs, m.","a lake, pool, source, 8.74; fen, 2.135.",15
+294,II.143,II.26-50,"mortālis","e","adj. (mors), subject to death, mortal, 10.375; of mortal nature, lineage, or descent; earthly, human, 1.328; made by man, mortal, 12.740; subst., mortālēs, ium, c., mortals, men, mankind, 2.142; mortālia, ium, n., human affairs; fortunes, woes, 1.462.",14
+296,II.146,II.26-50,"exuō","uī, ūtus, 3, a.","to put off; take off, lay aside, 1.690; unclasp, unbuckle, 9.303; put away, change, 4.319; divest; lay bare, strip, bare, 5.423; w. abl. of the thing from which, free from, 2.153, et al. (cf. induō)",10
+297,II.155,II.26-50,"ēnsis","is, m.","a sword, 2.393, et al.; knife, 2.155.",62
+298,II.155,II.26-50,"nefandus","a, um","adj. (nē and farī), not to be spoken; impious, execrable, accursed, abominable, 5.785; perfidious, 4.497; subst., nefandum, ī, n., wrong, 1.543.",8
+299,II.157,II.26-50,"fās","indecl. n.","divine right or law; duty, justice, 3.55; privilege, 9.96; as predicate with esse, permitted, lawful, proper, incumbent, 1.77, et al. (rel. to for)",21
+300,II.165,II.26-50,"vellō","vellī or vulsī, vulsus, 3, a.","to pluck; pull up, 3.28; wrench, tear away, 2.480; tear down, 9.506; move, 11.19; seize, lift, 10.381; vellere sīgna, pluck up the standards from the ground; move the camp, depart.",10
+301,II.167,II.26-50,"effigiēs","ēī, f.","something molded or fashioned; a figure, likeness, or image, 3.148. (effingō)",7
+302,II.167,II.26-50,"cruentus","a, um","(adj.), bloody, blood-stained, 1.296; covered with blood, 10.498.",22
+303,II.169,II.26-50,"retrō","retrō","(adv.), back, backwards, 2.753. (re-)",15
+304,II.171,II.26-50,"mōnstrum","ī, n.","the thing which warns; an omen, a portent, 3.26; supernatural token, sign, 12.246; a prodigy, marvel, wonder, terror, 3.583; monster, 2.245. (moneō)",31
+305,II.184,II.51-75,"nefās","indecl. n.","that which is contrary to divine law; sin, impiety, wrong, 2.719; wickedness, guilt, crime, 2.184; a ghastly deed, 10.497; impious or guilty word, 2.658; mischief, 7.386; dishonor, disgrace, shame, 8.688; (exclamatory), fearful sight! 7.73; fearful penalty! 7.596; (of a person), a monster, wretch, 2.585; (adj.), horrible, 3.365; nefās est, it is unlawful, wicked, impious, 6.391.",18
+306,II.185,II.51-75,"immēnsus","a, um","unmeasured; boundless; vast, immense, 2.204; mighty, 3.672; insatiate, unbounded, 6.823.",11
+307,II.194,II.51-75,"nepōs","ōtis, m.","a grandson, 2.702; pl., nepōtēs, um, grandchildren; posterity, descendants, 2.194.",18
+308,II.198,II.51-75,"domō","uī, itus, 1, a.","to tame, train, vanquish, 2.198; subdue, 6.80; till, 9.608.",4
+309,II.201,II.51-75,"sacerdōs","ōtis, c.","a priest or priestess, 2.201; 1.273; a poet or bard (as priest of the Muses), 6.645. (sacer)",26
+310,II.202,II.51-75,"sollemnis","e","adj. (sollus, whole, and annus), coming at the completion of a year; annual; stated; ceremonial; religious, solemn, 5.53; festive, 2.202; customary, 12.193; subst., sollemne, is, n., pl., sollemnia, ium, solemnities, sacrificial rites, offerings, 5.605.",3
+311,II.202,II.51-75,"taurus","ī, m.","a bull, steer, ox, bullock, 2.202, et al.",21
+312,II.202,II.51-75,"māctō","āvī, ātus, 1, a.","to magnify by worship; to sacrifice, immolate, 2.202; slay, slaughter, 8.294, et al.",13
+313,II.204,II.51-75,"anguis","is, m. and f.","a snake of any kind, serpent, 2.379; hydra, 8.300.",12
+314,II.205,II.51-75,"incumbō","cubuī, cubitus, 3, n.","to lay one's self upon; lean or recline upon; (w. dat.), lie on or stretch over, 2.205; fall upon, 1.84; bend to, ply, 5.15; hasten, urge, press on, 2.653; overhang, 2.514; press or bend toward, 5.325; (w. ad and acc.), lean, hang, incline, 8.236; absolute, bend to, urge on the work, 4.397.",20
+315,II.209,II.51-75,"sonitus","ūs, m.","a sounding; noise, 2.732, et al.; roaring, 2.209; thunder, 6.586. (sonō)",32
+316,II.209,II.51-75,"spūmō","āvī, ātus, 1, n. and a.","to foam, 3.534, et al. (spūma)",12
+317,II.211,II.51-75,"lambō","ī, itus, 3, a.","to lick, 2.211; of flame, touch, lick, 3.574.",5
+318,II.212,II.51-75,"vīsus","ūs, m.","a seeing; vision, sight, 4.277; a phenomenon, spectacle, appearance, sight, 2.212; aspect, 11.271; prodigy, 3.36. (videō)",12
+319,II.214,II.51-75,"amplector","amplexus sum, 3, dep. a.","to embrace, clasp, 3.607; wind, pass around, 5.86; encircle, coil around, 2.214; (fig.), comprehend, embrace, in description.",12
+320,II.215,II.51-75,"implicō","āvī or uī, ātus or itus, 1, a., ","to fold in; involve, entangle, entwine, 2.215; to wheel, 12.743; (w. dat.), bind to, 11.555; infuse, 1.660; insinuate, mingle, 7.355; sē implicāre, cling to, 2.724.",13
+321,II.218,II.51-75,"collum","ī, n.","the neck of men and animals, 1.654, et al.; of a plant, 9.436; pl., the neck, 11.692.",28
+322,II.223,II.51-75,"saucius","a, um","(adj.), wounded, 2.223; pierced, 4.1.",8
+323,II.224,II.51-75,"excutiō","cussī, cussus, 3, a.","to shake out or off, 2.224; throw or cast down, 1.115; cast out, 10.590; drive away, 3.200; expel, 7.299; shake out, uncoil, 3.267; uncoil and arrange (set the sails), 3.683; deprive of, 6.353; throw aside, break, 12.158; hurry forth, call forth, 9.68. (ex and quatiō)",22
+324,II.230,II.51-75,"sacrō","āvī, ātus, 1, a.","to set apart to the gods; devote, consecrate, 2.502; w. acc. and dat., devote, 10.419. (sacer)",12
+325,II.225,II.51-75,"lāpsus","ūs, m.","a slipping; gliding, 2.225; gliding movement, 2.225; turning, movement, 2.236; descent, flight, 3.225; course, 4.524. (1. lābor)",5
+326,II.227,II.51-75,"clipeus","ī, m., and clipeum, ī, n.","a round shield; a shield, 2.227, et al.",1
+327,II.229,II.51-75,"pavor","ōris, m.","a trembling, panic, fear, terror, 2.229; throbbing; eager, trembling, anxiety, 5.138. (paveō)",5
+328,II.235,II.51-75,"accingō","cīnxī, cīnctus (pass. inf., accingier, 4.493), 3, a.","to gird on; gird, 2.614; arm, equip, 6.184; make one’s self ready; prepare, 1.210; resort to, 4.493. (ad and cingō)",11
+329,II.237,II.51-75,"fūnis","is, m.","a rope, 2.239, et al.; cord, string, 5.488.",10
+330,II.245,II.76-100,"sistō","stitī, status, 3, a. and n.","to cause to stand, put, set, place, w. abl. of place, 2.245, et al.; place before one, bring, 4.634; fix, plant, 10.323; stop, 12.355; arrest, stay, 6.465; support, sustain, maintain, 6.858; set, place, 6.676; n., stand still, to stop, remain, abide, 3.7; stand in fight, 11.873.",15
+331,II.249,II.76-100,"vēlō","āvī, ātus, 1, a.","to veil, 3.405; cover, clothe; bind around, wreathe, crown, 5.72; festoon, adorn, 2.249; to shade by bearing in the hand, 7.154; 11.101. (vēlum)",15
+332,II.278,II.76-100,"sopor","ōris, m.","sleep; sound, deep slumber, 2.253; personified, 6.278.",6
+333,II.273,II.76-100,"complector","plexus sum, 3, dep. a.","to embrace; cover, 2.514; hold, 5.31; seize, grasp, 11.743.",13
+334,II.285,II.76-100,"aspiciō","spexī, spectus, 3, a.","to look at; to behold, see, 1.393, et al.; (fig.), to consider, 1.526; regard, pity, 2.690. (ad and speciō, look)",34
+335,II.285,II.76-100,"serēnus","a, um","(adj.), clear, calm, tranquil, serene, 3.518, et al.; fair, 2.285; subst., serēnum, ī, n. (sc. caelum), a clear sky.",7
+336,II.290,II.76-100,"culmen","inis, n.","a top, summit, height, 2.290; house top, ridge, roof, 2.458. (cf. columna)",15
+337,II.297,II.76-100,"penetrālis","e","adj. (penetrō), innermost, inner, 2.297; subst., penetrālia, ium, n., the interior of a house; sanctuary, shrine, chapel (of a dwelling or temple), 2.484, et al.",7
+338,II.301,II.76-100,"horror","ōris, m.","a roughening or bristling; (fig.), a shuddering; terror, dread, horror, dismay, 2.559; clashing din, 2.301. (horreō)",7
+339,II.302,II.76-100,"fastīgium","iī, n.","that which is carried to a point or apex; the apex or point of a pediment; a gable, upper part of a house; roof, pinnacle, battlement, 2.444; slope of a trench; (fig.), chief point, 1.342. (fastīgō)",10
+341,II.305,II.76-100,"rapidus","a, um","adj. (rapiō), that tears away; violent, fierce; swiftly moving, rapid, 1.42; speedy, quick, prompt, 5.513.",27
+342,II.306,II.76-100,"serō","sēvī, satus, 3, a.","to sow or plant; with indefinite object omitted, 6.844; scatter, spread, disseminate, 12.228.",15
+342,II.306,II.76-100,"serō","sertus, 3, a.","to join together; interweave, plait; interchange words; multa serere, to interweave many things, talk, commune much, 6.160.",1
+343,II.306,II.76-100,"bōs","bovis, c.","an ox, 2.306; bull, 5.405; cow, 7.663; heifer, 7.790; pl., cattle, 3.220.",14
+344,II.314,II.76-100,"āmēns","entis","out of one’s mind or senses; amazed, beside one’s self, frantic, mad, furious, 2.314; 4.203; distracted, 3.307.",13
+345,II.319,II.76-100,"faucēs","ium, f.","the jaws, throat, 2.358; (fig.), mouth, entrance, jaws, 6.241; defiles, 11.516.",15
+346,II.322,II.76-100,"prehendō","ī, ēnsus, 3, a.","to lay hold of; seize, 2.592; catch, 3.450; seize, hold for defense, 2.322; overtake, reach, 6.61.",8
+347,II.328,II.76-100,"arduus","a, um","(adj.), steep; erect, high, raised high, 2.475; 5.480; lofty, towering, 2.328; rearing, 11.638.",28
+348,II.349,II.76-100,"cupīdō","inis, f.","ardent longing, desire; love, 7.189; ardor, thirst, 9.354; resolve, 2.349; personified, Cupīdō, inis, m., Cupid the son of Venus, and god of love, 1.658. (cupiō)",12
+349,II.355,II.76-100,"ceu","ceu","(adv. and conj.), as, just as, 5.88; as if, 2.438, et al. (ce-ve)",1
+350,II.358,II.76-100,"siccus","a, um","(adj.), dry, 3.135; thirsty, dry, hungry, fasting, 2.358; nearly equivalent to carēns or prīvātus, with abl. foll., drained of blood, 8.261; hence, thirsting for blood, 9.64; subst., siccum, ī, n., dry ground, sand, or land, 10.301.",7
+351,II.359,II.76-100,"vādō","3, n.","to go, walk, advance, go on, 2.396, et al.; rush, 2.359; move, speed on, 8.702; imperat., vāde, away, go on! 3.462.",9
+352,II.368,II.76-100,"servō","āvī, ātus, 1, a.","to save, 3.86, et al.; reserve, 1.207; retain, keep, 6.200; hold, 7.179; continue, maintain, 10.340; guard, 2.450; keep, cherish, 1.36; preserve, inherit, 7.52; sit by, 2.568; dwell, abide by, 6.402; give heed to, watch, observe, 6.338; 11.200.",56
+353,II.403,II.76-100,"trepidus","a, um","(adj.), agitated, uneasy, disturbed, trembling, affrighted, 2.380; excited, tumultuous, 11.300; confused, in disorder, 10.283; alarmed, fearful of, anxious for, w. gen., 12.589; panic-stricken, 12.583.",25
+354,II.416,II.76-100,"caerulus","a, um","(adj.), dark blue, 2.381; sea-colored, azure, 5.819; dark; black, 3.64; subst., caerula, ōrum, n., the dark blue waters; the sea, 3.208.",2
+355,II.420,II.101-125,"haud","haud","(adv.), not at all; not, 1.387, et al.",102
+356,II.423,II.101-125,"dēnsus","a, um","(adj.), thick, dense, crowded, compact, in close array, serried, 2.383; frequent, 5.459.",36
+357,II.470,II.101-125,"exsultō","āvī, ātus, 1, intens. n.","to spring; move with bold or exulting strides, 2.470; 10.643; advance proudly, 10.550; bound, 12.688; rise, surge in billows, swell, 3.557; bubble, 7.464; pant, 5.137; exult, rejoice, triumph, 2.386. (exsiliō)",15
+358,II.473,II.101-125,"mōnstrō","āvī, ātus, 1, a.","to show, point out, indicate, 1.444; inform, tell, 1.321; direct, incite, 9.44; ordain, appoint, prescribe, 4.636. (mōnstrum)",18
+359,II.479,II.101-125,"prōcumbō","cubuī, cubitus, 3, n.","to lie down; to bend, lean forward, lie along, 8.83; bend down, lie prostrate; fall upon, 11.150; bend to, ply the oars, 5.198; to fall in death or battle, 2.426; fall down, sink in ruins, 2.505.",3
+360,II.481,II.101-125,"pietās","ātis, f.","piety, reverence, devotion, love with respect to gods or parents, 1.10; in other relations, dutiful affection; fidelity, regard; righteousness; pity for the injured, just retribution, justice, 2.536; pity, compassion, mercy, 5.688; patria pietās, affection for a parent, 9.294. (pius)",22
+361,II.483,II.101-125,"cinis","eris, m.","ashes, embers, 5.743; ashes of the dead, 4.34; (meton.), tomb, sepulcher, 4.633.",18
+362,II.485,II.101-125,"aevum","ī, n.","indefinite time; lapse of time, time, 3.415; age, 2.638; old age, 2.509; life, 10.582; immortality, 10.235.",20
+363,II.492,II.101-125,"tardus","a, um","(adj.), slow, sluggish, tardy, 5.154; backward, lingering, coming on late, 1.746; sluggish, gross, carnal, 6.720.",10
+364,II.493,II.101-125,"postis","is, m.","a post; doorpost, jamb, 3.287; door, 2.480. (rel. to pōnō)",14
+365,II.495,II.101-125,"quandō","quandō","(adv. interrog. and rel., and conj.), when; (indef.), at any time, 3.500; (conj. of cause), when, since, 6.50; as, since, because, 1.261; 4.291, et al.; sometimes joined w. sī as one word.",12
+366,II.495,II.101-125,"īnstaurō","āvī, ātus, 1, a.","to build; perform, celebrate, 3.62; revive, resolve anew, 2.451; celebrate anew, 4.63; renew, 2.669; repay, requite, 6.530.",10
+367,II.492,II.101-125,"labō","āvī, ātus, 1, n.","to give way, begin to yield; totter, 2.492; of the mind, waver, 4.22; falter, flag, despond, 12.223.",7
+368,II.514,II.101-125,"cessō","āvī, ātus, 1, intens. n.","to remit action; stay, linger, rest; be inactive, 1.672; cease, 2.468; delay, 6.51; impers., cessātum est, delay has been made, has happened, 11.288. (cēdō)",9
+369,II.469,II.101-125,"vestibulum","ī, n.","entrance, porch, portal, vestibule, 2.469, et al.",5
+371,II.471,II.101-125,"grāmen","inis, n.","grass, 3.537, et al.; a blade of grass or of grain, 7.809; plant; herb, 2.471; pasture, meadow; grassy field, plain, 7.655.",8
+372,II.472,II.101-125,"frīgidus","a, um","adj. (frīgeō), cold, 7.715; chilling, benumbing; chill, shuddering, 3.29; cool; (fig.), without spirit, slow, w. dat., 11.338.",10
+373,II.472,II.101-125,"tumidus","a, um","adj. (tumeō), swollen, 1.142; distended, 10.387; elated, 9.596; incensed, angry, 6.407; causing to swell, swelling, 3.357.",12
+374,II.480,II.101-125,"cardō","inis, m.","a hinge, pivot, 1.449; the socket in which the pivot plays, 2.493; (fig.), a turning point, crisis, emergency, 1.672.",8
+375,II.483,II.101-125,"ātrium","iī, n.","a rectangular area in the middle of a dwelling, partly open to the sky; and often surrounded with a colonnade; the court or principal apartment of a dwelling; or, in a house containing more than one court, the forecourt or first hall; a court, hall, 2.483, et al.",6
+376,II.487,II.101-125,"plangor","ōris, m.","lamentation by beating the breast; lamentation, wailing, cry of grief, 2.487. (plangō)",4
+377,II.488,II.101-125,"ululō","āvī, ātus, 1, a. and n.","to howl, 6.257; wail, shriek, 4.168; to utter wild cries of triumph, 11.662; shriek the name of; invoke with cries, 4.609.",6
+378,II.489,II.101-125,"pavidus","a, um","adj. (paveō, fear), trembling, alarmed, terror-stricken, 2.489; solicitous, trembling with expectation, eager, 5.575.",10
+379,II.493,II.101-125,"iānua","ae, f.","the outer door or gate, 2.493; entrance, way, 2.661. (Iānus)",5
+380,II.496,II.126-150,"amnis","is, m.","flowing water; a river, freq.; stream, 4.164; water, 12.417; amnis Eumenidum, the Cocytus, 6.374.",38
+381,II.503,II.126-150,"thalamus","ī, m.","a bedchamber; chamber, 2.503; couch, 6.280; marriage, 4.18; bridals, the bride, 7.388; pl., thalamī, ōrum, nuptials, wedlock, marriage, 6.94.",20
+382,II.510,II.126-150,"umerus","ī, m.","the upper bone of the arm; the shoulder, 1.501, and freq.",54
+383,II.512,II.126-150,"axis","is, m.","an axle; synecdoche, car, chariot, 5.820; the axis of the heavens, the sky, the heavens, 4.482; the pole; the north pole, the north.",8
+384,II.513,II.126-150,"iūxtā","iūxtā","(adv. and prep. w. acc.), near, close, near by, 2.513; at the same time, 2.666; near to, 3.506.",12
+385,II.513,II.126-150,"laurus","ī, f.","the laurel or bay tree, 2.513; a laurel crown or wreath, 3.81.",9
+386,II.515,II.126-150,"altāria","ium, n.","the upper part of an altar; a high altar, 7.211; an altar, 2.515. (altus)",11
+387,II.516,II.126-150,"columba","ae, f.","a pigeon, dove, 2.516.",6
+388,II.525,II.126-150,"longaevus","a, um","adj. (longus and aevum), of advanced age; aged, 2.525, et al.",14
+389,II.528,II.126-150,"porticus","ūs, f.","a portico, porch, gallery, pillared hall, colonnade, hall, 3.353. (porta)",5
+390,II.558,II.126-150,"sepulcrum","ī, n.","a place of burial; tomb, sepulchre, grave; burial, sepulture, 2.542. (sepeliō)",11
+391,II.544,II.126-150,"ictus","ūs, m.","a smiting; a stroke, blow, 5.198, and freq.; shooting, 7.165; wound, 7.756; force, 2.544. (icō)",21
+392,II.553,II.126-150,"tenus","tenus","(prep. w. gen. or abl., placed after its case), as far as; up to, 2.553; down to, to, 3.427; to, 1.737; hāc tenus, separated by tmesis, thus far, 5.603.",5
+393,II.579,II.126-150,"coniugium","iī, n.","a joining together; marriage, wedlock, 4.172; (meton.), husband, wife, consort, 2.579; 3.296. (coniungō)",10
+394,II.592,II.126-150,"caelicola","ae, c.","an inhabitant of heaven; a god, 2.641, et al. (caelum and colō)",8
+395,II.595,II.126-150,"linquō","līquī, 3, a.","to leave, 1.517, and freq.; desert, abandon, flee from, 3.213; pass by, 3.705; depart from, leave, 3.124; of death, yield up, 3.140; give up or over, desist from, 3.160.",41
+396,II.622,II.126-150,"faciēs","ēī, f.","the make or fashion of things; form, figure, 12.416; face, countenance, 1.658; image, specter, 7.448; aspect, 6.104; appearance, 3.310; form, kind, 6.560. (faciō)",34
+397,II.604,II.126-150,"invideō","vīdī, vīsus, 2, n. and a.","to look into; to look at with dislike; begrudge, envy, 4.234, et al.; withhold, deny.",6
+398,II.606,II.126-150,"ūmidus","a, um","adj. (ūmeō), moist, wet, damp, dewy, 2.8, et al.; liquid, 4.486.",9
+399,II.609,II.126-150,"fūmus","ī, m.","smoke, 2.609, et al.",10
+400,II.610,II.126-150,"quatiō","no perf., quassus, 3, a.","to shake, freq.; brandish, 11.767; flap, 3.226; shatter, 2.611; make tremble, 5.200; thrill, penetrate, 3.30; ransack, beat up, search, scour, 11.513; torment, 6.571; assault, 9.608; spur, 12.338.",18
+401,II.611,II.126-150,"ēruō","ī, tus, 3, a.","to cast out or up; to overthrow, 2.5.",8
+402,II.629,II.126-150,"ornus","ī, f.","a mountain-ash, 2.626, et al.",5
+403,II.633,II.126-150,"expediō","īvī or iī, ītus, 4, a.","to make the foot free; to extricate, disentangle; bring forth, get ready, 1.178; seize, use, 5.209; serve, 1.702; unfold, describe, disclose, 3.379, 460; declare, 11.315; pass. in middle sig., make one’s way out, escape, 2.633. (ex and pēs)",14
+404,II.639,II.126-150,"solidus","a, um","(adj.), the whole, whole, entire, 6.253; massive, 2.765; solid, hard, 6.552; sound, unimpaired, 2.639.",8
+405,II.646,II.151-170,"exuviae","ārum, f.","that which has been taken off; a garment, vestment, 4.496; armor, arms; spoils, 2.275; memorials, relics, 4.651; skin, 2.473; hide, 11.577. (exuō)",12
+406,II.653,II.151-170,"urgeō","ursī, 2, a. and n.","to drive, impel, press forward, 1.111; ply, hasten, 9.489; press, oppress, crush, bear down, 3.579; press around, inclose, surround, hem in, 11.524; weigh upon, oppress, close, 10.745; overpower, 2.653; attack, 10.375; punish, torture, 6.561.",23
+407,II.683,II.151-170,"mollis","e","(adj.), soft, tender, delicate; pliant, flexible, soft, 1.693; soft-cushioned, 8.666; subtle, 4.66; tamed, gentle; yielding, accessible, favorable, 4.293; haud mollia, things hard, difficult, harsh, unwelcome, 12.25.",24
+408,II.687,II.151-170,"laetus","a, um","(adj.), joyful, joyous, glad, 4.418, et freq.; delighting in (w. abl.), 1.275, 696; 2.417; springing, 10.643; sparkling, radiant, 1.591; happy, auspicious, 1.605; abounding, rich, full (w. abl. or gen.), 1.441; well fed, fat, 3.220; blissful, blessed, 6.744.",77
+409,II.691,II.151-170,"fīrmō","āvī, ātus, 3, a.","to make firm or strong; make steady, assure, 3.659; to establish, mature; confirm, 2.691; ratify, 12.212; encourage, 3.611, secure, guard, 11.466. (fīrmus)",9
+410,II.694,II.151-170,"stella","ae, f.","a star, freq.; a meteor, 2.694.",7
+411,II.697,II.151-170,"sīgnō","āvī, ātus, 1, a.","to distinguish by a mark or symbol, 6.780; mark, mark out; indicate, designate, 2.697; inscribe, record, 3.287; of the mind, observe, mark, notice, 2.423. (sīgnum)",9
+412,II.712,II.151-170,"famulus","ī, m.","pertaining to the house; a house servant or slave; manservant, 1.701; attendant, 5.95.",8
+413,II.722,II.151-170,"leō","leōnis, m.","a lion, 2.722, et al.",17
+414,II.725,II.151-170,"opācus","a, um","(adj.), shady, 6.283; obscure, dark, 3.619; subst., opāca, ōrum, n., partitive; opāca viārum, dark pathways, roads, 6.633.",2
+415,II.765,II.151-170,"crātēr","ēris, m., acc. sing. ēra, pl. ēras","a large mixing bowl or urn; mixer; bowl, 1.724; jar, 6.225.",7
+416,II.766,II.151-170,"congerō","gessī, gestus, 3, a.","to bring together; collect, heap up, 2.766; construct, build, 6.178.",3
+417,II.776,II.151-170,"indulgeō","dulsī, dultus, 2, n.","to be indulgent, kind, yielding, give way to, 2.776; yield to, indulge in, 4.51; favor, 8.512.",7
+418,II.804,II.151-170,"arō","āvi, ātus, 1, a. and n.","to plow; till, cultivate, 4.212; of navigation, to plow, 2.780; of age, to furrow, 7.417.",6
+419,II.810,II.151-170,"opīmus","a, um","adj. (ops), rich, fertile, 1.621; sumptuous, 3.224; spolia opīma, the arms taken by a general from a general slain in battle, 6.855.",5
+420,II.810,II.151-170,"lēnis","e","(adj.), mild, 3.70; gentle, quiet, 2.782.",3
+421,II.810,II.151-170,"māter","matris, f.","a mother, matron, 1.314; 2.489; parent stem, trunk, plant, or tree, 12.209; native, motherland, 10.172; Māter īdaea, Māter (māgna), the Idaean Mother, the Great Mother of the gods, Cybele, 9.619. (μήτηρ)",82
+422,II.790,II.151-170,"lacrimō","āvī, ātus, 1, n. and a.","to shed tears, weep, 1.459. (lacrima)",13
+423,II.791,II.151-170,"tenuis","e","adj. (cf. tendō), stretched out; slender, thin, 4.278; light, 3.448; little, 10.511; airy, ethereal, 6.292; delicate, fine, 4.264; scanty, yielding a scanty livelihood, 8.409; reduced, perishing, sinking, 5.690; simple, trivial, humble.",19
+424,II.792,II.151-170,"bracchium","iī, n.","strictly, the forearm from the hand to the elbow; in general, the arm, 2.792, et al.; (fig.), limb, branch, of a tree, 6.282; sail-yard, 5.829; of walls, 3.535.",15

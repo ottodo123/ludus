@@ -239,6 +239,180 @@
   font-weight: 500;
 }
 
+/* SECTION 3: Saved Lists */
+.saved-lists-section {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.saved-lists-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.saved-lists-section h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.recent-lists-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151;
+  text-align: left;
+}
+
+.auth-required {
+  text-align: center;
+  padding: 3rem;
+  color: #6b7280;
+}
+
+.auth-required p {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.no-saved-lists {
+  text-align: center;
+  padding: 3rem;
+  color: #6b7280;
+}
+
+.no-lists-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.no-saved-lists p {
+  margin: 0.5rem 0;
+  font-size: 1.125rem;
+}
+
+.no-saved-lists .hint {
+  font-size: 0.925rem;
+  font-style: italic;
+}
+
+.saved-lists-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.saved-lists-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.overview-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.browse-saved-btn {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+  text-align: left;
+}
+
+.browse-saved-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px -3px rgba(59, 130, 246, 0.4);
+}
+
+.btn-arrow {
+  font-size: 1.25rem;
+  margin-left: auto;
+  transition: transform 0.2s ease;
+}
+
+.browse-saved-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.recent-lists {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.recent-lists-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.recent-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.recent-list-item:hover {
+  background: #f0f9ff;
+  border-color: #3b82f6;
+}
+
+.list-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.list-name {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.925rem;
+}
+
+.list-count {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.list-arrow {
+  color: #9ca3af;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.recent-list-item:hover .list-arrow {
+  color: #3b82f6;
+  transform: translateX(2px);
+}
+
 /* SECTION 2: Curriculum Browsing */
 .curriculum-section {
   background: white;
@@ -374,6 +548,11 @@
   .actions-column {
     order: -1;
   }
+
+  .saved-lists-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -387,6 +566,7 @@
   }
 
   .daily-review-section,
+  .saved-lists-section,
   .curriculum-section {
     padding: 1.5rem;
   }
