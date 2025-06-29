@@ -318,6 +318,7 @@ export const saveSavedWordSessions = async (userId, sessionsData, retries = 3) =
       await setDoc(sessionsRef, {
         sessions: sessionsData.sessions,
         currentSessionId: sessionsData.currentSessionId,
+        deletedSessions: sessionsData.deletedSessions || [],
         lastUpdated: new Date().toISOString()
       }, { merge: true });
       console.log(`✅ Saved word sessions saved successfully (attempt ${attempt})`);
@@ -354,18 +355,15 @@ export const getSavedWordSessions = async (userId, retries = 3) => {
         return {
           sessions: data.sessions || [],
           currentSessionId: data.currentSessionId || 1,
+          deletedSessions: data.deletedSessions || [],
           lastUpdated: data.lastUpdated
         };
       } else {
         // Return default structure if no saved sessions exist
         return {
-          sessions: [{
-            id: 1,
-            name: "Session 1",
-            startedAt: new Date().toISOString(),
-            words: []
-          }],
-          currentSessionId: 1,
+          sessions: [],
+          currentSessionId: null,
+          deletedSessions: [],
           lastUpdated: null
         };
       }

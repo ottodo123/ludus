@@ -156,28 +156,12 @@
   padding: 1rem;
   margin-bottom: 1rem;
   border-left: 4px solid #3b82f6;
-}
-
-.session-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.session-display {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.session-info-left {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  flex: 1;
-}
 
 .session-name {
   margin: 0;
@@ -197,22 +181,16 @@
 }
 
 .session-date {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: #6b7280;
-  font-weight: 500;
 }
 
 .session-count {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: #6b7280;
   font-weight: 500;
 }
 
-.session-edit {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
 
 .session-name-input {
   flex: 1;
@@ -259,8 +237,8 @@
 
 /* Session Words */
 .session-words {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -379,6 +357,123 @@
   font-size: 0.925rem;
   font-style: italic;
   color: #9ca3af;
+}
+
+/* Trash/Recycle Bin Styles */
+.trash-toggle-btn {
+  padding: 0.5rem 1rem;
+  background: #f3f4f6;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.trash-toggle-btn:hover {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.trash-toggle-btn.active {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: #fbbf24;
+}
+
+.trash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.trash-header h4 {
+  margin: 0;
+  color: #92400e;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.empty-trash-btn {
+  padding: 0.5rem 1rem;
+  background: #dc2626;
+  color: white;
+  border: 1px solid #dc2626;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.empty-trash-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.deleted-session {
+  opacity: 0.8;
+}
+
+.deleted-session .session-divider {
+  background: #fef2f2;
+  border-color: #fecaca;
+  border-left-color: #ef4444;
+}
+
+.session-name.deleted {
+  text-decoration: line-through;
+  color: #991b1b;
+}
+
+.deletion-info {
+  font-size: 0.875rem;
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.restore-session-btn {
+  padding: 0.5rem 1rem;
+  background: #34d399;
+  color: white;
+  border: 1px solid #34d399;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.restore-session-btn:hover {
+  background: #10b981;
+  transform: translateY(-1px);
+}
+
+.deleted-word {
+  opacity: 0.7;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.more-words-indicator {
+  padding: 0.75rem;
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  font-size: 0.875rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  border: 1px dashed #e5e7eb;
 }
 
 /* Responsive Design */

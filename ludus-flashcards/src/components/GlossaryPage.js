@@ -2913,6 +2913,25 @@ const GlossaryPage = ({ onNavigate }) => {
     }
   }, [sessions, currentSessionId, user, hasLoadedInitialData]);
 
+  // Cleanup function to save any pending changes when component unmounts
+  useEffect(() => {
+    return () => {
+      // Save immediately on unmount if there are unsaved changes
+      if (hasLoadedInitialData && sessions && sessions.length > 0) {
+        const sessionsData = { sessions, currentSessionId };
+        localStorage.setItem('glossary-sessions', JSON.stringify(sessions));
+        localStorage.setItem('glossary-current-session-id', currentSessionId.toString());
+        
+        // Note: Firebase save is async and might not complete, but localStorage ensures data isn't lost
+        if (user?.uid) {
+          saveSavedWordSessions(user.uid, sessionsData).catch(error => {
+            console.error('Error saving on unmount:', error);
+          });
+        }
+      }
+    };
+  }, [sessions, currentSessionId, user, hasLoadedInitialData]);
+
   // Load dictionary data
   useEffect(() => {
     const loadData = async () => {
@@ -3491,9 +3510,9 @@ const GlossaryPage = ({ onNavigate }) => {
           {/* Saved Words Panel */}
           {showSavedWords && (
             <div className="saved-words-panel">
-              <div className="saved-words-header">
+              <div className="saved-words-header" style={{marginBottom: '0.1rem !important'}}>
                 <div className="saved-words-title">
-                  <h3>📚 Saved Words ({savedWords.length})</h3>
+                  <h3>Saved Words</h3>
                 </div>
                 <div className="saved-words-controls">
                   <button 
@@ -3503,50 +3522,20 @@ const GlossaryPage = ({ onNavigate }) => {
                   >
                     + New Session
                   </button>
-                  {savedWords.length > 0 && (
-                    <button 
-                      className="clear-all-btn"
-                      onClick={async () => {
-                        if (window.confirm('Are you sure you want to clear all saved words and sessions? This action cannot be undone.')) {
-                          // Clear local state
-                          setSavedWords([]);
-                          setSessions([{
-                            id: 1,
-                            name: "Session 1",
-                            startedAt: new Date().toISOString(),
-                            words: []
-                          }]);
-                          setCurrentSessionId(1);
-                          
-                          // Also delete from Firebase if user is authenticated
-                          if (user?.uid) {
-                            try {
-                              await deleteSavedWordSessions(user.uid);
-                              console.log('🔥 Cleared all sessions from Firebase');
-                            } catch (error) {
-                              console.error('❌ Error clearing Firebase sessions:', error);
-                            }
-                          }
-                        }
-                      }}
-                      title="Clear all saved words"
-                    >
-                      Clear All
-                    </button>
-                  )}
                 </div>
               </div>
-              <div className="saved-words-list">
+              <div className="saved-words-list" style={{paddingTop: '0rem !important', marginTop: '0rem !important'}}>
                 {savedWords.length === 0 ? (
                   <div className="empty-state">
                     <p>No saved words yet</p>
                     <p className="hint">Click the + button next to any word to save it here</p>
                   </div>
                 ) : (
-                  getSessionizedWords().map((session) => (
+                  getSessionizedWords().map((session, index) => (
                     <div 
                       key={session.id} 
                       className={`session-group ${dragOverSession === session.id ? 'drag-over' : ''}`}
+                      style={index === 0 ? {marginTop: '-0.25rem !important'} : {}}
                       onDragOver={(e) => handleDragOver(e, session.id)}
                       onDragLeave={handleDragLeave}
                       onDrop={(e) => handleDrop(e, session.id)}
@@ -3653,7 +3642,7 @@ const GlossaryPage = ({ onNavigate }) => {
           <div className="modal-overlay" onClick={() => setShowInflectionTable(false)}>
             <div className="inflection-modal" onClick={(e) => e.stopPropagation()}>
               <div className="modal-header">
-                <h2>📋 Inflection Table: {selectedEntry.dictionaryForm}</h2>
+                <h2 style={{textAlign: 'center'}}>{selectedEntry.dictionaryForm}</h2>
                 <button 
                   className="modal-close"
                   onClick={() => setShowInflectionTable(false)}

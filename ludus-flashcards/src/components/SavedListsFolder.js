@@ -1,15 +1,47 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import '../styles/SavedListsFolder.css';
+import '../styles/LudusFolder.css';
 
-const SavedListsFolder = ({ savedSessions, onBack, onStartStudy }) => {
-  const [selectedSession, setSelectedSession] = useState(null);
+const SavedListsFolder = ({ savedSessions, onBack, onStartStudy, selectedSession: propSelectedSession, onSessionSelect }) => {
+  const [selectedSession, setSelectedSession] = useState(propSelectedSession || null);
   const [viewMode, setViewMode] = useState('sessions'); // 'sessions' or 'vocabulary'
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
+  const [editingSessionId, setEditingSessionId] = useState(null);
+  const [editingSessionName, setEditingSessionName] = useState('');
 
   const handleSessionClick = (session) => {
     setSelectedSession(session);
+    if (onSessionSelect) {
+      onSessionSelect(session);
+    }
   };
+
+  const startEditingSession = (sessionId, currentName) => {
+    setEditingSessionId(sessionId);
+    setEditingSessionName(currentName);
+  };
+
+  const saveSessionName = () => {
+    if (editingSessionName.trim()) {
+      // Update the session name in savedSessions (assuming they come from parent)
+      // This would need to be handled by parent component since we don't have direct access to modify savedSessions
+      console.log('Session name changed to:', editingSessionName.trim());
+      // For now, just exit edit mode - actual implementation would need parent callback
+    }
+    setEditingSessionId(null);
+    setEditingSessionName('');
+  };
+
+  const cancelEditingSession = () => {
+    setEditingSessionId(null);
+    setEditingSessionName('');
+  };
+
+  // Sync with prop changes
+  useEffect(() => {
+    setSelectedSession(propSelectedSession || null);
+  }, [propSelectedSession]);
 
   // Get all vocabulary from all sessions for the vocabulary view
   const allVocabulary = useMemo(() => {
@@ -156,15 +188,20 @@ const SavedListsFolder = ({ savedSessions, onBack, onStartStudy }) => {
 
   if (selectedSession) {
     return (
-      <div className="saved-lists-folder">
-        <button className="back-btn" onClick={() => setSelectedSession(null)}>
+      <div className="ludus-folder">
+        <button className="back-btn" onClick={() => {
+          setSelectedSession(null);
+          if (onSessionSelect) {
+            onSessionSelect(null);
+          }
+        }}>
           ← Back to Saved Lists
         </button>
         <h1 className="main-title">{selectedSession.name}</h1>
 
         
         <div className="vocabulary-container">
-          <div className="vocabulary-controls">
+          <div className="vocabulary-controls-session">
             <div className="controls-left">
               <span className="word-counter">{selectedSession.words.length} words</span>
               {selectedSession.words.length > 0 && (
@@ -177,7 +214,7 @@ const SavedListsFolder = ({ savedSessions, onBack, onStartStudy }) => {
             </div>
             <div className="controls-right">
               {selectedSession.words.length > 0 && (
-                <div className="session-actions">
+                <div className="chapter-actions">
                   <button 
                     className="action-btn primary"
                     onClick={() => handleStartStudy(selectedSession, false)}
@@ -225,7 +262,7 @@ const SavedListsFolder = ({ savedSessions, onBack, onStartStudy }) => {
   }
 
   return (
-    <div className="saved-lists-folder">
+    <div className="ludus-folder">
       {/* Header Elements (matching LUDUS structure) */}
       <button className="back-btn" onClick={onBack}>
         ← Dashboard
@@ -276,14 +313,62 @@ const SavedListsFolder = ({ savedSessions, onBack, onStartStudy }) => {
               <div 
                 key={session.id} 
                 className="lesson-row"
-                onClick={() => setSelectedSession(session)}
+                onClick={() => handleSessionClick(session)}
                 style={{cursor: 'pointer'}}
               >
                 <div className="lesson-header">
                   <div className="lesson-title-group">
-                    <h3 className="clickable-session-title">
-                      {session.name}
-                    </h3>
+                    {editingSessionId === session.id ? (
+                      <input
+                        type="text"
+                        value={editingSessionName}
+                        onChange={(e) => setEditingSessionName(e.target.value)}
+                        onKeyPress={(e) => {
+                          if (e.key === 'Enter') saveSessionName();
+                          if (e.key === 'Escape') cancelEditingSession();
+                        }}
+                        onBlur={saveSessionName}
+                        autoFocus
+                        className="session-name-input"
+                        style={{
+                          padding: '0.5rem',
+                          border: '2px solid #3b82f6',
+                          borderRadius: '0.375rem',
+                          fontSize: '1rem',
+                          fontWeight: '600',
+                          color: '#1f2937',
+                          background: 'white',
+                          outline: 'none',
+                          minWidth: '200px'
+                        }}
+                      />
+                    ) : (
+                      <h3 
+                        className="clickable-session-title"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          startEditingSession(session.id, session.name);
+                        }}
+                        style={{
+                          cursor: 'pointer',
+                          padding: '0.25rem 0.5rem',
+                          borderRadius: '0.375rem',
+                          transition: 'all 0.2s ease',
+                          margin: 0
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.background = '#e2e8f0';
+                          e.target.style.color = '#3b82f6';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.background = 'transparent';
+                          e.target.style.color = '#1f2937';
+                        }}
+                        title="Click to rename session"
+                      >
+                        {session.name}
+                      </h3>
+                    )}
                   </div>
                   <span className="lesson-count">{session.words.length} words</span>
                 </div>

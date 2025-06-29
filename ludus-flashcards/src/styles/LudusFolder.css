@@ -129,6 +129,7 @@
   margin-bottom: 1rem;
   padding: 1rem 2rem;
   transition: box-shadow 0.2s;
+  min-height: 80px;
 }
 
 .lesson-row.empty {
@@ -145,12 +146,22 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+.lesson-header h3,
+.lesson-header .lesson-count,
+.lesson-header .lesson-title-group {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .lesson-title-group {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  justify-content: flex-start;
 }
 
 .reset-btn {
@@ -191,16 +202,23 @@
 }
 
 .lesson-header h3 {
-  margin: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   font-size: 1.0625rem;
   font-weight: 600;
   color: #1f2937;
+  text-align: left !important;
+  line-height: 1.2 !important;
 }
 
 .lesson-count {
+  margin: 0 !important;
+  padding: 0 !important;
   font-size: 0.875rem;
   color: #6b7280;
   font-weight: 500;
+  text-align: left !important;
+  line-height: 1.2 !important;
 }
 
 .lesson-stats {
@@ -523,10 +541,14 @@
     gap: 0.25rem;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
   }
   
   .lesson-title-group {
     gap: 0.25rem;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   
   .reset-btn {
@@ -541,10 +563,12 @@
   .lesson-header h3 {
     font-size: 1.05rem;
     margin-bottom: 0.1rem;
+    text-align: left;
   }
   
   .lesson-count {
     font-size: 0.95rem;
+    text-align: left;
   }
   
   /* Show dot stats instead of circular stats */

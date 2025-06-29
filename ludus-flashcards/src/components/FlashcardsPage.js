@@ -32,6 +32,7 @@ const FlashcardsPage = () => {
   
   const [savedSessions, setSavedSessions] = useState([]);
   const [savedWordsCount, setSavedWordsCount] = useState(0);
+  const [selectedSession, setSelectedSession] = useState(null);
 
   // Load saved sessions data when component mounts
   useEffect(() => {
@@ -185,6 +186,7 @@ const FlashcardsPage = () => {
     setCurrentView('main');
     setStudyCards([]);
     setIsPracticeMode(false);
+    setSelectedSession(null);
   };
 
   const handleBackToLudus = () => {
@@ -209,6 +211,11 @@ const FlashcardsPage = () => {
     setStudyCards(lessonCards);
     setIsPracticeMode(isPracticeMode);
     setCurrentView('savedListStudy');
+  };
+
+  const handleRecentListClick = (session) => {
+    setSelectedSession(session);
+    setCurrentView('savedLists');
   };
 
   const handleStudyComplete = (results) => {
@@ -342,6 +349,8 @@ const FlashcardsPage = () => {
         savedSessions={savedSessions}
         onBack={handleBackToMain}
         onStartStudy={handleStartSavedListStudy}
+        selectedSession={selectedSession}
+        onSessionSelect={setSelectedSession}
       />
     );
   }
@@ -653,7 +662,7 @@ const FlashcardsPage = () => {
                       <div 
                         key={session.id} 
                         className="recent-list-item"
-                        onClick={() => setCurrentView('savedLists')}
+                        onClick={() => handleRecentListClick(session)}
                       >
                         <div className="list-info">
                           <span className="list-name">{session.name}</span>

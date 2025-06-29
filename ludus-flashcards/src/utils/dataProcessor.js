@@ -57,28 +57,18 @@ const parseCSVData = (csvData, curriculum, idPrefix) => {
         english = cleanValues[4] || '';
       }
     } else if (curriculum === 'AENEID') {
-      // AENEID format: Required_Order,Book_Line_Ref,Chapter,Headword,Latin_Entry,Definitions,Occurrences
-      if (cleanValues.length >= 6) {
+      // AENEID format: Required_Order,Book_Line_Ref,Chapter,Headword,Latin_Entry,Part_of_Speech,Definitions_Whitakers,Dictionary_Form,Occurrences_in_Aeneid
+      if (cleanValues.length >= 8) {
         requiredOrder = parseInt(cleanValues[0]) || 0;
         bookLineRef = cleanValues[1] || '';
         chapter = cleanValues[2] || '';
         headword = cleanValues[3] || '';
         endings = cleanValues[4] || '';
-        english = cleanValues[5] || '';
+        partOfSpeech = cleanValues[5] || '';
+        english = cleanValues[6] || '';
         
         // For Aeneid, we'll use the chapter (like "I.1-25") as the lesson identifier
         lessonNum = requiredOrder; // Use required order for sorting within sections
-        
-        // Extract part of speech from English definitions if present
-        partOfSpeech = '';
-        if (english.includes('(adj.)')) partOfSpeech = 'adj';
-        else if (english.includes('(n.)')) partOfSpeech = 'n';
-        else if (english.includes('(v.)')) partOfSpeech = 'v';
-        else if (english.includes('(adv.)')) partOfSpeech = 'adv';
-        else if (english.includes('(conj.)')) partOfSpeech = 'conj';
-        else if (english.includes('(prep.)')) partOfSpeech = 'prep';
-        else if (english.includes('(pron.)')) partOfSpeech = 'pron';
-        else partOfSpeech = 'misc';
       }
     } else {
       // Other curricula format: Chapter,Headword,Latin_Entry,Part_of_Speech,English

@@ -128,7 +128,35 @@ When working with Firebase features:
 - **Manual Selections**: Range-based chapter selection (fromChapter/toChapter) instead of individual checkboxes
 - **Daily Review Logic**: Combines automatic (previously studied cards) and manual selection modes
 
-## Recent Work (Session ending 2025-06-27)
+## Recent Work (Session ending 2025-06-29)
+
+### Vocabulary Controls Height Fix (CRITICAL)
+**Problem**: Individual saved session vocabulary controls container was 103px tall while curriculum chapter pages were 54px - almost double the height despite seemingly identical CSS.
+
+**What Didn't Work** (multiple failed attempts):
+1. **Changing flex-wrap properties** (`wrap` to `nowrap`) - No effect on height
+2. **Removing mobile CSS overrides** - No effect on height  
+3. **Adding targeted CSS with !important** - Didn't work
+4. **Making SavedListsFolder import LudusFolder.css directly** - Fixed session pages but BROKE curriculum pages
+5. **Creating duplicate vocabulary-controls class** with identical properties - Still had height difference
+6. **Removing duplicate .stat-badge definitions** - Didn't solve core issue
+7. **Adding min-height/max-height constraints** - Broke layout by hiding content
+8. **Multiple attempts at CSS inheritance and specificity** - None worked consistently
+
+**Root Cause**: The issue wasn't the CSS properties themselves, but the **class structure**. Saved lists used `session-actions` while curriculum chapters used `chapter-actions`, and the existing CSS rules were specifically written for `chapter-actions`.
+
+**Solution That Worked**:
+1. **Changed SavedListsFolder.js**: Modified the controls structure to use `chapter-actions` instead of `session-actions`
+2. **Updated CSS selectors**: Changed `.session-actions` references to `.chapter-actions` in SavedListsFolder.css
+3. **Result**: Both containers now use identical class structure and achieve the same 54px height
+
+**Key Learning**: Sometimes the solution isn't duplicating CSS properties, but using the exact same class structure as the working implementation.
+
+**Files Modified**: 
+- `SavedListsFolder.js` (line 193: changed session-actions to chapter-actions)
+- `SavedListsFolder.css` (lines 979-985: updated CSS selectors)
+
+## Previous Work (Session ending 2025-06-27)
 
 ### Development Server Stability Fix (CRITICAL)
 - **PERMANENTLY FIXED** Safari connection issues that prevented page refreshing

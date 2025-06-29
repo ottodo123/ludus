@@ -867,8 +867,9 @@
 }
 
 .saved-words-header {
-  padding: 0.875rem 1rem;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 0.875rem 1rem 0.1rem 1rem;
+  margin-bottom: 0 !important;
+  border-bottom: none !important;
 }
 
 .saved-words-title {
@@ -929,10 +930,10 @@
 .saved-words-list {
   flex: 1;
   overflow-y: auto;
-  padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+  padding: 0 0.75rem 0.75rem 0.75rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.1rem;
 }
 
 /* Session Groups */

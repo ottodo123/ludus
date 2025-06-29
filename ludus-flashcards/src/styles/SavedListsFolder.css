@@ -272,7 +272,21 @@
   margin: 0 auto;
 }
 
-/* Vocabulary Controls */
+/* Vocabulary Controls - prevent wrapping to match curriculum height */
+.vocabulary-controls-session {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+/* Keep original vocabulary-controls for non-session views */
 .vocabulary-controls {
   background: white;
   border-radius: 0.75rem;
@@ -291,17 +305,64 @@
   align-items: center;
 }
 
-.vocabulary-controls .controls-right {
+.vocabulary-controls .controls-right,
+.vocabulary-controls-session .controls-right {
   display: flex;
   align-items: center;
   gap: 1rem;
-  align-self: center !important;
 }
 
 .word-counter {
   color: #6b7280;
   font-size: 1rem;
   font-weight: 500;
+}
+
+/* Status bar styling for individual views */
+.stat-separator {
+  color: #9ca3af;
+  margin: 0 0.5rem;
+}
+
+.stat-label {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+.stat-badge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.stat-badge.stat-due {
+  background: #fef2f2;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.stat-badge.stat-new {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+
+.stat-badge.stat-learned {
+  background: #f0fdf4;
+  color: #16a34a;
+  border-color: #bbf7d0;
+}
+
+.stat-badge.stat-zero {
+  background: #f9fafb;
+  color: #6b7280;
+  border-color: #e5e7eb;
 }
 
 .study-all-btn,
@@ -663,7 +724,7 @@
   }
   
   .vocabulary-controls {
-    padding: 1.25rem 1.5rem;
+    padding: 0.875rem 1.25rem;
   }
   
   /* Vocabulary items - vertical layout */
@@ -827,12 +888,6 @@
     grid-template-columns: 1fr;
   }
   
-  .vocabulary-controls {
-    padding: 1rem;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
-  }
   
   .controls-right {
     justify-content: stretch;
@@ -904,31 +959,33 @@
 }
 
 /* Status bar and button improvements for individual session views */
-.vocabulary-controls .controls-left {
+.vocabulary-controls .controls-left,
+.vocabulary-controls-session .controls-left {
   display: flex;
   align-items: center;
   gap: 0;
 }
 
-.vocabulary-controls .controls-left > span {
+.vocabulary-controls .controls-left > span,
+.vocabulary-controls-session .controls-left > span {
   margin-right: 0.5rem;
 }
 
-.vocabulary-controls .controls-left > span:last-child {
+.vocabulary-controls .controls-left > span:last-child,
+.vocabulary-controls-session .controls-left > span:last-child {
   margin-right: 0;
 }
 
-.vocabulary-controls .controls-right .session-actions {
+.vocabulary-controls .controls-right .chapter-actions,
+.vocabulary-controls-session .controls-right .chapter-actions {
   display: flex;
   gap: 0.75rem;
   align-items: center;
-}
-
-.vocabulary-controls .controls-right .session-actions {
   border-top: none !important;
 }
 
-.vocabulary-controls .controls-right .action-btn {
+.vocabulary-controls .controls-right .action-btn,
+.vocabulary-controls-session .controls-right .action-btn {
   border-radius: 0.5rem !important;
 }
 
@@ -944,14 +1001,3 @@
   margin-right: 0.25rem;
 }
 
-.stat-badge {
-  display: inline-block;
-  padding: 0.125rem 0.5rem;
-  border-radius: 0.375rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-right: 0.25rem;
-  background: #f0f9ff;
-  color: #0369a1;
-  border: 1px solid #bae6fd;
-}
