@@ -7,6 +7,7 @@ import LudusFolder from './components/LudusFolder';
 import FlashcardsPage from './components/FlashcardsPage';
 import GlossaryPage from './components/GlossaryPage';
 import GrammarPage from './components/GrammarPage';
+import SentencesPage from './components/SentencesPage';
 import StudySession from './components/StudySession';
 
 function App() {
@@ -59,6 +60,8 @@ function App() {
         return <GlossaryPage onNavigate={setCurrentPage} />;
       case 'grammar':
         return <GrammarPage />;
+      case 'sentences':
+        return <SentencesPage onBack={() => setCurrentPage('flashcards')} />;
       default:
         return (
           <LudusFolder 

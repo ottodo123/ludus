@@ -8,7 +8,8 @@ const Navigation = ({ onPageChange, currentPage, onGoHome }) => {
   const pages = [
     { key: 'flashcards', label: 'Flashcards', disabled: false },
     { key: 'glossary', label: 'Glossary', disabled: false },
-    { key: 'grammar', label: 'Grammar', disabled: false }
+    { key: 'grammar', label: 'Grammar', disabled: false },
+    { key: 'sentences', label: 'Sentences', disabled: false }
   ];
 
   const toggleMobileMenu = () => {
